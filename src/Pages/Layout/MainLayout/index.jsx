@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../share/Navbar";
 
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
+const MainLayout = ({ children }) => (
+  <>
+    <Navbar />
+    <main>{children}</main>
+  </>
+);
 
-export default index
+export default MainLayout;
