@@ -15,7 +15,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 bg-primary text-white px-4 py-2 rounded-lg shadow hover:bg-secondary transition"
+      className="bg-primary text-white px-4 py-2 rounded-lg shadow hover:bg-secondary transition"
     >
       Switch Theme
     </button>
