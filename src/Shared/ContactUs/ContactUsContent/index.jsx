@@ -36,8 +36,8 @@ const ContactFormContent = () => {
         {/* Logo */}
         <div className="text-center mb-4">
           <img
-            src={Images.LOGO_IMG}
             alt="Logo"
+            src={Images.LOGO_IMG}
             className="rounded-full shadow-lg border w-24 h-24 mx-auto"
           />
         </div>
@@ -50,12 +50,12 @@ const ContactFormContent = () => {
               Name
             </label>
             <input
-              type="text"
               id="name"
+              type="text"
               name="name"
-              placeholder="Enter your name"
               value={formData.name}
               onChange={handleInputChange}
+              placeholder="Enter your name"
               className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -66,11 +66,11 @@ const ContactFormContent = () => {
               Email
             </label>
             <input
-              type="email"
               id="email"
+              type="email"
               name="email"
-              placeholder="Enter your email"
               value={formData.email}
+              placeholder="Enter your email"
               onChange={handleInputChange}
               className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
