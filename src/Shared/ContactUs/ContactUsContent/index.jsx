@@ -51,8 +51,8 @@ const ContactFormContent = () => {
             </label>
             <input
               id="name"
-              type="text"
               name="name"
+              type="text"
               value={formData.name}
               onChange={handleInputChange}
               placeholder="Enter your name"
