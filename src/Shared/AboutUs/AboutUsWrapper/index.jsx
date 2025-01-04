@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { memo } from 'react'
+import AboutUsContent from '../AboutUsContent'
 
-const index = () => {
+const AboutUsWrapper = () => {
   return (
-    <div>index</div>
+    <div className='bg-gray-100'>
+<AboutUsContent/>
+    </div>
   )
 }
 
-export default index
+export default memo(AboutUsWrapper)

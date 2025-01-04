@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { memo } from "react";
+import ContactFormContent from "../ContactUsContent";
 
-const index = () => {
+const ContactWrapper = () => {
   return (
-    <div>index</div>
-  )
-}
+    <div className=" bg-white  mx-auto p-5">
+      <h1 className="text-4xl font-bold text-center mt-10 mb-4">Contact Us</h1>
+      <p className="text-lg text-center mb-10">
+        We'd love to hear from you! Drop us a message below.
+      </p>
 
-export default index
+      <ContactFormContent />
+    </div>
+  );
+};
+
+export default memo(ContactWrapper);

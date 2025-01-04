@@ -5,9 +5,8 @@ const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <section className="bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400 min-h-screen shadow-md">
       <header className="text-gray-700 body-font shadow-lg">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+        <div className="container mx-auto flex flex-wrap p-md-5 p-2 flex-row items-center justify-between">
          
 
           <nav
@@ -29,7 +28,7 @@ const Index = () => {
               <a
                 key={index}
                 href={`#${item.replace(/\s+/g, "").toLowerCase()}`}
-                className="mr-5 hover:text-gray-900 text-gray-600 transition duration-300 transform hover:scale-110 hover:underline"
+                className="w-100 mr-3 hover:text-gray-900 text-gray-600 transition duration-300 transform hover:scale-110 hover:underline"
               >
                 {item}
               </a>
@@ -37,7 +36,7 @@ const Index = () => {
           </nav>
 
           {/* Buttons */}
-          <div className="flex items-center">
+          <div className="flex justify-between items-center ">
             <button className="inline-flex items-center font-semibold bg-indigo-500 text-white border-0 py-2 px-4 focus:outline-none hover:bg-indigo-600 rounded text-base transition duration-300 transform hover:scale-105">
               Hire Me <FaUserPlus size={20} className="ml-2" />
             </button>
@@ -51,7 +50,6 @@ const Index = () => {
           </div>
         </div>
       </header>
-    </section>
   );
 };
 
