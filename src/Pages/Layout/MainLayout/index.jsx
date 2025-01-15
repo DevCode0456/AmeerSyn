@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import Topbar from "../Topbar";
+ import Navbar from "../Navbar";
+import Footer from "../Footer";
 
-const index = () => {
+const MainLayout = ({ children }) => {
   return (
-    <div>index</div>
-  )
-}
+    <div className="min-h-screen flex flex-col   bg-white">
+      <Topbar/>
+      <Navbar />
+      <main className="container mx-auto px-5 w-full m-0 p-0">{children}</main>
+      <Footer />
+    </div>
+  );
+};
 
-export default index
+export default MainLayout;

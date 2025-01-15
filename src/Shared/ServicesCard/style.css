@@ -1,0 +1,90 @@
+.custom-card-container {
+  margin: 1px;
+  min-height: 300px;
+  position: relative;
+  overflow: auto hidden;
+  flex: 1 1 calc(33.333% - 20px);
+}
+
+@media (max-width: 768px) {
+  .custom-card-container {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-card-container {
+    flex: 1 1 100%;
+  }
+}
+
+.custom-card-container .side-ribbon {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 35px;
+  height: 98%;
+  position: absolute;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+  clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+}
+
+.custom-card-container .custom-card {
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  transition: transform 0.3s ease-in;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card-container .custom-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card-container .custom-card .card-body {
+  text-align: center;
+}
+
+.custom-card-container .custom-card .card-body .icon-container {
+  width: 50px;
+  height: 50px;
+  color: #007bff;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.custom-card-container .custom-card .card-body  {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.custom-card-container .custom-card .card-body .reason-description {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.custom-card-container .custom-card .circle-btn {
+  width: 50px;
+  right: -20px;
+  height: 50px;
+  bottom: -20px;
+  color: #fff;
+  display: flex;
+  font-size: 1.2rem;
+  position: absolute;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card-container .custom-card .circle-btn:hover {
+  transform: scale(1.1);
+}

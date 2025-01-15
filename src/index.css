@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --color-primary: #101828; /* Primary background color */
+  --color-secondary: #F9EDED; /* Secondary text color */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Dark Theme */
+.theme-dark {
+  --color-primary: #111A24; /* Dark background color */
+  --color-secondary:#f8EE00; /* Dark theme text color */
+  --color-tertiary:yellow; 
+
+}
+
+/* Red Theme */
+.theme-red {
+  --color-primary: #990027; /* Red theme background color */
+  --color-secondary: #FCF5F5; /* Red theme text color */
+}
+
+/* Green Theme */
+.theme-green {
+  --color-primary: DarkGreen; /* Green theme background color */
+  --color-secondary: white; /* Green theme text color */
+}
+
+/* Blue Theme */
+.theme-blue {
+  --color-primary: #408EC6; /* Blue theme background color */
+  --color-secondary: #F9EDED; /* Blue theme text color */
+}
+* {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for theme changes */
 }

@@ -1,0 +1,27 @@
+let Images = {
+  LINUX_IMG: require("../Assets/Images/Common/Linux.webp"),
+  LOGO_IMG: require("../Assets/Images/Common/logo.png"),
+  DATABASE_IMG: require("../Assets/Images/Common/Database.webp"),
+  WEB_DEVELOPMENT_IMG: require("../Assets/Images/Common/web.webp"),
+  USER_DUMMY_IMG: require("../Assets/Images/Common/AmeerHamza2.jpg"),
+  NETWORKING_IMG: require("../Assets/Images/Common/Networking.webp"),
+  THESIS_WRITING_IMG: require("../Assets/Images/Common/Thesis.webp"),
+  PROGRAMING_IMG: require("../Assets/Images/Common/Programing.webp"),
+  ANDRIOD_APP_IMG: require("../Assets/Images/Common/AndriodApp.webp"),
+  USER_DUMMY_IMG2: require("../Assets/Images/Common/AmeerHamza3.jpeg"),
+  ARTIFICAL_INTELIGENCE_IMG: require("../Assets/Images/Common/AI.webp"),
+  PENTRATION_TESTING: require("../Assets/Images/Common/Penetration.webp"),
+  RESEARCH_WORK_IMG: require("../Assets/Images/Common/ResearchWork.webp"),
+  PROOF_READING_IMG: require("../Assets/Images/Common/ProofReading.jpeg"),
+  DATA_STRUCTURE_IMG: require("../Assets/Images/Common/DataStructure.webp"),
+  CYBER_SECURITY_IMG: require("../Assets/Images/Common/CyberSecurity.webp"),
+  NETWORK_DESIGNE_IMG: require("../Assets/Images/Common/NetworkDesigne.jpeg"),
+  CLOUD_COMPUTING_IMG: require("../Assets/Images/Common/CloudComputing.jpeg"),
+  OPERTAING_SYSTEM_IMG: require("../Assets/Images/Common/OperatingSystem.jpeg"),
+  MACHINE_LEARNING_IMG: require("../Assets/Images/Common/MachineLearning.webp"),
+  ASSAMBLY_LANGUAGE_IMG: require("../Assets/Images/Common/AssemblyLanguage.webp"),
+  PROJECT_MANAGEMENT_IMG: require("../Assets/Images/Common/ProjectMangement.webp"),
+  ASSIGNMENT_WRITING_IMG: require("../Assets/Images/Common/AssignmentWritting.jpeg"),
+};
+
+export default Images;
