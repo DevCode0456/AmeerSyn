@@ -25,7 +25,6 @@
   width: 35px;
   height: 98%;
   position: absolute;
-  background: currentColor;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
   clip-path: polygon(0 0, 100% 15%, 100% 85%, 0 100%);
 }
@@ -59,7 +58,7 @@
   justify-content: center;
 }
 
-.custom-card-container .custom-card .card-body .reason-title {
+.custom-card-container .custom-card .card-body  {
   color: #333;
   font-weight: 500;
   margin-bottom: 0.5rem;

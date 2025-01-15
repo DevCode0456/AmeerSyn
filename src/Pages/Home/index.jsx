@@ -18,10 +18,10 @@ import {
 } from "react-icons/fi";
 import React from "react";
 import { Link } from "react-router-dom";
-import ServicesCard from "../../Shared/ServicesCard";
-import { FaTools, FaHandshake, FaUsers, FaQuoteLeft } from "react-icons/fa";
 import FlipCard from "../../Shared/FlipCard";
 import Images from "../../Helper/ImagesConstant";
+import ServicesCard from "../../Shared/ServicesCard";
+import { FaTools, FaHandshake, FaUsers, FaQuoteLeft } from "react-icons/fa";
 
 const CustomCard = ({ icon, title, description, color, textColor }) => {
   return (
@@ -347,31 +347,44 @@ const ServicePage = () => {
 
   return (
     <section className="my-5 p-6 bg-white">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-semibold">Our Services</h2>
-        <p className="text-lg text-gray-600">
-          At AmeerSync, we deliver exceptional solutions tailored to your needs.
-          Here’s an overview of the services we offer:
-        </p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {services.map((service, index) => (
-          <div key={index} className="mb-4">
-            <ServicesCard
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              color={service.color}
-            />
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="text-center mb-8">
+      <h2 className="text-3xl font-semibold">Our Services</h2>
+      <p className="text-lg text-gray-600">
+        At AmeerSync, we deliver exceptional solutions tailored to your needs.
+        Here’s an overview of the services we offer:
+      </p>
+    </div>
+    <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-3xl shadow-lg">
+      <iframe
+        className="absolute top-0 left-0 w-full h-full rounded-3xl"
+        src="https://www.youtube.com/embed/2G3yL9NqK-8?autoplay=1&loop=1&playlist=2G3yL9NqK-8"
+        title="YouTube Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
+      {services.map((service, index) => (
+        <div key={index} className="mb-4">
+          <ServicesCard
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+            color={service.color}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+  
+  
+  
   );
 };
 
 const Testimonials = () => (
-  <section className="py-12 rounded-xl bg-gray-50">
+  <section className="py-12 rounded-5xl bg-gray-50">
     <div className="text-center mb-8">
       <PageHeading headingText="Testimonials" />
       <SubHeading headingText="Here’s what our clients have to say about us." />
@@ -416,7 +429,7 @@ const Testimonials = () => (
 
 export default function App() {
   return (
-    <div>
+    <div className="p-5">
       <AboutOwner />
       <AboutUs />
       <ServicePage />

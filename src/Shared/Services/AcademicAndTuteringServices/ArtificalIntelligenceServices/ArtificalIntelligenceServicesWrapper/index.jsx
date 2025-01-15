@@ -1,8 +1,13 @@
 import React from 'react'
+import ArtificalIntelligenceServicesContent from '../ArtificalIntelligenceServicesContent'
 
 const index = () => {
   return (
-    <div>index</div>
+    <div>
+      <div className="container">
+        <ArtificalIntelligenceServicesContent />
+      </div>
+    </div>
   )
 }
 

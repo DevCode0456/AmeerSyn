@@ -1,19 +1,16 @@
-// tailwind.config.js
 module.exports = {
-  darkMode: "class", // Enables dark mode toggle
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class", 
+  content: ["./src/**/*.{js,jsx,ts,tsx}"], 
   theme: {
     extend: {
       colors: {
-        primary: "var(--color-primary)",
+        primary: "var(--color-primary)", 
         secondary: "var(--color-secondary)",
-        accent: "var(--color-accent)",
-        bg: "var(--color-bg)",
-        dark: "var(--color-dark)",
+        tertiary: "var(--color-tertiary)",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        heading: ["Poppins", "sans-serif"],
+        sans: ["Inter", "sans-serif"], 
+        heading: ["Poppins", "sans-serif"], 
       },
     },
   },

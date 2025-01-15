@@ -1,14 +1,14 @@
 import React from "react";
-import Topbar from "../../../Shared/Topbar";
-// import Navbar from "../../../Shared/Navbar";
-import Footer from "../../../Shared/Footer";
+import Topbar from "../Topbar";
+ import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col  text-dark bg-black">
+    <div className="min-h-screen flex flex-col   bg-white">
       <Topbar/>
-      {/* <Navbar /> */}
-      <main className="flex-1 ">{children}</main>
+      <Navbar />
+      <main className="container mx-auto px-5 w-full m-0 p-0">{children}</main>
       <Footer />
     </div>
   );

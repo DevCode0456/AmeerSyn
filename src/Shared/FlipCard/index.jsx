@@ -1,5 +1,5 @@
 import React, { memo, useState } from "react";
-import "./style.css"; // Import the CSS file
+import "./style.css"; 
 
 const FlipCard = ({ icon, title, description }) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -13,23 +13,23 @@ const FlipCard = ({ icon, title, description }) => {
   };
 
   return (
-    <div className="flip-card-container">
-      <div
-        className={`flip-card ${isFlipped ? "flipped" : ""}`}
+    <div className="flip-card-container rounded-lg ">
+      <div 
+        className={`flip-card rounded-3xl ${isFlipped ? "flipped" : ""}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="flip-card-front">
+        <div className="flip-card-front rounded-3xl w-full">
           <div>
 
-          <div className="icon mb-3">{icon}</div>
+          <div className="icon mb-3 flex justify-center">{icon}</div>
           <div>
 
           <h3 className="title text-lg font-semibold mb-2">{title}</h3>
           </div>
           </div>
         </div>
-        <div className="flip-card-back">
+        <div className="flip-card-back rounded-3xl px-3">
           <p className="description font-bold">{description}</p>
         </div>
       </div>

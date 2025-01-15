@@ -1,7 +1,6 @@
 let Images = {
   LINUX_IMG: require("../Assets/Images/Common/Linux.webp"),
-  LOGO_IMG: require("../Assets/Images/Common/logo (1).jpg"),
-  LOGO_IMG: require("../Assets/Images/Common/logo (1).jpg"),
+  LOGO_IMG: require("../Assets/Images/Common/logo.png"),
   DATABASE_IMG: require("../Assets/Images/Common/Database.webp"),
   WEB_DEVELOPMENT_IMG: require("../Assets/Images/Common/web.webp"),
   USER_DUMMY_IMG: require("../Assets/Images/Common/AmeerHamza2.jpg"),

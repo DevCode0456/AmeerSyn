@@ -4,33 +4,35 @@
 
 
 :root {
-  --color-primary: #4f46e5; /* Default Light Theme */
-  --color-secondary: #6ee7b7;
-  --color-accent: #f59e0b;
-  --color-bg: #f9fafb;
-  --color-dark: #1f2937;
+  --color-primary: #101828; /* Primary background color */
+  --color-secondary: #F9EDED; /* Secondary text color */
 }
 
+/* Dark Theme */
 .theme-dark {
-  --color-primary: #1d4ed8; /* Dark Theme */
-  --color-secondary: #22c55e;
-  --color-accent: #facc15;
-  --color-bg: #1f2937;
-  --color-dark: #f3f4f6;
+  --color-primary: #111A24; /* Dark background color */
+  --color-secondary:#f8EE00; /* Dark theme text color */
+  --color-tertiary:yellow; 
+
 }
 
-.theme-blue {
-  --color-primary: #3b82f6; /* Blue Theme */
-  --color-secondary: #0ea5e9;
-  --color-accent: #9333ea;
-  --color-bg: #eff6ff;
-  --color-dark: #1e40af;
+/* Red Theme */
+.theme-red {
+  --color-primary: #990027; /* Red theme background color */
+  --color-secondary: #FCF5F5; /* Red theme text color */
 }
 
+/* Green Theme */
 .theme-green {
-  --color-primary: #16a34a; /* Green Theme */
-  --color-secondary: #059669;
-  --color-accent: #10b981;
-  --color-bg: #f0fdf4;
-  --color-dark: #064e3b;
+  --color-primary: DarkGreen; /* Green theme background color */
+  --color-secondary: white; /* Green theme text color */
+}
+
+/* Blue Theme */
+.theme-blue {
+  --color-primary: #408EC6; /* Blue theme background color */
+  --color-secondary: #F9EDED; /* Blue theme text color */
+}
+* {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for theme changes */
 }

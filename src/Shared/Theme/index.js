@@ -1,9 +1,9 @@
-import { FaMoon, FaSun } from "react-icons/fa";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 
 const ThemeToggle = () => {
   const [currentTheme, setCurrentTheme] = useState(0);
-  const themes = ["", "theme-dark", "theme-blue", "theme-green"];
+  const themes = [ "theme-light", "theme-red", "theme-dark", "theme-blue", "theme-green"];
+  const themeNames = ["Light", "Red", "Dark", "Blue" ,"green"];
 
   useEffect(() => {
     document.documentElement.className = themes[currentTheme];
@@ -14,16 +14,9 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="bg-primary absolute top-4 right-4  text-white p-3 px-6 rounded-3xl  shadow hover:bg-secondary transition"
-    >
-      <div className="flex items-center justify-center ">
-        {" "}
-        <FaMoon className="me-3" /> <FaSun />
-      </div>
-    </button>
+<>
+</>
   );
 };
 
-export default ThemeToggle;
+export default memo(ThemeToggle);
