@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-gray-600 body-font border-t w-full border-gray-200">
+    <footer className="text-primary bg-secondary body-font border-t w-full border-gray-200">
       <div className="container px-5 py-16 mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="w-64 text-center md:text-left mb-6 md:mb-0">
           <a
@@ -38,7 +38,7 @@ const Footer = () => {
               src={Images.LOGO_IMG}
               className="w-25 h-14 rounded-full flex-shrink-0 object-cover object-center"
             />          </a>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-sm text-primary">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
@@ -105,7 +105,7 @@ const Footer = () => {
 
       <div className="bg-gray-100 py-4 px-5">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-primary">
             AmeerSync © 2024. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">

@@ -1,6 +1,7 @@
 
 import { FiMenu, FiX } from "react-icons/fi"; 
 import {React,  memo, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,33 +29,25 @@ const Topbar = () => {
      
 
           <nav className="hidden lg:flex flex-wrap items-center text-base justify-center">
-            <a href="#" className="mr-5 text-secondary font-semibold transition">
+            <Link to={"/"}  className="mr-5 text-secondary font-semibold transition">
               Home
-            </a>
+            </Link>
           
-            <a href="#" className="mr-5 text-secondary font-semibold transition">
+            <Link to={"/about-us"} className="mr-5 text-secondary font-semibold transition">
            About Us 
-            </a>
-            <a href="#" className="mr-5 text-secondary font-semibold transition">
+            </Link>
+            <Link to={"/services"}  className="mr-5 text-secondary font-semibold transition">
             Services
-            </a>
-            <a href="#" className="mr-5 text-secondary font-semibold transition">
-           Projects
-            </a>
+            </Link>
+        
 
-            <a href="#" className="mr-5 text-secondary font-semibold transition">
+            <Link to={"/why-choose-us"}  className="mr-5 text-secondary font-semibold transition">
               Why Choose Us
-            </a>
+            </Link>
           
-            <a href="#" className="mr-5 text-secondary font-semibold transition">
-           FaQs
-            </a>
-            <a href="#" className="mr-5 text-secondary font-semibold transition">
-            Technologies
-            </a>
-            <a href="#" className="mr-5 text-secondary font-semibold transition">
-           Testimonials
-            </a>
+         
+         
+          
           </nav>
 
       
@@ -80,31 +73,31 @@ const Topbar = () => {
         {isMenuOpen && (
           <div className="lg:hidden">
             <nav className="flex flex-col items-start space-y-2 p-4 bg-gray-100 rounded-lg">
-            <a href="#" className="mr-5 text-primary font-semibold transition">
+            <a  className="mr-5 text-primary font-semibold transition">
               Home
             </a>
           
-            <a href="#" className="mr-5 text-primary font-semibold transition">
+            <a  className="mr-5 text-primary font-semibold transition">
            About Us 
             </a>
-            <a href="#" className="mr-5 text-primary font-semibold transition">
+            <a  className="mr-5 text-primary font-semibold transition">
             Services
             </a>
-            <a href="#" className="mr-5 text-primary font-semibold transition">
+            <a  className="mr-5 text-primary font-semibold transition">
            Projects
             </a>
 
-            <a href="#" className="mr-5 text-primary font-semibold transition">
+            <a  className="mr-5 text-primary font-semibold transition">
               Why Choose Us
             </a>
           
-            <a href="#" className="mr-5 text-primary font-semibold transition">
+            <a  className="mr-5 text-primary font-semibold transition">
            FaQs
             </a>
-            <a href="#" className="mr-5 text-primary font-semibold transition">
+            <a  className="mr-5 text-primary font-semibold transition">
             Technologies
             </a>
-            <a href="#" className="mr-5 text-primary font-semibold transition">
+            <a  className="mr-5 text-primary font-semibold transition">
            Testimonials
             </a>
             </nav>

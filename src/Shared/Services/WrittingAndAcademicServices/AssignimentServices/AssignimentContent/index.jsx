@@ -1,15 +1,15 @@
-import Accordin from './Accordin';
-import Images from './ImagesConstant';
+import Accordin from '../../../../Accordin';
+import Images from '../../../../../Helper/ImagesConstant';
 import { motion } from 'framer-motion';
-import HeroSection from './HeroSection';
+import HeroSection from '../../../../HeroSection';
 import { Link } from 'react-router-dom';
-import Testimonials from './Testimonials';
-import ServicesCard from './ServicesCard';
-import AssignmentCard from './AssignmentCard';
+import Testimonials from '../../../../Testimonials';
+import ServicesCard from '../../../../ServicesCard';
 import { Carousel } from 'react-responsive-carousel';
 import React, { useState, useEffect, memo } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FaFileAlt, FaUserEdit, FaRegMoneyBillAlt, FaComments } from 'react-icons/fa';
+import ContactUsSection from '../../../../ContactUsSection';
 
 // Fake data for assignments, services, and testimonials
 const assignments = [
@@ -123,7 +123,7 @@ const AssignimentContent = () => {
         <h2 className="text-center text-3xl font-bold mb-6">Our Popular Assignments</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {assignments.map((assignment) => (
-            <AssignmentCard
+            <ServicesCard
               key={assignment.id}
               assignment={assignment}
               onClick={() => handleSelectAssignment(assignment)}
@@ -151,6 +151,8 @@ const AssignimentContent = () => {
           ))}
         </div>
       </motion.div>
+            <ContactUsSection />
+      
 
       {/* Testimonials Section */}
       <motion.div

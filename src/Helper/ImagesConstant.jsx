@@ -1,13 +1,15 @@
 let Images = {
-  LINUX_IMG: require("../Assets/Images/Common/Linux.webp"),
+  LINUX_IMG: require("../Assets/Images/Common/Linux.png"),
   LOGO_IMG: require("../Assets/Images/Common/logo.png"),
+  NODE_IMG: require("../Assets/Images/Common/Node.jpg"),
+
   DATABASE_IMG: require("../Assets/Images/Common/Database.webp"),
-  WEB_DEVELOPMENT_IMG: require("../Assets/Images/Common/web.webp"),
+  WEB_DEVELOPMENT_IMG: require("../Assets/Images/Common/WebDev.jpg"),
   USER_DUMMY_IMG: require("../Assets/Images/Common/AmeerHamza2.jpg"),
   NETWORKING_IMG: require("../Assets/Images/Common/Networking.webp"),
   THESIS_WRITING_IMG: require("../Assets/Images/Common/Thesis.webp"),
   PROGRAMING_IMG: require("../Assets/Images/Common/Programing.webp"),
-  ANDRIOD_APP_IMG: require("../Assets/Images/Common/AndriodApp.webp"),
+  ANDRIOD_APP_IMG: require("../Assets/Images/Common/AndriodApp.jpg"),
   USER_DUMMY_IMG2: require("../Assets/Images/Common/AmeerHamza3.jpeg"),
   ARTIFICAL_INTELIGENCE_IMG: require("../Assets/Images/Common/AI.webp"),
   PENTRATION_TESTING: require("../Assets/Images/Common/Penetration.webp"),
