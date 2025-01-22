@@ -1,55 +1,53 @@
 import React, { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FiMinus, FiPlus } from "react-icons/fi";
 
-const FAQSection = ({ faqs }) => {
-  const [open, setOpen] = useState(0); // Initialize with 0 to open the first FAQ item by default
+const Accordin = ({ faqs }) => {
+  const [open, setOpen] = useState(0); 
 
   const toggle = (id) => {
     setOpen(open === id ? null : id);
   };
 
   return (
-    <div className="faq-section px-8 py-6 bg-gray-100 rounded-lg shadow-md">
-      <h2 className="text-center text-2xl font-bold text-gray-800 mb-6">
-        Frequently Asked Questions
-      </h2>
-      <div className="space-y-4">
+    <div className="container mx-auto md:p-32 p-4 py-6 rounded-lg">
+      <div className="space-y-4 bg-white">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className={`faq-item border rounded-lg overflow-hidden shadow-sm transition-all duration-300 ${
-              open === index ? "faq-open bg-blue-50" : "faq-closed bg-white"
-            }`}
+            className="border-b-2 overflow-hidden transition-all duration-700"
           >
             <button
               onClick={() => toggle(index)}
-              className="faq-header w-full text-left px-4 py-3 bg-primary text-white font-semibold flex justify-between items-center transition duration-300"
+              className="w-full text-left px-4 py-3 bg-primary font-semibold flex justify-between items-center transition duration-300"
             >
-              <span>{faq.question}</span>
+              <span className="text-secondary">{faq.question}</span>
               <span className="ml-2 flex items-center">
                 {open === index ? (
-                  <FaChevronUp
-                    size={18}
-                    className="transition-transform duration-300"
+                  <FiMinus
+                    size={22}
+                    className="transition-transform duration-300 text-secondary"
                   />
                 ) : (
-                  <FaChevronDown
-                    size={18}
-                    className="transition-transform duration-300"
+                  <FiPlus
+                    size={22}
+                    className="transition-transform duration-300 text-secondary"
                   />
                 )}
               </span>
             </button>
-            {open === index && (
-              <div className="faq-body px-4 py-3 bg-gray-100 text-gray-700">
-                {faq.answer}
-              </div>
-            )}
+            <div
+              className="px-4 py-3 text-gray-700 overflow-hidden transition-all duration-700"
+              style={{
+                maxHeight: open === index ? "1000px" : "0",
+              }}
+            >
+              {open === index ? faq.answer : ""}
+            </div>
           </div>
-        ))}    
+        ))}
       </div>
     </div>
   );
 };
 
-export default FAQSection;
+export default Accordin ;

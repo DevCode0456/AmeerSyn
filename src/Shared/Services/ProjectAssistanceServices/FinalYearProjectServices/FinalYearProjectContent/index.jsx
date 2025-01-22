@@ -8,6 +8,7 @@ import Accordin from "../../../../Accordin";
 import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ContactUsSection from "../../../../ContactUsSection";
 
 const FinalYearProjectContent = () => {
   const services = [
@@ -199,6 +200,7 @@ const FinalYearProjectContent = () => {
           ))}
         </div>
       </motion.div>
+      <ContactUsSection />
 
       <motion.div
         className="my-10"

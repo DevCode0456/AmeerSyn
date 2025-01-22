@@ -29,7 +29,7 @@ const FlipCard = ({ icon, title, description }) => {
           </div>
           </div>
         </div>
-        <div className="flip-card-back rounded-3xl px-3">
+        <div className="flip-card-back bg rounded-3xl px-3">
           <p className="description font-bold">{description}</p>
         </div>
       </div>

@@ -32,6 +32,7 @@ import ServicesCard from "../../../../ServicesCard";
 import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ContactUsSection from "../../../../ContactUsSection";
 
 const WebDevelopementContent = () => {
   const projects = [
@@ -209,7 +210,7 @@ const WebDevelopementContent = () => {
         buttonText="Get Started"
         title="Web Development Services"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.WEB_DEV_IMG1}
+        imageSrc={Images.WEB_DEVELOPMENT_IMG}
         description="Take your online presence to the next level with our comprehensive web development services. From responsive designs to robust back-end solutions, we deliver results that drive success."
         details={
           "Our web development services cater to businesses aiming for digital transformation. Whether it's a corporate website, e-commerce platform, or custom application, we ensure top-notch quality and performance."
@@ -256,6 +257,8 @@ const WebDevelopementContent = () => {
           ))}
         </div>
       </motion.div>
+            <ContactUsSection />
+      
 
       <motion.div
         className="my-10"

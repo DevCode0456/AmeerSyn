@@ -2,19 +2,15 @@ import {
   FaCog,
   FaHdd,
   FaLock,
-  FaRobot,
   FaTools,
   FaClock,
   FaCloud,
-  FaBrain,
   FaPenFancy,
-  FaDatabase,
   FaUserCheck,
   FaHandshake,
   FaLightbulb,
   FaShieldAlt,
-  FaCodeBranch,
-  FaLaptopCode,
+  FaCodeBranch, 
   FaCheckCircle,
   FaNetworkWired,
   FaLinux
@@ -29,6 +25,7 @@ import ServicesCard from "../../../../ServicesCard";
 import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ContactUsSection from "../../../../ContactUsSection";
 
 const LinuxContent = () => {
   const projects = [
@@ -221,7 +218,7 @@ const LinuxContent = () => {
         buttonText="Get Started"
         title="Linux Development Services"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.LINUX_IMG1}
+        imageSrc={Images.LINUX_IMG}
         description="Unlock the power of Linux with our tailored solutions. From server setup and optimization to system security and automation, we deliver services that meet your business goals."
         details={
           "Our Linux services ensure reliable, secure, and efficient operations. Whether it's setting up a new system, integrating cloud solutions, or automating processes, we have the expertise to help. Explore the benefits of Linux for cost-effective and scalable solutions."
@@ -268,6 +265,7 @@ const LinuxContent = () => {
           ))}
         </div>
       </motion.div>
+      <ContactUsSection />
 
       <motion.div
         className="my-10"

@@ -10,9 +10,13 @@ import {
   FaNetworkWired,
   FaRobot,
   FaLaptopCode,
-  FaDatabase,
   FaFire,
-  FaProjectDiagram
+  FaProjectDiagram,
+  FaCheckCircle,
+  FaUserCheck,
+  FaClock,
+  FaHandshake,
+  FaLightbulb
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
@@ -24,6 +28,7 @@ import ServicesCard from "../../../../ServicesCard";
 import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ContactUsSection from "../../../../ContactUsSection";
 
 const NodeContent = () => {
   const projects = [
@@ -201,7 +206,7 @@ const NodeContent = () => {
         buttonText="Get Started"
         title="Node.js Development Services"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.NODE_DEV_IMG1}
+        imageSrc={Images.NODE_IMG}
         description="Build scalable and high-performance applications with our expert Node.js development services."
         details={
           "Our Node.js development services provide solutions tailored to your business needs. Whether you need real-time apps, backend services, or scalable cloud solutions, we have the expertise to bring your ideas to life."
@@ -248,6 +253,7 @@ const NodeContent = () => {
           ))}
         </div>
       </motion.div>
+      <ContactUsSection />
 
       <motion.div
         className="my-10"

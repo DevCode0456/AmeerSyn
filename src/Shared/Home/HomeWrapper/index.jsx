@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { memo } from "react";
+import HomeContent from "../HomeContent";
 
-const index = () => {
+const HomeWrapper = () => {
   return (
-    <div>index</div>
-  )
-}
+    <div className=" mx-auto ">
+      <HomeContent />
+    </div>
+  );
+};
 
-export default index
+export default memo(HomeWrapper);

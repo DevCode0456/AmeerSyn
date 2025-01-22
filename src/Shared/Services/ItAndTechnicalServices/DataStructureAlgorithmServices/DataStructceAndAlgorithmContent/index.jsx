@@ -6,6 +6,9 @@ import {
   FaBrain,
   FaFileAlt,
   FaLaptopCode,
+  FaCheckCircle,
+  FaUserCheck,
+  FaClock,
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
@@ -17,6 +20,7 @@ import ServicesCard from "../../../../ServicesCard";
 import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ContactUsSection from "../../../../ContactUsSection";
 
 const DataStructceAndAlgorithmContent = () => {
   const projects = [
@@ -224,6 +228,7 @@ const DataStructceAndAlgorithmContent = () => {
           ))}
         </div>
       </motion.div>
+      <ContactUsSection />
 
       <motion.div
         className="my-10"
