@@ -24,6 +24,14 @@ let Images = {
   ASSAMBLY_LANGUAGE_IMG: require("../Assets/Images/Common/AssemblyLanguage.webp"),
   PROJECT_MANAGEMENT_IMG: require("../Assets/Images/Common/ProjectMangement.webp"),
   ASSIGNMENT_WRITING_IMG: require("../Assets/Images/Common/AssignmentWritting.jpeg"),
+  TERMS_CONDITION_IMG: require("../Assets/Images/Common/terms.png"),
+  NEED_HELP_IMG: require("../Assets/Images/Common/need-help.png"),
+  FEEDBACK_IMG: require("../Assets/Images/Common/feedback.png"),
+  CONTACT_US_IMG: require("../Assets/Images/Common/Contact-Us.png"),
+
+
+
+
 };
 
 export default Images;

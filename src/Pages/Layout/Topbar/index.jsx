@@ -17,7 +17,7 @@ const Topbar = () => {
 
   return (
     <div>
-      <header className="text-gray-600 body-font bg-white shadow">
+      <header className="text-gray-600 body-font bg-container shadow">
         <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2">
           <a
             className="flex title-font font-medium items-center md:mb-0"

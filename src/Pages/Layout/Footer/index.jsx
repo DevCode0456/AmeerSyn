@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-primary bg-secondary body-font border-t w-full border-gray-200">
+    <footer className="text-primary bg-container body-font border-t w-full border-gray-200">
       <div className="container px-5 py-16 mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="w-64 text-center md:text-left mb-6 md:mb-0">
           <a

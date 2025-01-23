@@ -20,7 +20,7 @@ import React, { memo } from "react";
 import { motion } from "framer-motion";
 import FlipCard from "../../../Shared/FlipCard";
 import Images from "../../../Helper/ImagesConstant";
-import Testimonials from "../../../Shared/Testimonials";
+import FeedbackSection from "../../../Shared/Testimonials";
 import ServicesCard from "../../../Shared/ServicesCard";
 import { FaTools, FaHandshake, FaUsers } from "react-icons/fa";
 import ContactUsSection from "../../ContactUsSection";
@@ -74,8 +74,8 @@ const HomeContent = () => {
     ];
 
     return (
-      <section className="py-10  rounded-4">
-        <div className="container mx-auto py-10">
+      <section className="py-10 bg-container  rounded-4">
+        <div className=" mx-auto py-10">
           <div className="text-center mb-4">
             <PageHeading headingText="Why Choose Us" />
             <SubHeading headingText="Discover the reasons why clients trust us for their projects and rely on our expertise." />
@@ -100,26 +100,26 @@ const HomeContent = () => {
     );
   };
 
-  const testimonialsData = [
-    {
-      text: "The app delivered is exactly what we envisioned. Fantastic work!",
-      name: "Sarah Lee",
-      role: "Startup Founder",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      text: "Excellent service and a top-quality app. Highly recommended!",
-      name: "Mark Wilson",
-      role: "Business Owner",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      text: "Our app launch was a huge success thanks to their expert development.",
-      name: "Emily Davis",
-      role: "Product Manager",
-      image: "https://via.placeholder.com/150",
-    },
-  ];
+  // const testimonialsData = [
+  //   {
+  //     text: "The app delivered is exactly what we envisioned. Fantastic work!",
+  //     name: "Sarah Lee",
+  //     role: "Startup Founder",
+  //     image: "https://via.placeholder.com/150",
+  //   },
+  //   {
+  //     text: "Excellent service and a top-quality app. Highly recommended!",
+  //     name: "Mark Wilson",
+  //     role: "Business Owner",
+  //     image: "https://via.placeholder.com/150",
+  //   },
+  //   {
+  //     text: "Our app launch was a huge success thanks to their expert development.",
+  //     name: "Emily Davis",
+  //     role: "Product Manager",
+  //     image: "https://via.placeholder.com/150",
+  //   },
+  // ];
 
   const AboutOwner = () => {
     return (
@@ -403,7 +403,7 @@ const HomeContent = () => {
           What Our Clients Say
         </h2>
         <div className="">
-          <Testimonials testimonials={testimonialsData} />
+        <FeedbackSection /> {/* Display the testimonials here */}
         </div>
       </motion.div>
       ;
