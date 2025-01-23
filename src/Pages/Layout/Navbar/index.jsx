@@ -1,21 +1,48 @@
 
+import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi"; 
 import {React,  memo, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState(0);
-    const themes = [ "theme-light", "theme-red", "theme-dark", "theme-blue", "theme-green"];
-    const themeNames = ["Light", "Red", "Dark", "Blue" ,"green"];
+    const [currentTheme, setCurrentTheme] = useState(0);
+   
+     const themes = [
+       "theme-modern-tech",
+       "theme-cyber-blue",
+       "theme-minimal-white",
+       "theme-classic-green",
+       "theme-elegant-purple",
+       "theme-black-gold",
+       "theme-dynamic-red",
+       "theme-oceanic-blue",
+       "theme-sunset-orange",
+       "theme-professional-gray",
+     ];
+   
+     const themeNames = [
+       "Modern Tech",
+       "Cyber Blue",
+       "Minimal White",
+       "Classic Green",
+       "Elegant Purple",
+       "Sleek Black & Gold",
+       "Dynamic Red",
+       "Oceanic Blue",
+       "Sunset Orange",
+       "Professional Gray",
+     ];
+   
+     useEffect(() => {
+       themes.forEach((theme) => document.documentElement.classList.remove(theme));
+       document.documentElement.classList.add(themes[currentTheme]);
+     }, [currentTheme]);
+   
+     const toggleTheme = () => {
+       setCurrentTheme((prev) => (prev + 1) % themes.length); 
+     };
+   
   
-    useEffect(() => {
-      document.documentElement.className = themes[currentTheme];
-    }, [currentTheme]);
-  
-    const toggleTheme = () => {
-      setCurrentTheme((prev) => (prev + 1) % themes.length);
-    };
   
 
   const toggleMenu = () => {

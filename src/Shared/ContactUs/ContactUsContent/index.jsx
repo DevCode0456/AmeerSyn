@@ -28,8 +28,10 @@ const ContactFormContent = () => {
     setIsFlipped((prev) => !prev);
   };
 
+
   return (
     <div className="relative w-full mx-auto overflow-hidden">
+      
       <div
         className={`flex w-full rounded-3xl shadow-lg border-secondary border-2 p-2 bg-secondary transform transition-transform duration-700 ease-in-out ${
           isFlipped ? "flex-row-reverse translate-x-0" : "flex-row translate-x-0"

@@ -2,37 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --color-primary: #323d9b; /* Primary background color */
-  --color-secondary: #f7d9d9; /* Secondary text color */
+  --color-text: #333;
+  --color-primary: #0070f3;
+  --color-secondary: #ff4081;
+  --color-container: #f8f8f8;
+  --color-button: #6200ea;
 }
 
-/* Dark Theme */
-.theme-dark {
-  --color-primary: #111A24; /* Dark background color */
-  --color-secondary:#f8EE00; /* Dark theme text color */
-  --color-tertiary:yellow; 
-
+/* Modern Tech */
+.theme-modern-tech {
+  --color-primary: #3B82F6;
+  --color-secondary: #ffffff;
+  --color-text: #1E293B;
+  --color-container: #dddd;
+  --color-button: #3B82F6;
 }
 
-/* Red Theme */
-.theme-red {
-  --color-primary: #990027; /* Red theme background color */
-  --color-secondary: #FCF5F5; /* Red theme text color */
+/* Cyber Blue */
+.theme-cyber-blue {
+  --color-primary: #3A86FF;
+  --color-secondary: #0D1B2A;
+  --color-text: #E0E1DD;
+  --color-container: #1B263B;
+  --color-button: #3A86FF;
 }
 
-/* Green Theme */
-.theme-green {
-  --color-primary: DarkGreen; /* Green theme background color */
-  --color-secondary: white; /* Green theme text color */
+/* Minimal White */
+.theme-minimal-white {
+  --color-primary: #006D77;
+  --color-secondary: #FFFFFF;
+  --color-text: #222222;
+  --color-container: #dddd;
+  --color-button: #006D77;
 }
 
-/* Blue Theme */
-.theme-blue {
-  --color-primary: #408EC6; /* Blue theme background color */
-  --color-secondary: #F9EDED; /* Blue theme text color */
+/* Classic Green */
+.theme-classic-green {
+  --color-primary: #52B788;
+  --color-secondary: #F0F4F8;
+  --color-text: #1B4332;
+  --color-container: #D8F3DC;
+  --color-button: #52B788;
 }
+
+/* Elegant Purple */
+.theme-elegant-purple {
+  --color-primary: #8B5CF6;
+  --color-secondary: #F5F3FF;
+  --color-text: #4C1D95;
+  --color-container: #EDE9FE;
+  --color-button: #8B5CF6;
+}
+
+/* Sleek Black & Gold */
+.theme-black-gold {
+  --color-primary:#000000 ;
+  --color-secondary: #FFD700;
+  --color-text: #FFD700;
+  --color-container: #0c090988;
+  --color-button: #FFAA00;
+}
+
+/* Dynamic Red */
+.theme-dynamic-red {
+  --color-primary: #ce2449;
+  --color-secondary: #e4dfb1;
+  --color-text: #000000;
+  --color-container: #e2ebee;
+  --color-button: #F94144;
+}
+
+/* Oceanic Blue */
+.theme-oceanic-blue {
+  --color-primary: #00796B;
+  --color-secondary: #E0F7FA;
+  --color-text: #004D61;
+  --color-container: #B2EBF2;
+  --color-button: #00796B;
+}
+
+/* Sunset Orange */
+.theme-sunset-orange {
+  --color-primary: #FB8C00;
+  --color-secondary: #FFF5EB;
+  --color-text: #4E342E;
+  --color-container: #FFE0B2;
+  --color-button: #FB8C00;
+}
+
+/* Professional Gray */
+.theme-professional-gray {
+  --color-primary: #828282;
+  --color-secondary: #F7F7F7;
+  --color-text: #333333;
+  --color-container: #E0E0E0;
+  --color-button: #828282;
+}
+
 * {
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for theme changes */
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }

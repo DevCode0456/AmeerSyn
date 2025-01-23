@@ -13,7 +13,7 @@ const ContactUsSection = () => {
     transition={{ duration: 0.8 }}
   >
     <h2 className="text-center text-3xl font-bold mb-6">Contact Us</h2>
-    <div className="bg-primary text-secondary border-2 shadow-inset border-secondary p-8 rounded-lg text-center">
+    <div className="bg-primary text-text border-2 shadow-inset border-secondary p-8 rounded-lg text-center">
     <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
     <p className="text-lg mb-6">
       Contact us today to discuss your project, and let's bring your ideas

@@ -7,6 +7,7 @@ import {
   FiCheckCircle,
 } from "react-icons/fi";
 import React, { useState } from "react";
+import Images from "../../Helper/ImagesConstant";
 
 const TermsAndConditions = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,14 +22,14 @@ const TermsAndConditions = () => {
   );
 
   const TnCItem = ({ icon, title, description }) => (
-    <div className="p-6 bg-blue-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+    <div className="p-6 bg-container rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
       <div className="flex items-center text-primary mb-4">
-        <div className="p-2 rounded-full bg-blue-500 text-white mr-4">
+        <div className="p-2 rounded-full bg-primary text-white mr-4">
           {icon}
         </div>
         <h4 className="text-xl font-semibold">{title}</h4>
       </div>
-      <p className="text-gray-700">{description}</p>
+      <p className="text-text">{description}</p>
     </div>
   );
   const faqs = [
@@ -93,8 +94,6 @@ const TermsAndConditions = () => {
         "You can reach us via the Contact Us page or explore the Need Help section on our website for more options.",
     },
   ];
-  
-  
 
   const Modal = ({ isOpen, onClose }) =>
     isOpen ? (
@@ -129,6 +128,10 @@ const TermsAndConditions = () => {
 
   return (
     <div className="container mx-auto p-8">
+      <div className="flex justify-center items-center">
+<img src={Images.TERMS_CONDITION_IMG} alt="terms&conditions" className={" mx-auto"} />
+
+      </div>
       <h1 className="text-4xl font-bold text-center text-primary mb-8">
         Terms and Conditions
       </h1>
@@ -177,7 +180,7 @@ const TermsAndConditions = () => {
 
       <SectionHeading text="Payment Terms" />
       <SectionDescription text="For our paid services, we require a 30% advance payment to begin the project." />
-      <div className="bg-green-100 p-6 rounded-xl shadow-lg">
+      <div className="bg-green-100 p-6 rounded-xl shadow-lg my-3">
         <div className="flex items-center text-green-500 mb-4">
           <div className="p-2 rounded-full bg-green-500 text-white mr-4">
             <FiCheckCircle size={32} />
@@ -214,26 +217,20 @@ const TermsAndConditions = () => {
       <SectionHeading text="Privacy Policy" />
       <SectionDescription text="Your privacy is important to us. Please refer to our Privacy Policy for detailed information." />
 
-   
-
       <SectionHeading text="Conclusion" />
       <SectionDescription text="Thank you for taking the time to read and understand our Terms and Conditions. If you have any questions, feel free to contact us." />
 
       <div className="flex justify-center">
         <button
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700"
+          className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-secondary hover:text-text"
           onClick={() => setModalOpen(true)}
         >
           Accept Terms and Conditions
         </button>
       </div>
-      
-      
 
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
-
-
   );
 };
 
