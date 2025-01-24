@@ -4,6 +4,10 @@ import { MdContactPhone } from "react-icons/md";
 
 const CustomCard = ({ icon, title, description }) => {
   return (
+<>
+  
+    
+
     <div class="custom-card-container rounded-3xl py-5 p-3 md:p-5 bg-primary text-center">
       <div class="side-ribbon shadow-5xl bg-primary"></div>
       <div class="custom-card bg-white rounded-3xl shadow-sm px-0">
@@ -19,6 +23,7 @@ const CustomCard = ({ icon, title, description }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

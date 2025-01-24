@@ -74,7 +74,7 @@ const HomeContent = () => {
     ];
 
     return (
-      <section className="py-10 bg-container  rounded-4">
+      <section className="py-10 bg-container p-2  rounded-4">
         <div className=" mx-auto py-10">
           <div className="text-center mb-4">
             <PageHeading headingText="Why Choose Us" />
@@ -100,26 +100,7 @@ const HomeContent = () => {
     );
   };
 
-  // const testimonialsData = [
-  //   {
-  //     text: "The app delivered is exactly what we envisioned. Fantastic work!",
-  //     name: "Sarah Lee",
-  //     role: "Startup Founder",
-  //     image: "https://via.placeholder.com/150",
-  //   },
-  //   {
-  //     text: "Excellent service and a top-quality app. Highly recommended!",
-  //     name: "Mark Wilson",
-  //     role: "Business Owner",
-  //     image: "https://via.placeholder.com/150",
-  //   },
-  //   {
-  //     text: "Our app launch was a huge success thanks to their expert development.",
-  //     name: "Emily Davis",
-  //     role: "Product Manager",
-  //     image: "https://via.placeholder.com/150",
-  //   },
-  // ];
+ 
 
   const AboutOwner = () => {
     return (
@@ -354,21 +335,17 @@ const HomeContent = () => {
     return (
       <section className="my-5 p-6 ">
         <div className="text-center mb-8">
+        <div className="flex justify-center items-center">
+<img src={Images.SERVICES_IMG} alt="terms&conditions" className={" max-h-64 mx-auto"} />
+
+      </div>
           <h2 className="text-3xl font-semibold">Our Services</h2>
           <p className="text-lg text-gray-600">
             At AmeerSync, we deliver exceptional solutions tailored to your
             needs. Here’s an overview of the services we offer:
           </p>
         </div>
-        <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-3xl shadow-lg">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full rounded-3xl"
-            src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1737486559/WhatsApp_Video_2025-01-22_at_12.02.36_AM_l1bl9v.mp4"
-            title="YouTube Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
+     
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
           {services.map((service, index) => (
@@ -385,9 +362,17 @@ const HomeContent = () => {
       </section>
     );
   };
-
+  <div className="relative overflow-hidden pb-[56.25%] h-0 rounded-3xl shadow-lg">
+  <iframe
+    className="absolute top-0 left-0 w-full h-full rounded-3xl"
+    src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1737486559/WhatsApp_Video_2025-01-22_at_12.02.36_AM_l1bl9v.mp4"
+    title="YouTube Video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
   return (
-    <div className="p-5 ">
+    <div className=" ">
       <AboutOwner />
       <AboutUs />
       <ServicePage />
@@ -403,7 +388,7 @@ const HomeContent = () => {
           What Our Clients Say
         </h2>
         <div className="">
-        <FeedbackSection /> {/* Display the testimonials here */}
+        <FeedbackSection /> 
         </div>
       </motion.div>
       ;

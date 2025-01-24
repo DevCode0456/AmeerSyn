@@ -1,31 +1,32 @@
 import {
+  FaTools,
   FaAndroid,
   FaMobileAlt,
-  FaAppStore,
-  FaGooglePlay,
-  FaTools,
-  FaCodeBranch,
-  FaLaptopCode,
   FaShieldAlt,
+  FaLaptopCode,
+  FaGooglePlay,
+  FaCodeBranch,
+  FaCheckCircle,
+  FaUserCheck,
   FaClock,
   FaHandshake,
   FaLightbulb,
-  FaUserCheck,
-  FaCheckCircle,
 } from "react-icons/fa";
 import React, { memo } from "react";
-import { motion } from "framer-motion";
-import Accordin from "../../../../Accordin";
-import FlipCard from "../../../../FlipCard";
 import HeroSection from "../../../../HeroSection";
-import Testimonials from "../../../../Testimonials";
-import ServicesCard from "../../../../ServicesCard";
-import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
+import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
+import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
+import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
+import Accordin from "../../../../Accordin";
+import { motion } from "framer-motion";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUs";
 
-const AndriodAppContent = () => {
+
+const AndroidAppContent = () => {
   const projects = [
     {
       title: "E-Commerce Mobile App",
@@ -174,31 +175,31 @@ const AndriodAppContent = () => {
 
   const reasons = [
     {
-      icon: <FaCheckCircle />,
+      icon: <FaCheckCircle size={50} />,
       title: "Expert Android Developers",
       description:
         "A team with years of experience in delivering top-quality apps.",
     },
     {
-      icon: <FaUserCheck />,
+      icon: <FaUserCheck size={50} />,
       title: "Client-Centric Approach",
       description:
         "We prioritize your goals to build apps that truly fit your needs.",
     },
     {
-      icon: <FaClock />,
+      icon: <FaClock size={50} />,
       title: "On-Time Delivery",
       description:
         "We ensure projects are completed within the agreed timeline.",
     },
     {
-      icon: <FaHandshake />,
+      icon: <FaHandshake size={50} />,
       title: "Transparent Workflow",
       description:
         "Regular updates and open communication during development.",
     },
     {
-      icon: <FaLightbulb />,
+      icon: <FaLightbulb size={50} />,
       title: "Innovative Solutions",
       description:
         "Using the latest tools and frameworks for innovative app features.",
@@ -223,108 +224,12 @@ const AndriodAppContent = () => {
         description="We craft top-notch Android applications tailored to your business needs. From design to deployment, we ensure excellence in every step of the app development journey."
         details="Our Android app solutions are designed for scalability, reliability, and top-tier performance. Whether you're launching your first app or expanding your digital presence, our experts are here to help."
       />
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-8">
-          {services.map((service, index) => (
-            <ServicesCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-            />
-          ))}
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-8">
-          {reasons.map((reason, index) => (
-            <div
-              className="bg-white shadow-2xl p-6 rounded-3xl  text-center"
-              key={index}
-            >
-              <div className="mb-4 text-center text-blue-500">
-                {reason.icon}
-              </div>
-              <h3 className="font-semibold text-xl mb-2">{reason.title}</h3>
-              <p className="text-gray-600">{reason.description}</p>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-            <ContactUsSection />
-      
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">
-          Technologies We Use
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
-            <FlipCard
-              key={index}
-              icon={tech.icon}
-              title={tech.title}
-              description={tech.description}
-            />
-          ))}
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Our Projects</h2>
-        <Carousel showThumbs={false}>
-          {projects.map((project, index) => (
-            <div key={index}>
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-lg"
-              />
-              <p className="legend text-center mt-4 text-lg">
-                <strong>{project.title}</strong>: {project.description}
-              </p>
-            </div>
-          ))}
-        </Carousel>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">
-          What Our Clients Say
-        </h2>
-        <div className="">
-          <Testimonials testimonials={testimonialsData} />
-        </div>
-      </motion.div>
-
+      <ServicesSection services={services} />
+      <TechnologiesSection technologies={technologies} />
+      <TestimonialsSection testimonials={testimonialsData} />
+      <ProjectsSection projects={projects} />
+      <ContactUsSection />
+      <WhyChooseUsSection reasons={reasons	}/>
       <motion.div
         className="my-10"
         initial={{ opacity: 0, x: -50 }}
@@ -333,8 +238,8 @@ const AndriodAppContent = () => {
       >
         <Accordin faqs={faqs} />
       </motion.div>
-    </div>    
+    </div>
   );
 };
 
-export default memo(AndriodAppContent);
+export default memo(AndroidAppContent);

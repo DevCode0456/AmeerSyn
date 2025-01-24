@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
+import Images from "../../Helper/ImagesConstant";
 
 const Accordin = ({ faqs }) => {
   const [open, setOpen] = useState(0); 
@@ -9,7 +10,15 @@ const Accordin = ({ faqs }) => {
   };
 
   return (
-    <div className="container mx-auto md:p-32 p-4 py-6 rounded-lg">
+    <div className="container mx-auto  p-4 py-6 rounded-lg">
+
+<div className="flex justify-center items-center">
+<img src={Images.FAQS_IMG} alt="terms&conditions" className={" max-h-64 mx-auto"} />
+
+      </div>
+      <h1 className="text-4xl font-bold text-center text-primary py-3">
+Frequently Asked Questions      </h1>
+
       <div className="space-y-4 bg-white">
         {faqs.map((faq, index) => (
           <div
