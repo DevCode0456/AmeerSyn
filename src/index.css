@@ -59,8 +59,8 @@
 .theme-black-gold {
   --color-primary:#000000 ;
   --color-secondary: #FFD700;
-  --color-text: #FFD700;
-  --color-container: #0c090988;
+  --color-text: #000000;
+  --color-container: #dfd4d4;
   --color-button: #FFAA00;
 }
 
@@ -96,7 +96,7 @@
   --color-primary: #828282;
   --color-secondary: #F7F7F7;
   --color-text: #333333;
-  --color-container: #E0E0E0;
+  --color-container: #f0d7d7;
   --color-button: #828282;
 }
 

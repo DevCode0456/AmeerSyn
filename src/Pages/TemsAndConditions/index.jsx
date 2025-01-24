@@ -105,7 +105,7 @@ const TermsAndConditions = () => {
           <p className="text-lg text-gray-600 mb-4">
             By clicking "Accept", you agree to our Terms and Conditions.
           </p>
-          <div className="flex justify-between">
+          <div className="flex justify-center gap-4">
             <button
               className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
               onClick={() => {
@@ -119,7 +119,7 @@ const TermsAndConditions = () => {
               className="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
               onClick={onClose}
             >
-              Reject
+              close
             </button>
           </div>
         </div>
@@ -222,7 +222,7 @@ const TermsAndConditions = () => {
 
       <div className="flex justify-center">
         <button
-          className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-secondary hover:text-text"
+          className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-secondary hover:text-text hover:border-button hover:border-2 transition-all duration-300"
           onClick={() => setModalOpen(true)}
         >
           Accept Terms and Conditions
