@@ -23,7 +23,7 @@ import TestimonialsSection from "../../../../PagesSectionComponents/Testimonials
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import Accordin from "../../../../Accordin";
 import { motion } from "framer-motion";
-import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUs";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 
 const AndroidAppContent = () => {

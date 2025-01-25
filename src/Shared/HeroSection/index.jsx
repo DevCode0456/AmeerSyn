@@ -1,5 +1,7 @@
 import React, { memo } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { IoIosRocket } from "react-icons/io";
 
 const HeroSection = ({
   title,
@@ -15,7 +17,7 @@ const HeroSection = ({
 }) => {
   return (
     <motion.div
-      className="hero-section flex flex-col md:flex-row bg-primary rounded-lg  items-center justify-between gap-8 py-12 px-6 my-3"
+      className="hero-section flex flex-col md:flex-row bg-primary rounded-3xl  items-center justify-between gap-8 py-12 px-6 my-3"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -28,19 +30,21 @@ const HeroSection = ({
         <p className="text-lg mb-6 text-secondary">
           {details}
         </p>
-        <button
-          className="cta-button text-white px-6 py-2 rounded-lg shadow-md transition-all duration-300"
-          onClick={onButtonClick}
-        >
-          {buttonText}
-        </button>
+        <Link to="/contact-us">
+          <button className="bg-secondary text-primary border border-secondary px-6 py-3 rounded-3xl font-semibold  ">
+            <span className="flex items-center justify-center gap-3 text-primary">
+            <IoIosRocket className="text-primary" size={24}/>    Get In Touch  
+            </span>
+           
+          </button>
+              </Link>
       </div>
-      <div className="hero-image md:w-1/2">
+      <div className="hero-image bg-container rounded-3xl overflow-hidden md:w-1/2">
         <img
           src={imageSrc}
           alt={imageAlt}
           style={{ width: imageWidth, height: imageHeight }}
-          className="rounded-lg shadow-lg"
+          className="rounded-3xl"
         />
       </div>
     </motion.div>

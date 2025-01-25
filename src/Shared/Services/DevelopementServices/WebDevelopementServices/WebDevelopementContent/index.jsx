@@ -1,13 +1,6 @@
 import {
-  FaCog,
-  FaHdd,
-  FaLock,
-  FaRobot,
-  FaTools,
   FaClock,
   FaCloud,
-  FaBrain,
-  FaPenFancy,
   FaDatabase,
   FaUserCheck,
   FaHandshake,
@@ -17,22 +10,20 @@ import {
   FaLaptopCode,
   FaCheckCircle,
   FaNetworkWired,
-  FaLinux,
-  FaShopify,
-  FaWordpress,
-  FaHtml5
+  FaHtml5,
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
-import FlipCard from "../../../../FlipCard";
 import HeroSection from "../../../../HeroSection";
-import Testimonials from "../../../../Testimonials";
-import ServicesCard from "../../../../ServicesCard";
-import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
+import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
+import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
+import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
+import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 
 const WebDevelopementContent = () => {
   const projects = [
@@ -48,7 +39,8 @@ const WebDevelopementContent = () => {
     },
     {
       title: "Web Applications",
-      description: "Created custom web applications tailored to business needs.",
+      description:
+        "Created custom web applications tailored to business needs.",
       image: Images.WEB_DEV_IMG3,
     },
     {
@@ -60,32 +52,32 @@ const WebDevelopementContent = () => {
 
   const services = [
     {
-      icon: <FaHtml5 size={100} className="mt-6" />, 
+      icon: <FaHtml5 size={100} className="mt-6" />,
       title: "Front-end Development",
       description: "Crafting visually appealing and user-friendly interfaces.",
     },
     {
-      icon: <FaCodeBranch size={100} className="mt-6" />, 
+      icon: <FaCodeBranch size={100} className="mt-6" />,
       title: "Back-end Development",
       description: "Building robust and scalable server-side solutions.",
     },
     {
-      icon: <FaLaptopCode size={100} className="mt-6" />, 
+      icon: <FaLaptopCode size={100} className="mt-6" />,
       title: "Full-stack Development",
       description: "Providing end-to-end web development services.",
     },
     {
-      icon: <FaNetworkWired size={100} className="mt-6" />, 
+      icon: <FaNetworkWired size={100} className="mt-6" />,
       title: "Website Optimization",
       description: "Enhancing performance and load times of websites.",
     },
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />, 
+      icon: <FaShieldAlt size={100} className="mt-6" />,
       title: "Web Security",
       description: "Implementing measures to safeguard websites from threats.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />, 
+      icon: <FaCloud size={100} className="mt-6" />,
       title: "Cloud Integration",
       description: "Integrating cloud services for improved functionality.",
     },
@@ -115,54 +107,60 @@ const WebDevelopementContent = () => {
   const faqs = [
     {
       question: "Do you offer responsive web design?",
-      answer: "Yes, we specialize in creating websites that look great on all devices.",
+      answer:
+        "Yes, we specialize in creating websites that look great on all devices.",
     },
     {
       question: "Can you develop custom web applications?",
-      answer: "Absolutely, we tailor web applications to meet your business needs.",
+      answer:
+        "Absolutely, we tailor web applications to meet your business needs.",
     },
     {
       question: "What technologies do you use?",
-      answer: "We use modern frameworks like React, Angular, Node.js, and more.",
+      answer:
+        "We use modern frameworks like React, Angular, Node.js, and more.",
     },
     {
       question: "Do you offer maintenance services?",
-      answer: "Yes, we provide ongoing support and maintenance for your website.",
+      answer:
+        "Yes, we provide ongoing support and maintenance for your website.",
     },
     {
       question: "How secure are your web solutions?",
-      answer: "We implement best practices to ensure your website is secure from threats.",
+      answer:
+        "We implement best practices to ensure your website is secure from threats.",
     },
   ];
 
   const technologies = [
     {
-      icon: <FaHtml5 size={100} />, 
+      icon: <FaHtml5 size={100} />,
       title: "HTML5",
       description: "The standard markup language for creating web pages.",
     },
     {
-      icon: <FaLaptopCode size={100} />, 
+      icon: <FaLaptopCode size={100} />,
       title: "CSS3",
-      description: "Styling language for creating visually engaging web designs.",
+      description:
+        "Styling language for creating visually engaging web designs.",
     },
     {
-      icon: <FaCodeBranch size={100} />, 
+      icon: <FaCodeBranch size={100} />,
       title: "JavaScript",
       description: "Programming language for dynamic and interactive content.",
     },
     {
-      icon: <FaNetworkWired size={100} />, 
+      icon: <FaNetworkWired size={100} />,
       title: "React",
       description: "A popular library for building user interfaces.",
     },
     {
-      icon: <FaCloud size={100} />, 
+      icon: <FaCloud size={100} />,
       title: "Node.js",
       description: "Server-side JavaScript for scalable applications.",
     },
     {
-      icon: <FaDatabase size={100} />, 
+      icon: <FaDatabase size={100} />,
       title: "Databases",
       description: "Efficient data management with SQL and NoSQL solutions.",
     },
@@ -170,29 +168,32 @@ const WebDevelopementContent = () => {
 
   const reasons = [
     {
-      icon: <FaCheckCircle />, 
+      icon: <FaCheckCircle />,
       title: "Proven Expertise",
-      description: "Years of experience in delivering high-quality web solutions.",
+      description:
+        "Years of experience in delivering high-quality web solutions.",
     },
     {
-      icon: <FaUserCheck />, 
+      icon: <FaUserCheck />,
       title: "Client-Centric Approach",
       description: "We tailor our services to meet your specific requirements.",
     },
     {
-      icon: <FaClock />, 
+      icon: <FaClock />,
       title: "On-Time Delivery",
-      description: "We ensure timely completion of projects without compromising quality.",
+      description:
+        "We ensure timely completion of projects without compromising quality.",
     },
     {
-      icon: <FaHandshake />, 
+      icon: <FaHandshake />,
       title: "Reliable Partnership",
       description: "Building long-term relationships with our clients.",
     },
     {
-      icon: <FaLightbulb />, 
+      icon: <FaLightbulb />,
       title: "Innovative Solutions",
-      description: "We embrace the latest trends and technologies in web development.",
+      description:
+        "We embrace the latest trends and technologies in web development.",
     },
   ];
 
@@ -216,108 +217,12 @@ const WebDevelopementContent = () => {
           "Our web development services cater to businesses aiming for digital transformation. Whether it's a corporate website, e-commerce platform, or custom application, we ensure top-notch quality and performance."
         }
       />
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <ServicesCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-            />
-          ))}
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {reasons.map((reason, index) => (
-            <div
-              className="bg-white shadow-2xl p-6 rounded-3xl text-center"
-              key={index}
-            >
-              <div className="mb-4 text-center text-blue-500">
-                {reason.icon}
-              </div>
-              <h3 className="font-semibold text-xl mb-2">{reason.title}</h3>
-              <p className="text-gray-600">{reason.description}</p>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-            <ContactUsSection />
-      
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">
-          Technologies We Use
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
-            <FlipCard
-              key={index}
-              icon={tech.icon}
-              title={tech.title}
-              description={tech.description}
-            />
-          ))}
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Our Projects</h2>
-        <Carousel showThumbs={false}>
-          {projects.map((project, index) => (
-            <div key={index}>
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-lg"
-              />
-              <p className="legend text-center mt-4 text-lg">
-                <strong>{project.title}</strong>: {project.description}
-              </p>
-            </div>
-          ))}
-        </Carousel>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">
-          What Our Clients Say
-        </h2>
-        <div className="">
-          <Testimonials testimonials={testimonialsData} />
-        </div>
-      </motion.div>
-
+      <ServicesSection services={services} />
+      <TechnologiesSection technologies={technologies} />
+      <TestimonialsSection testimonials={testimonialsData} />
+      <ProjectsSection projects={projects} />
+      <ContactUsSection />
+      <WhyChooseUsSection reasons={reasons} />
       <motion.div
         className="my-10"
         initial={{ opacity: 0, x: -50 }}

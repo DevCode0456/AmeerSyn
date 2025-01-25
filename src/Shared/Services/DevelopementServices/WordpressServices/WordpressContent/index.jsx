@@ -24,14 +24,16 @@ import {
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
-import FlipCard from "../../../../FlipCard";
 import HeroSection from "../../../../HeroSection";
-import Testimonials from "../../../../Testimonials";
-import ServicesCard from "../../../../ServicesCard";
-import { Carousel } from "react-responsive-carousel";
+
 import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
+import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
+import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
+import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
+import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const WordpressContent = () => {
   const projects = [
@@ -219,108 +221,12 @@ const WordpressContent = () => {
           "Our WordPress services cater to businesses and individuals looking to create a robust online presence. Whether it's a new website or enhancing an existing one, our solutions are designed for growth and scalability."
         }
       />
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <ServicesCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-            />
-          ))}
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {reasons.map((reason, index) => (
-            <div
-              className="bg-white shadow-2xl p-6 rounded-3xl text-center"
-              key={index}
-            >
-              <div className="mb-4 text-center text-blue-500">
-                {reason.icon}
-              </div>
-              <h3 className="font-semibold text-xl mb-2">{reason.title}</h3>
-              <p className="text-gray-600">{reason.description}</p>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-            <ContactUsSection />
-      
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">
-          Technologies We Use
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
-            <FlipCard
-              key={index}
-              icon={tech.icon}
-              title={tech.title}
-              description={tech.description}
-            />
-          ))}
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">Our Projects</h2>
-        <Carousel showThumbs={false}>
-          {projects.map((project, index) => (
-            <div key={index}>
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-lg"
-              />
-              <p className="legend text-center mt-4 text-lg">
-                <strong>{project.title}</strong>: {project.description}
-              </p>
-            </div>
-          ))}
-        </Carousel>
-      </motion.div>
-
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">
-          What Our Clients Say
-        </h2>
-        <div className="">
-          <Testimonials testimonials={testimonialsData} />
-        </div>
-      </motion.div>
-
+      <ServicesSection services={services} />
+      <TechnologiesSection technologies={technologies} />
+      <TestimonialsSection testimonials={testimonialsData} />
+      <ProjectsSection projects={projects} />
+      <ContactUsSection />
+      <WhyChooseUsSection reasons={reasons	}/>
       <motion.div
         className="my-10"
         initial={{ opacity: 0, x: -50 }}
