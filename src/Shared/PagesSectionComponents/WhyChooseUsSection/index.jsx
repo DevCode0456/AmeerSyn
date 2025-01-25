@@ -1,4 +1,3 @@
-// WhyChooseUsSection.jsx
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Images from "../../../Helper/ImagesConstant";

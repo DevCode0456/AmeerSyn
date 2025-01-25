@@ -35,6 +35,8 @@ let Images = {
   PROJECT_IMG: require("../Assets/Images/Services/project.png"),
   GET_STARTED_IMG: require("../Assets/Images/Services/getstarted.png"),
   Why_CHOOSE_US_IMG: require("../Assets/Images/Services/why choose us.png"),
+EMAIL_INVOICES_IMG: require("../Assets/Images/Services/email_invoice.png"),
+
 
 
 
