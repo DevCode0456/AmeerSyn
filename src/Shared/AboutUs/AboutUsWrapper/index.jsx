@@ -3,7 +3,7 @@ import AboutUsContent from '../AboutUsContent'
 
 const AboutUsWrapper = () => {
   return (
-    <div className='bg-gray-100'>
+    <div className=''>
 <AboutUsContent/>
     </div>
   )
