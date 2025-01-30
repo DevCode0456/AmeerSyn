@@ -12,12 +12,14 @@
 
 /* Modern Tech */
 .theme-modern-tech {
-  --color-primary: #3B82F6;
-  --color-secondary: #ffffff;
-  --color-text: #1E293B;
-  --color-container: #dddd;
-  --color-button: #3B82F6;
-}
+  
+    --color-primary: #FB8C00;
+    --color-secondary: #FFF5EB;
+    --color-text: #4E342E;
+    --color-container: #FFE0B2;
+    --color-button: #FB8C00;
+  }
+
 
 /* Cyber Blue */
 .theme-cyber-blue {

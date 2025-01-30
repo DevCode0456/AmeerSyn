@@ -5,10 +5,11 @@ import Footer from "../Footer";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col   bg-white">
+    <div className="min-h-screen flex flex-col   bg-light">
       <Topbar/>
       <Navbar />
-      <main  className="mx-auto  container w-full m-0 p-0">{children}</main>
+      <main  className="mx-auto  fluid p-0 w-full m-0 ">
+        {children}</main>
       <Footer />
     </div>
   );
