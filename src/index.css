@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --color-text: #333;
   --color-primary: #0070f3;
@@ -24,10 +26,10 @@
 /* Cyber Blue */
 .theme-cyber-blue {
   --color-primary: #3A86FF;
-  --color-secondary: #0D1B2A;
-  --color-text: #E0E1DD;
-  --color-container: #1B263B;
-  --color-button: #3A86FF;
+  --color-secondary: #dddddd;
+  --color-text:#0D1B2A ;
+  --color-container: #d1daeb;
+  --color-button: #121070;
 }
 
 /* Minimal White */
@@ -105,3 +107,48 @@
 * {
   transition: background-color 0.3s ease, color 0.3s ease; 
 }
+
+.hide-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) white;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 1px;  
+  height: 1px; 
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  background: #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  color: #FF3D00;
+  background: currentColor;
+  border-radius: 50%;
+  box-shadow: 25px 2px, 10px 22px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+

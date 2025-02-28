@@ -70,8 +70,8 @@ const NeedHelp = () => {
   ];
 
   return (
-    <div className="bg-secondarymin-h-screen p-6">
-      <div className="max-w-7xl mx-auto bg-white shadow-lg rounded-lg p-8">
+    <div className="bg-secondary max-w-full min-h-screen ">
+      <div className=" bg-white  rounded-lg p-8">
       <div className="flex justify-center items-center p-3 bg-container rounded-3xl">
 <img src={Images.NEED_HELP_IMG} alt="terms&conditions" className={" max-h-80 rounded mx-auto"} />
 

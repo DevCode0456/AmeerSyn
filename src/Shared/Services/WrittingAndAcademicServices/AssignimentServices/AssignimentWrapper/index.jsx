@@ -2,7 +2,8 @@ import React, { memo } from 'react'
 import AssignimentContent from '../AssignimentContent'
 const AssignimentWrapper = () => {
   return (
-    <div className="container fluid ">
+       <div className="m-0 p-0 ">
+
     <AssignimentContent />
   </div>  )
 }

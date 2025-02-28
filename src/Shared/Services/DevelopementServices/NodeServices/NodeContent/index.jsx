@@ -1,62 +1,37 @@
 import {
+  FaFire,
+  FaCloud,
+  FaClock,
+  FaServer,
   FaNodeJs,
   FaDatabase,
-  FaServer,
-  FaCloud,
-  FaCodeBranch,
   FaShieldAlt,
-  FaNetworkWired,
-  FaLaptopCode,
-  FaFire,
-  FaCheckCircle,
   FaUserCheck,
-  FaClock,
+  FaLightbulb,
   FaHandshake,
-  FaLightbulb
+  FaCodeBranch,
+  FaLaptopCode,
+  FaCheckCircle,
+  FaNetworkWired,
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
-
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
-import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const NodeContent = () => {
-  const projects = [
-    {
-      title: "Node.js Backend APIs",
-      description: "Built scalable and efficient RESTful APIs using Node.js.",
-      image: Images.NODE_DEV_IMG1,
-    },
-    {
-      title: "Real-time Applications",
-      description: "Developed real-time applications with WebSocket and Node.js.",
-      image: Images.NODE_DEV_IMG2,
-    },
-    {
-      title: "Microservices Architecture",
-      description: "Implemented microservices using Node.js for modular and scalable solutions.",
-      image: Images.NODE_DEV_IMG3,
-    },
-    {
-      title: "Serverless Solutions",
-      description: "Designed serverless applications with Node.js on cloud platforms.",
-      image: Images.NODE_DEV_IMG4,
-    },
-  ];
-
   const services = [
     {
       icon: <FaNodeJs size={100} className="mt-6" />,
       title: "Custom Node.js Development",
-      description: "Building high-performance Node.js solutions tailored to your needs.",
+      description:
+        "Building high-performance Node.js solutions tailored to your needs.",
     },
     {
       icon: <FaCodeBranch size={100} className="mt-6" />,
@@ -76,7 +51,8 @@ const NodeContent = () => {
     {
       icon: <FaCloud size={100} className="mt-6" />,
       title: "Cloud Deployment",
-      description: "Deploying Node.js applications to scalable cloud environments.",
+      description:
+        "Deploying Node.js applications to scalable cloud environments.",
     },
     {
       icon: <FaShieldAlt size={100} className="mt-6" />,
@@ -87,45 +63,86 @@ const NodeContent = () => {
 
   const testimonialsData = [
     {
-      text: "Node.js services helped us build a scalable backend solution!",
-      name: "Sophia Williams",
-      role: "Tech Lead",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "For my Node.js project, AmeerSync provided exceptional backend development support. Their code was clean, scalable, and optimized for performance.",
+      author: "Ethan Walker",
+      company: "DevStudio",
     },
     {
-      text: "Their expertise in real-time apps is outstanding!",
-      name: "David Taylor",
-      role: "CTO",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "They helped us migrate from a monolithic to a microservices architecture using Node.js, improving scalability and performance.",
+      author: "Alex Turner",
+      company: "CloudFlex",
     },
     {
-      text: "The serverless architecture provided was exactly what we needed.",
-      name: "Mason Green",
-      role: "Founder",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "Their real-time WebSocket integration made our chat application smooth and responsive.",
+      author: "Sophia Kim",
+      company: "ChatConnect",
+    },
+    {
+      quote:
+        "AmeerSync built a powerful REST API for our e-commerce platform using Node.js and Express.",
+      author: "David Johnson",
+      company: "ShopEase",
+    },
+    {
+      quote:
+        "Their expertise in database optimization for Node.js helped us reduce query response times by 50%.",
+      author: "Rachel Green",
+      company: "DataSphere",
+    },
+    {
+      quote:
+        "They improved the security of our Node.js app by implementing JWT authentication and role-based access control.",
+      author: "Michael Roberts",
+      company: "SecureApp",
+    },
+    {
+      quote:
+        "AmeerSync provided excellent debugging and optimization for our backend, solving performance bottlenecks.",
+      author: "Olivia Adams",
+      company: "TechSolutions",
+    },
+    {
+      quote:
+        "Their asynchronous programming techniques helped us handle high user traffic efficiently.",
+      author: "Nathan Lewis",
+      company: "ScaleUp",
+    },
+    {
+      quote:
+        "They integrated third-party APIs seamlessly, making our app feature-rich and scalable.",
+      author: "Lucas Bennett",
+      company: "APIConnect",
     },
   ];
 
   const faqs = [
     {
       question: "Do you specialize in Node.js development?",
-      answer: "Yes, we focus on creating efficient and scalable backend solutions with Node.js.",
+      answer:
+        "Yes, we focus on creating efficient and scalable backend solutions with Node.js.",
     },
     {
       question: "Can you develop real-time applications with Node.js?",
-      answer: "Absolutely, we have experience in building real-time solutions using Node.js and WebSocket.",
+      answer:
+        "Absolutely, we have experience in building real-time solutions using Node.js and WebSocket.",
     },
     {
       question: "Do you offer API development services?",
-      answer: "Yes, we design and develop RESTful APIs to integrate and enhance your applications.",
+      answer:
+        "Yes, we design and develop RESTful APIs to integrate and enhance your applications.",
     },
     {
       question: "What types of Node.js projects have you completed?",
-      answer: "From serverless solutions to real-time apps and backend services, we handle it all.",
+      answer:
+        "From serverless solutions to real-time apps and backend services, we handle it all.",
     },
     {
       question: "Do you provide maintenance for Node.js applications?",
-      answer: "Yes, we offer ongoing support and optimization for Node.js projects.",
+      answer:
+        "Yes, we offer ongoing support and optimization for Node.js projects.",
     },
   ];
 
@@ -138,7 +155,8 @@ const NodeContent = () => {
     {
       icon: <FaCodeBranch size={100} />,
       title: "Express.js",
-      description: "Web framework for building APIs and server-side applications.",
+      description:
+        "Web framework for building APIs and server-side applications.",
     },
     {
       icon: <FaDatabase size={100} />,
@@ -148,12 +166,14 @@ const NodeContent = () => {
     {
       icon: <FaLaptopCode size={100} />,
       title: "NestJS",
-      description: "A modern framework for building scalable server-side applications.",
+      description:
+        "A modern framework for building scalable server-side applications.",
     },
     {
       icon: <FaFire size={100} />,
       title: "Socket.io",
-      description: "Enabling real-time, bidirectional communication between web clients and servers.",
+      description:
+        "Enabling real-time, bidirectional communication between web clients and servers.",
     },
     {
       icon: <FaNetworkWired size={100} />,
@@ -166,17 +186,20 @@ const NodeContent = () => {
     {
       icon: <FaCheckCircle />,
       title: "Expert Developers",
-      description: "Experienced developers crafting efficient Node.js solutions.",
+      description:
+        "Experienced developers crafting efficient Node.js solutions.",
     },
     {
       icon: <FaUserCheck />,
       title: "Client Satisfaction",
-      description: "We deliver projects that align with clients' goals and needs.",
+      description:
+        "We deliver projects that align with clients' goals and needs.",
     },
     {
       icon: <FaClock />,
       title: "Timely Delivery",
-      description: "We meet deadlines and deliver high-quality Node.js applications.",
+      description:
+        "We meet deadlines and deliver high-quality Node.js applications.",
     },
     {
       icon: <FaHandshake />,
@@ -186,7 +209,8 @@ const NodeContent = () => {
     {
       icon: <FaLightbulb />,
       title: "Innovative Solutions",
-      description: "We use the latest technologies to deliver cutting-edge Node.js applications.",
+      description:
+        "We use the latest technologies to deliver cutting-edge Node.js applications.",
     },
   ];
 
@@ -196,10 +220,17 @@ const NodeContent = () => {
 
   return (
     <div className="node-development-content w-100 bg-white">
-      <HeroSection
+     
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+         <HeroSection
         icon={FaNodeJs}
-        imageWidth="600px"
-        imageHeight="400px"
+        imageWidth="100%"
+        imageHeight="500px"
         imageAlt="Node.js Development Services"
         buttonText="Get Started"
         title="Node.js Development Services"
@@ -210,19 +241,12 @@ const NodeContent = () => {
           "Our Node.js development services provide solutions tailored to your business needs. Whether you need real-time apps, backend services, or scalable cloud solutions, we have the expertise to bring your ideas to life."
         }
       />
-     <ServicesSection services={services} />
+      <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons	}/>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+      <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

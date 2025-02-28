@@ -20,34 +20,12 @@ import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 
 const NetworkingContent = () => {
-  const projects = [
-    {
-      title: "Network Design",
-      description: "Developed scalable and secure network designs for businesses.",
-      image: Images.NETWORKING_IMG1,
-    },
-    {
-      title: "Wireless Solutions",
-      description: "Implemented advanced wireless networking solutions for enterprises.",
-      image: Images.NETWORKING_IMG2,
-    },
-    {
-      title: "Network Security",
-      description: "Enhanced network security with firewalls and intrusion detection systems.",
-      image: Images.NETWORKING_IMG3,
-    },
-    {
-      title: "Cloud Networking",
-      description: "Integrated cloud networking solutions for seamless operations.",
-      image: Images.NETWORKING_IMG4,
-    },
-  ];
+ 
 
   const services = [
     {
@@ -84,24 +62,52 @@ const NetworkingContent = () => {
 
   const testimonialsData = [
     {
-      text: "The network design improved our connectivity and efficiency.",
-      name: "Alice Brown",
-      role: "IT Manager",
-      image: "https://via.placeholder.com/150",
+      quote: "Their networking solutions are fantastic! We struggled with connectivity and security issues, but AmeerSync streamlined our entire infrastructure.",
+      author: "William Harris",
+      company: "Enterprise Networks"
     },
     {
-      text: "Their wireless solutions transformed our office operations.",
-      name: "Michael Green",
-      role: "Network Engineer",
-      image: "https://via.placeholder.com/150",
+      quote: "They optimized our office network, eliminating lag and increasing speed significantly.",
+      author: "Sophia Mitchell",
+      company: "SpeedNet"
     },
     {
-      text: "Outstanding support for our network security needs!",
-      name: "Sarah Lee",
-      role: "Security Analyst",
-      image: "https://via.placeholder.com/150",
+      quote: "AmeerSync implemented a secure VPN for our remote teams, improving productivity and security.",
+      author: "David Williams",
+      company: "RemoteWorks"
     },
+    {
+      quote: "Their firewall and cybersecurity setup protected us from constant cyber threats.",
+      author: "Rachel Green",
+      company: "CyberSafe"
+    },
+    {
+      quote: "They designed a scalable cloud networking solution for our distributed applications.",
+      author: "Ethan Lewis",
+      company: "CloudConnect"
+    },
+    {
+      quote: "AmeerSync resolved our network congestion issues with advanced traffic management strategies.",
+      author: "Linda Thomas",
+      company: "NetFlow"
+    },
+    {
+      quote: "Their wireless networking solutions improved our office Wi-Fi coverage and performance.",
+      author: "Nathan Scott",
+      company: "SmartOffice"
+    },
+    {
+      quote: "They configured our data center networking, ensuring seamless communication between servers.",
+      author: "Lucas Bennett",
+      company: "DataHub"
+    },
+    {
+      quote: "AmeerSync provided an effective network monitoring solution that helps us detect issues before they become critical.",
+      author: "Emily White",
+      company: "ITGuard"
+    }
   ];
+  
 
   const faqs = [
     {
@@ -198,15 +204,21 @@ const NetworkingContent = () => {
 
   return (
     <div className="networking-content w-100 bg-white">
-      <HeroSection
+      
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <HeroSection
         icon={FaNetworkWired}
-        imageWidth="600px"
-        imageHeight="400px"
+       
         imageAlt="Networking Solutions"
         buttonText="Get Started"
         title="Networking Services"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.NETWORKING_IMG1}
+        imageSrc={Images.NETWORKING_IMG}
         description="Empower your business with our cutting-edge networking solutions. From setup and optimization to security and automation, we deliver services tailored to your needs."
         details={
           "Our networking services ensure reliable, secure, and efficient operations. Whether it's designing a new network, integrating cloud solutions, or enhancing security, we have the expertise to support you. Explore the advantages of modern networking technologies for scalable and robust solutions."
@@ -214,17 +226,10 @@ const NetworkingContent = () => {
       />
         <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
       <WhyChooseUsSection reasons={reasons	}/>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
         <Accordin faqs={faqs} />
+      <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

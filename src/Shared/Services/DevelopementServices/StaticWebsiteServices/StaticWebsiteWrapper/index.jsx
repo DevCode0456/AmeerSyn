@@ -2,7 +2,7 @@ import React from 'react'
 import StaticWebsiteContent from '../StaticWebsiteContent'
 const StaticWebsiteWrapper = () => {
   return (
-    <div className="container fluid ">
+    <div className="m-0 p-0 ">
     <StaticWebsiteContent />
   </div>  )
 }

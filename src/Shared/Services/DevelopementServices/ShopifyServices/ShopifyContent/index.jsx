@@ -24,36 +24,10 @@ import ContactUsSection from "../../../../ContactUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const ShopifyContent = () => {
-  const projects = [
-    {
-      title: "Shopify Store Development",
-      description:
-        "Built custom Shopify stores tailored to client requirements.",
-      image: Images.SHOPIFY_IMG1,
-    },
-    {
-      title: "Theme Customization",
-      description:
-        "Customized Shopify themes to enhance user experience and branding.",
-      image: Images.SHOPIFY_IMG2,
-    },
-    {
-      title: "App Integration",
-      description:
-        "Integrated third-party apps to expand Shopify store functionality.",
-      image: Images.SHOPIFY_IMG3,
-    },
-    {
-      title: "Payment Gateway Setup",
-      description:
-        "Implemented secure and reliable payment solutions for Shopify stores.",
-      image: Images.SHOPIFY_IMG4,
-    },
-  ];
+
 
   const services = [
     {
@@ -96,24 +70,53 @@ const ShopifyContent = () => {
 
   const testimonialsData = [
     {
-      text: "The Shopify store they built has significantly boosted our sales!",
-      name: "Alice Brown",
-      role: "E-commerce Entrepreneur",
-      image: "https://via.placeholder.com/150",
+      quote: "We needed a fully customized Shopify store, and AmeerSync delivered beyond expectations! The store is fast, user-friendly, and optimized for conversions.",
+      author: "Rachel Green",
+      company: "EcomBoost"
     },
     {
-      text: "Their theme customization services brought our brand to life.",
-      name: "Chris Green",
-      role: "Brand Manager",
-      image: "https://via.placeholder.com/150",
+      quote: "Their Shopify theme customization gave our store a unique and professional look.",
+      author: "David Williams",
+      company: "TrendWear"
     },
     {
-      text: "Excellent integration of payment gateways, very professional!",
-      name: "Sarah White",
-      role: "Business Owner",
-      image: "https://via.placeholder.com/150",
+      quote: "AmeerSync integrated advanced payment gateways and streamlined our checkout process.",
+      author: "Sophia Mitchell",
+      company: "ShopNow"
     },
+    {
+      quote: "Their expertise in Shopify SEO helped our store rank higher, bringing in more organic traffic.",
+      author: "Ethan Lewis",
+      company: "OrganicFashion"
+    },
+    {
+      quote: "They set up automated inventory management, saving us hours of manual updates.",
+      author: "Linda Thomas",
+      company: "SmartGadgets"
+    },
+    {
+      quote: "AmeerSync migrated our existing store to Shopify without any downtime.",
+      author: "James Carter",
+      company: "HomeDecor"
+    },
+    {
+      quote: "Their custom Shopify app allowed us to add exclusive functionalities to our store.",
+      author: "Emily Wilson",
+      company: "PetCare"
+    },
+    {
+      quote: "They provided excellent post-launch support and maintenance for our Shopify store.",
+      author: "Nathan Scott",
+      company: "FitnessPro"
+    },
+    {
+      quote: "AmeerSync optimized our store’s loading speed, reducing bounce rates significantly.",
+      author: "Lucas Harris",
+      company: "FastTrends"
+    }
   ];
+  
+  
 
   const faqs = [
     {
@@ -210,33 +213,32 @@ const ShopifyContent = () => {
 
   return (
     <div className="shopify-content w-100 bg-white">
-      <HeroSection
+    
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+          <HeroSection
         icon={FaShopify}
-        imageWidth="600px"
-        imageHeight="400px"
+      
         imageAlt="Shopify Solutions"
         buttonText="Get Started"
         title="Shopify Development Services"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.SHOPIFY_IMG1}
+        imageSrc={Images.SHOPIFY_IMG}
         description="Boost your online presence with our expert Shopify services. From store setup and theme customization to app integration and optimization, we provide solutions tailored to your business needs."
         details={
           "Our Shopify services empower businesses to succeed in the e-commerce landscape. Whether you're launching a new store or enhancing an existing one, our expertise ensures seamless and scalable solutions."
         }
       />
-    <ServicesSection services={services} />
+      <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
       <WhyChooseUsSection reasons={reasons	}/>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
         <Accordin faqs={faqs} />
+      <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

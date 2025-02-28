@@ -1,46 +1,97 @@
-import React, { memo } from 'react';
+import React, { memo } from "react";
 import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
-import { IoIosRocket } from 'react-icons/io'
-import Images from '../../Helper/ImagesConstant';
-
+import { Link } from "react-router-dom";
+import { IoIosRocket } from "react-icons/io";
+import Images from "../../Helper/ImagesConstant"; 
+import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 
 const ContactUsSection = () => {
   return (
-    <motion.div
-    className="my-10"
-    initial={{ opacity: 0, x: -50 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8 }}
-  >
-<div className="flex justify-center items-center">
-<img src={Images.CONTACT_US_IMG} alt="terms&conditions" className={" max-h-64 mx-auto"} />
-
+    <div className="bg-gradient-to-b from-primary to-pink-300">
+      <div className="justify-center w-full flex  py-5 ">
+      <motion.img
+            alt="Rocket Launch"
+            src={Images.CONTACT_US_IMG} 
+            className=" max-w-64 max-h-64 text-center rounded-full mb-6"
+            
+          />
       </div>
-      <h1 className="text-4xl font-bold text-center text-primary py-3">
-Contact Us     </h1>    <div className="bg-primary text-text border-2 shadow-inset border-secondary p-8 rounded-3xl text-center">
+      <motion.div
+        transition={{ duration: 0.8 }}
+        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 50 }}
+        className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center    p-8 md:p-12"
+      >
+      
+        {/* Left Section - Contact Info */}
+        <div className="space-y-6 text-center md:text-left">
+          <h1 className="text-3xl md:text-4xl font-semibold text-white">
+            Let's Work Together!
+          </h1>
+          <p className="text-lg text-gray-300">
+            Have a project in mind? Contact us and let's bring your ideas to
+            life with cutting-edge technology.
+          </p>
 
+          {/* Contact Details */}
+          <div className="space-y-4">
+            <div className="flex items-center justify-center md:justify-start gap-4">
+              <MdEmail className="text-white text-3xl" />
+              <p className="text-white">contact@ammersync.com</p>
+            </div>
+            <div className="flex items-center justify-center md:justify-start gap-4">
+              <MdLocationOn className="text-white text-3xl" />
+              <p className="text-white"> Morden, London UK</p>
+            </div>
+            <div className="flex items-center justify-center md:justify-start gap-4">
+              <MdPhone className="text-white text-3xl" />
+              <p className="text-white">            (+44) 7440 095528
+              </p>
+            </div>
+          </div>
+        </div>
 
-<div className="flex justify-center items-center">
-<img src={Images.GET_STARTED_IMG} alt="terms&conditions" className={" max-h-40 mx-auto"} />
+        {/* Right Section - Animated Rocket 🚀 */}
+        <div className="flex flex-col items-center md:items-end text-center ">
+          <motion.img
+            src={Images.GET_STARTED_IMG} // Rocket Image
+            alt="Rocket Launch"
+            className="w-48 md:w-64 h-auto rounded-lg mb-6"
+            animate={{
+              y: [-10, 10, -10], 
+              rotate: [-2, 2, -2], 
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 2,
+              ease: "easeInOut",
+            }}
+          />
 
-      </div>
-    <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
-    <p className="text-lg mb-6">
-      Contact us today to discuss your project, and let's bring your ideas
-      to life with cutting-edge technology!
-    </p>
-   
-    <Link to="/contact-us">
-    <button className="bg-secondary text-primary border border-secondary px-6 py-3 rounded-3xl font-semibold  ">
-      <span className="flex items-center justify-center gap-3 text-primary">
-      <IoIosRocket className="text-primary" size={24}/>    Get In Touch  
-      </span>
-     
-    </button>
-        </Link>
-  </div>
-  </motion.div>  )
-}
+          <Link to="/contact-us">
+            <motion.button
+              className="bg-white text-primary px-6 py-3 rounded-full font-semibold flex items-center gap-3 text-lg shadow-md hover:shadow-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
+              whileHover={{ scale: 1.1 }}
+            >
+              <motion.span
+                animate={{
+                  y: [-5, 5, -5], // Moves the rocket icon up & down
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+              >
+                <IoIosRocket className="text-primary" size={24} />
+              </motion.span>
+              Get In Touch
+            </motion.button>
+          </Link>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
 
-export default memo(ContactUsSection)
+export default memo(ContactUsSection);

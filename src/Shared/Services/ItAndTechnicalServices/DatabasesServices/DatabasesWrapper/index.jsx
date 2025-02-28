@@ -3,7 +3,8 @@ import DatabasesContent from '../DatabasesContent'
 
 const DatabasesWrapper = () => {
   return (
-    <div className="container fluid ">
+       <div className="m-0 p-0 ">
+
     <DatabasesContent />
   </div>  )
 }

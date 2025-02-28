@@ -16,40 +16,16 @@ import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
-
 import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const ReactContent = () => {
-  const projects = [
-    {
-      title: "React Dashboards",
-      description: "Designed and developed interactive dashboards using React.",
-      image: Images.REACT_DEV_IMG1,
-    },
-    {
-      title: "Single Page Applications",
-      description: "Built SPAs with smooth navigation and fast loading times.",
-      image: Images.REACT_DEV_IMG2,
-    },
-    {
-      title: "React Native Apps",
-      description:
-        "Developed cross-platform mobile applications with React Native.",
-      image: Images.REACT_DEV_IMG3,
-    },
-    {
-      title: "Component Libraries",
-      description: "Created reusable and scalable component libraries.",
-      image: Images.REACT_DEV_IMG4,
-    },
-  ];
+
 
   const services = [
     {
@@ -89,24 +65,53 @@ const ReactContent = () => {
 
   const testimonialsData = [
     {
-      text: "Their React solutions transformed our web presence!",
-      name: "James Carter",
-      role: "Product Manager",
-      image: "https://via.placeholder.com/150",
+      quote: "Our React.js web app needed performance improvements, and AmeerSync optimized it perfectly.",
+      author: "Liam Johnson",
+      company: "Web Solutions"
     },
     {
-      text: "Highly impressed with their state management expertise!",
-      name: "Emma Stone",
-      role: "Software Engineer",
-      image: "https://via.placeholder.com/150",
+      quote: "They helped us migrate our legacy frontend to React.js, improving performance and maintainability.",
+      author: "Sophia Kim",
+      company: "TechFlex"
     },
     {
-      text: "Our mobile app is now a market leader, thanks to them!",
-      name: "Oliver Smith",
-      role: "CEO",
-      image: "https://via.placeholder.com/150",
+      quote: "AmeerSync implemented server-side rendering (SSR), boosting our app’s SEO and loading speed.",
+      author: "Ethan Walker",
+      company: "SEOBoost"
     },
+    {
+      quote: "Their expertise in React Hooks made our application more efficient and maintainable.",
+      author: "David Williams",
+      company: "ModernApps"
+    },
+    {
+      quote: "They built an interactive React dashboard for our analytics platform. The UI is flawless!",
+      author: "Rachel Green",
+      company: "DataInsights"
+    },
+    {
+      quote: "Their state management solutions with Redux improved our app’s stability and performance.",
+      author: "Olivia Brown",
+      company: "StateSync"
+    },
+    {
+      quote: "AmeerSync created a beautiful, responsive UI that enhances our customer experience.",
+      author: "Michael Carter",
+      company: "UXPro"
+    },
+    {
+      quote: "They optimized our React app for mobile devices, improving usability significantly.",
+      author: "Charlotte Evans",
+      company: "MobileFirst"
+    },
+    {
+      quote: "Their React Native integration helped us build a cross-platform app effortlessly.",
+      author: "Lucas Bennett",
+      company: "CrossTech"
+    }
   ];
+  
+  
 
   const faqs = [
     {
@@ -171,7 +176,7 @@ const ReactContent = () => {
 
   const reasons = [
     {
-      icon: <FaCheckCircle />,
+      icon: <FaCheckCircle size={40} />,
       title: "Expert Developers",
       description: "Highly skilled in crafting React solutions.",
     },
@@ -203,34 +208,34 @@ const ReactContent = () => {
   };
 
   return (
-    <div className="react-development-content w-100 bg-white">
-      <HeroSection
+    <div className="react-development-content w-100">
+ 
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}>
+               <HeroSection
         icon={FaReact}
-        imageWidth="600px"
-        imageHeight="400px"
+        imageWidth="100%"
+        imageHeight="500px"
         imageAlt="React Development Services"
         buttonText="Get Started"
         title="React Development Services"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.REACT_DEV_IMG1}
+        imageSrc={Images.REACT_IMG}
         description="Elevate your digital solutions with our expert React development services. From dynamic SPAs to powerful React Native apps, we build experiences that engage and deliver."
         details={
           "Our React development services are tailored to meet the diverse needs of businesses. Whether it's a responsive web application, interactive dashboard, or mobile app, we deliver solutions that exceed expectations."
         }
       />
+      
       <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
       <WhyChooseUsSection reasons={reasons} />
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <Accordin faqs={faqs} />
+      <Accordin faqs={faqs} />
+      <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

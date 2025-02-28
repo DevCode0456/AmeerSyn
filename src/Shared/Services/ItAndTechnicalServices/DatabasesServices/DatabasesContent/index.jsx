@@ -30,35 +30,9 @@ import ServicesSection from "../../../../PagesSectionComponents/ServicesSection"
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 
 const DatabasesContent = () => {
-  const projects = [
-    {
-      title: "Database Optimization",
-      description:
-        "Enhanced database performance through query optimization and indexing strategies.",
-      image: Images.DATABASE_IMG1,
-    },
-    {
-      title: "Data Warehousing",
-      description:
-        "Design and implementation of robust data warehousing solutions for analytical insights.",
-      image: Images.DATABASE_IMG2,
-    },
-    {
-      title: "Database Migration",
-      description:
-        "Seamless migration of databases with minimal downtime and data integrity.",
-      image: Images.DATABASE_IMG3,
-    },
-    {
-      title: "Backup and Recovery",
-      description:
-        "Comprehensive backup and disaster recovery solutions for critical databases.",
-      image: Images.DATABASE_IMG4,
-    },
-  ];
+
 
   const services = [
     {
@@ -101,24 +75,52 @@ const DatabasesContent = () => {
 
   const testimonialsData = [
     {
-      text: "The database optimization service improved our system's performance significantly.",
-      name: "Michael Lee",
-      role: "Data Analyst",
-      image: "https://via.placeholder.com/150",
+      quote: "Managing databases was a nightmare until AmeerSync optimized our queries and indexing. Our application runs much faster now!",
+      author: "Michael Carter",
+      company: "DataSphere"
     },
     {
-      text: "Seamless database migration with zero data loss. Highly recommend their expertise!",
-      name: "Sarah Wilson",
-      role: "IT Manager",
-      image: "https://via.placeholder.com/150",
+      quote: "They helped us migrate our database from MySQL to PostgreSQL with zero downtime.",
+      author: "Ethan Lewis",
+      company: "CloudData"
     },
     {
-      text: "Exceptional support and cutting-edge solutions for our cloud databases.",
-      name: "David Brown",
-      role: "CTO",
-      image: "https://via.placeholder.com/150",
+      quote: "AmeerSync set up a high-availability database cluster, improving reliability and performance.",
+      author: "Rachel Green",
+      company: "ScaleDB"
     },
+    {
+      quote: "Their expertise in database normalization helped us reduce redundant data and improve query speed.",
+      author: "David Williams",
+      company: "DataOptimizer"
+    },
+    {
+      quote: "They implemented advanced indexing strategies that made our reports load 3x faster.",
+      author: "Sophia Kim",
+      company: "BIAnalytics"
+    },
+    {
+      quote: "AmeerSync optimized our database backup and recovery process, enhancing data security.",
+      author: "Olivia Adams",
+      company: "SecureData"
+    },
+    {
+      quote: "Their NoSQL database implementation helped us scale our big data applications.",
+      author: "Nathan Scott",
+      company: "BigDataTech"
+    },
+    {
+      quote: "AmeerSync helped us secure our database against SQL injection attacks and other vulnerabilities.",
+      author: "Linda Thomas",
+      company: "SafeNet"
+    },
+    {
+      quote: "They integrated real-time data synchronization between our databases, ensuring seamless updates.",
+      author: "James Carter",
+      company: "LiveSync"
+    }
   ];
+  
 
   const faqs = [
     {
@@ -225,16 +227,22 @@ const DatabasesContent = () => {
   };
 
   return (
-    <div className="database-content w-100 bg-white">
-      <HeroSection
+    <div className="database-content w-100">
+     
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+         <HeroSection
         icon={FaDatabase}
-        imageWidth="600px"
-        imageHeight="400px"
+     
         imageAlt="Database Solutions"
         buttonText="Get Started"
         title="Database Development Services"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.DATABASE_IMG1}
+        imageSrc={Images.DATABASE_IMG}
         description="Unlock the power of efficient data management and analytics with our database solutions. From database design and optimization to secure cloud integration, we deliver tailored services that drive business success."
         details={
           "Our database services ensure your data is accessible, secure, and optimized for performance. Whether you're looking to implement a new database system, migrate to a cloud platform, or enhance existing setups, our team has the expertise to deliver. Explore the benefits of modern database technologies for improved decision-making and operational efficiency."
@@ -242,17 +250,10 @@ const DatabasesContent = () => {
       />
       <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
       <WhyChooseUsSection reasons={reasons	}/>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
         <Accordin faqs={faqs} />
+      <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

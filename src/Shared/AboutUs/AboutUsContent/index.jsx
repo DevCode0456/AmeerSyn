@@ -1,255 +1,365 @@
-import React from "react";
-import "../../../index.css";
-import FlipCard from "../../FlipCard";
-import { motion } from "framer-motion";
-import FeedbackSection from "../../Testimonials";
-import Images from "../../../Helper/ImagesConstant";
-import ContactUsSection from "../../ContactUsSection";
 import {
-  FaWordpress,
-  FaShopify,
-  FaAndroid,
-  FaTools,
-  FaHandshake,
-  FaUsers,
-} from "react-icons/fa";
-import Accordin from "../../Accordin";
+  FiCode,
+  FiBook,
+  FiUser,
+  FiFlag,
+  FiCheck,
+  FiClock,
+  FiCloud,
+  FiShield,
+  FiMonitor,
+  FiDatabase,
+  FiSettings,
+  FiTerminal,
+  FiLifeBuoy,
+  FiTrendingUp,
+} from "react-icons/fi";
+import "swiper/css";
+import React from "react";
+import "swiper/css/pagination";
+import { motion } from "framer-motion";
+import { ReactTyped } from "react-typed";
+import ContactUsSection from "../../ContactUsSection";
+import ServicesSection from "../../PagesSectionComponents/ServicesSection";
+import { FaServer, FaCode, FaCloud, FaLock, FaUserTie } from "react-icons/fa";
+import WhyChooseUsSection from "../../PagesSectionComponents/WhyChooseUsSection";
+import TestimonialsSection from "../../PagesSectionComponents/TestimonialsSection";
+import Images from "../../../Helper/ImagesConstant";
+
+const reasons = [
+  {
+    icon: <FiCheck size={32} />,
+    title: "Expertise & Experience",
+    description:
+      "With years of industry experience, our team delivers exceptional quality in every project.",
+  },
+  {
+    icon: <FiUser size={50} />,
+    title: "Client-Centered Approach",
+    description:
+      "We prioritize client satisfaction by focusing on transparent communication and understanding your goals.",
+  },
+  {
+    icon: <FiTrendingUp size={50} />,
+    title: "Innovative Solutions",
+    description:
+      "Our solutions are designed to bring innovation and cutting-edge technology to your business.",
+  },
+  {
+    icon: <FiFlag size={50} />,
+    title: "High-Quality Standards",
+    description:
+      "We ensure meticulous attention to detail, delivering quality that meets and exceeds expectations.",
+  },
+  {
+    icon: <FiClock size={50} />,
+    title: "Timely Delivery",
+    description:
+      "Our commitment to timelines means your projects are completed efficiently and on schedule.",
+  },
+  {
+    icon: <FiLifeBuoy size={50} />,
+    title: "Continuous Support",
+    description:
+      "From start to finish, we offer dedicated support to ensure your success every step of the way.",
+  },
+];
+const mission = [
+  {
+    category: "Development",
+    items: [
+      {
+        name: "Web Development",
+        icon: <FaCode />,
+        desc: "Modern, scalable web solutions.",
+      },
+      {
+        name: "Shopify & WordPress",
+        icon: <FaCode />,
+        desc: "E-commerce & CMS expertise.",
+      },
+      {
+        name: "Custom Programs",
+        icon: <FaCode />,
+        desc: "Automate your workflows.",
+      },
+    ],
+  },
+  {
+    category: "Networking & Security",
+    items: [
+      {
+        name: "Linux Administration",
+        icon: <FaServer />,
+        desc: "Efficient server management.",
+      },
+      {
+        name: "Cybersecurity",
+        icon: <FaLock />,
+        desc: "Protect your digital assets.",
+      },
+      {
+        name: "Cloud Computing",
+        icon: <FaCloud />,
+        desc: "AWS, Google Cloud, Azure.",
+      },
+    ],
+  },
+  {
+    category: "IT Consultancy",
+    items: [
+      {
+        name: "Project Management",
+        icon: <FaUserTie />,
+        desc: "Guiding your IT success.",
+      },
+      {
+        name: "AI & Automation",
+        icon: <FaCode />,
+        desc: "Integrating smart technology.",
+      },
+      {
+        name: "Data & Research",
+        icon: <FaCode />,
+        desc: "Advanced analytics & insights.",
+      },
+    ],
+  },
+];
+
+const services = [
+  {
+    icon: <FiCode size={50} />,
+    color: "green-500",
+    textColor: "white",
+    title: "Web Development",
+    description: "Build modern and responsive web applications.",
+  },
+  {
+    icon: <FiMonitor size={50} />,
+    textColor: "white",
+    color: "orange-500",
+    title: "UI/UX Design",
+    description: "Design visually appealing interfaces.",
+  },
+  {
+    icon: <FiDatabase size={50} />,
+    title: "Databases",
+    textColor: "white",
+    color: "indigo-500",
+    description: "Manage and structure data efficiently.",
+  },
+  {
+    icon: <FiTerminal size={50} />,
+    textColor: "white",
+    color: "purple-500",
+    title: "Assembly Language",
+    description: "Develop low-level programs.",
+  },
+  {
+    icon: <FiBook size={50} />,
+    color: "blue-500",
+    textColor: "white",
+    title: "Assignment & Thesis Writing",
+    description: "Writing services for academic projects.",
+  },
+  {
+    icon: <FiCloud size={50} />,
+    color: "teal-500",
+    textColor: "white",
+    title: "Cloud Computing",
+    description: "Implement scalable cloud solutions.",
+  },
+  {
+    icon: <FiShield size={50} />,
+    color: "pink-500",
+    textColor: "white",
+    title: "Cyber Security",
+    description: "Protect systems from unauthorized access.",
+  },
+  {
+    icon: <FiSettings size={50} />,
+    textColor: "white",
+    color: "yellow-500",
+    title: "Linux & Virtualization",
+    description: "Deploy and manage virtualized environments.",
+  },
+  {
+    icon: <FiTerminal size={50} />,
+    textColor: "white",
+    color: "orange-400",
+    title: "Android App Development",
+    description: "Create seamless Android apps.",
+  },
+  {
+    icon: <FiSettings size={50} />,
+    color: "green-400",
+    textColor: "white",
+    title: "Network Design (Packet Tracer)",
+    description: "Design and simulate network structures.",
+  },
+  {
+    icon: <FiShield size={50} />,
+    textColor: "white",
+    color: "purple-400",
+    title: "Penetration Testing",
+    description: "Detect vulnerabilities with thorough testing.",
+  },
+  {
+    icon: <FiBook size={50} />,
+    color: "blue-400",
+    textColor: "white",
+    title: "Content Writing & Proofreading",
+    description: "Improve content quality with professional writing.",
+  },
+];
+
+const testimonialsData = [
+  {
+    quote:
+      "AmeerSync’s AI expertise helped us develop a custom recommendation engine for our e-commerce store. The accuracy of predictions improved significantly, leading to a 30% increase in sales. Absolutely brilliant!",
+    author: "Olivia Adams",
+    company: "SmartShop",
+  },
+  {
+    quote:
+      "Their networking solutions are fantastic! We struggled with connectivity and security issues, but AmeerSync streamlined our entire infrastructure. Now, everything runs smoothly without interruptions.",
+    author: "William Harris",
+    company: "Enterprise Networks",
+  },
+  {
+    quote:
+      "For my Node.js project, AmeerSync provided exceptional backend development support. Their code was clean, scalable, and optimized for performance. Truly a lifesaver for developers like me!",
+    author: "Ethan Walker",
+    company: "DevStudio",
+  },
+  {
+    quote:
+      "Their cloud computing services helped us migrate our entire system to AWS seamlessly. The process was quick, and we now have better scalability and cost efficiency. Highly recommended!",
+    author: "Charlotte Evans",
+    company: "CloudServe",
+  },
+  {
+    quote:
+      "AmeerSync’s proof-reading and editing services polished my research paper to perfection. The detailed feedback and corrections improved the clarity and structure significantly. I received great feedback from my professors!",
+    author: "Nathan Clark",
+    company: "Academic Researcher",
+  },
+  {
+    quote:
+      "Managing email invoices was a nightmare until we found AmeerSync. Their automation service streamlined everything, reducing errors and saving us hours of manual work. Absolutely worth every penny!",
+    author: "Emily White",
+    company: "BizTrack",
+  },
+  {
+    quote:
+      "We needed a static website for our startup, and AmeerSync delivered a clean, modern, and ultra-fast site. Their attention to UI/UX and performance optimization was incredible. Highly satisfied!",
+    author: "Lucas Turner",
+    company: "Startup Solutions",
+  },
+  {
+    quote:
+      "My final year project needed expert guidance, and AmeerSync provided just that! From concept to execution, they ensured every detail was perfect. I couldn’t have achieved this success without them.",
+    author: "Sophia Bennett",
+    company: "University Graduate",
+  },
+  {
+    quote:
+      "Their project management expertise helped us complete our software development cycle ahead of schedule. The structured approach and real-time tracking made a huge difference. AmeerSync truly understands agile workflows!",
+    author: "Benjamin Carter",
+    company: "Tech Ventures",
+  },
+];
 
 const AboutUs = () => {
-  const faqs = [
-    {
-      question: "What services do you offer?",
-      answer:
-        "We specialize in WordPress, Shopify, and Android app development, along with IT academic services such as research work, thesis writing, and final year projects.",
-    },
-    {
-      question: "Do you provide custom WordPress and Shopify development?",
-      answer:
-        "Yes, we create custom themes, plugins, and eCommerce solutions tailored to your business needs.",
-    },
-    {
-      question: "Can you help with final year projects and academic assignments?",
-      answer:
-        "Absolutely! We assist students with research work, thesis writing, and IT-related academic projects.",
-    },
-    {
-      question: "What technologies do you use for development?",
-      answer:
-        "We work with WordPress, Shopify, React, Kotlin, Java, Firebase, and other modern tools to ensure high-quality solutions.",
-    },
-    {
-      question: "How can I get in touch with you?",
-      answer:
-        "You can contact us via WhatsApp at +923047914358 or email at ameerhamzabscs02@gmail.com.",
-    },
-    {
-      question: "Do you offer post-development support and maintenance?",
-      answer:
-        "Yes, we provide ongoing support and maintenance for websites, mobile apps, and IT solutions.",
-    },
-  ];
-  
-  const AboutOwner = () => {
-    return (
-      <div className="my-12">
-        <div className="container mx-auto bg-container  rounded-2xl shadow-lg p-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-section space-y-4">
-              <h3 className="text-2xl font-bold text-primary ">
-                Hi! I am Ameer Hamza, a professional WordPress, Shopify, and
-                Android app developer.
-              </h3>
-              <p className="text-lg text-gray-600">
-                I am an IT academic expert offering a range of services:
-              </p>
-              <div className="space-y-2">
-                <h4 className="text-xl font-bold text-gray-800">
-                  Contact me for:
-                </h4>
-                <p>Final Year Projects, Thesis, Research Work, Assignments</p>
-                <p className="text-primary">
-                  WhatsApp: <strong>+923047914358</strong>
-                </p>
-                <p className="text-primary">
-                  Email: <strong>ameerhamzabscs02@gmail.com</strong>
-                </p>
-                <span className="text-gray-500">
-                  For any questions or concerns
-                </span>
-                <div>
-                  <button className="px-4 py-2 bg-button text-white rounded shadow">
-                    Get Started Now
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="image-section relative flex justify-center items-center">
-              <div className="relative">
-                <img
-                  alt="User Dummy"
-                  src={Images.USER_DUMMY_IMG}
-                  className="w-100 rounded-full border-4 shadow animate-fadeIn"
-                />
-                <div className="absolute w-24 h-24 bg-yellow-400 rounded-full top-4 left-4 animate-bounce"></div>
-                <div className="absolute w-24 h-24 bg-blue-300 rounded-full bottom-4 right-4 animate-bounce"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <section className="services-section py-10 my-6  rounded-2xl">
-          <div className="container mx-auto grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <FaTools size={100} />,
-                title: "24/7 Support",
-                description:
-                  "Always here to assist you at any time of the day.",
-              },
-              {
-                icon: <FaHandshake size={100} />,
-                title: "Let's Work Together",
-                description:
-                  "Providing quality solutions for every IT challenge.",
-              },
-              {
-                icon: <FaUsers size={100} />,
-                title: "Team Work",
-                description: "Collaborating with you for the best outcomes.",
-              },
-            ].map((service, index) => (
-              <div className="" key={index}>
-                <FlipCard
-                  icon={service.icon}
-                  title={service.title}
-                  description={service.description}
-                  color="yellow-500"
-                  textColor="white"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-      </div>
-    );
-  };
   return (
-    <div className=" py-12 px-6 sm:px-12 lg:px-24">
-      <motion.div
-        className="text-center mb-12"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+    <div className=" ">
+      <motion.section
+        className="relative h-screen flex flex-col items-center justify-center text-center bg-black"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
       >
-        <h1 className="text-4xl font-bold text-primary mb-4">About Us</h1>
-        <p className="text-lg text-text">
-          We are a team of passionate professionals, dedicated to providing
-          exceptional solutions in web development, mobile app development, and
-          IT services. Our mission is to deliver high-quality work that empowers
-          your digital presence.
-        </p>
-        <AboutOwner />
-      </motion.div>
-
-      <motion.div
-        className="bg-primary text-secondary md:flex items-center justify-center gap-5 p-8 rounded-lg shadow-md text-center mb-12"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="flex justify-center items-center p-3 bg-container rounded-3xl">
-          <img src={Images.OUR_MISSION_IMG} alt="img" />
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute w-full h-full object-cover opacity-50"
+        >
+          <source
+            src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="absolute bottom-0 z-10 p-10">
+          <motion.h1 className="text-6xl font-semibold text-primary">
+            Elevate Your{" "}
+            <ReactTyped
+              className="text-secondary"
+              strings={["Business", "Brand", "Success"]}
+              typeSpeed={100}
+              backSpeed={200}
+              loop
+            />
+          </motion.h1>
+          <motion.p className="text-secondary mt-4">
+            We bring innovation and technology together to create impact.
+          </motion.p>
         </div>
-        <div className="">
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            Our Mission
-          </h2>
-          <p className="text-secondary">
-            Our mission is to enable businesses to thrive in the digital world
-            by creating innovative, scalable, and secure digital solutions
-            tailored to your needs.
-          </p>
-        </div>
-      </motion.div>
+      </motion.section>
 
-      {/* Our Services Section */}
-      <motion.div
-        className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        {/* Service 1 */}
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <FaWordpress size={40} className="text-primary mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            WordPress Development
-          </h3>
-          <p className="text-text mb-4">
-            We create stunning, responsive WordPress websites that meet your
-            business needs and deliver a flawless user experience.
-          </p>
-          <button className="px-4 py-2 bg-button text-white rounded-lg hover:bg-primary">
-            Learn More
-          </button>
-        </div>
+      <section className="py-16 bg-white px-6 sm:px-12 lg:px-24">
 
-        {/* Service 2 */}
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <FaShopify size={40} className="text-primary mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            Shopify Development
-          </h3>
-          <p className="text-text mb-4">
-            Build powerful and optimized Shopify stores to grow your e-commerce
-            business with ease.
-          </p>
-          <button className="px-4 py-2 bg-button text-white rounded-lg hover:bg-primary">
-            Learn More
-          </button>
-        </div>
+      <div className="flex justify-center items-center   rounded-3xl">
+<img src={Images.OUR_MISSION_IMG} alt="terms&conditions" className={" rounded mx-auto max-h-64"} />
 
-        {/* Service 3 */}
-        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-          <FaAndroid size={40} className="text-primary mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-primary mb-2">
-            Android App Development
-          </h3>
-          <p className="text-text mb-4">
-            We create high-performance Android applications that provide a
-            seamless user experience and exceptional functionality.
-          </p>
-          <button className="px-4 py-2 bg-button text-white rounded-lg hover:bg-primary">
-            Learn More
-          </button>
-        </div>
-      </motion.div>
+      </div>
 
-      {/* Contact Section */}
-      <ContactUsSection />
 
-      {/* Testimonials Section */}
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-center text-3xl font-bold mb-6">
-          What Our Clients Say
+        <h2 className="text-4xl font-bold text-center text-primary">
+          Our Mission
         </h2>
-        <div className="">
-          <FeedbackSection />
+        <div className="grid md:grid-cols-3 gap-10 mt-10">
+          {mission?.map((service, index) => (
+            <motion.div
+              key={index}
+              className="p-6  bg-gradient-to-b from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition"
+              whileHover={{ scale: 1.1 }}
+            >
+              <h3 className="text-2xl font-bold text-primary mb-3">
+                {service.category}
+              </h3>
+              <div className="space-y-4">
+                {service.items?.map(
+                  (
+                    item,
+                    idx // <-- FIXED HERE
+                  ) => (
+                    <div key={idx} className="flex items-center gap-4">
+                      <div className="text-primary text-3xl">{item.icon}</div>
+                      <div>
+                        <h4 className="text-xl text-text font-semibold">
+                          {item.name}
+                        </h4>
+                        <p className="text-text">{item.desc}</p>
+                      </div>
+                    </div>
+                  )
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </motion.div>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <Accordin faqs={faqs} />
-      </motion.div>
+      </section>
+
+      <ServicesSection services={services} />
+      {/* 🌟 Why Choose Us Section */}
+      <WhyChooseUsSection reasons={reasons} />
+
+      <div className="">
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
+      </div>
     </div>
   );
 };

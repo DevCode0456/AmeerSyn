@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import WordpressContent from '../WordpressContent'
 const WordpressWrapper = () => {
   return (
-    <div className="container fluid ">
+    <div className="m-0 p-0 ">
     <WordpressContent />
   </div>  )
 }

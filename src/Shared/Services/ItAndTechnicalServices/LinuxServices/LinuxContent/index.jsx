@@ -21,39 +21,11 @@ import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 
 const LinuxContent = () => {
-  const projects = [
-    {
-      title: "Linux Server Setup",
-      description:
-        "Configured and optimized Linux servers for high availability and performance.",
-      image: Images.LINUX_IMG1,
-    },
-    {
-      title: "Shell Scripting",
-      description:
-        "Developed custom shell scripts for automation and process efficiency.",
-      image: Images.LINUX_IMG2,
-    },
-    {
-      title: "Network Management",
-      description:
-        "Implemented robust networking solutions using Linux-based systems.",
-      image: Images.LINUX_IMG3,
-    },
-    {
-      title: "System Security",
-      description:
-        "Enhanced system security with advanced Linux-based tools and techniques.",
-      image: Images.LINUX_IMG4,
-    },
-  ];
-
   const services = [
     {
       icon: <FaLinux size={100} className="mt-6" />,
@@ -95,22 +67,58 @@ const LinuxContent = () => {
 
   const testimonialsData = [
     {
-      text: "The Linux server setup was flawless and improved our operations.",
-      name: "John Doe",
-      role: "System Administrator",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "Their Linux support team helped us configure and optimize our servers for maximum efficiency.",
+      author: "Daniel Reed",
+      company: "TechOps",
     },
     {
-      text: "Exceptional shell scripting services that saved us time and resources!",
-      name: "Jane Smith",
-      role: "DevOps Engineer",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "They set up a secure and scalable Linux server for our SaaS platform, ensuring high uptime.",
+      author: "Alex Turner",
+      company: "CloudFlex",
     },
     {
-      text: "Highly recommend their expertise in Linux-based security solutions.",
-      name: "Robert Johnson",
-      role: "IT Specialist",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "AmeerSync automated our Linux server deployments, saving us hours of manual setup.",
+      author: "Sophia Mitchell",
+      company: "DevOpsWorks",
+    },
+    {
+      quote:
+        "Their security hardening for our Linux servers helped prevent cyberattacks.",
+      author: "William Scott",
+      company: "SecureNet",
+    },
+    {
+      quote:
+        "AmeerSync’s Linux expertise resolved our performance issues with kernel tuning.",
+      author: "Ethan Walker",
+      company: "DataFlow",
+    },
+    {
+      quote:
+        "They set up a high-availability cluster on Linux that improved our system reliability.",
+      author: "Olivia Adams",
+      company: "WebScale",
+    },
+    {
+      quote:
+        "Their troubleshooting skills helped us recover from a critical Linux system failure quickly.",
+      author: "Michael Roberts",
+      company: "TechRescue",
+    },
+    {
+      quote:
+        "AmeerSync migrated our entire infrastructure to a Linux-based environment seamlessly.",
+      author: "Charlotte Evans",
+      company: "CloudSwitch",
+    },
+    {
+      quote:
+        "Their expertise in Linux containerization with Docker improved our deployment efficiency.",
+      author: "Lucas Bennett",
+      company: "DevContainer",
     },
   ];
 
@@ -121,7 +129,8 @@ const LinuxContent = () => {
     },
     {
       question: "Can you help with Linux server security?",
-      answer: "Yes, we offer comprehensive security solutions for Linux servers.",
+      answer:
+        "Yes, we offer comprehensive security solutions for Linux servers.",
     },
     {
       question: "Do you provide Linux system monitoring?",
@@ -129,11 +138,13 @@ const LinuxContent = () => {
     },
     {
       question: "Can you automate tasks on Linux?",
-      answer: "Yes, we specialize in creating shell scripts and automation tools.",
+      answer:
+        "Yes, we specialize in creating shell scripts and automation tools.",
     },
     {
       question: "Do you offer Linux training?",
-      answer: "Yes, we provide training for individuals and teams on Linux systems.",
+      answer:
+        "Yes, we provide training for individuals and teams on Linux systems.",
     },
   ];
 
@@ -161,7 +172,8 @@ const LinuxContent = () => {
     {
       icon: <FaCog size={100} />,
       title: "Fedora",
-      description: "An innovative Linux distribution for developers and tech enthusiasts.",
+      description:
+        "An innovative Linux distribution for developers and tech enthusiasts.",
     },
     {
       icon: <FaLightbulb size={100} />,
@@ -209,33 +221,30 @@ const LinuxContent = () => {
 
   return (
     <div className="linux-content w-100 bg-white">
-      <HeroSection
-        icon={FaLinux}
-        imageWidth="600px"
-        imageHeight="400px"
-        imageAlt="Linux Solutions"
-        buttonText="Get Started"
-        title="Linux Development Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.LINUX_IMG}
-        description="Unlock the power of Linux with our tailored solutions. From server setup and optimization to system security and automation, we deliver services that meet your business goals."
-        details={
-          "Our Linux services ensure reliable, secure, and efficient operations. Whether it's setting up a new system, integrating cloud solutions, or automating processes, we have the expertise to help. Explore the benefits of Linux for cost-effective and scalable solutions."
-        }
-      />
-         <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons	}/>
       <motion.div
-        className="my-10"
+        className="mt-10"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
+        <HeroSection
+          icon={FaLinux}
+          imageAlt="Linux Solutions"
+          buttonText="Get Started"
+          title="Linux Development Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.LINUX_IMG}
+          description="Unlock the power of Linux with our tailored solutions. From server setup and optimization to system security and automation, we deliver services that meet your business goals."
+          details={
+            "Our Linux services ensure reliable, secure, and efficient operations. Whether it's setting up a new system, integrating cloud solutions, or automating processes, we have the expertise to help. Explore the benefits of Linux for cost-effective and scalable solutions."
+          }
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

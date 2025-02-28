@@ -10,10 +10,10 @@ const Accordin = ({ faqs }) => {
   };
 
   return (
-    <div className="container mx-auto  p-4 py-6 rounded-lg">
+    <div className=" mx-auto container my-10 rounded-lg p-5 ">
 
 <div className="flex justify-center items-center">
-<img src={Images.FAQS_IMG} alt="terms&conditions" className={" max-h-64 mx-auto"} />
+<img src={Images.FAQS_IMG} alt="terms&conditions" className={" max-h-64 rounded-full mx-auto"} />
 
       </div>
       <h1 className="text-4xl font-bold text-center text-primary py-3">

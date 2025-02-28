@@ -3,7 +3,8 @@ import DataStructceAndAlgorithmContent from '../DataStructceAndAlgorithmContent'
 
 const DataStructceAndAlgorithmWrapper = () => {
   return (
- <div className="container fluid ">
+    <div className="m-0 p-0 ">
+
         <DataStructceAndAlgorithmContent/>
       </div>  )
 }
