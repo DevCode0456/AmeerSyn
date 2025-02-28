@@ -17,39 +17,14 @@ import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 
 const WebDevelopementContent = () => {
-  const projects = [
-    {
-      title: "Responsive Websites",
-      description: "Built fully responsive websites for various devices.",
-      image: Images.WEB_DEV_IMG1,
-    },
-    {
-      title: "E-commerce Platforms",
-      description: "Developed online stores with seamless user experiences.",
-      image: Images.WEB_DEV_IMG2,
-    },
-    {
-      title: "Web Applications",
-      description:
-        "Created custom web applications tailored to business needs.",
-      image: Images.WEB_DEV_IMG3,
-    },
-    {
-      title: "API Integrations",
-      description: "Integrated third-party APIs for added functionalities.",
-      image: Images.WEB_DEV_IMG4,
-    },
-  ];
-
   const services = [
     {
       icon: <FaHtml5 size={100} className="mt-6" />,
@@ -85,22 +60,58 @@ const WebDevelopementContent = () => {
 
   const testimonialsData = [
     {
-      text: "Their front-end designs are both functional and beautiful!",
-      name: "Alice Brown",
-      role: "Creative Director",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "Muhammad's expertise in web development helped me create a highly responsive and user-friendly website for my business.",
+      author: "Jessica Miller",
+      company: "E-commerce Startup",
     },
     {
-      text: "Thanks to their back-end expertise, our platform runs smoothly.",
-      name: "David Lee",
-      role: "CTO",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "He built a stunning website for my portfolio, incorporating the latest design trends and technologies.",
+      author: "Daniel Moore",
+      company: "Freelance Designer",
     },
     {
-      text: "They optimized our website, and the results are amazing!",
-      name: "Sarah Wilson",
-      role: "Marketing Manager",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "Muhammad ensured my website was not only visually appealing but also optimized for SEO and fast loading times.",
+      author: "Rachel Johnson",
+      company: "Digital Marketing Agency",
+    },
+    {
+      quote:
+        "His attention to detail and ability to integrate custom features into my website helped elevate my brand's online presence.",
+      author: "Michael Carter",
+      company: "Tech Innovations",
+    },
+    {
+      quote:
+        "Muhammad helped me transform my ideas into a fully functional website that’s both engaging and intuitive.",
+      author: "Sophia Lee",
+      company: "Fashion Retailer",
+    },
+    {
+      quote:
+        "He provided expert advice on making my website mobile-friendly and compatible across different devices.",
+      author: "Ethan Lewis",
+      company: "Software Development",
+    },
+    {
+      quote:
+        "Muhammad ensured the smooth implementation of my website’s CMS, making it easy for me to manage content on my own.",
+      author: "Olivia Brown",
+      company: "Non-Profit Organization",
+    },
+    {
+      quote:
+        "His guidance on UI/UX design helped me create an easy-to-navigate website that users love to visit.",
+      author: "Nathan Scott",
+      company: "Consulting Firm",
+    },
+    {
+      quote:
+        "Muhammad’s dedication to delivering high-quality web solutions resulted in an impressive website that exceeded my expectations.",
+      author: "James Carter",
+      company: "Corporate Business",
     },
   ];
 
@@ -202,34 +213,31 @@ const WebDevelopementContent = () => {
   };
 
   return (
-    <div className="web-development-content w-100 bg-white">
-      <HeroSection
-        icon={FaLaptopCode}
-        imageWidth="600px"
-        imageHeight="400px"
-        imageAlt="Web Development Services"
-        buttonText="Get Started"
-        title="Web Development Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.WEB_DEVELOPMENT_IMG}
-        description="Take your online presence to the next level with our comprehensive web development services. From responsive designs to robust back-end solutions, we deliver results that drive success."
-        details={
-          "Our web development services cater to businesses aiming for digital transformation. Whether it's a corporate website, e-commerce platform, or custom application, we ensure top-notch quality and performance."
-        }
-      />
-      <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons} />
+    <div className="web-development-content w-100 ">
       <motion.div
-        className="my-10"
+        className="mt-10"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
+        <HeroSection
+          icon={FaLaptopCode}
+          imageAlt="Web Development Services"
+          buttonText="Get Started"
+          title="Web Development Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.WEB_DEVELOPMENT_IMG}
+          description="Take your online presence to the next level with our comprehensive web development services. From responsive designs to robust back-end solutions, we deliver results that drive success."
+          details={
+            "Our web development services cater to businesses aiming for digital transformation. Whether it's a corporate website, e-commerce platform, or custom application, we ensure top-notch quality and performance."
+          }
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

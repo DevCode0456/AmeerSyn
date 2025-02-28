@@ -25,32 +25,10 @@ import ContactUsSection from "../../../../ContactUsSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const StaticWebsiteContent = () => {
-  const projects = [
-    {
-      title: "Corporate Websites",
-      description: "Developed modern, clean, and responsive websites for businesses.",
-      image: Images.STATIC_WEBSITE_IMG1,
-    },
-    {
-      title: "Portfolio Websites",
-      description: "Created visually stunning and user-friendly portfolios.",
-      image: Images.STATIC_WEBSITE_IMG2,
-    },
-    {
-      title: "Landing Pages",
-      description: "Designed high-converting landing pages for marketing campaigns.",
-      image: Images.STATIC_WEBSITE_IMG3,
-    },
-    {
-      title: "Blog Websites",
-      description: "Built sleek and responsive blogs with easy content management.",
-      image: Images.STATIC_WEBSITE_IMG4,
-    },
-  ];
+
 
   const services = [
     {
@@ -87,24 +65,52 @@ const StaticWebsiteContent = () => {
 
   const testimonialsData = [
     {
-      text: "Our new website is a game-changer for our business!",
-      name: "John Doe",
-      role: "CEO",
-      image: "https://via.placeholder.com/150",
+      quote: "We needed a static website for our startup, and AmeerSync delivered a clean, modern, and ultra-fast site.",
+      author: "Lucas Turner",
+      company: "Startup Solutions"
     },
     {
-      text: "Incredibly happy with the website design and performance!",
-      name: "Alice Johnson",
-      role: "Marketing Manager",
-      image: "https://via.placeholder.com/150",
+      quote: "Their SEO-friendly static website helped us rank higher on search engines, bringing in more customers.",
+      author: "Sophia Kim",
+      company: "Marketing Pro"
     },
     {
-      text: "They delivered on time and exceeded expectations!",
-      name: "Michael Brown",
-      role: "Project Lead",
-      image: "https://via.placeholder.com/150",
+      quote: "AmeerSync built a lightning-fast static landing page that increased our conversion rate by 40%.",
+      author: "David Williams",
+      company: "ClickBoost"
     },
+    {
+      quote: "Their static website solution ensured security and speed while maintaining a professional look.",
+      author: "Rachel Green",
+      company: "PortfolioHub"
+    },
+    {
+      quote: "They designed a simple yet elegant static site for my personal blog, and I absolutely love it!",
+      author: "Michael Carter",
+      company: "BlogWriter"
+    },
+    {
+      quote: "AmeerSync's optimized static pages reduced our website load time significantly.",
+      author: "Ethan Lewis",
+      company: "FastWeb"
+    },
+    {
+      quote: "Their expertise in static website hosting helped us deploy our site at minimal costs.",
+      author: "Olivia Brown",
+      company: "BudgetWeb"
+    },
+    {
+      quote: "They provided an intuitive static website with mobile-friendly design, enhancing user experience.",
+      author: "Nathan Scott",
+      company: "MobileFirst"
+    },
+    {
+      quote: "AmeerSync delivered a pixel-perfect static site that aligns perfectly with our brand image.",
+      author: "James Carter",
+      company: "BrandVisuals"
+    }
   ];
+  
 
   const faqs = [
     {
@@ -191,15 +197,21 @@ const StaticWebsiteContent = () => {
 
   return (
     <div className="static-website-development-content w-100 bg-white">
-      <HeroSection
+     
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+         <HeroSection
         icon={FaGlobe}
-        imageWidth="600px"
-        imageHeight="400px"
+      
         imageAlt="Static Website Development Services"
         buttonText="Get Started"
         title="Static Website Development Services"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.STATIC_WEBSITE_IMG1}
+        imageSrc={Images.STATIC_IMG}
         description="Transform your online presence with our expert static website development services. We design fast, responsive, and SEO-optimized websites that elevate your brand."
         details={
           "Our static websites are designed to be lightweight, fast-loading, and easy to maintain. We specialize in creating beautiful and secure websites that are tailored to your business needs."
@@ -207,17 +219,10 @@ const StaticWebsiteContent = () => {
       />
          <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
       <WhyChooseUsSection reasons={reasons	}/>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
         <Accordin faqs={faqs} />
+      <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

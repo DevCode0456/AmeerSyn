@@ -14,7 +14,6 @@ import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
@@ -113,53 +112,56 @@ const CustomContent = () => {
     },
   ];
 
-  const projects = [
-    {
-      title: "Custom E-commerce Platform",
-      description:
-        "Developed a full-featured e-commerce platform tailored to the client's specific needs.",
-      image: Images.CUSTOM_PROG_IMG1,
-    },
-    {
-      title: "Inventory Management System",
-      description:
-        "Built a robust inventory management system to streamline supply chain operations.",
-      image: Images.CUSTOM_PROG_IMG2,
-    },
-    {
-      title: "Customer Relationship Management (CRM)",
-      description:
-        "Created a CRM solution that helped businesses manage and analyze customer interactions.",
-      image: Images.CUSTOM_PROG_IMG3,
-    },
-    {
-      title: "Project Management Tool",
-      description:
-        "Developed a comprehensive project management tool to assist teams in collaboration.",
-      image: Images.CUSTOM_PROG_IMG4,
-    },
-  ];
+  
 
   const testimonialsData = [
     {
-      text: "The custom software we received is tailored perfectly to our business. A seamless experience from start to finish.",
-      name: "Alice Brown",
-      role: "CEO at Tech Solutions",
-      image: "https://via.placeholder.com/150",
+      quote: "Muhammad helped me develop a custom software solution tailored to my business needs, improving efficiency and automation.",
+      author: "John Davis",
+      company: "E-commerce Business"
     },
     {
-      text: "They delivered our CRM system on time and exceeded expectations. We’ve seen tremendous improvements in workflow.",
-      name: "John Smith",
-      role: "Product Manager at Creative Studio",
-      image: "https://via.placeholder.com/150",
+      quote: "He built a unique application for my company that integrated seamlessly with our existing systems and workflows.",
+      author: "Sarah Taylor",
+      company: "Tech Start-up"
     },
     {
-      text: "Amazing service and truly professional development. The team understood our needs and delivered top-quality software.",
-      name: "Sarah Johnson",
-      role: "Operations Lead at Marketing Hub",
-      image: "https://via.placeholder.com/150",
+      quote: "Muhammad’s expertise in custom programming enabled me to solve specific challenges within my business, providing a competitive edge.",
+      author: "David Williams",
+      company: "Consulting Firm"
     },
+    {
+      quote: "He delivered a high-quality custom software solution that perfectly met my business requirements and exceeded expectations.",
+      author: "Rachel Green",
+      company: "Retail Business"
+    },
+    {
+      quote: "Muhammad worked closely with me to understand my needs, delivering a customized solution that was intuitive and user-friendly.",
+      author: "Michael Carter",
+      company: "Financial Services"
+    },
+    {
+      quote: "Thanks to Muhammad’s custom programming expertise, I now have a scalable solution that supports my growing business.",
+      author: "Sophia Kim",
+      company: "Marketing Agency"
+    },
+    {
+      quote: "Muhammad built a custom CRM system for my company that simplified client management and streamlined operations.",
+      author: "Olivia Brown",
+      company: "Customer Relations"
+    },
+    {
+      quote: "He created a robust custom application that handled complex processes and reduced the time needed to complete tasks.",
+      author: "Nathan Scott",
+      company: "Logistics Firm"
+    },
+    {
+      quote: "Muhammad's custom programming service helped me develop a personalized solution that gave my business a unique advantage.",
+      author: "James Carter",
+      company: "Business Solutions"
+    }
   ];
+  
 
   const faqs = [
     {
@@ -195,31 +197,31 @@ const CustomContent = () => {
 
   return (
     <div className="custom-programming-services-content w-full bg-gray-100">
-      <HeroSection
+      
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <HeroSection
         icon={FaCode}
-        imageWidth="600px"
-        imageHeight="400px"
-        imageAlt="Custom Programming Solutions"
+      
         buttonText="Get Started"
-        title="Custom Programming Solutions"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.CUSTOM_PROG_IMG1}
+        imageSrc={Images.PROGRAMING_IMG}
+        title="Custom Programming Solutions"
+        imageAlt="Custom Programming Solutions"
         description="We offer custom programming services designed to meet your unique business requirements. From software development to system integration, we deliver reliable solutions."
         details="Our team of expert developers works closely with you to create personalized applications that meet your goals, whether it’s a mobile app, web app, or an enterprise solution."
       />
         <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
+   
       <WhyChooseUsSection reasons={reasons	}/>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

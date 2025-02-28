@@ -9,7 +9,7 @@ import {
   FaKey,
   FaLightbulb,
   FaTools,
-  FaCheckCircle
+  FaCheckCircle,
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
@@ -20,39 +20,11 @@ import Images from "../../../../../Helper/ImagesConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 
 const CyberSecurityContent = () => {
-  const projects = [
-    {
-      title: "Threat Detection System",
-      description:
-        "Developed an advanced system to detect and mitigate cyber threats in real-time.",
-      image: Images.CYBERSECURITY_IMG1,
-    },
-    {
-      title: "Data Encryption",
-      description:
-        "Implemented robust encryption techniques to secure sensitive data.",
-      image: Images.CYBERSECURITY_IMG2,
-    },
-    {
-      title: "Vulnerability Assessment",
-      description:
-        "Conducted comprehensive vulnerability assessments for various networks.",
-      image: Images.CYBERSECURITY_IMG3,
-    },
-    {
-      title: "Incident Response",
-      description:
-        "Designed effective incident response plans for cybersecurity breaches.",
-      image: Images.CYBERSECURITY_IMG4,
-    },
-  ];
-
   const services = [
     {
       icon: <FaShieldAlt size={100} className="mt-6" />,
@@ -81,8 +53,7 @@ const CyberSecurityContent = () => {
     {
       icon: <FaCloud size={100} className="mt-6" />,
       title: "Cloud Security",
-      description:
-        "Ensuring secure access and storage in cloud environments.",
+      description: "Ensuring secure access and storage in cloud environments.",
     },
     {
       icon: <FaLaptopCode size={100} className="mt-6" />,
@@ -94,45 +65,86 @@ const CyberSecurityContent = () => {
 
   const testimonialsData = [
     {
-      text: "Their penetration testing services are top-notch and revealed critical issues we overlooked.",
-      name: "Sarah Wilson",
-      role: "Security Analyst",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "Cybersecurity threats were a major concern for us, but AmeerSync implemented strong security measures that protected our data.",
+      author: "Nathan Lewis",
+      company: "SecureNet",
     },
     {
-      text: "Impressive expertise in securing cloud platforms. Highly recommend their services!",
-      name: "James Carter",
-      role: "Cloud Engineer",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "Their penetration testing services helped us identify vulnerabilities before hackers could.",
+      author: "David Williams",
+      company: "EthicalShield",
     },
     {
-      text: "The incident response plan they designed saved our company from a major breach.",
-      name: "Emily Davis",
-      role: "IT Manager",
-      image: "https://via.placeholder.com/150",
+      quote:
+        "AmeerSync set up a robust firewall system that blocked numerous cyber attacks.",
+      author: "Rachel Green",
+      company: "NetSecure",
+    },
+    {
+      quote:
+        "They trained our staff on best cybersecurity practices, reducing phishing attack risks.",
+      author: "Michael Carter",
+      company: "CyberAware",
+    },
+    {
+      quote:
+        "Their encryption solutions helped us secure sensitive customer data efficiently.",
+      author: "Sophia Kim",
+      company: "DataVault",
+    },
+    {
+      quote:
+        "AmeerSync’s DDoS protection measures ensured our website stayed online during heavy traffic surges.",
+      author: "Ethan Lewis",
+      company: "UptimePro",
+    },
+    {
+      quote:
+        "They helped us comply with security regulations, avoiding legal complications.",
+      author: "Olivia Brown",
+      company: "ComplySecure",
+    },
+    {
+      quote:
+        "Their team detected and removed malware from our systems, preventing data breaches.",
+      author: "Nathan Scott",
+      company: "MalwareFix",
+    },
+    {
+      quote:
+        "AmeerSync secured our cloud applications, protecting us from unauthorized access.",
+      author: "James Carter",
+      company: "CloudDefense",
     },
   ];
 
   const faqs = [
     {
       question: "What types of cyber threats do you address?",
-      answer: "We handle malware, phishing, ransomware, and advanced persistent threats.",
+      answer:
+        "We handle malware, phishing, ransomware, and advanced persistent threats.",
     },
     {
       question: "Do you provide 24/7 monitoring?",
-      answer: "Yes, we offer round-the-clock monitoring services for your systems.",
+      answer:
+        "Yes, we offer round-the-clock monitoring services for your systems.",
     },
     {
       question: "Can you help with regulatory compliance?",
-      answer: "Absolutely, we assist in meeting GDPR, HIPAA, and other compliance requirements.",
+      answer:
+        "Absolutely, we assist in meeting GDPR, HIPAA, and other compliance requirements.",
     },
     {
       question: "What is penetration testing?",
-      answer: "Penetration testing involves simulating cyberattacks to identify system vulnerabilities.",
+      answer:
+        "Penetration testing involves simulating cyberattacks to identify system vulnerabilities.",
     },
     {
       question: "Do you offer cybersecurity training?",
-      answer: "Yes, we provide training for employees to enhance cybersecurity awareness.",
+      answer:
+        "Yes, we provide training for employees to enhance cybersecurity awareness.",
     },
   ];
 
@@ -145,7 +157,8 @@ const CyberSecurityContent = () => {
     {
       icon: <FaKey size={100} />,
       title: "Encryption Tools",
-      description: "Cutting-edge tools for data encryption and secure communication.",
+      description:
+        "Cutting-edge tools for data encryption and secure communication.",
     },
     {
       icon: <FaCloud size={100} />,
@@ -155,12 +168,14 @@ const CyberSecurityContent = () => {
     {
       icon: <FaLaptopCode size={100} />,
       title: "Security Scanners",
-      description: "Tools to identify vulnerabilities across systems and applications.",
+      description:
+        "Tools to identify vulnerabilities across systems and applications.",
     },
     {
       icon: <FaLightbulb size={100} />,
       title: "Threat Intelligence",
-      description: "Proactively identifying and addressing emerging cyber threats.",
+      description:
+        "Proactively identifying and addressing emerging cyber threats.",
     },
     {
       icon: <FaTools size={100} />,
@@ -208,33 +223,31 @@ const CyberSecurityContent = () => {
 
   return (
     <div className="cybersecurity-content w-100 bg-white">
-      <HeroSection
-        icon={FaShieldAlt}
-        imageWidth="600px"
-        imageHeight="400px"
-        imageAlt="Cybersecurity Solutions"
-        buttonText="Get Started"
-        title="Cybersecurity Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.CYBERSECURITY_IMG1}
-        description="Protect your digital assets with our comprehensive cybersecurity solutions. From threat detection to incident response, we provide end-to-end security services."
-        details={
-          "Our cybersecurity services are designed to safeguard your business against evolving threats. We offer a range of services including vulnerability assessments, penetration testing, and incident response plans. Stay secure with our trusted expertise."
-        }
-      />
-         <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons	}/>
       <motion.div
-        className="my-10"
+        className="mt-10"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
+        <HeroSection
+          icon={FaShieldAlt}
+          imageAlt="Cybersecurity Solutions"
+          buttonText="Get Started"
+          title="Cybersecurity Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.CYBER_SECURITY_IMG}
+          description="Protect your digital assets with our comprehensive cybersecurity solutions. From threat detection to incident response, we provide end-to-end security services."
+          details={
+            "Our cybersecurity services are designed to safeguard your business against evolving threats. We offer a range of services including vulnerability assessments, penetration testing, and incident response plans. Stay secure with our trusted expertise."
+          }
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

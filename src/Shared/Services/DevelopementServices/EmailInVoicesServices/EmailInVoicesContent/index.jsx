@@ -19,34 +19,12 @@ import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 
 const EmailInVoicesContent = () => {
-  const projects = [
-    {
-      title: "Custom Invoice Templates",
-      description: "Designed custom, brand-focused invoice templates for businesses.",
-      image: Images.EMAIL_INVOICE_IMG1,
-    },
-    {
-      title: "Automated Email Invoices",
-      description: "Built automated email systems for sending invoices with ease.",
-      image: Images.EMAIL_INVOICE_IMG2,
-    },
-    {
-      title: "Responsive Designs",
-      description: "Developed mobile-optimized invoices that look great on all devices.",
-      image: Images.EMAIL_INVOICE_IMG3,
-    },
-    {
-      title: "Interactive Invoices",
-      description: "Created interactive invoices with payment options and order details.",
-      image: Images.EMAIL_INVOICE_IMG4,
-    },
-  ];
+
 
   const services = [
     {
@@ -83,24 +61,53 @@ const EmailInVoicesContent = () => {
 
   const testimonialsData = [
     {
-      text: "Our invoices are now beautifully designed and easy for clients to understand!",
-      name: "Sarah Lee",
-      role: "Business Owner",
-      image: "https://via.placeholder.com/150",
+      quote: "Managing email invoices was a nightmare until we found AmeerSync. Their automation service streamlined everything!",
+      author: "Emily White",
+      company: "BizTrack"
     },
     {
-      text: "The custom templates and automated emails have saved us so much time.",
-      name: "James Hunt",
-      role: "Finance Manager",
-      image: "https://via.placeholder.com/150",
+      quote: "Their email invoicing system reduced our manual work and improved accuracy significantly.",
+      author: "David Williams",
+      company: "FinanceEase"
     },
     {
-      text: "Clients love the clean, professional look of our email invoices!",
-      name: "Laura Smith",
-      role: "Accountant",
-      image: "https://via.placeholder.com/150",
+      quote: "AmeerSync automated our invoice reminders, helping us get paid faster with minimal follow-ups.",
+      author: "Rachel Green",
+      company: "PayFlow"
     },
+    {
+      quote: "Their email invoice tracking feature gave us real-time updates on customer payments.",
+      author: "Michael Carter",
+      company: "SmartFinance"
+    },
+    {
+      quote: "They designed a professional email invoicing system that saved us hours of administrative work.",
+      author: "Sophia Kim",
+      company: "AdminEase"
+    },
+    {
+      quote: "AmeerSync integrated email invoicing with our accounting software seamlessly.",
+      author: "Ethan Lewis",
+      company: "AutoAccount"
+    },
+    {
+      quote: "Their secure email invoicing service ensured our transactions were protected from fraud.",
+      author: "Olivia Brown",
+      company: "SecureBilling"
+    },
+    {
+      quote: "AmeerSync's automated invoice generation made our billing process smooth and error-free.",
+      author: "Nathan Scott",
+      company: "BillingPro"
+    },
+    {
+      quote: "They customized our email invoices with branded templates, giving us a more professional look.",
+      author: "James Carter",
+      company: "InvoiceDesign"
+    }
   ];
+  
+  
 
   const faqs = [
     {
@@ -176,11 +183,18 @@ const EmailInVoicesContent = () => {
   };
 
   return (
-    <div className="email-invoice-design-content w-100 bg-white">
-      <HeroSection
+    <div className="">
+     
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+         <HeroSection
         icon={FaEnvelope}
-        imageWidth="600px"
-        imageHeight="400px"
+        imageWidth="100%"
+        imageHeight="500px"
         imageAlt="Email Invoice Design Services"
         buttonText="Get Started"
         title="Email Invoice Design Services"
@@ -193,17 +207,10 @@ const EmailInVoicesContent = () => {
       />
       <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
       <WhyChooseUsSection reasons={reasons	}/>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
         <Accordin faqs={faqs} />
+      <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

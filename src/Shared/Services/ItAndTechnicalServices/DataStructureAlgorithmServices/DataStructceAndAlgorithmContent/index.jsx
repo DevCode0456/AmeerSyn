@@ -18,37 +18,12 @@ import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
-import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const DataStructceAndAlgorithmContent = () => {
-  const projects = [
-    {
-      title: "Sorting Algorithms Visualization",
-      description:
-        "Interactive sorting algorithm visualizations to better understand sorting techniques.",
-      image: Images.DATA_STRUCTURE_IMG1,
-    },
-    {
-      title: "Graph Traversal Algorithms",
-      description:
-        "Implemented and visualized graph traversal algorithms like DFS and BFS.",
-      image: Images.DATA_STRUCTURE_IMG2,
-    },
-    {
-      title: "Dynamic Programming Challenges",
-      description: "Solving real-world problems using dynamic programming.",
-      image: Images.DATA_STRUCTURE_IMG3,
-    },
-    {
-      title: "Data Structure Optimization",
-      description:
-        "Optimizing data structures for performance and scalability.",
-      image: Images.DATA_STRUCTURE_IMG4,
-    },
-  ];
+
 
   const services = [
     {
@@ -91,24 +66,52 @@ const DataStructceAndAlgorithmContent = () => {
 
   const testimonialsData = [
     {
-      text: "Thanks to the tutorials, I was able to understand dynamic programming and graph algorithms!",
-      name: "John Doe",
-      role: "Software Engineer",
-      image: "https://via.placeholder.com/150",
+      quote: "Muhammad’s insights into data structures and algorithms helped me ace my programming assignments and improve my coding skills.",
+      author: "Sophia Bennett",
+      company: "Computer Science Major"
     },
     {
-      text: "The problem-solving approach made me better at tackling complex algorithm challenges.",
-      name: "Emily Stone",
-      role: "Tech Lead",
-      image: "https://via.placeholder.com/150",
+      quote: "His step-by-step guidance on algorithm optimization was invaluable for my final year project.",
+      author: "David Williams",
+      company: "Software Engineering Student"
     },
     {
-      text: "Great guidance on optimizing data structures for real-world applications.",
-      name: "Michael Brown",
-      role: "Data Scientist",
-      image: "https://via.placeholder.com/150",
+      quote: "Muhammad helped me understand complex data structures, making my coding projects much more efficient and organized.",
+      author: "Rachel Green",
+      company: "Tech Intern"
     },
+    {
+      quote: "His deep knowledge of algorithms and problem-solving techniques made me confident in tackling competitive programming challenges.",
+      author: "Michael Carter",
+      company: "Engineering Student"
+    },
+    {
+      quote: "Muhammad’s tutoring helped me refine my understanding of algorithms, which was crucial for my thesis project.",
+      author: "Sophia Kim",
+      company: "Research Student"
+    },
+    {
+      quote: "He explained the intricacies of various data structures and their applications, which greatly enhanced my coding skills.",
+      author: "Ethan Lewis",
+      company: "Software Developer"
+    },
+    {
+      quote: "Muhammad’s approach to teaching algorithms is clear, concise, and full of real-world applications, making complex concepts easy to understand.",
+      author: "Olivia Brown",
+      company: "Tech Consultant"
+    },
+    {
+      quote: "His insights into time and space complexity analysis helped me optimize my solutions for faster execution.",
+      author: "Nathan Scott",
+      company: "Computer Science Graduate"
+    },
+    {
+      quote: "Muhammad’s expertise in data structures and algorithms played a key role in my success during technical interviews.",
+      author: "James Carter",
+      company: "Software Engineering Graduate"
+    }
   ];
+  
 
   const faqs = [
     {
@@ -198,31 +201,31 @@ const DataStructceAndAlgorithmContent = () => {
 
   return (
     <div className="data-structures-algorithms-content w-100 bg-white">
-      <HeroSection
+     
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+         <HeroSection
         icon={FaCode}
-        imageWidth="600px"
-        imageHeight="400px"
+      
         imageAlt="Data Structures and Algorithms"
         buttonText="Get Started"
         title="Master Data Structures and Algorithms"
         onButtonClick={handleButtonClick}
-        imageSrc={Images.DATA_STRUCTURE_IMG1}
+        imageSrc={Images.DATA_STRUCTURE_IMG}
         description="Master the core concepts of data structures and algorithms. We offer tutorials, challenges, and optimization strategies to help you solve complex problems efficiently."
         details="Learn essential data structures like arrays, linked lists, trees, and graphs, and understand the algorithms used to manipulate them. Our tutorials focus on both theory and practical implementations in various programming languages."
       />
       <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
+     
       <WhyChooseUsSection reasons={reasons} />
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

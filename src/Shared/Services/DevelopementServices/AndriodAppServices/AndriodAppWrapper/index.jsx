@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import AndriodAppContent from '../AndriodAppContent'	
 const AndriodAppWrapper = () => {
   return (
-    <div className="container fluid ">
+    <div className="m-0 p-0 ">
     <AndriodAppContent />
   </div>  )
 }

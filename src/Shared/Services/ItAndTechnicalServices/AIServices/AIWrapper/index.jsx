@@ -4,8 +4,8 @@ import AIContent from "../AIContent";
 const AIWrapper = () => {
   return (
     <div>
-      <div className="container fluid ">
-        <AIContent />
+    <div className="m-0 p-0 ">
+    <AIContent />
       </div>
     </div>
   );

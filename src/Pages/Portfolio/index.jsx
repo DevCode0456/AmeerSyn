@@ -1,220 +1,287 @@
-import React, { memo } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import React from "react";
 import { motion } from "framer-motion";
-import { FaCode, FaLaptopCode, FaUsers, FaBriefcase, FaPhoneAlt } from "react-icons/fa";
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
-import Testimonials from "../../Shared/Testimonials";
-import Images from "../../Helper/ImagesConstant";
+import Typed, { ReactTyped } from "react-typed";
+import { Swiper, SwiperSlide } from "swiper/react";
 import ContactUsSection from "../../Shared/ContactUsSection";
 
-const PortfolioPage = () => {
-  const PageHeading = ({ headingText }) => {
-    return <h2 className="text-4xl font-extrabold text-gray-800">{headingText}</h2>;
-  };
+import { FaCode, FaServer, FaCloud, FaLock, FaUserTie, FaLaptopCode, FaAward, FaProjectDiagram, FaRocket, FaLightbulb, FaChartLine, FaDatabase, FaMobileAlt, FaTools } from "react-icons/fa";
+import WhyChooseUsSection from "../../Shared/PagesSectionComponents/WhyChooseUsSection";
+import { FiCheck, FiClock, FiFlag, FiLifeBuoy, FiTrendingUp, FiUser } from "react-icons/fi";
 
-  const SubHeading = ({ headingText }) => {
-    return <p className="text-lg text-gray-600">{headingText}</p>;
-  };
+// Motion Variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
 
-  const skills = [
-    { name: "React", level: "Expert", icon: <FaLaptopCode size={32} /> },
-    { name: "Tailwind CSS", level: "Advanced", icon: <FaLaptopCode size={32} /> },
-    { name: "WordPress", level: "Expert", icon: <FaLaptopCode size={32} /> },
-    { name: "Shopify", level: "Intermediate", icon: <FaLaptopCode size={32} /> },
-    { name: "Android Development", level: "Expert", icon: <FaCode size={32} /> },
-  ];
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+};
 
-  const projects = [
-    {
-      title: "Project One",
-      description: "A fully responsive eCommerce site built with React and Tailwind CSS.",
-      imageUrl: "https://via.placeholder.com/400",
-      demoLink: "#",
-      codeLink: "#",
-    },
-    {
-      title: "Project Two",
-      description: "A blog website with custom WordPress theme and admin panel.",
-      imageUrl: "https://via.placeholder.com/400",
-      demoLink: "#",
-      codeLink: "#",
-    },
-    {
-      title: "Project Three",
-      description: "A mobile app built using Android Studio for a restaurant management system.",
-      imageUrl: "https://via.placeholder.com/400",
-      demoLink: "#",
-      codeLink: "#",
-    },
-  ];
+// 📌 Our Features
+const features = [
+  { title: "Cutting-Edge Technology", description: "We integrate the latest advancements to create impactful solutions.", icon: <FaRocket /> },
+  { title: "Client-Centered Approach", description: "Understanding your needs to deliver exceptional results.", icon: <FaUserTie /> },
+  { title: "Scalable Solutions", description: "We build products that grow with your business.", icon: <FaChartLine /> },
+  { title: "Innovative Thinking", description: "Pushing boundaries with creative and intelligent solutions.", icon: <FaLightbulb /> },
+];
 
-  const testimonialsData = [
-    {
-      text: "Ameer Hamza delivered exactly what we needed, a sleek and functional web app. Highly recommended!",
-      name: "John Doe",
-      role: "CEO, TechCorp",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      text: "Working with Ameer was a great experience. His expertise in both web development and design is remarkable.",
-      name: "Jane Smith",
-      role: "Product Manager, InnovateX",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      text: "The Android app we launched with Ameer’s help has been a huge success. He’s incredibly talented and dependable.",
-      name: "Michael Brown",
-      role: "Founder, FoodieApp",
-      image: "https://via.placeholder.com/150",
-    },
-  ];
+// 📌 Our Mission
+const mission = {
+  title: "Our Mission",
+  description: "Empowering businesses with high-quality, innovative, and scalable digital solutions to drive success in a rapidly evolving world.",
+  image: "https://via.placeholder.com/600",
+};
 
-  const socialLinks = [
-    { icon: <FiGithub size={24} />, link: "https://github.com" },
-    { icon: <FiLinkedin size={24} />, link: "https://linkedin.com" },
-    { icon: <FiTwitter size={24} />, link: "https://twitter.com" },
-    { icon: <FiMail size={24} />, link: "mailto:ameerhamzabscs02@gmail.com" },
-  ];
+// 📌 Featured Projects
+const projects = [
+  { title: "E-Commerce Website", description: "Built with React & Shopify.", image: "https://via.placeholder.com/400" },
+  { title: "AI Chatbot", description: "Smart chatbot powered by NLP.", image: "https://via.placeholder.com/400" },
+  { title: "Cybersecurity Dashboard", description: "Enterprise security analytics.", image: "https://via.placeholder.com/400" },
+];
 
-  const AboutMe = () => {
-    return (
-      <section className="py-20 bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
-        <div className="container mx-auto text-center">
-          <PageHeading headingText="About Me" />
-          <SubHeading headingText="I am Ameer Hamza, a passionate developer specializing in WordPress, Shopify, and Android applications." />
-        </div>
-        <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center mt-10">
-          <div>
-            <img
-              alt="Ameer Hamza"
-              src={Images.USER_DUMMY_IMG}
-              className="rounded-full shadow-lg w-60 mx-auto border-4 border-white"
-            />
-          </div>
-          <div className="space-y-4">
-            <p className="text-lg">
-              I have extensive experience building web and mobile applications that meet the needs of clients in diverse industries.
-            </p>
-            <p className="text-lg">
-              My skills span across full-stack development, mobile app development, and e-commerce platforms.
-            </p>
-            <p className="text-lg">
-              When I'm not coding, I enjoy contributing to open-source projects and learning new technologies.
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  };
+// 📌 Tech Stack
+const skills = [
+  { name: "Web Development", icon: <FaCode />, category: "Development" },
+  { name: "Cloud Computing", icon: <FaCloud />, category: "Cloud" },
+  { name: "Cybersecurity", icon: <FaLock />, category: "Security" },
+  { name: "Linux Administration", icon: <FaServer />, category: "Networking" },
+  { name: "AI & Automation", icon: <FaLaptopCode />, category: "AI" },
+];
 
-  const SkillsSection = () => {
-    return (
-      <section className="py-20 bg-white">
-        <div className="container mx-auto text-center">
-          <PageHeading headingText="Skills" />
-          <SubHeading headingText="The tools and technologies I specialize in to bring your projects to life." />
-        </div>
-        <div className="container mx-auto grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
-          {skills.map((skill, index) => (
-            <div className="p-6 shadow-lg rounded-xl border border-gray-200 text-center transition-transform transform hover:scale-105" key={index}>
-              <div className="mb-4 text-primary">{skill.icon}</div>
-              <h3 className="font-semibold text-xl mb-2">{skill.name}</h3>
-              <p className="text-gray-600">{skill.level}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-    );
-  };
+const certifications = [
+  { title: "AWS Certified Solutions Architect", issuer: "Amazon AWS", icon: <FaAward /> },
+  { title: "Google Cloud Certified Professional", issuer: "Google Cloud", icon: <FaAward /> },
+  { title: "Certified Ethical Hacker (CEH)", issuer: "EC-Council", icon: <FaAward /> },
+  { title: "Full-Stack Web Developer", issuer: "Udemy", icon: <FaAward /> },
+  { title: "Python for AI & Machine Learning", issuer: "Coursera", icon: <FaAward /> },
+];
+const reasons = [
+  {
+    icon: <FiCheck size={32} />,
+    title: "Expert Developer",
+    description: "10+ years of experience in full-stack development, AI, and cloud computing.",
+  },
+  {
+    icon: <FiUser size={50} />,
+    title: "Client-Centered Approach",
+    description: "I prioritize understanding your goals and crafting solutions that fit your needs.",
+  },
+  {
+    icon: <FiTrendingUp size={50} />,
+    title: "Innovative & Future-Ready",
+    description: "I integrate the latest technologies to ensure long-term scalability and performance.",
+  },
+  {
+    icon: <FiClock size={50} />,
+    title: "Timely Delivery",
+    description: "Meeting deadlines is a priority – delivering high-quality work on time, every time.",
+  },
+  {
+    icon: <FiLifeBuoy size={50} />,
+    title: "Continuous Support & Maintenance",
+    description: "Providing long-term support, updates, and optimizations even after project completion.",
+  },
+  {
+    icon: <FiFlag size={50} />,
+    title: "Proven Track Record",
+    description: "Successfully completed 50+ projects for startups and enterprises worldwide.",
+  },
+];
 
-  const ProjectsSection = () => {
-    return (
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto text-center">
-          <PageHeading headingText="My Projects" />
-          <SubHeading headingText="A collection of some of the projects I've worked on." />
-        </div>
-        <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-          {projects.map((project, index) => (
-            <div key={index} className="p-6 shadow-lg rounded-xl border border-gray-200 hover:shadow-2xl transition-all duration-300">
-              <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover rounded-lg transition-transform transform hover:scale-105" />
-              <div className="mt-4">
-                <h3 className="font-semibold text-xl">{project.title}</h3>
-                <p className="text-gray-600">{project.description}</p>
-                <div className="mt-4">
-                  <a href={project.demoLink} className="text-primary hover:text-blue-700">Live Demo</a>
-                  <span className="mx-2">|</span>
-                  <a href={project.codeLink} className="text-primary hover:text-blue-700">Source Code</a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    );
-  };
+const testimonials = [
+  "Great service! Highly recommended.",
+  "Amazing work, exceeded expectations!",
+  "Professional and efficient – will hire again!",
+];
 
-  const TestimonialsSection = () => {
-    return (
-      <section className="py-20 bg-white">
-        <div className="container mx-auto text-center">
-          <PageHeading headingText="Client Testimonials" />
-          <SubHeading headingText="Here’s what some of my clients have said about my work." />
-        </div>
-        <div className="mt-10">
-          <Testimonials testimonials={testimonialsData} />
-        </div>
-      </section>
-    );
-  };
 
-  const ContactSection = () => {
-    return (
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto text-center">
-          <PageHeading headingText="Contact Me" />
-          <SubHeading headingText="Let’s talk about how I can help you with your next project." />
-        </div>
-        <div className="flex justify-center mt-10">
-          <div className="bg-white p-8 shadow-lg rounded-lg w-full md:w-2/3 lg:w-1/2">
-            <form>
-              <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-600">Full Name</label>
-                <input type="text" id="name" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-600">Email Address</label>
-                <input type="email" id="email" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" />
-              </div>
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-gray-600">Message</label>
-                <textarea id="message" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" rows="6"></textarea>
-              </div>
-              <div className="mb-4 text-center">
-                <button type="submit" className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300">
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-    );
-  };
+// 📌 Tech Stack
+const techStack = [
+  { name: "Frontend Development", icon: <FaCode />, skills: ["React.js", "Next.js", "Vue.js", "Tailwind CSS", "Bootstrap"] },
+  { name: "Backend Development", icon: <FaServer />, skills: ["Node.js", "Express.js", "Django", "Flask", "Spring Boot"] },
+  { name: "Cloud Computing", icon: <FaCloud />, skills: ["AWS", "Google Cloud", "Azure", "Firebase", "Heroku"] },
+  { name: "Cybersecurity", icon: <FaLock />, skills: ["Penetration Testing", "Ethical Hacking", "SSL Security", "OWASP"] },
+  { name: "Database Management", icon: <FaDatabase />, skills: ["MySQL", "MongoDB", "PostgreSQL", "Redis", "Firebase"] },
+  { name: "Mobile App Development", icon: <FaMobileAlt />, skills: ["React Native", "Flutter", "Swift", "Kotlin"] },
+  { name: "DevOps & CI/CD", icon: <FaTools />, skills: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Terraform"] },
+];
 
+const services = [
+  {
+    title: "Custom Web Development",
+    description: "Building responsive, scalable, and high-performance web applications tailored to your business needs.",
+    icon: <FaCode />,
+  },
+  {
+    title: "E-Commerce Solutions",
+    description: "Developing powerful e-commerce platforms with Shopify, WooCommerce, and custom solutions.",
+    icon: <FaProjectDiagram />,
+  },
+  {
+    title: "Cloud & DevOps Consulting",
+    description: "Helping businesses scale with cloud deployment, automation, and CI/CD best practices.",
+    icon: <FaCloud />,
+  },
+  {
+    title: "Cybersecurity & Pen Testing",
+    description: "Ensuring secure applications through penetration testing, vulnerability assessments, and security audits.",
+    icon: <FaLock />,
+  },
+  {
+    title: "AI & Automation",
+    description: "Integrating AI-powered chatbots, automation scripts, and machine learning solutions for businesses.",
+    icon: <FaUserTie />,
+  },
+];
+
+
+const Portfolio = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="portfolio-page"
-    >
-      <AboutMe />
-      <SkillsSection />
-      <ProjectsSection />
-      <TestimonialsSection />
+    <div className="">
+
+      {/* 🌟 Hero Section */}
+      <motion.section
+        className="relative h-screen flex flex-col items-center justify-center text-center bg-black"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+      >
+        <video autoPlay loop muted className="absolute w-full h-full object-cover opacity-50">
+          <source src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute bottom-0 z-10 p-10">
+          <motion.h1 className="text-6xl font-semibold text-primary">
+            My {" "}
+            <ReactTyped className="text-secondary" strings={["Portfolio", "Projects", "Work"]} typeSpeed={100} backSpeed={200} loop />
+          </motion.h1>
+          <motion.p className="text-secondary mt-4">
+            Showcasing innovation, creativity, and technology-driven solutions.
+          </motion.p>
+        </div>
+      </motion.section>
+
+      {/* 🚀 Our Features */}
+      <section className="py-16 bg-gradient-to-b from-secondary to-container px-6 sm:px-12 lg:px-24">
+  <h2 className="text-4xl font-bold text-center text-primary mb-10">Our Features</h2>
+  
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {features.map((feature, index) => (
+      <motion.div
+        key={index}
+        whileHover={{ scale: 1.08, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+        className="p-6 bg-white rounded-xl shadow-xl flex flex-col items-center text-center border border-transparent hover:border-blue-400 transition-all duration-300"
+      >
+        <div className="text-5xl bg-gradient-to-r from-pink-500 to-primary text-white p-4 rounded-full mb-4">
+          {feature.icon}
+        </div>
+        <h3 className="text-xl font-bold text-gray-800">{feature.title}</h3>
+        <p className="text-gray-600 mt-2">{feature.description}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+      <section className="py-16 px-6 sm:px-12 lg:px-24">
+  <h2 className="text-4xl font-bold text-center text-primary">Tech Stack</h2>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+    {techStack.map((tech, index) => (
+      <motion.div key={index} className="p-6 bg-gray-100 rounded-lg shadow-lg text-center hover:scale-105 transition">
+        <div className="text-4xl text-primary mb-3">{tech.icon}</div>
+        <h3 className="text-2xl font-bold">{tech.name}</h3>
+        <p className="text-gray-600 mt-2">{tech.skills.join(", ")}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+<section className="py-16 bg-white px-6 sm:px-12 lg:px-24">
+  <h2 className="text-4xl font-bold text-center text-primary">Services</h2>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+    {services.map((service, index) => (
+      <motion.div key={index} className="p-6 bg-container rounded-3xl shadow-lg text-center hover:scale-105 transition">
+        <div className="text-5xl text-primary mb-3">{service.icon}</div>
+        <h3 className="text-2xl font-bold text-primary">{service.title}</h3>
+        <p className="text-gray-600 mt-2">{service.description}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+
+      {/* 🚀 Featured Projects */}
+      <section className="py-16 px-6 sm:px-12 lg:px-24">
+      <h2 className="text-4xl font-bold text-center text-primary mb-10">My Projects</h2>
+      
+      <motion.div 
+        className="grid md:grid-cols-3 gap-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", staggerChildren: 0.2 }}
+        viewport={{ once: true }}
+      >
+        {projects.map((project, index) => (
+          <motion.div 
+            key={index}
+            className="p-6 rounded-3xl shadow-lg text-center backdrop-blur-lg bg-white/10 border border-white/20 transition-transform transform hover:scale-105 hover:shadow-xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+          >
+            <motion.img 
+              src={project.image} 
+              alt={project.title} 
+              className="rounded-lg mb-4"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true }}
+            />
+            <h3 className="text-2xl font-bold text-primary mb-3">{project.title}</h3>
+            <p className="text-text">{project.description}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+
+      {/* 🌟 Certifications */}
+      <section className="py-16 px-6 sm:px-12 lg:px-24">
+        <h2 className="text-4xl font-bold text-center text-primary">Certifications</h2>
+        <div className="grid md:grid-cols-3 gap-10 mt-10">
+          {certifications.map((cert, index) => (
+            <motion.div key={index} className="p-6 bg-container rounded-3xl shadow-lg text-center transform hover:scale-105 transition">
+              <div className="text-5xl text-primary">{cert.icon}</div>
+              <h3 className="text-2xl font-bold text-primary mt-3">{cert.title}</h3>
+              <p className="text-text">{cert.issuer}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <WhyChooseUsSection reasons={reasons} />
+
+      {/* 🌟 Testimonials Section */}
+      <section className="py-16 px-6 sm:px-12 lg:px-24">
+        <h2 className="text-4xl font-bold text-primary text-center">Client Testimonials</h2>
+        <Swiper spaceBetween={50} slidesPerView={1} autoplay={{ delay: 3000 }}>
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index} className="p-6 text-center">
+              <p className="italic text-lg">"{testimonial}"</p>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+
+      {/* 🌟 Contact Section */}
       <ContactUsSection />
-    </motion.div>
+
+    </div>
   );
 };
 
-export default memo(PortfolioPage);
+export default Portfolio;

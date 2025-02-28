@@ -1,147 +1,234 @@
-import {
-  FaTwitter,
-  FaYoutube,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import React, { useState } from "react";
+import React from "react";
+import { FaLinkedinIn, FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Images from "../../../Helper/ImagesConstant";
 
 const Footer = () => {
-  const [activeTab, setActiveTab] = useState("Home");
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-
-    if (tab === "Contact Us") {
-      window.location.href = "/contact"; 
-    } else {
-      const sectionId = tab.toLowerCase().replace(/\s+/g, "-");
-      const section = document.getElementById(sectionId);
-
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  };
-
   return (
-    <footer className="text-primary bg-container body-font border-t w-full border-gray-200">
-      <div className="container px-5 py-16 mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="w-64 text-center md:text-left mb-6 md:mb-0">
-          <a
-            href="#"
-            className="flex items-center justify-center md:justify-start"
-          >
-  <img
-              alt="logo"
-              src={Images.LOGO_IMG}
-              className="w-25 h-14 rounded-full flex-shrink-0 object-cover object-center"
-            />          </a>
-          <p className="mt-4 text-sm text-primary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
-          </p>
-        </div>
+    <footer className=" bg-gradient-to-b from-primary  to-black  text-secondary hover:text-text py-5">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Logo & Intro */}
+          <div>
+            <Link to="/" className="flex items-center mb-4">
+              <img
+                src={Images.LOGO_IMG}
+                className="h-40 w-72 object-contain"
+                alt="Company Logo"
+              />
+            </Link>
+            <p className="text-secondary text-sm">
+              Providing top-notch services in web development, AI, and
+              cybersecurity.
+            </p>
+          </div>
 
-        <div className="py-6 flex flex-col md:ps-4  gap-8">
-          <nav className="flex flex-col md:flex-row md:items-center  flex-wrap  space-y-6 md:space-y-0  md:space-x-5">
-            {[     "Home",
-              "About Us",
-              "Our Team",
-              "Services",
-              "Projects",
-              "Portfolio",
-              "Feedbacks",
-              "Why Choose Us",
-              "Contact Us",,].map(
-              (tab) => (
-                <a
-                  href="#"
-                  key={tab}
-                  className={`${
-                    activeTab === tab
-                      ? "text-[#0052DE] font-semibold  m-0 p-0"
-                      : "text-gray-600 hover:text-[#0052DE] "
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault(); 
-                    handleTabClick(tab);
-                  }}
+          {/* Services by Category */}
+          <div>
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+              Development Services
+            </h2>
+            <ul className="text-secondary space-y-2">
+              <li>
+                <Link to="/services/node.js" className=" hover:text-text">
+                  Node.js
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/shopify" className=" hover:text-text">
+                  Shopify
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/react.js" className=" hover:text-text">
+                  React.js
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/wordpress" className=" hover:text-text">
+                  WordPress
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/static-website"
+                  className=" hover:text-text"
                 >
-                  {tab}
-                </a>
-              )
-            )}
-          </nav>
+                  Static Websites
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/web-development"
+                  className=" hover:text-text"
+                >
+                  Web Development
+                </Link>
+              </li>
+            </ul>
+          </div>
 
           <div>
-            <div className="md:flex  md:flex-nowrap flex-wrap justify-center items-end md:justify-start">
-              <div className="relative w-full my-2  mr-4">
-                <label
-                  htmlFor="footer-field"
-                  className="leading-7 text-sm text-gray-800 font-semibold"
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+              IT & Security
+            </h2>
+            <ul className="text-secondary space-y-2">
+              <li>
+                <Link to="/services/linux" className=" hover:text-text">
+                  Linux
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/databases" className=" hover:text-text">
+                  Databases
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/networking" className=" hover:text-text">
+                  Networking
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/cyber-security"
+                  className=" hover:text-text"
                 >
-                  Your Email
-                </label>
-                <input
-                  type="text"
-                  id="footer-field"
-                  name="footer-field"
-                  placeholder="Enter your email"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:bg-transparent focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            <div className="md:inline-flex my-2 text-center mx-auto w-full md:w-auto  ">
-            <button className=" text-white bg-indigo-500 border-0 py-2  px-6 focus:outline-none hover:bg-indigo-600 rounded">
-                Subscribe
-              </button>
-            </div>
-            </div>
+                  Cyber Security
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/cloud-computing"
+                  className=" hover:text-text"
+                >
+                  Cloud Computing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+              Academic Services
+            </h2>
+            <ul className="text-secondary space-y-2">
+             
+              <li>
+                <Link to="/services/assignments" className=" hover:text-text">
+                  Assignments
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/thesis" className=" hover:text-text">
+                  Thesis Writing
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/proof-reading" className=" hover:text-text">
+                  Proof Reading
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/research-paper"
+                  className=" hover:text-text"
+                >
+                  Research Papers
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mt-8 text-secondary">
+          <div>
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+              Company
+            </h2>
+            <ul className="text-secondary space-y-2">
+              <li>
+                <Link to="/about-us" className=" hover:text-text">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact-us" className=" hover:text-text">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/projects" className=" hover:text-text">
+                  {" "}
+                  Our Projects
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/why-choose-us" className=" hover:text-text">
+                  Why Choose Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+              Legal
+            </h2>
+            <ul className="text-secondary space-y-2">
+              <li>
+                <Link
+                  to="/need-help"
+                  className="text-secondary  hover:text-text"
+                >
+                  Need Help?
+                </Link>
+              </li>
+           
+              <li>
+                <Link
+                  to="/privacy-policy"
+                  className=" text-secondary  hover:text-text"
+                >
+                  Privacy & Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms&conditions"
+                  className=" text-secondary  hover:text-text"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div className="bg-gray-100 py-4 px-5">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-primary">
-            AmeerSync © 2024. All rights reserved.
-          </p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
+      <div className="border-t border-secondary my-6"></div>
+
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+        <p className="text-secondary text-sm">
+          © 2024 AmeerSync. All rights reserved.
+        </p>
+
+        <div className="flex space-x-4 mt-4  md:mt-0">
+          {[
+            { icon: <FaFacebook />, url: "https://facebook.com" },
+
+            { icon: <FaLinkedinIn />, url: "https://linkedin.com" },
+          ].map((item, index) => (
             <a
+              key={index}
+              href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.youtube.com"
-              className="p-2 border rounded-full text-gray-800 border-gray-500 hover:text-[#0052DE]"
+              className="p-2 border border-secondary rounded-full text-secondary  hover:text-text hover:border-primary transition duration-300"
             >
-              <FaYoutube />
+              {item.icon}
             </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 border border-gray-500 rounded-full text-gray-800 hover:text-[#0052DE]"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com"
-              className="p-2 border border-gray-500 rounded-full text-gray-800 hover:text-[#0052DE]"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com"
-              className="p-2 border border-gray-500 rounded-full text-gray-800 hover:text-[#0052DE]"
-            >
-              <FaLinkedinIn />
-            </a>
-          </div>
+          ))}
         </div>
       </div>
     </footer>

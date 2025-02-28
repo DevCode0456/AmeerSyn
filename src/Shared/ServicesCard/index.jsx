@@ -1,29 +1,51 @@
-import "./style.css";
 import React, { memo } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { MdContactPhone } from "react-icons/md";
 
 const CustomCard = ({ icon, title, description }) => {
   return (
-<>
-  
-    
-
-    <div class="custom-card-container rounded-3xl py-5 p-3 md:p-5 bg-primary text-center">
-      <div class="side-ribbon shadow-5xl bg-primary"></div>
-      <div class="custom-card bg-white rounded-3xl shadow-sm px-0">
-        <div class="card-body p-3">
-          <div class="icon-container">
-            <div class="icon text-primary py-5">{icon}</div>
-          </div>
-          <h5 class="reason-title text-primary  font-semibold text-2xl mb-2">{title}</h5>
-          <p class="reason-description text-gray-800 text-sm">{description}</p>
-        </div>
-        <div class="circle-btn text-center mx-2 flex items-center justify-center bg-primary rounded-full shadow-md text-white">
-          <MdContactPhone class="w-8 h-8 " />
-        </div>
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-gradient-to-b from-primary to-pink-500 rounded-3xl shadow-xl p-5 text-center transform transition-all duration-300 h-full flex flex-col justify-between"
+    >
+      <div className="relative z-10 p-6 flex-grow">
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="bg-secondary p-4 rounded-full shadow-sm flex items-center justify-center mx-auto"
+        >
+          <div className="text-primary">{icon}</div>
+        </motion.div>
+        <motion.h5
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-white font-bold text-2xl mt-4"
+        >
+          {title}
+        </motion.h5>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-text text-sm mt-2 py-3"
+        >
+          {description}
+        </motion.p>
       </div>
-    </div>
-    </>
+      <Link to="/contact-us" className="flex justify-end">
+        <motion.div
+          whileHover={{ scale: 1.2, rotate: 360 }}
+          transition={{ duration: 0.4 }}
+          className="w-14 h-14 bg-gradient-to-b from-secondary to-container text-primary shadow-md rounded-full p-3  flex justify-center items-center cursor-pointer"
+        >
+          <MdContactPhone className="w-6 h-6" />
+        </motion.div>
+      </Link>
+    </motion.div>
   );
 };
 

@@ -1,59 +1,30 @@
 import {
   FaTools,
+  FaClock,
   FaAndroid,
   FaMobileAlt,
   FaShieldAlt,
-  FaLaptopCode,
-  FaGooglePlay,
-  FaCodeBranch,
-  FaCheckCircle,
   FaUserCheck,
-  FaClock,
   FaHandshake,
   FaLightbulb,
+  FaGooglePlay,
+  FaLaptopCode,
+  FaCodeBranch,
+  FaCheckCircle,
 } from "react-icons/fa";
 import React, { memo } from "react";
+import { motion } from "framer-motion";
+import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
 import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
-import Accordin from "../../../../Accordin";
-import { motion } from "framer-motion";
-import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
-
 
 const AndroidAppContent = () => {
-  const projects = [
-    {
-      title: "E-Commerce Mobile App",
-      description:
-        "A feature-rich e-commerce application with seamless navigation and secure payment options.",
-      image: Images.MOBILE_APP_IMG,
-    },
-    {
-      title: "Healthcare Mobile App",
-      description:
-        "A mobile platform for healthcare providers and patients to manage appointments and records.",
-      image: Images.HEALTHCARE_APP_IMG,
-    },
-    {
-      title: "Social Networking App",
-      description:
-        "An engaging social media application for connecting people globally.",
-      image: Images.SOCIAL_MEDIA_APP_IMG,
-    },
-    {
-      title: "Educational App",
-      description:
-        "A mobile app designed for online learning and interactive course material delivery.",
-      image: Images.EDUCATION_APP_IMG,
-    },
-  ];
-
   const services = [
     {
       icon: <FaAndroid size={100} className="mt-6" />,
@@ -95,22 +66,58 @@ const AndroidAppContent = () => {
 
   const testimonialsData = [
     {
-      text: "The app delivered is exactly what we envisioned. Fantastic work!",
-      name: "Sarah Lee",
-      role: "Startup Founder",
-      image: "https://via.placeholder.com/150", // Replace with actual image URLs
+      quote:
+        "AmeerSync developed a sleek Android app for our business. The UI/UX is intuitive, and performance is outstanding.",
+      author: "Emma Robinson",
+      company: "App Innovations",
     },
     {
-      text: "Excellent service and a top-quality app. Highly recommended!",
-      name: "Mark Wilson",
-      role: "Business Owner",
-      image: "https://via.placeholder.com/150", // Replace with actual image URLs
+      quote:
+        "They optimized our Android app for low-end devices, ensuring a smooth experience for all users.",
+      author: "David Williams",
+      company: "MobileFirst",
     },
     {
-      text: "Our app launch was a huge success thanks to their expert development.",
-      name: "Emily Davis",
-      role: "Product Manager",
-      image: "https://via.placeholder.com/150", // Replace with actual image URLs
+      quote:
+        "AmeerSync integrated real-time push notifications, increasing our app engagement by 50%.",
+      author: "Rachel Green",
+      company: "EngageApp",
+    },
+    {
+      quote:
+        "Their expertise in Firebase helped us build a real-time chat feature seamlessly.",
+      author: "Sophia Kim",
+      company: "ChatNow",
+    },
+    {
+      quote:
+        "They helped us implement in-app purchases, boosting our revenue significantly.",
+      author: "Ethan Lewis",
+      company: "MobileCommerce",
+    },
+    {
+      quote:
+        "AmeerSync's Android app security enhancements protected us from data leaks and vulnerabilities.",
+      author: "Michael Carter",
+      company: "SecureApps",
+    },
+    {
+      quote:
+        "Their Android app optimization reduced battery usage and improved overall performance.",
+      author: "Olivia Brown",
+      company: "BatterySaver",
+    },
+    {
+      quote:
+        "They built a feature-rich Android app for our e-learning platform. The experience is seamless!",
+      author: "Nathan Scott",
+      company: "LearnPro",
+    },
+    {
+      quote:
+        "AmeerSync delivered a highly scalable Android application with cloud integration.",
+      author: "James Carter",
+      company: "CloudApps",
     },
   ];
 
@@ -135,8 +142,7 @@ const AndroidAppContent = () => {
     },
     {
       question: "Do you provide app maintenance after development?",
-      answer:
-        "Yes, we offer comprehensive maintenance and support services.",
+      answer: "Yes, we offer comprehensive maintenance and support services.",
     },
   ];
 
@@ -144,20 +150,17 @@ const AndroidAppContent = () => {
     {
       icon: <FaAndroid size={100} />,
       title: "Kotlin",
-      description:
-        "A modern programming language for Android app development.",
+      description: "A modern programming language for Android app development.",
     },
     {
       icon: <FaCodeBranch size={100} />,
       title: "Java",
-      description:
-        "A robust and reliable language for building Android apps.",
+      description: "A robust and reliable language for building Android apps.",
     },
     {
       icon: <FaLaptopCode size={100} />,
       title: "Android Studio",
-      description:
-        "The official IDE for Android development.",
+      description: "The official IDE for Android development.",
     },
     {
       icon: <FaShieldAlt size={100} />,
@@ -168,8 +171,7 @@ const AndroidAppContent = () => {
     {
       icon: <FaGooglePlay size={100} />,
       title: "Play Store APIs",
-      description:
-        "APIs for app monetization, subscriptions, and more.",
+      description: "APIs for app monetization, subscriptions, and more.",
     },
   ];
 
@@ -195,8 +197,7 @@ const AndroidAppContent = () => {
     {
       icon: <FaHandshake size={50} />,
       title: "Transparent Workflow",
-      description:
-        "Regular updates and open communication during development.",
+      description: "Regular updates and open communication during development.",
     },
     {
       icon: <FaLightbulb size={50} />,
@@ -211,11 +212,18 @@ const AndroidAppContent = () => {
   };
 
   return (
-    <div className="android-content w-100 bg-white">
-      <HeroSection
+    <div className="">
+      
+      <motion.div
+        className="mt-10"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <HeroSection
         icon={FaAndroid}
-        imageWidth="600px"
-        imageHeight="400px"
+        imageWidth="100%"
+        imageHeight="500px"
         buttonText="Get Started"
         onButtonClick={handleButtonClick}
         imageSrc={Images.ANDRIOD_APP_IMG}
@@ -226,17 +234,10 @@ const AndroidAppContent = () => {
       />
       <ServicesSection services={services} />
       <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons	}/>
-      <motion.div
-        className="my-10"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+      <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

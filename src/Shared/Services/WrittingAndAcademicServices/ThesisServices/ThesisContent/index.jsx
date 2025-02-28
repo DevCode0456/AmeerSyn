@@ -1,55 +1,29 @@
 import {
-  FaFileAlt,
-  FaPenFancy,
-  FaCheckCircle,
-  FaUserCheck,
   FaClock,
-  FaShieldAlt,
-  FaThumbsUp,
-  FaHandshake,
   FaCloud,
+  FaFileAlt,
+  FaThumbsUp,
+  FaPenFancy,
+  FaShieldAlt,
+  FaHandshake,
+  FaUserCheck,
+  FaCheckCircle,
   FaClipboardList,
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
-import FlipCard from "../../../../FlipCard";
 import HeroSection from "../../../../HeroSection";
-import Testimonials from "../../../../Testimonials";
-import ServicesCard from "../../../../ServicesCard";
-import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
-import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const ThesisContent = () => {
-  const projects = [
-    {
-      title: "Thesis Editing",
-      description: "Improving the quality of your thesis for submission or publication.",
-      image: Images.THESIS_IMG1,
-    },
-    {
-      title: "Technical Thesis Proofreading",
-      description: "Enhancing technical accuracy and clarity in your thesis content.",
-      image: Images.THESIS_IMG2,
-    },
-    {
-      title: "Thesis Formatting and Structure",
-      description: "Ensuring correct structure and formatting in line with academic guidelines.",
-      image: Images.THESIS_IMG3,
-    },
-    {
-      title: "Full Thesis Proofreading",
-      description: "Complete proofreading service for thesis, including references and citations.",
-      image: Images.THESIS_IMG4,
-    },
-  ];
+
 
   const services = [
     {
@@ -76,24 +50,52 @@ const ThesisContent = () => {
 
   const testimonialsData = [
     {
-      text: "The thesis proofreading service transformed my thesis into a polished academic document. Highly recommend!",
-      name: "James Richardson",
-      role: "PhD Candidate",
-      image: "https://via.placeholder.com/150",
+      quote: "AmeerSync guided me through my thesis with structured recommendations. Their expertise helped me refine my research significantly.",
+      author: "Sophia Mitchell",
+      company: "Graduate Research"
     },
     {
-      text: "I had my master's thesis proofread and formatted perfectly for submission. The service was fast and reliable.",
-      name: "Olivia Thompson",
-      role: "Master's Student",
-      image: "https://via.placeholder.com/150",
+      quote: "Their insights helped me strengthen my arguments and improve my thesis presentation.",
+      author: "Ethan Carter",
+      company: "Master's Student"
     },
     {
-      text: "The proofreading and editing service helped me refine my thesis for a top-quality presentation.",
-      name: "David Miller",
-      role: "PhD Candidate",
-      image: "https://via.placeholder.com/150",
+      quote: "They provided valuable feedback that made my thesis more concise and impactful.",
+      author: "Olivia Brown",
+      company: "PhD Candidate"
     },
+    {
+      quote: "AmeerSync's detailed proofreading caught errors I had overlooked. Highly recommended!",
+      author: "Ryan Foster",
+      company: "University Student"
+    },
+    {
+      quote: "They helped structure my thesis in a way that was easy to follow and well-organized.",
+      author: "Emily White",
+      company: "Academic Scholar"
+    },
+    {
+      quote: "The research assistance they provided was instrumental in improving my paper's credibility.",
+      author: "Nathan Clark",
+      company: "Doctoral Researcher"
+    },
+    {
+      quote: "Their literature review support helped me find the most relevant sources for my study.",
+      author: "Lucas Harris",
+      company: "Postgraduate Student"
+    },
+    {
+      quote: "They formatted my thesis according to my university's strict guidelines perfectly.",
+      author: "Sophia Bennett",
+      company: "University Graduate"
+    },
+    {
+      quote: "AmeerSync's feedback helped me defend my thesis confidently in front of my professors.",
+      author: "Benjamin Carter",
+      company: "Research Associate"
+    }
   ];
+  
 
   const faqs = [
     {
@@ -165,32 +167,31 @@ const ThesisContent = () => {
   };
 
   return (
-    <div className="thesis-content w-100 bg-white">
-      <HeroSection
-        icon={FaPenFancy}
-        imageWidth="600px"
-        imageHeight="400px"
-        imageAlt="Thesis Proofreading"
-        buttonText="Get Started"
-        title="Professional Thesis Proofreading Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.THESIS_IMG1}
-        description="Get your thesis proofread and polished by experts in academic writing and research."
-        details="Our thesis proofreading services include grammar corrections, structure improvements, citation and reference checks, and consistent formatting."
-      />
-  <ServicesSection services={services} />
-      <ProjectsSection projects={reasons} />
-      <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons} />
+    <div className="thesis-content w-full">
+  
       <motion.div
-        className="my-10"
+        className="mt-10"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
+            <HeroSection
+        icon={FaPenFancy}
+       
+        imageAlt="Thesis Proofreading"
+        buttonText="Get Started"
+        title="Professional Thesis Proofreading Services"
+        onButtonClick={handleButtonClick}
+        imageSrc={Images.THESIS_WRITING_IMG}
+        description="Get your thesis proofread and polished by experts in academic writing and research."
+        details="Our thesis proofreading services include grammar corrections, structure improvements, citation and reference checks, and consistent formatting."
+      />
+  <ServicesSection services={services} />
+      <TechnologiesSection technologies={technologies} />
+      <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+      <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

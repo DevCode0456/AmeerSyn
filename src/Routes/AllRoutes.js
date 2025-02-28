@@ -3,11 +3,13 @@ import Home from "../Pages/Home";
 import AboutUs from "../Pages/AboutUs";
 import Projects from "../Pages/Projects";
 import NeedHelp from "../Pages/NeedHelp";
-import Feedback from "../Pages/Feedbacks";
+// import Feedback from "../Pages/Feedbacks";
 import Portfolio from "../Pages/Portfolio";
 import ContactUs from "../Pages/ContactUs";
 import WhyChooseUs from "../Pages/WhyChooseUs";
 import TemsAndConditions from "../Pages/TemsAndConditions";
+
+
 
 // import Services from "../Pages/Services";
 
@@ -47,20 +49,25 @@ import ResearchPapperPage from "../Pages/ServicesPages/WrittingAndAcademicServic
 
 
 import { Route, Routes } from "react-router-dom";
+import PrivacyPolicy from "../Pages/PrivacyPolicy";
 const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/feedback" element={<Feedback />} />
+      {/* <Route path="/feedback" element={<Feedback />} /> */}
       <Route path="/need-help" element={<NeedHelp/>} />
       <Route path="/terms&conditions" element={<TemsAndConditions />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/about-us" element={<AboutUs />} />
+
+
       {/* <Route path="/services" element={<Services />} /> */}
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/faqs" element={<Home />} />
       <Route path="/why-choose-us" element={<WhyChooseUs />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
 
       <Route path="/services/node.js" element={<NodePage />} />
       <Route path="/services/react.js" element={<ReactPage />} />

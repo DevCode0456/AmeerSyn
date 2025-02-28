@@ -6,7 +6,7 @@ import Images from "../../../Helper/ImagesConstant";
 const ServicesSection = ({ services }) => {
   return (
     <motion.div
-      className="my-10"
+      className="my-10 p-5 container mx-auto"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

@@ -1,13 +1,13 @@
 import {
+  FaWifi,
+  FaLock,
+  FaRobot,
+  FaGlobe,
   FaThumbsUp,
+  FaMobileAlt,
   FaLaptopCode,
   FaGraduationCap,
   FaProjectDiagram,
-  FaRobot,
-  FaLock,
-  FaWifi,
-  FaMobileAlt,
-  FaGlobe,
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
@@ -15,13 +15,69 @@ import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
 import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 
 const FinalYearProjectContent = () => {
+  const testimonialsData = [
+    {
+      quote:
+        "My final year project needed expert guidance, and AmeerSync provided just that! Their mentorship was invaluable.",
+      author: "Sophia Bennett",
+      company: "University Graduate",
+    },
+    {
+      quote:
+        "They helped me with complex coding tasks in my final year project, ensuring clean and optimized code.",
+      author: "David Williams",
+      company: "CS Major",
+    },
+    {
+      quote:
+        "AmeerSync assisted me in designing and testing my IoT-based project, making it industry-ready.",
+      author: "Rachel Green",
+      company: "Tech Innovators",
+    },
+    {
+      quote:
+        "Their structured project planning helped me manage my time effectively and meet deadlines.",
+      author: "Michael Carter",
+      company: "Engineering Student",
+    },
+    {
+      quote:
+        "They provided valuable research insights that made my final year dissertation more impactful.",
+      author: "Sophia Kim",
+      company: "Academia Research",
+    },
+    {
+      quote:
+        "AmeerSync’s debugging skills helped me resolve critical issues in my project at the last moment.",
+      author: "Ethan Lewis",
+      company: "Software Engineering",
+    },
+    {
+      quote:
+        "They helped with the documentation of my project, ensuring clear explanations and professional formatting.",
+      author: "Olivia Brown",
+      company: "Technical Writer",
+    },
+    {
+      quote:
+        "Their real-world project implementation tips made my work stand out during the final presentation.",
+      author: "Nathan Scott",
+      company: "Project Excellence",
+    },
+    {
+      quote:
+        "AmeerSync’s project review and feedback significantly improved my work, leading to top grades.",
+      author: "James Carter",
+      company: "University Student",
+    },
+  ];
+
   const services = [
     {
       icon: <FaGraduationCap size={100} className="mt-6" />,
@@ -46,33 +102,6 @@ const FinalYearProjectContent = () => {
       title: "Presentation Preparation",
       description:
         "Prepare impactful presentations with visual aids and speech coaching for confident delivery.",
-    },
-  ];
-
-  const projects = [
-    {
-      title: "AI-Based Chatbot for Customer Support",
-      description:
-        "Developed using Natural Language Processing (NLP) to enhance user engagement and response accuracy.",
-      image: Images.FINAL_YEAR_IMG1,
-    },
-    {
-      title: "Mobile App for Healthcare Management",
-      description:
-        "A comprehensive mobile solution for managing patient data, appointments, and prescriptions.",
-      image: Images.FINAL_YEAR_IMG2,
-    },
-    {
-      title: "Blockchain-Based Voting System",
-      description:
-        "Secure and transparent blockchain technology to revolutionize the voting process.",
-      image: Images.FINAL_YEAR_IMG3,
-    },
-    {
-      title: "IoT-Based Smart Traffic Management",
-      description:
-        "Real-time optimization of traffic flow and congestion reduction using IoT sensors and algorithms.",
-      image: Images.FINAL_YEAR_IMG4,
     },
   ];
 
@@ -103,7 +132,6 @@ const FinalYearProjectContent = () => {
       description: "Build responsive and modern web applications.",
     },
   ];
-  
 
   const reasons = [
     {
@@ -164,32 +192,29 @@ const FinalYearProjectContent = () => {
   };
 
   return (
-    <div className="final-year-projects-content w-full bg-gray-100">
-      <HeroSection
-        icon={FaGraduationCap}
-        imageWidth="600px"
-        imageHeight="400px"
-        imageAlt="Final Year Projects"
-        buttonText="Get Started"
-        title="Expert Final Year Project Solutions"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.FINAL_YEAR_IMG1}
-        description="We specialize in providing end-to-end solutions for your final year projects. From innovative project ideas to complete implementation and presentation guidance, we've got you covered."
-        details="Our expert team ensures you achieve academic success with tailored solutions that meet your project's unique requirements. Whether you need assistance with coding, documentation, or final presentation, we deliver unmatched support across multiple disciplines."
-      />
-      <ServicesSection services={services} />
-      <ProjectsSection projects={projects} />
-      <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons} />
+    <div className="final-year-projects-content w-full ">
       <motion.div
-        className="my-10"
+        className="mt-10"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
+        <HeroSection
+          icon={FaGraduationCap}
+          buttonText="Get Started"
+          imageAlt="Final Year Projects"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.FINAL_YEAR_IMG}
+          title="Expert Final Year Project Solutions"
+          description="We specialize in providing end-to-end solutions for your final year projects. From innovative project ideas to complete implementation and presentation guidance, we've got you covered."
+          details="Our expert team ensures you achieve academic success with tailored solutions that meet your project's unique requirements. Whether you need assistance with coding, documentation, or final presentation, we deliver unmatched support across multiple disciplines."
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

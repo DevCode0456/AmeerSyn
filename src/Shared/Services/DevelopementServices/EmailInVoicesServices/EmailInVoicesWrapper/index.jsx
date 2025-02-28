@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import EmailInVoicesContent  from  "../EmailInVoicesContent"
 const EmailInVoicesWrapper = () => {
   return (
-     <div className="container fluid ">
+     <div className=" ">
         <EmailInVoicesContent />
       </div> 
  )

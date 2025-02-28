@@ -4,6 +4,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
+  FaMapMarked,
 } from "react-icons/fa";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 
@@ -34,6 +35,18 @@ export default function Topbar() {
           />
           <span className="font-semibold hidden md:inline">
             (+92) 304-7914358
+          </span>
+        </a>
+        <a
+          href="mailto:info@wongateway.com"
+          className="flex items-center gap-2 md:border-r-2 border-gray-300 text-primary md:pr-4 group"
+        >
+          <FaMapMarked
+            size={24}
+            className="text-primary transition-transform duration-300 group-hover:scale-110"
+          />
+          <span className="font-semibold hidden md:inline">
+            Morden, London UK
           </span>
         </a>
 

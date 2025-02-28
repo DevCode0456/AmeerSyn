@@ -9,15 +9,13 @@ const HeroSection = ({
   imageSrc,
   imageAlt,
   icon: Icon,
-  buttonText,
   description,
-  onButtonClick,
-  imageWidth = "500px",
+  imageWidth = "100%",
   imageHeight = "500px",
 }) => {
   return (
     <motion.div
-      className="hero-section flex flex-col md:flex-row bg-primary rounded-3xl  items-center justify-between gap-8 py-12 px-6 my-3"
+      className=" mx-auto  my-3 py-12 p-5  md:px-12 w-full  flex flex-col md:flex-row bg-primary   items-center justify-between gap-8  "
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

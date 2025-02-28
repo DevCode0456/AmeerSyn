@@ -1,55 +1,29 @@
 import {
-  FaFileAlt,
-  FaPenFancy,
-  FaCheckCircle,
-  FaUserCheck,
   FaClock,
-  FaShieldAlt,
-  FaThumbsUp,
-  FaHandshake,
   FaCloud,
+  FaFileAlt,
+  FaThumbsUp,
+  FaPenFancy,
+  FaUserCheck,
+  FaHandshake,
+  FaShieldAlt,
+  FaCheckCircle,
   FaClipboardList,
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
-import FlipCard from "../../../../FlipCard";
 import HeroSection from "../../../../HeroSection";
-import Testimonials from "../../../../Testimonials";
-import ServicesCard from "../../../../ServicesCard";
-import { Carousel } from "react-responsive-carousel";
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
-import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const ResearchPapperContent = () => {
-  const projects = [
-    {
-      title: "Research Paper Editing",
-      description: "Improving the quality of academic research papers for submission.",
-      image: Images.RESEARCH_PAPER_IMG1,
-    },
-    {
-      title: "Technical Research Paper Proofreading",
-      description: "Enhancing the technical aspects and ensuring clarity of technical research.",
-      image: Images.RESEARCH_PAPER_IMG2,
-    },
-    {
-      title: "Journal Paper Proofreading",
-      description: "Proofreading papers for academic journals and conferences.",
-      image: Images.RESEARCH_PAPER_IMG3,
-    },
-    {
-      title: "Thesis and Dissertation Proofreading",
-      description: "Polishing your thesis and dissertation for a professional presentation.",
-      image: Images.RESEARCH_PAPER_IMG4,
-    },
-  ];
+
 
   const services = [
     {
@@ -76,24 +50,52 @@ const ResearchPapperContent = () => {
 
   const testimonialsData = [
     {
-      text: "The editing and proofreading service transformed my paper into a professional masterpiece. Highly recommend!",
-      name: "James Richardson",
-      role: "PhD Candidate",
-      image: "https://via.placeholder.com/150",
+      quote: "Their expertise in research papers helped me structure my work professionally.",
+      author: "Isabella Morris",
+      company: "PhD Candidate"
     },
     {
-      text: "I had my journal paper proofread, and the improvements were outstanding. Will definitely use this service again!",
-      name: "Olivia Thompson",
-      role: "Researcher",
-      image: "https://via.placeholder.com/150",
+      quote: "AmeerSync provided extensive research support, helping me find credible sources.",
+      author: "Sophia Kim",
+      company: "Academic Scholar"
     },
     {
-      text: "The proofreading service was quick, thorough, and professional. It really helped me improve my thesis.",
-      name: "David Miller",
-      role: "Master's Student",
-      image: "https://via.placeholder.com/150",
+      quote: "Their literature review assistance saved me hours of effort and improved my paper's credibility.",
+      author: "David Williams",
+      company: "Graduate Researcher"
     },
+    {
+      quote: "They helped me analyze and interpret my research data effectively.",
+      author: "Rachel Green",
+      company: "Data Science Student"
+    },
+    {
+      quote: "AmeerSync’s formatting and citation corrections ensured my paper met all guidelines.",
+      author: "Michael Carter",
+      company: "University Professor"
+    },
+    {
+      quote: "They improved the clarity and impact of my research abstract, making it more compelling.",
+      author: "Ethan Lewis",
+      company: "Scientific Researcher"
+    },
+    {
+      quote: "Their critical feedback helped strengthen my research arguments significantly.",
+      author: "Olivia Brown",
+      company: "Postgraduate Student"
+    },
+    {
+      quote: "AmeerSync’s review process enhanced my paper’s readability and logical flow.",
+      author: "Nathan Scott",
+      company: "Medical Researcher"
+    },
+    {
+      quote: "They helped me finalize my research for publication, making sure it met academic standards.",
+      author: "James Carter",
+      company: "Doctoral Candidate"
+    }
   ];
+  
 
   const faqs = [
     {
@@ -165,32 +167,31 @@ const ResearchPapperContent = () => {
   };
 
   return (
-    <div className="research-paper-content w-100 bg-white">
-      <HeroSection
-        icon={FaPenFancy}
-        imageWidth="600px"
-        imageHeight="400px"
-        imageAlt="Research Paper Proofreading"
-        buttonText="Get Started"
-        title="Professional Research Paper Proofreading Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.RESEARCH_PAPER_IMG1}
-        description="Get your research paper proofread and polished by experienced professionals who specialize in academic writing and research."
-        details="Our research paper proofreading services include grammar checks, clarity improvements, citation formatting, and consistency checks."
-      />
-    <ServicesSection services={services} />
-      <ProjectsSection projects={reasons} />
-      <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons} />
+    <div className="research-paper-content w-full ">
+   
       <motion.div
-        className="my-10"
+        className="mt-10"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
+           <HeroSection
+        icon={FaPenFancy}
+   
+        imageAlt="Research Paper Proofreading"
+        buttonText="Get Started"
+        title="Professional Research Paper Proofreading Services"
+        onButtonClick={handleButtonClick}
+        imageSrc={Images.RESEARCH_WORK_IMG}
+        description="Get your research paper proofread and polished by experienced professionals who specialize in academic writing and research."
+        details="Our research paper proofreading services include grammar checks, clarity improvements, citation formatting, and consistency checks."
+      />
+    <ServicesSection services={services} />
+      <TechnologiesSection technologies={technologies} />
+      <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+      <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData}  />
       </motion.div>
     </div>
   );

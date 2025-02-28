@@ -4,7 +4,8 @@ import CloudComputingContent from '../CloudComputingContent'
 const CloudComputingWrapper = () => {
   return (
  <div>
-      <div className="container fluid ">
+         <div className="m-0 p-0 ">
+
         <CloudComputingContent />
       </div>
     </div>  )

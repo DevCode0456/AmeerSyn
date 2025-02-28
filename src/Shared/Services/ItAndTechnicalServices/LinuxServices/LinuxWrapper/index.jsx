@@ -3,7 +3,8 @@ import LinuxContent from '../LinuxContent'
 
 const LinuxWrapper = () => {
   return (
-    <div className="container fluid ">
+       <div className="m-0 p-0 ">
+
     <LinuxContent />
   </div>  )
 }

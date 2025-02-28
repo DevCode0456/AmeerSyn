@@ -22,44 +22,15 @@ import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
-
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
+import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
-import ProjectsSection from "../../../../PagesSectionComponents/ProjectsSection";
-import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const AIContent = () => {
-  const projects = [
-    {
-      title: "AI-Powered Chatbot",
-      description:
-        "A conversational AI chatbot designed for real-time customer support and enhanced user engagement.Unlock the potential of Artificial Intelligence (AI) to transform your business operations, decision-making, and customer experiences. Our AI services empower organizations to harness cutting-edge technologies such as machine learning, natural language processing, computer vision, and predictive analytics. Whether you're looking to automate routine tasks, personalize customer interactions, or gain deeper insights from your data, our tailored solutions are designed to meet your unique needs.",
-      image: Images.ARTIFICAL_INTELIGENCE_IMG,
-    },
-    {
-      title: "Predictive Analytics Platform",
-      description:
-        "A robust platform that leverages AI to analyze trends and forecast future outcomes.",
-      image: Images.WEB_DEVELOPMENT_IMG,
-    },
-    {
-      title: "Recommendation Engine",
-      description:
-        "An AI-based recommendation system for personalized content and product suggestions.",
-      image: Images.USER_DUMMY_IMG,
-    },
-    {
-      title: "Natural Language Processing Tool",
-      description:
-        "An NLP-based solution for extracting insights from unstructured text data.",
-      image: Images.USER_DUMMY_IMG2,
-    },
-  ];
-
   const services = [
     {
       icon: <FaBrain size={100} className="mt-6" />,
@@ -101,22 +72,58 @@ const AIContent = () => {
 
   const testimonialsData = [
     {
-      text: "This product has completely changed my life for the better. Highly recommend it to everyone!",
-      name: "John Doe",
-      role: "Software Engineer",
-      image: "https://via.placeholder.com/150", // Replace with actual image URLs
+      quote:
+        "AmeerSync’s AI expertise helped us develop a custom recommendation engine for our e-commerce store. The accuracy of predictions improved significantly, leading to a 30% increase in sales. Absolutely brilliant!",
+      author: "Olivia Adams",
+      company: "SmartShop",
     },
     {
-      text: "Outstanding service and top-notch quality. I'm beyond satisfied with my experience.",
-      name: "Jane Smith",
-      role: "Marketing Specialist",
-      image: "https://via.placeholder.com/150", // Replace with actual image URLs
+      quote:
+        "Their AI-driven chatbot improved our customer support efficiency by 40%. Now, we handle more queries with fewer resources!",
+      author: "David Williams",
+      company: "SupportPro",
     },
     {
-      text: "I couldn't have asked for a better experience. Everything exceeded my expectations!",
-      name: "Alex Johnson",
-      role: "Freelancer",
-      image: "https://via.placeholder.com/150", // Replace with actual image URLs
+      quote:
+        "AmeerSync automated our data analysis with AI, reducing manual effort and improving accuracy. Highly recommend their services!",
+      author: "Sophia Kim",
+      company: "DataVision",
+    },
+    {
+      quote:
+        "They built an AI-powered image recognition system for our security application. The accuracy is beyond impressive!",
+      author: "James Carter",
+      company: "SafeTech",
+    },
+    {
+      quote:
+        "AmeerSync implemented an AI-based demand forecasting model that helped optimize our inventory, reducing waste by 25%.",
+      author: "Rachel Green",
+      company: "RetailGenius",
+    },
+    {
+      quote:
+        "The NLP model they developed helped us automate document classification. It's a game changer for our workflow!",
+      author: "Kevin Smith",
+      company: "DocuScan",
+    },
+    {
+      quote:
+        "Their AI-powered fraud detection system significantly reduced fraudulent transactions on our platform.",
+      author: "Linda Thomas",
+      company: "FinSecure",
+    },
+    {
+      quote:
+        "We used their AI models for personalized marketing campaigns, and our engagement rates doubled!",
+      author: "Emma Wilson",
+      company: "AdSmart",
+    },
+    {
+      quote:
+        "AmeerSync's deep learning solutions helped us extract meaningful insights from complex datasets.",
+      author: "Ethan Lewis",
+      company: "DataSolutions",
     },
   ];
 
@@ -243,33 +250,31 @@ const AIContent = () => {
 
   return (
     <div className="ai-content w-100 bg-white">
-      <HeroSection
-        icon={FaBrain}
-        imageWidth="600px"
-        imageHeight="400px"
-        imageAlt="AI Solutions"
-        buttonText="Get Started"
-        title="AI Development Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.ARTIFICAL_INTELIGENCE_IMG}
-        description="We create cutting-edge AI solutions that transform businesses...Unlock the potential of Artificial Intelligence (AI) to transform your business operations, decision-making, and customer experiences. Our AI services empower organizations to harness cutting-edge technologies such as machine learning, natural language processing, computer vision, and predictive analytics. Whether you're looking to automate routine tasks, personalize customer interactions, or gain deeper insights from your data, our tailored solutions are designed to meet your unique needs."
-        details={
-          "With AI, you can improve efficiency, reduce costs, and stay ahead in an increasingly competitive digital landscape. From developing intelligent chatbots and virtual assistants to implementing advanced AI-powered analytics, our team of experts ensures seamless integration and impactful results. Explore how AI can help you innovate, adapt, and achieve unparalleled growth in today's data-driven world. Let us guide you on your journey to leveraging AI for a smarter, more efficient future."
-        }
-      />
-     <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <TestimonialsSection testimonials={testimonialsData} />
-      <ProjectsSection projects={projects} />
-      <ContactUsSection />
-      <WhyChooseUsSection reasons={reasons	}/>
       <motion.div
-        className="my-10"
+        className="mt-10"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
+        <HeroSection
+          icon={FaBrain}
+        
+          imageAlt="AI Solutions"
+          buttonText="Get Started"
+          title="AI Development Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.AI_IMG}
+          description="We create cutting-edge AI solutions that transform businesses...Unlock the potential of Artificial Intelligence (AI) to transform your business operations, decision-making, and customer experiences. Our AI services empower organizations to harness cutting-edge technologies such as machine learning, natural language processing, computer vision, and predictive analytics. Whether you're looking to automate routine tasks, personalize customer interactions, or gain deeper insights from your data, our tailored solutions are designed to meet your unique needs."
+          details={
+            "With AI, you can improve efficiency, reduce costs, and stay ahead in an increasingly competitive digital landscape. From developing intelligent chatbots and virtual assistants to implementing advanced AI-powered analytics, our team of experts ensures seamless integration and impactful results. Explore how AI can help you innovate, adapt, and achieve unparalleled growth in today's data-driven world. Let us guide you on your journey to leveraging AI for a smarter, more efficient future."
+          }
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );
