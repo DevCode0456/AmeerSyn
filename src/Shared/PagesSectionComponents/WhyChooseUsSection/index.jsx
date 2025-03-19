@@ -5,7 +5,7 @@ import WhyChooseUsComponent from "../WhyChooseUsComponent";
 const WhyChooseUsSection = ({ reasons }) => {
   return (
     <motion.div
-      className="my-10 vw-[100]"
+      className=" vw-[100]"
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
@@ -13,17 +13,17 @@ const WhyChooseUsSection = ({ reasons }) => {
       <WhyChooseUsComponent/>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14  py-10 container mx-auto p-5 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14  py-12 container mx-auto p-5 ">
         {reasons.map((reason, index) => (
           <div
             key={index}
-            className={`relative bg-white shadow-lg p-6 rounded-3xl text-center border border-primary
-              transition-all duration-500 group 
-              hover:bg-gradient-to-b hover:from-primary hover:to-red-500 hover:shadow-2xl`}
+            className={`relative bg-white shadow-sm p-6 rounded-3xl text-center border border-primary
+              transition-all duration-300 group 
+              hover:bg-gradient-to-tr hover:from-primary hover:to-varientColor hover:shadow-lg hover:border-0`}
           >
             <div
               className="absolute -top-10 left-1/2 transform -translate-x-1/2 
-             bg-gradient-to-r from-pink-500 to-primary p-3 rounded-full flex justify-center items-center 
+             bg-gradient-to-r from-varientColor to-primary text-white p-3 rounded-full flex justify-center items-center 
               w-20 h-20 transition-all duration-500 group-hover:bg-white group-hover:border-2 group-hover:border-white"
             >
               <span className="text-white text-3xl ">
@@ -40,7 +40,6 @@ const WhyChooseUsSection = ({ reasons }) => {
               {reason.description}
             </p>
 
-            {/* Learn More Link (If Provided) */}
             {reason.learnMore && (
               <a
                 href={reason.learnMore}

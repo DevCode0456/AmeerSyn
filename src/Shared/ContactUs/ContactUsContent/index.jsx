@@ -69,7 +69,7 @@ const ContactFormContent = () => {
           </p>
           <button
             onClick={toggleSections}
-            className="mt-4 p-3 bg-secondary text-primary border-primary border-2 font-bold rounded-full shadow-lg transition duration-300 flex items-center justify-center gap-2 hidden md:flex"
+            className="mt-4 p-3 bg-secondary text-primary border-primary border-2 font-bold rounded-full shadow-lg transition duration-300 flex items-center justify-center gap-2 sm:hidden md:flex"
           >
             {isFlipped ? <FaArrowLeft size={24} /> : <FaArrowRight size={24} />}
           </button>

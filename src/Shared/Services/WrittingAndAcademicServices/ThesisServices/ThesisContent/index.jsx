@@ -167,10 +167,10 @@ const ThesisContent = () => {
   };
 
   return (
-    <div className="thesis-content w-full">
+    <div className="thesis-content w-full bg-Bg m-0 p-0">
   
       <motion.div
-        className="mt-10"
+        className=""
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}

@@ -4,15 +4,15 @@ import React, { useState, memo } from "react";
 import Images from "../../Helper/ImagesConstant";
 import ContactUsSection from "../../Shared/ContactUsSection";
 import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
-import TestimonialsSection from "../../Shared/PagesSectionComponents/TestimonialsSection";
 import ServicesSection from "../../Shared/PagesSectionComponents/ServicesSection";
+import TestimonialsSection from "../../Shared/PagesSectionComponents/TestimonialsSection";
 import { FiBook, FiCloud, FiCode, FiDatabase, FiMonitor, FiSettings, FiShield, FiTerminal } from "react-icons/fi";
 
 const ProjectPage = () => {
   const projects = [
     {
       title: "Project 1",
-      image: Images.USER_DUMMY_IMG,
+      image: Images.ASSIGNMENT_WRITING_IMG,
       docUrl:
         "https://res.cloudinary.com/dvgpgzibx/raw/upload/v1739692646/assignement_tasks_k0v16h.docx",
     },
@@ -162,8 +162,7 @@ const ProjectPage = () => {
   const [selectedDoc, setSelectedDoc] = useState(null);
 
   return (
-    <div className="pt-12 min-h-screen  ">
-      {/* Hero Section */}
+    <div className="pt-12 min-h-screen bg-Bg ">
       <motion.div 
         initial={{ opacity: 0, y: -50 }} 
         animate={{ opacity: 1, y: 0 }} 
@@ -179,7 +178,7 @@ const ProjectPage = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="py-12 my-4 p-6 bg-container  text-center  px-4"
+        className="py-12 my-4 p-6 bg-white  md:mx-14 rounded-3xl   text-center  px-4"
       >
         <h2 className="text-3xl font-bold text-primary">🔥 Featured Projects</h2>
         <p className="text-text mt-2">Some of my best work.</p>
@@ -194,10 +193,10 @@ const ProjectPage = () => {
             whileHover={{ scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className=" bg-gradient-to-b from-secondary to-container border-primary border-2 shadow-md rounded-3xl overflow-hidden cursor-pointer"
+            className=" bg-white border-primary border-2 hover:border-0 hover:shadow-xl shadow-md rounded-3xl overflow-hidden cursor-pointer"
           >
             <img
-              className="w-full h-52 object-cover p-2 rounded-3xl"
+              className="w-full h-52 object-fill  rounded-3xl"
               src={project.image}
               alt={project.title}
             />

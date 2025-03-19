@@ -1,36 +1,46 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FiCheck, FiUser, FiTrendingUp, FiFlag, FiClock, FiLifeBuoy } from "react-icons/fi";
-import { FaAward, FaHandsHelping, FaRocket, FaQuoteLeft } from "react-icons/fa";
-import { BsShieldLock } from "react-icons/bs";
-import WhyChooseUsSection from "../../Shared/PagesSectionComponents/WhyChooseUsSection";
+import {
+  FiUser,
+  FiFlag,
+  FiClock,
+  FiLifeBuoy,
+  FiTrendingUp,
+} from "react-icons/fi";
+import { memo } from "react";
+import { FaAward } from "react-icons/fa";
 import ContactUsSection from "../../Shared/ContactUsSection";
+import WhyChooseUsSection from "../../Shared/PagesSectionComponents/WhyChooseUsSection";
+import TestimonialsSection from "../../Shared/PagesSectionComponents/TestimonialsSection";
 
 const reasons = [
   {
     icon: <FaAward size={32} />,
     title: "Proven Expertise",
-    description: "With years of experience, we bring excellence to every project.",
+    description:
+      "With years of experience, we bring excellence to every project.",
   },
   {
     icon: <FiUser size={32} />,
     title: "Client-Centric Approach",
-    description: "We tailor our solutions to fit your needs, ensuring satisfaction.",
+    description:
+      "We tailor our solutions to fit your needs, ensuring satisfaction.",
   },
   {
     icon: <FiTrendingUp size={32} />,
     title: "Future-Ready Solutions",
-    description: "We utilize the latest technologies to give your business an edge.",
+    description:
+      "We utilize the latest technologies to give your business an edge.",
   },
   {
     icon: <FiFlag size={32} />,
     title: "Commitment to Quality",
-    description: "Our quality standards guarantee top-notch results every time.",
+    description:
+      "Our quality standards guarantee top-notch results every time.",
   },
   {
     icon: <FiClock size={32} />,
     title: "Timely Delivery",
-    description: "We value your time and ensure projects are completed on schedule.",
+    description:
+      "We value your time and ensure projects are completed on schedule.",
   },
   {
     icon: <FiLifeBuoy size={32} />,
@@ -39,57 +49,71 @@ const reasons = [
   },
 ];
 
-const testimonials = [
+const testimonialsData = [
   {
-    quote: "AmeerSync transformed our business with their cutting-edge solutions!",
-    author: "John Doe",
-    company: "TechCorp",
+    quote:
+      "AmeerSync’s AI expertise helped us develop a custom recommendation engine for our e-commerce store. The accuracy of predictions improved significantly, leading to a 30% increase in sales. Absolutely brilliant!",
+    author: "Olivia Adams",
+    company: "SmartShop",
   },
   {
-    quote: "Their customer support is unmatched. Highly recommend!",
-    author: "Jane Smith",
-    company: "Web Solutions",
+    quote:
+      "Their networking solutions are fantastic! We struggled with connectivity and security issues, but AmeerSync streamlined our entire infrastructure. Now, everything runs smoothly without interruptions.",
+    author: "William Harris",
+    company: "Enterprise Networks",
+  },
+  {
+    quote:
+      "For my Node.js project, AmeerSync provided exceptional backend development support. Their code was clean, scalable, and optimized for performance. Truly a lifesaver for developers like me!",
+    author: "Ethan Walker",
+    company: "DevStudio",
+  },
+  {
+    quote:
+      "Their cloud computing services helped us migrate our entire system to AWS seamlessly. The process was quick, and we now have better scalability and cost efficiency. Highly recommended!",
+    author: "Charlotte Evans",
+    company: "CloudServe",
+  },
+  {
+    quote:
+      "AmeerSync’s proof-reading and editing services polished my research paper to perfection. The detailed feedback and corrections improved the clarity and structure significantly. I received great feedback from my professors!",
+    author: "Nathan Clark",
+    company: "Academic Researcher",
+  },
+  {
+    quote:
+      "Managing email invoices was a nightmare until we found AmeerSync. Their automation service streamlined everything, reducing errors and saving us hours of manual work. Absolutely worth every penny!",
+    author: "Emily White",
+    company: "BizTrack",
+  },
+  {
+    quote:
+      "We needed a static website for our startup, and AmeerSync delivered a clean, modern, and ultra-fast site. Their attention to UI/UX and performance optimization was incredible. Highly satisfied!",
+    author: "Lucas Turner",
+    company: "Startup Solutions",
+  },
+  {
+    quote:
+      "My final year project needed expert guidance, and AmeerSync provided just that! From concept to execution, they ensured every detail was perfect. I couldn’t have achieved this success without them.",
+    author: "Sophia Bennett",
+    company: "University Graduate",
+  },
+  {
+    quote:
+      "Their project management expertise helped us complete our software development cycle ahead of schedule. The structured approach and real-time tracking made a huge difference. AmeerSync truly understands agile workflows!",
+    author: "Benjamin Carter",
+    company: "Tech Ventures",
   },
 ];
 
-const companies = ["Google", "Microsoft", "Amazon", "Meta", "Netflix"];
-
 const WhyChooseUs = () => {
   return (
-    <div className="bg-container  m-0 p-0">
-      {/* Hero Section */}
-  <WhyChooseUsSection reasons={reasons}   />
-
-      {/* Client Testimonials Section */}
-      <div className="bg-gradient-to-b from-secondary to-container text-white py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl text-primary font-bold">What Our Clients Say</h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white text-gray-900 p-6 rounded-3xl shadow-lg"
-              >
-                <div className="flex items-center">
-                  <FaQuoteLeft className="text-primary text-2xl mr-3" />
-                  <p className="text-lg">{testimonial.quote}</p>
-                </div>
-                <p className="mt-4 text-blue-600 font-semibold">{testimonial.author}</p>
-                <p className="text-sm">{testimonial.company}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-
-
+    <div className="bg-Bg">
+      <WhyChooseUsSection reasons={reasons} />
       <ContactUsSection />
+      <TestimonialsSection testimonials={testimonialsData} />
     </div>
   );
 };
 
-export default WhyChooseUs;
+export default memo(WhyChooseUs);

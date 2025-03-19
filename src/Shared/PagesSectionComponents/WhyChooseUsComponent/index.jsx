@@ -2,6 +2,7 @@ import React, { memo, useState } from "react";
 import PageHeading from "../../Headings/PageHeading";
 import SubHeading from "../../Headings/SubHeading";
 import Images from "../../../Helper/ImagesConstant";
+import { Link } from "react-router-dom";
 
 const WhyChooseUsComponent = () => {
   // State to track the active tab
@@ -32,11 +33,11 @@ const WhyChooseUsComponent = () => {
     },
   };
   return (
-    <div className=" bg-gradient-to-b from-secondary to-container py-10 md:my-10  w-">
+    <div className=" bg-gradient-to-b from-secondary to-container">
       {/* Heading */}
       <div className="text-center mb-6">
       <div className="flex justify-center items-center p-3  rounded-3xl">
-<img src={Images.Why_CHOOSE_US_IMG} alt="terms&conditions" className={" rounded mx-auto max-h-64"} />
+<img src={Images.Why_CHOOSE_US_IMG} alt="terms&conditions" className={" rounded mx-auto max-h-64 animate-pulse md:animate-bounce lg:animate-scroll   "} />
 
       </div>
 
@@ -76,15 +77,17 @@ const WhyChooseUsComponent = () => {
             <h2 className="text-primary text-sm uppercase font-semibold tracking-wide">
               Touching Lives Through Technology
             </h2>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-4 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mt-4 leading-tight">
               {tabsContent[activeTab].title}
             </h1>
             <p className="text-text mt-4 leading-relaxed">
               {tabsContent[activeTab].description}
             </p>
-            <button className="mt-6 bg-button text-white py-2 px-6 rounded-lg hover:bg-orange-600 transition shadow-md">
+            <Link to={"/about-us"}>
+            <button className="mt-6 bg-button text-white py-2 px-6 rounded-3xl hover:bg-white hover:text-button transition shadow-md">
               About Us
             </button>
+            </Link>
           </div>
 
           {/* Video Section */}

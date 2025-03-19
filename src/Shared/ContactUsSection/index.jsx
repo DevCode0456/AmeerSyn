@@ -7,12 +7,12 @@ import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 
 const ContactUsSection = () => {
   return (
-    <div className="bg-gradient-to-b from-primary to-pink-300">
+    <div className="bg-gradient-to-tr from-primary to-varientColor">
       <div className="justify-center w-full flex  py-5 ">
       <motion.img
             alt="Rocket Launch"
             src={Images.CONTACT_US_IMG} 
-            className=" max-w-64 max-h-64 text-center rounded-full mb-6"
+            className=" max-w-64 max-h-64 text-center rounded-full mb-6  animate-pulse md:animate-bounce lg:animate-scroll   transition duration-1000 ease-in"
             
           />
       </div>
@@ -23,7 +23,6 @@ const ContactUsSection = () => {
         className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center    p-8 md:p-12"
       >
       
-        {/* Left Section - Contact Info */}
         <div className="space-y-6 text-center md:text-left">
           <h1 className="text-3xl md:text-4xl font-semibold text-white">
             Let's Work Together!
@@ -33,7 +32,6 @@ const ContactUsSection = () => {
             life with cutting-edge technology.
           </p>
 
-          {/* Contact Details */}
           <div className="space-y-4">
             <div className="flex items-center justify-center md:justify-start gap-4">
               <MdEmail className="text-white text-3xl" />
@@ -51,12 +49,11 @@ const ContactUsSection = () => {
           </div>
         </div>
 
-        {/* Right Section - Animated Rocket 🚀 */}
         <div className="flex flex-col items-center md:items-end text-center ">
           <motion.img
-            src={Images.GET_STARTED_IMG} // Rocket Image
+            src={Images.GET_STARTED_IMG} 
             alt="Rocket Launch"
-            className="w-48 md:w-64 h-auto rounded-lg mb-6"
+            className="w-48 md:w-64 h-auto rounded-lg mb-6  "
             animate={{
               y: [-10, 10, -10], 
               rotate: [-2, 2, -2], 
@@ -75,7 +72,7 @@ const ContactUsSection = () => {
             >
               <motion.span
                 animate={{
-                  y: [-5, 5, -5], // Moves the rocket icon up & down
+                  y: [-5, 5, -5], 
                 }}
                 transition={{
                   repeat: Infinity,

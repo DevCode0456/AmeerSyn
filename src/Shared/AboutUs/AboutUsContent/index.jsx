@@ -273,7 +273,7 @@ const testimonialsData = [
 
 const AboutUs = () => {
   return (
-    <div className=" ">
+    <div className=" bg-Bg">
       <motion.section
         className="relative h-screen flex flex-col items-center justify-center text-center bg-black"
         initial={{ opacity: 0 }}
@@ -308,49 +308,50 @@ const AboutUs = () => {
         </div>
       </motion.section>
 
-      <section className="py-16 bg-white px-6 sm:px-12 lg:px-24">
+      <section className="py-16  px-6 sm:px-12 lg:px-24">
+          <div className="flex justify-center items-center   rounded-3xl">
+            <img
+              src={Images.OUR_MISSION_IMG}
+              alt="terms&conditions"
+              className={" rounded mx-auto max-h-64"}
+            />
+          </div>
+          <h2 className="text-4xl font-bold text-center text-Heading">
+            Our Mission
+          </h2>
+          <div className="grid md:grid-cols-3 gap-10 mt-10">
+            {mission?.map((service, index) => (
+              <motion.div
+                key={index}
+                className="p-6 bg-gradient-to-r from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition hover:from-secondary hover:to-primary hover:border-0"
 
-      <div className="flex justify-center items-center   rounded-3xl">
-<img src={Images.OUR_MISSION_IMG} alt="terms&conditions" className={" rounded mx-auto max-h-64"} />
-
-      </div>
-
-
-        <h2 className="text-4xl font-bold text-center text-primary">
-          Our Mission
-        </h2>
-        <div className="grid md:grid-cols-3 gap-10 mt-10">
-          {mission?.map((service, index) => (
-            <motion.div
-              key={index}
-              className="p-6  bg-gradient-to-b from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition"
-              whileHover={{ scale: 1.1 }}
-            >
-              <h3 className="text-2xl font-bold text-primary mb-3">
-                {service.category}
-              </h3>
-              <div className="space-y-4">
-                {service.items?.map(
-                  (
-                    item,
-                    idx // <-- FIXED HERE
-                  ) => (
-                    <div key={idx} className="flex items-center gap-4">
-                      <div className="text-primary text-3xl">{item.icon}</div>
-                      <div>
-                        <h4 className="text-xl text-text font-semibold">
-                          {item.name}
-                        </h4>
-                        <p className="text-text">{item.desc}</p>
+                whileHover={{ scale: 1.1 }}
+              >
+                <h3 className="text-2xl font-bold text-primary mb-3">
+                  {service.category}
+                </h3>
+                <div className="space-y-4">
+                  {service.items?.map(
+                    (
+                      item,
+                      idx 
+                    ) => (
+                      <div key={idx} className="flex items-center gap-4">
+                        <div className="text-primary text-3xl">{item.icon}</div>
+                        <div>
+                          <h4 className="text-xl text-text font-semibold">
+                            {item.name}
+                          </h4>
+                          <p className="text-text">{item.desc}</p>
+                        </div>
                       </div>
-                    </div>
-                  )
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+                    )
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
 
       <ServicesSection services={services} />
       {/* 🌟 Why Choose Us Section */}

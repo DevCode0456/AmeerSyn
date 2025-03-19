@@ -105,7 +105,7 @@ const Topbar = () => {
                     <li key={index}>
                       <Link
                         to={service.path}
-                        className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-secondary transition"
+                        className="block px-4 py-2 text-Heading hover:bg-primary hover:text-secondary transition"
                       >
                         {service.name}
                       </Link>
@@ -119,9 +119,7 @@ const Topbar = () => {
           <Link to="/need-help" className="font-medium text-sm transition">
             Need Help?
           </Link>
-          <Link to="/feedback" className="font-medium text-sm transition">
-            Feedbacks
-          </Link>
+
           <Link
             to="/terms&conditions"
             className="font-medium text-sm transition"
@@ -197,7 +195,7 @@ const Topbar = () => {
                     key={index}
                     to={service.path}
                     onClick={toggleMenu}
-                    className="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-secondary"
+                    className="block px-4 py-2 text-Heading hover:bg-primary hover:text-secondary"
                   >
                     {service.name}
                   </Link>
@@ -212,13 +210,7 @@ const Topbar = () => {
             >
               Need Help?
             </Link>
-            <Link
-              to="/feedback"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              Feedbacks
-            </Link>
+
             <Link
               to="/terms&conditions"
               onClick={toggleMenu}

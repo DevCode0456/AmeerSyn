@@ -2,110 +2,166 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+/* Default Theme */
 :root {
+  --color-Bg: white;
   --color-text: #333;
+  --color-button: #6200ea;
   --color-primary: #0070f3;
+  --color-HoverBtn: DarkBlue;
   --color-secondary: #ff4081;
   --color-container: #f8f8f8;
-  --color-button: #6200ea;
+  --color-varientColor: #0070f3;
+  --color-Heading: rgb(11, 11, 22);
 }
 
 /* Modern Tech */
 .theme-modern-tech {
-  
-    --color-primary: #FB8C00;
-    --color-secondary: #FFF5EB;
-    --color-text: #4E342E;
-    --color-container: #FFE0B2;
-    --color-button: #FB8C00;
-  }
-
+  --color-Bg: #ffffff;
+  --color-text: #4e342e;
+  --color-button: #fb8c00;
+  --color-primary: #fb8c00;
+  --color-HoverBtn: #ff9800;
+  --color-varientColor: red;
+  --color-secondary: #fff5eb;
+  --color-container: #ffe0b2;
+  --color-Heading: DarkOrange;
+}
 
 /* Cyber Blue */
 .theme-cyber-blue {
-  --color-primary: #3A86FF;
-  --color-secondary: #dddddd;
-  --color-text:#0D1B2A ;
-  --color-container: #d1daeb;
+  --color-Bg: #e0e0e0;
+  --color-text: #0d1b2a;
   --color-button: #121070;
+  --color-Heading: #1b1f3b;
+  --color-primary: #3a86ff;
+  --color-HoverBtn: #007bff;
+  --color-container: #d1daeb;
+  --color-secondary: #dddddd;
+  --color-varientColor: #1b263b;
 }
 
 /* Minimal White */
 .theme-minimal-white {
-  --color-primary: #006D77;
-  --color-secondary: #FFFFFF;
+  --color-Bg: #fafafa;
   --color-text: #222222;
-  --color-container: #dddd;
-  --color-button: #006D77;
+  --color-button: #006d77;
+  --color-Heading: #1b1b1b;
+  --color-primary: #006d77;
+  --color-HoverBtn: #004d61;
+  --color-secondary: #ffffff;
+  --color-container: #dddddd;
+  --color-varientColor: #888888;
 }
 
 /* Classic Green */
 .theme-classic-green {
-  --color-primary: #52B788;
-  --color-secondary: #F0F4F8;
-  --color-text: #1B4332;
-  --color-container: #D8F3DC;
-  --color-button: #52B788;
+  --color-Bg: #ffffff;
+  --color-text: #1b4332;
+  --color-button: #52b788;
+  --color-Heading: #22a175;
+  --color-primary: #52b788;
+  --color-HoverBtn: #40916c;
+  --color-secondary: #f0f4f8;
+  --color-container: #d8f3dc;
+  --color-varientColor: #2d6a4f;
 }
 
 /* Elegant Purple */
 .theme-elegant-purple {
-  --color-primary: #8B5CF6;
-  --color-secondary: #F5F3FF;
-  --color-text: #4C1D95;
-  --color-container: #EDE9FE;
-  --color-button: #8B5CF6;
+  --color-primary: #8b5cf6;
+  --color-secondary: #f5f3ff;
+  --color-text: rgba(14, 13, 13, 0.729);
+  --color-varientColor: #6d28d9;
+  --color-HoverBtn: #7c3aed;
+  --color-Bg: #f3e8ff;
+  --color-Heading: #4c1d95;
+  --color-container: #ede9fe;
+  --color-button: #8b5cf6;
 }
 
 /* Sleek Black & Gold */
 .theme-black-gold {
-  --color-primary:#000000 ;
-  --color-secondary: #FFD700;
-  --color-text: #000000;
-  --color-container: #dfd4d4;
-  --color-button: #FFAA00;
+  --color-Bg: #000000;
+  --color-text: #ffd700;
+  --color-text: #ffffff;
+  --color-button: #ffaa00;
+  --color-Heading: #ffd700;
+  --color-HoverBtn: #daa520;
+  --color-varientColor: #b8860b;
+  --color-primary: rgb(17, 17, 43);
+  --color-varientColor: rgb(19, 15, 39);
+  --color-secondary: rgb(206, 190, 190);
+  --color-container: rgba(43, 40, 63, 0.986);
 }
 
 /* Dynamic Red */
 .theme-dynamic-red {
-  --color-primary: #ce2449;
-  --color-secondary: #e4dfb1;
+  --color-Bg: #ffffff;
   --color-text: #000000;
+  --color-button: #f94144;
+  --color-primary: #ce2449;
+  --color-Heading: #7b020b;
+  --color-HoverBtn: #dc143c;
+  --color-secondary: #e4dfb1;
   --color-container: #e2ebee;
-  --color-button: #F94144;
+  --color-varientColor: #8b0000;
 }
 
 /* Oceanic Blue */
 .theme-oceanic-blue {
-  --color-primary: #00796B;
-  --color-secondary: #E0F7FA;
-  --color-text: #004D61;
-  --color-container: #B2EBF2;
-  --color-button: #00796B;
+  --color-Bg: #e0f2f1;
+  --color-text: #004d61;
+  --color-button: #00796b;
+  --color-Heading: #003b46;
+  --color-primary: #00796b;
+  --color-HoverBtn: #00838f;
+  --color-container: #b2ebf2;
+  --color-secondary: #e0f7fa;
+  --color-varientColor: #006064;
 }
 
 /* Sunset Orange */
 .theme-sunset-orange {
-  --color-primary: #FB8C00;
-  --color-secondary: #FFF5EB;
-  --color-text: #4E342E;
-  --color-container: #FFE0B2;
-  --color-button: #FB8C00;
+  --color-Bg: #ffebe5;
+  --color-text: #4e342e;
+  --color-button: #fb8c00;
+  --color-Heading: #3e2723;
+  --color-primary: #fb8c00;
+  --color-HoverBtn: #ff7043;
+  --color-secondary: #fff5eb;
+  --color-container: #ffe0b2;
+  --color-varientColor: #bf360c;
 }
 
 /* Professional Gray */
 .theme-professional-gray {
-  --color-primary: #828282;
-  --color-secondary: #F7F7F7;
+  --color-Bg: white;
   --color-text: #333333;
-  --color-container: #f0d7d7;
   --color-button: #828282;
+  --color-Heading: #205e50;
+  --color-primary: #828282;
+  --color-HoverBtn: #bdbdbd;
+  --color-secondary: #f7f7f7;
+  --color-container: #f0d7d7;
+  --color-varientColor: #757575;
+}
+
+/* Dark Mode */
+.theme-dark {
+  --color-Bg: #121212;
+  --color-text: #e0e0e0;
+  --color-button: #6200ee;
+  --color-primary: #bb86fc;
+  --color-Heading: #ffffff;
+  --color-HoverBtn: #bb86fc;
+  --color-secondary: #3700b3;
+  --color-container: #1f1f1f;
+  --color-varientColor: #888;
 }
 
 * {
-  transition: background-color 0.3s ease, color 0.3s ease; 
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hide-scrollbar {
@@ -114,31 +170,31 @@
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  width: 1px;  
-  height: 1px; 
+  width: 1px;
+  height: 1px;
 }
 
 .loader {
   width: 48px;
   height: 48px;
-  background: #FFF;
   border-radius: 50%;
-  display: inline-block;
   position: relative;
+  background: #fff;
+  display: inline-block;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
 .loader::after {
-  content: '';  
-  box-sizing: border-box;
-  position: absolute;
   left: 6px;
   top: 10px;
   width: 12px;
+  content: "";
   height: 12px;
-  color: #FF3D00;
-  background: currentColor;
+  color: #ff3d00;
+  position: absolute;
   border-radius: 50%;
+  box-sizing: border-box;
+  background: currentColor;
   box-shadow: 25px 2px, 10px 22px;
 }
 
@@ -149,6 +205,4 @@
   100% {
     transform: rotate(360deg);
   }
-} 
-
-
+}
