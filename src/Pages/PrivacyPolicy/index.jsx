@@ -11,15 +11,15 @@ import Images from "../../Helper/ImagesConstant";
 
 const PrivacyPolicy = () => {
   const SectionHeading = ({ text }) => (
-    <h3 className="text-2xl font-semibold text-gray-800 mb-4">{text}</h3>
+    <h3 className="text-2xl font-semibold text-primary mb-4">{text}</h3>
   );
 
   const SectionDescription = ({ text }) => (
-    <p className="text-lg text-gray-600 mb-6">{text}</p>
+    <p className="text-lg text-text mb-6">{text}</p>
   );
 
   const PolicyItem = ({ icon, title, description }) => (
-    <div className="p-6 bg-container rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+    <div className="p-6 bg-container rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-secondary">
       <div className="flex items-center text-primary mb-4">
         <div className="p-2 rounded-full bg-primary text-white mr-4">
           {icon}
@@ -33,10 +33,10 @@ const PrivacyPolicy = () => {
   return (
     <div className="container mx-auto p-8">
         <div className="flex justify-center items-center">
-<img src={Images.PRIVACY_POLICY_IMG} alt="img" className={" mx-auto max-h-64"} />
+<img src={Images.PRIVACY_POLICY_IMG} alt="img" className={" mx-auto max-h-80 max-w-80 rounded-full"} />
 
       </div>
-      <h1 className="text-4xl font-bold text-center text-primary mb-8">
+      <h1 className="text-4xl font-bold text-center text-primary mb-8 my-4">
         Privacy Policy
       </h1>
 

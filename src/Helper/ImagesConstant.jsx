@@ -60,6 +60,10 @@ let Images = {
   ASSIGNMENT_WRITING_IMG: require("../Assets/Images/Services/Assignment.avif"),
   TERMS_CONDITION_IMG: require("../Assets/Images/Services/terms&conditions.jpg"),
   ANDRIOD_APP_IMG: require("../Assets/Images/Services/andriod app developement.jpg"),
+  PROJECT_DUMMY_IMG: require("../Assets/Images/Services/createForm.png"),
+
+  LOADER: require("../Assets/loader/loader.gif"),
+
 };
 
 export default Images;

@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import ProofReadingContent from '../ProofReadingContent'
 const ProofReadingWrapper = () => {
   return (
-    <div className=" ">
+    <div className="m-0 p-0 ">
     <ProofReadingContent />
   </div>  )
 }

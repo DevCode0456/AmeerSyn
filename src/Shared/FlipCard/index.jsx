@@ -11,14 +11,12 @@ const FlipCard = ({ icon, title, description }) => {
         onMouseEnter={() => setIsFlipped(true)}
         onMouseLeave={() => setIsFlipped(false)}
       >
-        {/* Front Side */}
-        <div className="flip-card-front bg-gradient-to-r from-pink-500 to-primary rounded-3xl">
+        <div className="flip-card-front bg-gradient-to-tr from-secondary to-varientColor rounded-3xl">
           <div className="icon">{icon}</div>
           <h1 className="title font-semibold md:text-4xl">{title}</h1>
         </div>
 
-        {/* Back Side */}
-        <div className="flip-card-back bg-gradient-to-r from-red-500 to-secondary rounded-3xl">
+        <div className="flip-card-back bg-gradient-to-br from-primary to-container rounded-3xl">
           <p className="description">{description}</p>
         </div>
       </div>

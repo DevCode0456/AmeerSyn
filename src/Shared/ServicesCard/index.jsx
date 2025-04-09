@@ -8,7 +8,8 @@ const CustomCard = ({ icon, title, description }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="bg-gradient-to-b from-primary to-pink-500 rounded-3xl shadow-xl p-5 text-center transform transition-all duration-300 h-full flex flex-col justify-between"
+      className="bg-gradient-to-b from-button to-primary rounded-3xl shadow-xl p-5 text-center transform transition-all duration-300 h-full flex flex-col justify-between hover:from-primary hover:to-gradiant hover:text-secondary"
+
     >
       <div className="relative z-10 p-6 flex-grow">
         <motion.div

@@ -10,19 +10,18 @@ import React, { useState } from "react";
 import Images from "../../Helper/ImagesConstant";
 
 const TermsAndConditions = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [accepted, setAccepted] = useState(false);
+  
 
   const SectionHeading = ({ text }) => (
-    <h3 className="text-2xl font-semibold text-gray-800 mb-4">{text}</h3>
+    <h3 className="text-2xl font-semibold text-primary mb-4">{text}</h3>
   );
 
   const SectionDescription = ({ text }) => (
-    <p className="text-lg text-gray-600 mb-6">{text}</p>
+    <p className="text-lg text-text mb-6">{text}</p>
   );
 
   const TnCItem = ({ icon, title, description }) => (
-    <div className="p-6 bg-container rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+    <div className="p-6 bg-container rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-secondary">
       <div className="flex items-center text-primary mb-4">
         <div className="p-2 rounded-full bg-primary text-white mr-4">
           {icon}
@@ -95,44 +94,15 @@ const TermsAndConditions = () => {
     },
   ];
 
-  const Modal = ({ isOpen, onClose }) =>
-    isOpen ? (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-        <div className="bg-white rounded-xl p-6 shadow-lg max-w-lg w-full">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">
-            Accept Terms and Conditions
-          </h2>
-          <p className="text-lg text-gray-600 mb-4">
-            By clicking "Accept", you agree to our Terms and Conditions.
-          </p>
-          <div className="flex justify-center gap-4">
-            <button
-              className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
-              onClick={() => {
-                setAccepted(true);
-                onClose();
-              }}
-            >
-              Accept
-            </button>
-            <button
-              className="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
-              onClick={onClose}
-            >
-              close
-            </button>
-          </div>
-        </div>
-      </div>
-    ) : null;
+
 
   return (
     <div className="container mx-auto p-8">
       <div className="flex justify-center items-center">
-<img src={Images.TERMS_CONDITION_IMG} alt="terms&conditions" className={" mx-auto"} />
+<img src={Images.TERMS_CONDITION_IMG} alt="terms&conditions" className={" mx-auto max-h-80 max-w-80 rounded-full"} />
 
       </div>
-      <h1 className="text-4xl font-bold text-center text-primary mb-8">
+      <h1 className="text-4xl font-bold text-center text-primary mb-8 my-4">
         Terms and Conditions
       </h1>
 
@@ -220,16 +190,8 @@ const TermsAndConditions = () => {
       <SectionHeading text="Conclusion" />
       <SectionDescription text="Thank you for taking the time to read and understand our Terms and Conditions. If you have any questions, feel free to contact us." />
 
-      <div className="flex justify-center">
-        <button
-          className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-secondary hover:text-text hover:border-button hover:border-2 transition-all duration-300"
-          onClick={() => setModalOpen(true)}
-        >
-          Accept Terms and Conditions
-        </button>
-      </div>
+     
 
-      <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 };

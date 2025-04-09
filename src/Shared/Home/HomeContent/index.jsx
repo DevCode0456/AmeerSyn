@@ -18,38 +18,33 @@ import {
 } from "react-icons/fi";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
-import { SiProbot } from "react-icons/si";
-import { BsHexagon } from "react-icons/bs";
-import { AiOutlineBank } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import Images from "../../../Helper/ImagesConstant";
 import ContactUsSection from "../../ContactUsSection";
-import { RiLightbulbFlashLine } from "react-icons/ri";
-import { FaCloud, FaCode, FaCube, FaFeatherAlt, FaLock, FaServer, FaUserTie } from "react-icons/fa";
 import ServicesCard from "../../../Shared/ServicesCard";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FaArrowRight, FaRocket, FaUsers, FaEnvelope } from "react-icons/fa";
+import { FaCloud, FaCode, FaLock, FaServer, FaUserTie } from "react-icons/fa";
 import WhyChooseUsSection from "../../PagesSectionComponents/WhyChooseUsSection";
 import TestimonialsSection from "../../PagesSectionComponents/TestimonialsSection";
-import { Link } from "react-router-dom";
-
 
 const mission = [
   {
     category: "Development",
     items: [
       {
-        name: "Web Development",
         icon: <FaCode />,
+        name: "Web Development",
         desc: "Modern, scalable web solutions.",
       },
       {
-        name: "Shopify & WordPress",
         icon: <FaCode />,
+        name: "Shopify & WordPress",
         desc: "E-commerce & CMS expertise.",
       },
       {
-        name: "Custom Programs",
         icon: <FaCode />,
+        name: "Custom Programs",
         desc: "Automate your workflows.",
       },
     ],
@@ -58,18 +53,18 @@ const mission = [
     category: "Networking & Security",
     items: [
       {
-        name: "Linux Administration",
         icon: <FaServer />,
+        name: "Linux Administration",
         desc: "Efficient server management.",
       },
       {
-        name: "Cybersecurity",
         icon: <FaLock />,
+        name: "Cybersecurity",
         desc: "Protect your digital assets.",
       },
       {
-        name: "Cloud Computing",
         icon: <FaCloud />,
+        name: "Cloud Computing",
         desc: "AWS, Google Cloud, Azure.",
       },
     ],
@@ -78,71 +73,79 @@ const mission = [
     category: "IT Consultancy",
     items: [
       {
-        name: "Project Management",
         icon: <FaUserTie />,
+        name: "Project Management",
         desc: "Guiding your IT success.",
       },
       {
-        name: "AI & Automation",
         icon: <FaCode />,
+        name: "AI & Automation",
         desc: "Integrating smart technology.",
       },
       {
-        name: "Data & Research",
         icon: <FaCode />,
+        name: "Data & Research",
         desc: "Advanced analytics & insights.",
       },
     ],
   },
 ];
 const HomeContent = () => {
-
   const testimonialsData = [
     {
-      quote: "AmeerSync’s AI expertise helped us develop a custom recommendation engine for our e-commerce store. The accuracy of predictions improved significantly, leading to a 30% increase in sales. Absolutely brilliant!",
+      quote:
+        "AmeerSync’s AI expertise helped us develop a custom recommendation engine for our e-commerce store. The accuracy of predictions improved significantly, leading to a 30% increase in sales. Absolutely brilliant!",
       author: "Olivia Adams",
-      company: "SmartShop"
+      company: "SmartShop",
     },
     {
-      quote: "Their networking solutions are fantastic! We struggled with connectivity and security issues, but AmeerSync streamlined our entire infrastructure. Now, everything runs smoothly without interruptions.",
+      quote:
+        "Their networking solutions are fantastic! We struggled with connectivity and security issues, but AmeerSync streamlined our entire infrastructure. Now, everything runs smoothly without interruptions.",
       author: "William Harris",
-      company: "Enterprise Networks"
+      company: "Enterprise Networks",
     },
     {
-      quote: "For my Node.js project, AmeerSync provided exceptional backend development support. Their code was clean, scalable, and optimized for performance. Truly a lifesaver for developers like me!",
+      quote:
+        "For my Node.js project, AmeerSync provided exceptional backend development support. Their code was clean, scalable, and optimized for performance. Truly a lifesaver for developers like me!",
       author: "Ethan Walker",
-      company: "DevStudio"
+      company: "DevStudio",
     },
     {
-      quote: "Their cloud computing services helped us migrate our entire system to AWS seamlessly. The process was quick, and we now have better scalability and cost efficiency. Highly recommended!",
+      quote:
+        "Their cloud computing services helped us migrate our entire system to AWS seamlessly. The process was quick, and we now have better scalability and cost efficiency. Highly recommended!",
       author: "Charlotte Evans",
-      company: "CloudServe"
+      company: "CloudServe",
     },
     {
-      quote: "AmeerSync’s proof-reading and editing services polished my research paper to perfection. The detailed feedback and corrections improved the clarity and structure significantly. I received great feedback from my professors!",
+      quote:
+        "AmeerSync’s proof-reading and editing services polished my research paper to perfection. The detailed feedback and corrections improved the clarity and structure significantly. I received great feedback from my professors!",
       author: "Nathan Clark",
-      company: "Academic Researcher"
+      company: "Academic Researcher",
     },
     {
-      quote: "Managing email invoices was a nightmare until we found AmeerSync. Their automation service streamlined everything, reducing errors and saving us hours of manual work. Absolutely worth every penny!",
+      quote:
+        "Managing email invoices was a nightmare until we found AmeerSync. Their automation service streamlined everything, reducing errors and saving us hours of manual work. Absolutely worth every penny!",
       author: "Emily White",
-      company: "BizTrack"
+      company: "BizTrack",
     },
     {
-      quote: "We needed a static website for our startup, and AmeerSync delivered a clean, modern, and ultra-fast site. Their attention to UI/UX and performance optimization was incredible. Highly satisfied!",
+      quote:
+        "We needed a static website for our startup, and AmeerSync delivered a clean, modern, and ultra-fast site. Their attention to UI/UX and performance optimization was incredible. Highly satisfied!",
       author: "Lucas Turner",
-      company: "Startup Solutions"
+      company: "Startup Solutions",
     },
     {
-      quote: "My final year project needed expert guidance, and AmeerSync provided just that! From concept to execution, they ensured every detail was perfect. I couldn’t have achieved this success without them.",
+      quote:
+        "My final year project needed expert guidance, and AmeerSync provided just that! From concept to execution, they ensured every detail was perfect. I couldn’t have achieved this success without them.",
       author: "Sophia Bennett",
-      company: "University Graduate"
+      company: "University Graduate",
     },
     {
-      quote: "Their project management expertise helped us complete our software development cycle ahead of schedule. The structured approach and real-time tracking made a huge difference. AmeerSync truly understands agile workflows!",
+      quote:
+        "Their project management expertise helped us complete our software development cycle ahead of schedule. The structured approach and real-time tracking made a huge difference. AmeerSync truly understands agile workflows!",
       author: "Benjamin Carter",
-      company: "Tech Ventures"
-    }
+      company: "Tech Ventures",
+    },
   ];
   const reasons = [
     {
@@ -206,12 +209,12 @@ const HomeContent = () => {
         text: "Our dedication to quality and customer satisfaction makes us a reliable partner in your digital journey.",
       },
     ];
-   
+
     return (
-      <section className="my-5 p-6 md:p-12 bg-gradient-to-b from-secondary to-container  text-text rounded-3xl">
+      <section className="my-5 p-6 md:p-12 bg-gradient-to-br from-secondary to-primary  text-text rounded-3xl">
         <div className=" w-full text-center ">
-          <h2 className="text-3xl font-bold">About Us</h2>
-          <p className="text-lg">
+          <h2 className="text-3xl font-semibold text-Heading">About Us</h2>
+          <p className="text-lg text-text">
             We are a team of dedicated professionals passionate about delivering
             high-quality digital solutions. Our mission is to empower businesses
             with innovative and sustainable technology solutions that drive
@@ -239,12 +242,12 @@ const HomeContent = () => {
                 key={index}
                 className="md:flex items-center md:items-start text-center md:text-left"
               >
-                <div className="flex items-center justify-center bg-primary text-secondary rounded-full w-12 h-12 shrink-0 mr-4">
+                <div className="flex items-center justify-center  bg-gradient-to-r from-varientColor to-primary text-white rounded-full w-12 h-12 shrink-0 mr-4">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold">{feature.title}</h3>
-                  <p className="text-text">{feature.text}</p>
+                  <h3 className="text-lg font-semibold">{feature.title}</h3>
+                  <p className="text-text text-lg font-medium">{feature.text}</p>
                 </div>
               </div>
             ))}
@@ -346,27 +349,23 @@ const HomeContent = () => {
       <section className="my-5 p-6 ">
         <div className="text-center mb-8">
           <div className="flex justify-center items-center">
-            <img
-              src={Images.SERVICES_IMG}
-              alt="terms&conditions"
-              className={" max-h-64 mx-auto"}
-            />
+          <img src={Images.SERVICES_IMG} alt="services" className={" max-h-64 max-w-64 mx-auto  rounded-full bg-Heading hover:bg-primary p-4 animate-pulse  lg:animate-scroll"} />
           </div>
-          <h2 className="text-3xl font-semibold">Our Services</h2>
-          <p className="text-lg text-gray-600">
+          <h2 className="text-3xl text-Heading font-semibold">Our Services</h2>
+          <p className="text-lg text-text">
             At AmeerSync, we deliver exceptional solutions tailored to your
             needs. Here’s an overview of the services we offer:
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8 container mx-auto">
           {services.map((service, index) => (
             <div key={index} className="mb-4">
               <ServicesCard
                 icon={service.icon}
+                color={service.color}
                 title={service.title}
                 description={service.description}
-                color={service.color}
               />
             </div>
           ))}
@@ -375,144 +374,161 @@ const HomeContent = () => {
     );
   };
 
-   
-      return (
-        <div className="w-full bg-gray-50 text-gray-900">
-        <div className="relative w-full  h-screen overflow-hidden flex items-center justify-center">
-          <video
-            loop
-            muted
-            autoPlay
-            className="absolute top-44 md:top-0 left-0 w-full h-full sm:object-contain md:object-cover z-0"
+  return (
+    <div className="w-full bg-Bg ">
+      <div className="relative w-full  h-screen overflow-hidden flex items-center justify-center">
+        <video
+          loop
+          muted
+          autoPlay
+          className="absolute top-44 md:top-0 left-0 w-full h-full sm:object-contain md:object-cover z-0"
+        >
+          <source
+            src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="hidden md:block absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/80 via-black/50 to-black/80"></div>
+
+        <div
+          className="w-full  px-6 py-2 
+            md:absolute md:bottom-0 md:left-0 md:flex   md:max-w-3xl md:h-full text-text"
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
-            <source
-              src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-  
-          <div className="hidden md:block absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/80 via-black/50 to-black/80"></div>
-  
-          <div className="w-full  px-6 py-2 
-            md:absolute md:bottom-0 md:left-0 md:flex   md:max-w-3xl md:h-full text-text">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-              <h1 className=" text-primary md:text-secondary  text-3xl sm:text-sm md:text-5xl md:max-w-1/2 font-bold">
-                Elevate Your Experience with{" "}
-                <span className="text-primary">Stunning Designs</span>
-              </h1>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 1 }}
-                className="sm:text-lg text-gray-900 md:text-white"
-              >
-                Explore our innovative solutions crafted to enhance your journey.
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1, duration: 0.5 }}
-                className="mt-6 flex flex-col sm:flex-row items-center sm:items-start gap-4"
-              >
-                <Link to="/contact-us">	
-                <button className="px-4 py-2 bg-button hover:shadow-md hover:shadow-primary hover:bg-button text-white text-lg font-semibold rounded-3xl flex items-center gap-2 transition duration-300">
+            <h1 className=" text-text md:text-secondary  text-3xl sm:text-sm md:text-5xl md:max-w-1/2 font-bold">
+              Elevate Your Experience with{" "}
+              <span className="text-Heading">Stunning Designs</span>
+            </h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="sm:text-lg text-text md:text-white"
+            >
+              Explore our innovative solutions crafted to enhance your journey.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="mt-6 flex flex-col sm:flex-row items-center sm:items-start gap-4"
+            >
+              <Link to="/contact-us">
+                <button className="px-4 py-2 bg-button hover:bg-HoverBtn hover:shadow-md hover:shadow-primary  text-white text-lg font-semibold rounded-3xl flex items-center gap-2 transition duration-300">
                   Get Started <FaRocket />
                 </button>
-                </Link>
-            
-               <Link to={"/need-help"}>
-               <button className="px-4 py-2 bg-transparent border border-white text-white text-lg font-semibold rounded-full flex items-center gap-2 hover:bg-white hover:text-black transition duration-300">
+              </Link>
+
+              <Link to={"/need-help"}>
+                <button className="px-4 py-2 bg-transparent border border-white text-white text-lg font-semibold rounded-full flex items-center gap-2 hover:bg-white hover:text-black transition duration-300">
                   Learn More <FaArrowRight />
                 </button>
-               </Link>
-           
-              </motion.div>
+              </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
-  
-        {/* Features Section */}
-        <div className="py-4 bottom-10 w-full flex justify-center">
-          <div className="flex flex-wrap justify-center gap-6">
-            {[
-              { icon: <FaRocket />, title: "Innovative Solutions", text: "We create cutting-edge solutions to enhance your business." },
-              { icon: <FaUsers />, title: "Expert Team", text: "Our professional team is here to support your needs." },
-              { icon: <FaEnvelope />, title: "24/7 Support", text: "We are available anytime to assist you with your queries." },
-            ].map((item, index) => (
+      </div>
+
+      <div className="py-4 bottom-10 w-full flex justify-center">
+        <div className="flex flex-wrap justify-center gap-6">
+          {[
+            {
+              icon: <FaRocket />,
+              title: "Innovative Solutions",
+              text: "We create cutting-edge solutions to enhance your business.",
+            },
+            {
+              icon: <FaUsers />,
+              title: "Expert Team",
+              text: "Our professional team is here to support your needs.",
+            },
+            {
+              icon: <FaEnvelope />,
+              title: "24/7 Support",
+              text: "We are available anytime to assist you with your queries.",
+            },
+          ].map((item, index) => (
+            <motion.div
+            key={index}
+            whileHover={{ scale: 1.05 }} 
+            className="bg-white hover:bg-gradient-to-t hover:from-white hover:to-primary border border-primary p-6  hover:border-0 rounded-3xl hover:shadow-lg w-64 text-center duration-200"
+          >
+           <div className="text-5xl text-primary hover:text-secondary p-4 rounded-full mb-4">
+                {item.icon}
+              </div>
+            <h3 className="text-xl text-primary font-semibold">
+              {item.title}
+            </h3>
+            <p className="text-text mt-2">
+              {item.text}
+            </p>
+          </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full ">
+        <div className="container mx-auto">
+          <AboutUs />
+        </div>
+        <section className="py-16  px-6 sm:px-12 lg:px-24">
+          <div className="flex justify-center items-center   rounded-3xl">
+            <img
+              src={Images.OUR_MISSION_IMG}
+              alt="terms&conditions"
+              className={" rounded mx-auto max-h-64 animate-pulse md:animate-bounce lg:animate-scroll   transition duration-1000 ease-in"}
+            />
+          </div>
+          <h2 className="text-4xl font-bold text-center text-Heading">
+            Our Mission
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+            {mission?.map((service, index) => (
               <motion.div
                 key={index}
-                whileHover={{ scale: 1.05 }}
-                className="bg-transparent border border-primary p-6 rounded-lg shadow-lg w-64 text-center"
+                className="p-6 bg-gradient-to-r from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition hover:from-secondary hover:to-primary hover:border-0"
+
+                whileHover={{ scale: 1.1 }}
               >
-                <div className="text-primary text-4xl   mb-3">{item.icon}</div>
-                <h3 className="text-xl text-primary font-semibold">{item.title}</h3>
-                <p className="text-text mt-2">{item.text}</p>
+                <h3 className="text-2xl font-bold text-primary mb-3">
+                  {service.category}
+                </h3>
+                <div className="space-y-4">
+                  {service.items?.map(
+                    (
+                      item,
+                      idx 
+                    ) => (
+                      <div key={idx} className="flex items-center gap-4">
+                        <div className="text-primary text-3xl">{item.icon}</div>
+                        <div>
+                          <h4 className="text-xl text-text font-semibold">
+                            {item.name}
+                          </h4>
+                          <p className="text-text">{item.desc}</p>
+                        </div>
+                      </div>
+                    )
+                  )}
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>
-  
-       
-  
-        {/* Additional Sections */}
-        <div className="w-full ">
-          <div className="container mx-auto">
-
-          <AboutUs />
-          </div>
-           <section className="py-16 bg-white px-6 sm:px-12 lg:px-24">
-           <div className="flex justify-center items-center   rounded-3xl">
-<img src={Images.OUR_MISSION_IMG} alt="terms&conditions" className={" rounded mx-auto max-h-64"} />
-
+        </section>
+        <ServicePage />
+        <WhyChooseUsSection reasons={reasons} />
+        <ContactUsSection />
       </div>
-                  <h2 className="text-4xl font-bold text-center text-primary">
-                    Our Mission
-                  </h2>
-                  <div className="grid md:grid-cols-3 gap-10 mt-10">
-                    {mission?.map((service, index) => (
-                      <motion.div
-                        key={index}
-                        className="p-6  bg-gradient-to-b from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition"
-                        whileHover={{ scale: 1.1 }}
-                      >
-                        <h3 className="text-2xl font-bold text-primary mb-3">
-                          {service.category}
-                        </h3>
-                        <div className="space-y-4">
-                          {service.items?.map(
-                            (
-                              item,
-                              idx // <-- FIXED HERE
-                            ) => (
-                              <div key={idx} className="flex items-center gap-4">
-                                <div className="text-primary text-3xl">{item.icon}</div>
-                                <div>
-                                  <h4 className="text-xl text-text font-semibold">
-                                    {item.name}
-                                  </h4>
-                                  <p className="text-text">{item.desc}</p>
-                                </div>
-                              </div>
-                            )
-                          )}
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </section>
-          <ServicePage />
-          <WhyChooseUsSection reasons={reasons} />
-          <ContactUsSection />
-        </div>
-  
-        {/* Feedback Section */}
-       
+
       <TestimonialsSection testimonials={testimonialsData} />
-      </div>
-      );
-    };
-    
- 
+    </div>
+  );
+};
 
 export default memo(HomeContent);

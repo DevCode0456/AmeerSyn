@@ -4,11 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        text: "var(--color-text)", 
-        primary: "var(--color-primary)", 
+        text: "var(--color-text)",
+        primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
-        container: "var(--color-container)", 
-        button: "var(--color-button)", 
+        container: "var(--color-container)",
+        button: "var(--color-button)",
+        HoverBtn: "var(--color-HoverBtn)",
+        Bg: "var(--color-Bg)",
+        Heading: "var(--color-Heading)",
+        varientColor: "var(--color-varientColor)",
       },
       animation: {
         scroll: "scroll 15s linear infinite",

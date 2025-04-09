@@ -8,6 +8,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
     <Suspense fallback={<LoadingScreen />}>
+      {/* <LoadingScreen /> */}
       <Router>
         <MainLayout>
           <ThemeToggle />

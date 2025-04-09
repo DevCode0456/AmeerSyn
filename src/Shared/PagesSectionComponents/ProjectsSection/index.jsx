@@ -1,13 +1,13 @@
 import React, { memo } from "react";
 import { motion } from "framer-motion";
+import Images from "../../../Helper/ImagesConstant";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Images from "../../../Helper/ImagesConstant";
 
 const ProjectsSection = ({ projects }) => {
   return (
     <motion.div
-      className="my-10"
+      className="my-10 "
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

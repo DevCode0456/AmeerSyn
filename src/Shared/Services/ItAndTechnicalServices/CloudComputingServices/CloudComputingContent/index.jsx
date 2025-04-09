@@ -214,9 +214,9 @@ const CloudComputingContent = () => {
   };
 
   return (
-    <div className="cloud-content w-100">
+    <div className="cloud-content w-100 bg-Bg">
       <motion.div
-        className="mt-10"
+        className=""
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
