@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 /* Default Theme */
 :root {
   --color-Bg: white;
@@ -206,3 +211,9 @@
     transform: rotate(360deg);
   }
 }
+
+.loader {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}      

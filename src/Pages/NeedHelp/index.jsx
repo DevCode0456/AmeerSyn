@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Accordin from "../../Shared/Accordin";
 import Images from "../../Helper/ImagesConstant";
 import ContactUsSection from "../../Shared/ContactUsSection";
+import { MdAndroid, MdEmail, MdPhoneAndroid } from "react-icons/md";
 
 const NeedHelp = () => {
 
@@ -86,22 +87,26 @@ Need Help?      </h1>        <p className="text-text mb-4 max-w-2xl mx-auto text
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-container  rounded-3xl hover:bg-white hover:shadow-xl p-6">
             <h3 className="text-lg font-semibold text-Heading mb-2">
-              📧 Email Support
+            <MdEmail className="inline-block items-center mr-2" size={44} /> Email Support
             </h3>
             <p className="text-text">
               Reach out to us at{" "}
+            
               <a
-                href="mailto:support@example.com"
-                className="text-Heading font-semibold hover:underline"
-              >
-                support@example.com
-              </a>
-              .
+  href="mailto:ameersync.com@gmail.com"
+  className="flex items-center gap-2 md:border-r-2 border-gray-300 text-primary md:pr-4 group"
+>
+  
+  <span className="font-semibold  md:inline">
+    ameersync.com@gmail.com
+  </span>
+</a>
+
             </p>
           </div>
           <div className="bg-container  rounded-3xl hover:bg-white hover:shadow-xl p-6">
             <h3 className="text-lg font-semibold text-Heading mb-2">
-              ☎️ Phone Support
+              <MdPhoneAndroid className="inline-block items-center mr-2" size={44} /> Phone Support
             </h3>
             <p className="text-text">
               Call us at <span className="font-semibold text-Heading">+1 (123) 456-7890</span>{" "}
@@ -129,12 +134,12 @@ Need Help?      </h1>        <p className="text-text mb-4 max-w-2xl mx-auto text
           transition={{ duration: 0.8 }}
         >
           <Accordin faqs={faqs} />
-        </motion.div>
+        </motion.div >
 
         <h2 className="text-4xl text-center font-semibold text-Heading py-4 md:py-8 ">
           Helpful Links
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-gradient-to-b from-container to-primary rounded-3xl p-3  md:p-10 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-gradient-to-b from-container to-primary rounded-3xl p-3 my-5 md:p-10 ">
           <a
             href="/about-us"
             className="block bg-secondary text-text p-4 rounded-lg hover:bg-primary transition-all hover:text-white"
@@ -173,7 +178,7 @@ Need Help?      </h1>        <p className="text-text mb-4 max-w-2xl mx-auto text
           </a>
         </div>
       </div>
-      <ContactUsSection/>
+      <ContactUsSection />
     </div>
   );
 };

@@ -1,35 +1,76 @@
-import React, { useState, memo } from "react";
-import Images from "../../../Helper/ImagesConstant";
+import React, { memo, useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { FaUser, FaEnvelope, FaCommentDots } from "react-icons/fa";
+
 import {
   FaArrowLeft,
   FaArrowRight,
   FaArrowUp,
   FaArrowDown,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
+import Images from "../../../Helper/ImagesConstant";
+import Toaster from "../../Toaster";
 
 const ContactFormContent = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const [isFlipped, setIsFlipped] = useState(false);
   const [isMobileFlipped, setIsMobileFlipped] = useState(false);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  const sendContactEmail = async (values) => {
+    const serviceID = "service_il8atkb";
+    const welcomeTemplateID = "template_nflovc7";
+    const ownerTemplateID = "template_ttmslno";
+    const publicKey = "dIIrl8MNMYPxYlifX";
+
+    try {
+      await emailjs.send(
+        serviceID,
+        welcomeTemplateID,
+        {
+          name: values.name,
+          email: values.email,
+        },
+        publicKey
+      );
+
+      await emailjs.send(
+        serviceID,
+        ownerTemplateID,
+        {
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        },
+        publicKey
+      );
+
+      Toaster.success("Email sent successfully!");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      Toaster.error("Failed to send email. Please try again later.");
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data Submitted: ", formData);
-  };
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("Name is required").min(2, "name could be at least 2 characters!").max(50, "name could be at most 50 characters!"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      message: Yup.string().required("Message is required").min(10, "message could be at least 10 characters!"),
+    }),
+    onSubmit: async (values, { resetForm }) => {
+      await sendContactEmail(values);
+      resetForm();
+    },
+  });
 
   const toggleSections = () => {
     setIsFlipped((prev) => !prev);
@@ -40,12 +81,12 @@ const ContactFormContent = () => {
   };
 
   return (
-    <div className="relative w-full mx-auto p-4 overflow-hidden flex justify-center items-center">
+    <div className="relative w-full mx-auto p-4 overflow-hidden flex justify-center items-center ">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className={`flex flex-col md:flex-row w-full max-w-7xl rounded-3xl shadow-lg border-2 border-secondary p-2 bg-secondary transform transition-transform duration-700 ease-in-out ${
+        className={`flex border-primary border-2 flex-col md:flex-row w-full max-w-7xl rounded-3xl shadow-lg  p-2 bg-secondary transform transition-transform duration-700 ease-in-out ${
           isFlipped ? "md:flex-row-reverse" : ""
         } ${isMobileFlipped ? "flex-col-reverse" : ""}`}
       >
@@ -54,7 +95,7 @@ const ContactFormContent = () => {
           initial={{ x: -100 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`flex flex-col justify-center items-center bg-primary  text-secondary  overflow-hidden p-6 flex-1 transition-all duration-700 ease-in-out ${
+          className={`flex flex-col justify-center items-center bg-primary text-secondary overflow-hidden p-6 flex-1 transition-all duration-700 ease-in-out ${
             isFlipped
               ? "rounded-tr-3xl md:rounded-tr-3xl md:rounded-br-3xl"
               : "rounded-tl-3xl md:rounded-tl-3xl md:rounded-bl-3xl"
@@ -65,7 +106,8 @@ const ContactFormContent = () => {
           </h1>
           <p className="text-center text-base md:text-lg">
             Leave your feedback, queries, or contact us for support. We're here
-            to help!
+            to help! Your message is sent in the form of email invoices. An
+            email invoice is also sent to you from AmeerSync.
           </p>
           <button
             onClick={toggleSections}
@@ -90,7 +132,7 @@ const ContactFormContent = () => {
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`flex-1 overflow-hidden bg-secondary p-6 transition-all duration-700 ease-in-out border-gray-300 ${
+          className={`flex-1 overflow-hidden bg-secondary p-6 transition-all duration-700 ease-in-out   ${
             isFlipped
               ? "rounded-tl-3xl md:rounded-tl-3xl md:rounded-bl-3xl"
               : "rounded-tr-3xl md:rounded-tr-3xl md:rounded-br-3xl"
@@ -106,65 +148,85 @@ const ContactFormContent = () => {
           </div>
 
           {/* Form */}
-          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Name
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder="Enter your name"
-                className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Enter your email"
-                className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                placeholder="Write your message"
-                value={formData.message}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 border rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              />
-            </div>
-            <button
-              type="submit"
-              className="mt-4 py-3 bg-primary text-secondary border-secondary border-2 font-bold rounded-lg shadow-lg transition duration-300 flex items-center justify-center gap-2"
-            >
-              Submit
-            </button>
-          </form>
+
+<form className="flex flex-col gap-4" onSubmit={formik.handleSubmit}>
+  {/* Name Field */}
+  <div className="relative">
+    <label htmlFor="name" className="block  text-primary mb-1 font-semibold">
+      Name
+    </label>
+    <div className="relative">
+      <FaUser size={20} className="absolute top-1/2 left-3 transform -translate-y-1/2 text-primary" />
+      <input
+        id="name"
+        name="name"
+        type="text"
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        value={formik.values.name}
+        placeholder="Enter your name"
+        className="w-full pl-10 pr-4 py-3 border border-primary rounded-lg shadow-sm outline-0"
+      />
+    </div>
+    {formik.touched.name && formik.errors.name && (
+      <p className="text-red-600 text-xs mt-1">{formik.errors.name}</p>
+    )}
+  </div>
+
+  {/* Email Field */}
+  <div className="relative">
+    <label htmlFor="email" className="block  text-primary mb-1 font-semibold">
+      Email
+    </label>
+    <div className="relative">
+      <FaEnvelope size={20} className="absolute top-1/2 left-3 transform -translate-y-1/2 text-primary" />
+      <input
+        id="email"
+        type="email"
+        name="email"
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        value={formik.values.email}
+        placeholder="Enter your email"
+        className="w-full pl-10 pr-4 py-3 border border-primary rounded-lg shadow-sm outline-0"
+      />
+    </div>
+    {formik.touched.email && formik.errors.email && (
+      <p className="text-red-600 text-xs mt-1">{formik.errors.email}</p>
+    )}
+  </div>
+
+  {/* Message Field */}
+  <div className="relative">
+    <label htmlFor="message" className="block  text-primary mb-1 font-semibold">
+      Message
+    </label>
+    <div className="relative">
+      <FaCommentDots size={20} className="absolute top-4 left-3 text-primary " />
+      <textarea
+        id="message"
+        name="message"
+        rows={4}
+        onChange={formik.handleChange}
+        onBlur={formik.handleBlur}
+        value={formik.values.message}
+        placeholder="Write your message"
+        className="w-full pl-10 pr-4 py-3 border border-primary outline-0 rounded-lg shadow-sm"
+      />
+    </div>
+    {formik.touched.message && formik.errors.message && (
+      <p className="text-red-600 text-xs mt-1">{formik.errors.message}</p>
+    )}
+  </div>
+
+  <button
+    type="submit"
+    className="mt-4 py-3 bg-primary text-secondary border-secondary border-2 font-bold rounded-lg shadow-lg transition duration-300 flex items-center justify-center gap-2"
+  >
+    Submit
+  </button>
+</form>
+
         </motion.div>
       </motion.div>
     </div>

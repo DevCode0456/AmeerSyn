@@ -12,7 +12,6 @@ const WhyChooseUsSection = ({ reasons }) => {
     >
       <WhyChooseUsComponent/>
 
-      {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14  py-12 container mx-auto p-5 ">
         {reasons.map((reason, index) => (
           <div
@@ -31,8 +30,7 @@ const WhyChooseUsSection = ({ reasons }) => {
               </span>
             </div>
 
-            {/* Card Content */}
-            <h3 className="mt-10 text-xl font-bold text-text group-hover:text-secondary">
+            <h3 className="mt-10 text-xl font-bold text-Heading group-hover:text-secondary">
               {reason.title}
             </h3>
             <div className="w-10 h-1 bg-primary mx-auto my-2 rounded-full group-hover:bg-white"></div>

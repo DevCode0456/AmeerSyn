@@ -5,10 +5,8 @@ import Images from "../../../Helper/ImagesConstant";
 import { Link } from "react-router-dom";
 
 const WhyChooseUsComponent = () => {
-  // State to track the active tab
   const [activeTab, setActiveTab] = useState("mission");
 
-  // Content for each tab
   const tabsContent = {
     mission: {
       title: "Fingent’s Four Pillars Of Influence",

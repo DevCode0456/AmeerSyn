@@ -349,7 +349,7 @@ const HomeContent = () => {
       <section className="my-5 p-6 ">
         <div className="text-center mb-8">
           <div className="flex justify-center items-center">
-          <img src={Images.SERVICES_IMG} alt="services" className={" max-h-64 max-w-64 mx-auto  rounded-full bg-Heading hover:bg-primary p-4 animate-pulse md:animate-bounce lg:animate-scroll"} />
+          <img src={Images.SERVICES_IMG} alt="services" className={" max-h-64 max-w-64 mx-auto  rounded-full bg-Heading hover:bg-primary p-4 animate-pulse  lg:animate-scroll"} />
           </div>
           <h2 className="text-3xl text-Heading font-semibold">Our Services</h2>
           <p className="text-lg text-text">
@@ -488,7 +488,7 @@ const HomeContent = () => {
           <h2 className="text-4xl font-bold text-center text-Heading">
             Our Mission
           </h2>
-          <div className="grid md:grid-cols-3 gap-10 mt-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
             {mission?.map((service, index) => (
               <motion.div
                 key={index}

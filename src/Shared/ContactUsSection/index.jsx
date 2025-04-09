@@ -33,19 +33,31 @@ const ContactUsSection = () => {
           </p>
 
           <div className="space-y-4">
-            <div className="flex items-center justify-center md:justify-start gap-4">
-              <MdEmail className="text-white text-3xl" />
-              <p className="text-white">contact@ammersync.com</p>
+          <div className="flex items-center justify-center md:justify-start gap-4">
+              <MdPhone className="text-white text-3xl" />
+              <p className="text-white">            (+44) 7440 095528
+              </p>
             </div>
+           
             <div className="flex items-center justify-center md:justify-start gap-4">
               <MdLocationOn className="text-white text-3xl" />
               <p className="text-white"> Morden, London UK</p>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-4">
-              <MdPhone className="text-white text-3xl" />
-              <p className="text-white">            (+44) 7440 095528
-              </p>
+              <MdEmail className="text-white text-3xl" />
+              <p className="text-white">
+                <a
+  href="mailto:ameersync.com@gmail.com"
+  className="flex items-center gap-2 md:border-r-2 border-gray-300 text-primary md:pr-4 group"
+>
+ 
+  <span className="font-semibold  inline text-white">
+    ameersync.com@gmail.com
+  </span>
+</a>
+</p>
             </div>
+            
           </div>
         </div>
 

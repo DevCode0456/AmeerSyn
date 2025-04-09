@@ -52,17 +52,18 @@ export default function Topbar() {
 
         {/* Email */}
         <a
-          href="mailto:info@wongateway.com"
-          className="flex items-center gap-2 md:border-r-2 border-gray-300 text-primary md:pr-4 group"
-        >
-          <FaEnvelope
-            size={24}
-            className="text-primary transition-transform duration-300 group-hover:scale-110"
-          />
-          <span className="font-semibold hidden md:inline">
-            info@wongateway.com
-          </span>
-        </a>
+  href="mailto:ameersync.com@gmail.com"
+  className="flex items-center gap-2 md:border-r-2 border-gray-300 text-primary md:pr-4 group"
+>
+  <FaEnvelope
+    size={24}
+    className="text-primary transition-transform duration-300 group-hover:scale-110"
+  />
+  <span className="font-semibold hidden md:inline">
+    ameersync.com@gmail.com
+  </span>
+</a>
+
       </div>
 
       <div className="flex gap-4 text-primary">

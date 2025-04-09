@@ -6,13 +6,13 @@ import Images from "../../../Helper/ImagesConstant";
 const ServicesSection = ({ services }) => {
   return (
     <motion.div
-      className=" container  mx-auto px-5 "
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    initial={{ opacity: 0, y: 50 }}
+    className=" container  mx-auto px-5 "
     >
 <div className="flex justify-center items-center ">
-<img src={Images.SERVICES_IMG} alt="services" className={" max-h-64 max-w-64 mx-auto  rounded-full bg-Heading hover:bg-primary p-4 animate-pulse md:animate-bounce lg:animate-scroll   transition duration-1000 ease-in"} />
+<img src={Images.SERVICES_IMG} alt="services" className={" max-h-64 max-w-64 mx-auto  rounded-full bg-Heading hover:bg-primary p-4 animate-pulse   lg:animate-scroll   transition duration-1000 ease-in"} />
 
       </div>
       <h1 className="text-4xl font-bold text-center text-Heading py-3">
