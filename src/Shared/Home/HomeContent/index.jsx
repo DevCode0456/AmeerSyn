@@ -211,19 +211,23 @@ const HomeContent = () => {
     ];
 
     return (
-      <section className="my-5 p-6 md:p-12 bg-gradient-to-br from-secondary to-primary  text-text rounded-3xl">
-        <div className=" w-full text-center ">
+<section
+  style={{ backgroundImage: `url(${Images.BG_GRADIENT})` }} 
+  className="my-5 p-6 md:p-12 text-text rounded-3xl"
+>        <div className=" w-full text-center ">
           <h2 className="text-3xl font-semibold text-Heading">About Us</h2>
-          <p className="text-lg text-text">
+        <div className="flex justify-center w-full">
+        <p className="text-lg text-text max-w-3xl text-center py-3">
             We are a team of dedicated professionals passionate about delivering
             high-quality digital solutions. Our mission is to empower businesses
             with innovative and sustainable technology solutions that drive
             growth and success.
+            
           </p>
+        </div>
         </div>
 
         <div className="w-full  flex flex-col md:flex-row gap-8 items-stretch mt-5">
-          {/* Mobile Frame Video Section */}
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <div className="bg-black p-2 rounded-[2rem] shadow-xl w-full max-w-[300px] aspect-[9/16] flex items-center justify-center">
               <iframe
@@ -479,11 +483,12 @@ const HomeContent = () => {
         </div>
         <section className="py-16  px-6 sm:px-12 lg:px-24">
           <div className="flex justify-center items-center   rounded-3xl">
-            <img
-              src={Images.OUR_MISSION_IMG}
-              alt="terms&conditions"
-              className={" rounded mx-auto max-h-64 animate-pulse md:animate-bounce lg:animate-scroll   transition duration-1000 ease-in"}
-            />
+          <img
+  src={Images.OUR_MISSION_IMG}
+  alt="terms&conditions"
+  className="rounded mx-auto max-h-64 transition duration-300 ease-in-out hover:scale-105 hover:rotate-1 hover:brightness-110 hover:saturate-150 animate__animated animate__pulse"
+/>
+
           </div>
           <h2 className="text-4xl font-bold text-center text-Heading">
             Our Mission
@@ -521,6 +526,7 @@ const HomeContent = () => {
             ))}
           </div>
         </section>
+        
         <ServicePage />
         <WhyChooseUsSection reasons={reasons} />
         <ContactUsSection />

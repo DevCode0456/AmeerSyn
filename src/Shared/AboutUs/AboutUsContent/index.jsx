@@ -310,11 +310,12 @@ const AboutUs = () => {
 
       <section className="py-16  px-6 sm:px-12 lg:px-24">
           <div className="flex justify-center items-center   rounded-3xl">
-            <img
-              src={Images.OUR_MISSION_IMG}
-              alt="terms&conditions"
-              className={" rounded mx-auto max-h-64"}
-            />
+          <img
+  src={Images.OUR_MISSION_IMG}
+  alt="terms&conditions"
+  className="rounded mx-auto max-h-64 transition duration-300 ease-in-out hover:scale-105 hover:rotate-1 hover:brightness-110 hover:saturate-150 animate__animated animate__pulse"
+/>
+
           </div>
           <h2 className="text-4xl font-bold text-center text-Heading">
             Our Mission
@@ -354,9 +355,7 @@ const AboutUs = () => {
         </section>
 
       <ServicesSection services={services} />
-      {/* 🌟 Why Choose Us Section */}
       <WhyChooseUsSection reasons={reasons} />
-
       <div className="">
         <ContactUsSection />
         <TestimonialsSection testimonials={testimonialsData} />
