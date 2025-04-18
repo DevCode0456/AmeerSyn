@@ -14,7 +14,6 @@ const ThemeToggle = () => {
     { name: "theme-black-gold", color: "#000000" },
     { name: "theme-dynamic-red", color: "#ce2449" },
     { name: "theme-oceanic-blue", color: "#00796B" },
-    // { name: "theme-sunset-orange", color: "#FB8C00" },
     { name: "theme-professional-gray", color: "#828282" },
   ];
 
@@ -27,14 +26,13 @@ const ThemeToggle = () => {
   }, [currentTheme]);
 
   return (
-    <div className="fixed right-2 top-1/2 transform -translate-y-1/2 z-50">
+    <div className="fixed right-0.5 top-1/2 transform -translate-y-1/2 z-50">
       <button
         className="p-2 bg-button border-secondary border rounded-full shadow-lg transition-all duration-300 ease-in-out text-white"
-        // style={{ backgroundColor: themes[currentTheme].color }}
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         aria-label="Toggle theme menu"
       >
-        <Sun size={24} />
+        <Sun size={15} />
       </button>
 
       {isDropdownOpen && (

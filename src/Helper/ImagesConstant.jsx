@@ -63,6 +63,10 @@ let Images = {
   PROJECT_DUMMY_IMG: require("../Assets/Images/Services/createForm.png"),
 
   LOADER: require("../Assets/loader/loader.gif"),
+  BG_GRADIENT: require("../Assets/Images/Services/bg-gradient.avif"),
+  SOLGAN_IMG: require("../Assets/Images/Services/ameersync.jpeg"),
+
+
 
 };
 

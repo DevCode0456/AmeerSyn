@@ -12,7 +12,32 @@ const ServicesSection = ({ services }) => {
     className=" container  mx-auto px-5 "
     >
 <div className="flex justify-center items-center ">
-<img src={Images.SERVICES_IMG} alt="services" className={" max-h-64 max-w-64 mx-auto  rounded-full bg-Heading hover:bg-primary p-4 animate-pulse   lg:animate-scroll   transition duration-1000 ease-in"} />
+<img
+  src={Images.SERVICES_IMG}
+  alt="services"
+  className="
+    max-h-64 max-w-64 mx-auto 
+    rounded-full p-4 
+    cursor-pointer
+    filter grayscale brightness-95
+    transition-all duration-700 ease-in-out 
+    
+    // Responsive floating animation
+    animate-floatY lg:animate-floatX
+
+    // Hover effects
+    hover:scale-110 hover:grayscale-0 hover:brightness-110 hover:contrast-125 hover:sepia-0
+    hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:ring-4 hover:ring-primary hover:ring-offset-2
+    hover:animate-pulse-glow
+
+    // Active click effect
+    active:scale-95 active:shadow-[0_0_25px_4px_var(--color-primary)]
+  "
+/>
+
+
+
+
 
       </div>
       <h1 className="text-4xl font-bold text-center text-Heading py-3">
