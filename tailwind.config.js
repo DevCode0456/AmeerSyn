@@ -15,6 +15,19 @@ module.exports = {
         varientColor: "var(--color-varientColor)",
       },
       keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        textGlide: {
+          '0%': { transform: 'translateX(-10px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        fadeInText: {
+          '0%': { opacity: 0 },
+          '50%': { opacity: 0.5 },
+          '100%': { opacity: 1 },
+        },
         scroll: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
@@ -37,6 +50,9 @@ module.exports = {
         },
       },
       animation: {
+        'fade-in': 'fadeIn 1s ease-in-out',
+        'text-glide': 'textGlide 0.5s ease-out',
+        'fade-in-text': 'fadeInText 1s ease-in-out',
         scroll: "scroll 15s linear infinite",
         floatY: "floatY 3s ease-in-out infinite",
         floatX: "floatX 4s ease-in-out infinite",

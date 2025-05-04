@@ -5,11 +5,11 @@ import Images from "../../../Helper/ImagesConstant";
 
 const Footer = () => {
   return (
-    <footer className=" bg-gradient-to-b from-primary  to-black  text-secondary hover:text-text py-5">
+    <footer className="bg-gradient-to-br from-primary to-container text-secondary hover:text-text py-5">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Intro */}
-          <div>
+          <div className="animate-fade-in">
             <Link to="/" className="flex items-center mb-4">
               <img
                 src={Images.LOGO_IMG}
@@ -17,7 +17,7 @@ const Footer = () => {
                 alt="Company Logo"
               />
             </Link>
-            <p className="text-secondary text-sm">
+            <p className="text-white text-sm animate-fade-in-text">
               Providing top-notch services in web development, AI, and
               cybersecurity.
             </p>
@@ -25,34 +25,46 @@ const Footer = () => {
 
           {/* Services by Category */}
           <div>
-            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary animate-fade-in-text">
               Development Services
             </h2>
-            <ul className="text-secondary space-y-2">
+            <ul className="text-white space-y-2">
               <li>
-                <Link to="/services/node.js" className=" hover:text-text">
+                <Link
+                  to="/services/node.js"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Node.js
                 </Link>
               </li>
               <li>
-                <Link to="/services/shopify" className=" hover:text-text">
+                <Link
+                  to="/services/shopify"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Shopify
                 </Link>
               </li>
               <li>
-                <Link to="/services/react.js" className=" hover:text-text">
+                <Link
+                  to="/services/react.js"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   React.js
                 </Link>
               </li>
               <li>
-                <Link to="/services/wordpress" className=" hover:text-text">
+                <Link
+                  to="/services/wordpress"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   WordPress
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services/static-website"
-                  className=" hover:text-text"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
                 >
                   Static Websites
                 </Link>
@@ -60,7 +72,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/web-development"
-                  className=" hover:text-text"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
                 >
                   Web Development
                 </Link>
@@ -69,29 +81,38 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary animate-fade-in-text">
               IT & Security
             </h2>
-            <ul className="text-secondary space-y-2">
+            <ul className="text-white space-y-2">
               <li>
-                <Link to="/services/linux" className=" hover:text-text">
+                <Link
+                  to="/services/linux"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Linux
                 </Link>
               </li>
               <li>
-                <Link to="/services/databases" className=" hover:text-text">
+                <Link
+                  to="/services/databases"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Databases
                 </Link>
               </li>
               <li>
-                <Link to="/services/networking" className=" hover:text-text">
+                <Link
+                  to="/services/networking"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Networking
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services/cyber-security"
-                  className=" hover:text-text"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
                 >
                   Cyber Security
                 </Link>
@@ -99,7 +120,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/services/cloud-computing"
-                  className=" hover:text-text"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
                 >
                   Cloud Computing
                 </Link>
@@ -108,30 +129,38 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary animate-fade-in-text">
               Academic Services
             </h2>
-            <ul className="text-secondary space-y-2">
-             
+            <ul className="text-white space-y-2">
               <li>
-                <Link to="/services/assignments" className=" hover:text-text">
+                <Link
+                  to="/services/assignments"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Assignments
                 </Link>
               </li>
               <li>
-                <Link to="/services/thesis" className=" hover:text-text">
+                <Link
+                  to="/services/thesis"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Thesis Writing
                 </Link>
               </li>
               <li>
-                <Link to="/services/proof-reading" className=" hover:text-text">
+                <Link
+                  to="/services/proof-reading"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Proof Reading
                 </Link>
               </li>
               <li>
                 <Link
                   to="/services/research-paper"
-                  className=" hover:text-text"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
                 >
                   Research Papers
                 </Link>
@@ -142,29 +171,39 @@ const Footer = () => {
 
         <div className="grid md:grid-cols-3 gap-8 mt-8 text-secondary">
           <div>
-            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary animate-fade-in-text">
               Company
             </h2>
-            <ul className="text-secondary space-y-2">
+            <ul className="text-white space-y-2">
               <li>
-                <Link to="/about-us" className=" hover:text-text">
+                <Link
+                  to="/about-us"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact-us" className=" hover:text-text">
+                <Link
+                  to="/contact-us"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className=" hover:text-text">
-                  {" "}
+                <Link
+                  to="/projects"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Our Projects
                 </Link>
               </li>
-
               <li>
-                <Link to="/why-choose-us" className=" hover:text-text">
+                <Link
+                  to="/why-choose-us"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
+                >
                   Why Choose Us
                 </Link>
               </li>
@@ -172,23 +211,22 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary">
+            <h2 className="mb-4 text-lg font-semibold uppercase border-b pb-2 text-secondary animate-fade-in-text">
               Legal
             </h2>
-            <ul className="text-secondary space-y-2">
+            <ul className="text-white space-y-2">
               <li>
                 <Link
                   to="/need-help"
-                  className="text-secondary  hover:text-text"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
                 >
                   Need Help?
                 </Link>
               </li>
-           
               <li>
                 <Link
                   to="/privacy-policy"
-                  className=" text-secondary  hover:text-text"
+                  className=" hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
                 >
                   Privacy & Policy
                 </Link>
@@ -196,7 +234,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/terms&conditions"
-                  className=" text-secondary  hover:text-text"
+                  className="hover:text-text hover:font-bold hover:border-b-2 hover:border-primary transition-all animate-text-glide"
                 >
                   Terms & Conditions
                 </Link>
@@ -206,17 +244,16 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-secondary my-6"></div>
+      <div className="border-t border-white my-6"></div>
 
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-        <p className="text-secondary text-sm">
+        <p className="text-white font-semibold text-sm animate-fade-in-text">
           © 2024 AmeerSync. All rights reserved.
         </p>
 
-        <div className="flex space-x-4 mt-4  md:mt-0">
+        <div className="flex space-x-4 mt-4 md:mt-0">
           {[
             { icon: <FaFacebook />, url: "https://facebook.com" },
-
             { icon: <FaLinkedinIn />, url: "https://linkedin.com" },
           ].map((item, index) => (
             <a
@@ -224,7 +261,7 @@ const Footer = () => {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 border border-secondary rounded-full text-secondary  hover:text-text hover:border-primary transition duration-300"
+              className="p-2 rounded-full border text-primary  border-primary transition duration-300 hover:bg-primary hover:text-white"
             >
               {item.icon}
             </a>

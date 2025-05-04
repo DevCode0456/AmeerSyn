@@ -27,7 +27,32 @@ import { FaArrowRight, FaRocket, FaUsers, FaEnvelope } from "react-icons/fa";
 import { FaCloud, FaCode, FaLock, FaServer, FaUserTie } from "react-icons/fa";
 import WhyChooseUsSection from "../../PagesSectionComponents/WhyChooseUsSection";
 import TestimonialsSection from "../../PagesSectionComponents/TestimonialsSection";
+import { ReactTyped } from "react-typed";
 
+
+
+const VideoKeyWords = [
+  "Stunning Designs",
+  "Timeless Aesthetics",
+  "Cutting-Edge Technology",
+  "Innovative Solutions",
+  "Next-Level Functionality",
+  "Tailored Interfaces",
+  "Intuitive User Journeys",
+  "Bold Visuals",
+  "Flawless Performance",
+  "Unforgettable Interactions",
+  "Premium Craftsmanship",
+  "Dynamic Features",
+  "Sleek UI/UX",
+  "Elegant Simplicity",
+  "Responsive Brilliance",
+  "Purpose-Driven Designs",
+  "Pixel-Perfect Precision",
+  "Seamless Integration",
+  "Interactive Components",
+  "Modern Elegance"
+];
 const mission = [
   {
     category: "Development",
@@ -213,11 +238,11 @@ const HomeContent = () => {
     return (
 <section
   style={{ backgroundImage: `url(${Images.BG_GRADIENT})` }} 
-  className="my-5 p-6 md:p-12 text-text rounded-3xl"
+  className="my-5 p-6 md:p-12  rounded-3xl"
 >        <div className=" w-full text-center ">
-          <h2 className="text-3xl font-semibold text-Heading">About Us</h2>
+          <h2 className="text-3xl font-semibold text-primary hover:animate-bounce">About Us</h2>
         <div className="flex justify-center w-full">
-        <p className="text-lg text-text max-w-3xl text-center py-3">
+        <p className="text-lg text-gary-900 max-w-3xl text-center py-3 fadeInText hover:animate-pulse">
             We are a team of dedicated professionals passionate about delivering
             high-quality digital solutions. Our mission is to empower businesses
             with innovative and sustainable technology solutions that drive
@@ -246,12 +271,12 @@ const HomeContent = () => {
                 key={index}
                 className="md:flex items-center md:items-start text-center md:text-left"
               >
-                <div className="flex items-center justify-center  bg-gradient-to-r from-varientColor to-primary text-white rounded-full w-12 h-12 shrink-0 mr-4">
+                <div className="flex items-center justify-center  bg-gradient-to-r from-varientColor to-primary text-white rounded-full w-12 h-12 shrink-0 mr-4 hover:animate-spin">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">{feature.title}</h3>
-                  <p className="text-text text-lg font-medium">{feature.text}</p>
+                  <h2 className="text-lg  xl:text-2xl text-primary font-bold">{feature.title}</h2>
+                  <p className="text-black hover:animate-pulse text-lg font-medium">{feature.text}</p>
                 </div>
               </div>
             ))}
@@ -405,9 +430,15 @@ const HomeContent = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h1 className=" text-text md:text-secondary  text-3xl sm:text-sm md:text-5xl md:max-w-1/2 font-bold">
+            <h1 className=" text-text md:text-white  text-3xl sm:text-sm md:text-5xl md:max-w-1/2 font-bold">
               Elevate Your Experience with{" "}
-              <span className="text-Heading">Stunning Designs</span>
+              <ReactTyped
+        className="text-primary"
+        strings={VideoKeyWords}
+        typeSpeed={100}
+        backSpeed={50}
+        loop
+      />
             </h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

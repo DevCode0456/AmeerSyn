@@ -55,7 +55,7 @@ const WhyChooseUsComponent = () => {
               className={`py-2 px-4 text-base sm:text-lg font-semibold transition ${
                 activeTab === tabKey
                   ? "text-primary font-semibold border-b-2 border-primary"
-                  : "text-gray-600 hover:text-gray-800 hover:border-b-2 hover:border-gray-400"
+                  : "text-black hover:text-primary hover:border-b-2 hover:border-indigo-300"
               }`}
               onClick={() => setActiveTab(tabKey)}
             >
@@ -88,13 +88,10 @@ const WhyChooseUsComponent = () => {
             </Link>
           </div>
 
-          {/* Video Section */}
           <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl flex justify-center">
-            {/* Circular Background - Responsive */}
             <div className="absolute w-[90%] h-[90%] md:w-96 md:h-96 bg-primary rounded-full -z-10"></div>
             
-            {/* Video Container */}
-            <div className="relative w-full h-full aspect-video overflow-hidden rounded-lg shadow-lg">
+            <div className="relative w-full h-full aspect-video overflow-hidden rounded-lg shadow-lg my-3">
               <video
                 src={tabsContent[activeTab].video}
                 autoPlay
