@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import Images from "../../../Helper/ImagesConstant";
 import { memo, useEffect, useRef, useState } from "react";
@@ -7,8 +7,8 @@ const Topbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const location = useLocation();
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -25,12 +25,10 @@ const Topbar = () => {
     };
   }, [isDropdownOpen]);
 
-  // Toggle dropdown visibility
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
-  // Toggle mobile menu
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
     setIsDropdownOpen(false);
@@ -58,43 +56,41 @@ const Topbar = () => {
     { name: "Web Development", path: "/services/web-development" },
     { name: "Final Year Project", path: "/services/final-year-project" },
     { name: "Project Management", path: "/services/project-management" },
-    {
-      name: "Data Structure & Algorithm",
-      path: "/services/data-structure-algorithm",
-    },
+    { name: "Data Structure & Algorithm", path: "/services/data-structure-algorithm" },
   ];
+
+  const navLinkClass = (path) =>
+    `text-sm transition duration-300 ease-in-out pb-1 ${
+      location.pathname === path
+        ? "font-bold border-b-2 border-secondary text-secondary"
+        : "font-medium hover:text-secondary"
+    }`;
+
+  const serviceIsActive = location.pathname.startsWith("/services");
 
   return (
     <header className="bg-primary text-secondary shadow w-full">
       <div className="mx-auto flex items-center justify-between px-4 py-3 xl:px-10">
-        {/* Logo */}
         <div>
           <img src={Images.LOGO_IMG} alt="logo" width="150" height="150" />
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center space-x-6">
-          <Link to="/" className="font-medium text-sm transition">
-            Home
-          </Link>
-          <Link to="/about-us" className="font-medium text-sm transition">
-            About Us
-          </Link>
-          <Link to="/why-choose-us" className="font-medium text-sm transition">
-            Why Choose Us
-          </Link>
-          <Link to="/portfolio" className="font-medium text-sm transition">
-            Portfolio
-          </Link>
-          <Link to="/projects" className="font-medium text-sm transition">
-            Projects
-          </Link>
+          <Link to="/" className={navLinkClass("/")}>Home</Link>
+          <Link to="/about-us" className={navLinkClass("/about-us")}>About Us</Link>
+          <Link to="/why-choose-us" className={navLinkClass("/why-choose-us")}>Why Choose Us</Link>
+          <Link to="/portfolio" className={navLinkClass("/portfolio")}>Portfolio</Link>
+          <Link to="/projects" className={navLinkClass("/projects")}>Projects</Link>
 
-          {/* Services Dropdown */}
           <div className="relative group" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
-              className="font-medium text-sm transition focus:outline-none flex items-center"
+              className={`text-sm transition duration-300 ease-in-out flex items-center focus:outline-none pb-1 ${
+                serviceIsActive
+                  ? "font-bold border-b-2 border-secondary text-secondary"
+                  : "font-medium hover:text-secondary"
+              }`}
             >
               Services ▾
             </button>
@@ -105,7 +101,11 @@ const Topbar = () => {
                     <li key={index}>
                       <Link
                         to={service.path}
-                        className="block px-4 py-2 text-Heading hover:bg-primary hover:text-secondary transition"
+                        className={`block px-4 py-2 text-Heading transition duration-300 ease-in-out ${
+                          location.pathname === service.path
+                            ? "font-bold border-b-2 border-secondary text-secondary"
+                            : "hover:text-secondary"
+                        }`}
                       >
                         {service.name}
                       </Link>
@@ -116,26 +116,13 @@ const Topbar = () => {
             )}
           </div>
 
-          <Link to="/need-help" className="font-medium text-sm transition">
-            Need Help?
-          </Link>
-
-          <Link
-            to="/terms&conditions"
-            className="font-medium text-sm transition"
-          >
-            Terms and Conditions
-          </Link>
-          <Link to="/privacy-policy" className="font-medium text-sm transition">
-            Privacy Policy
-          </Link>
+          <Link to="/need-help" className={navLinkClass("/need-help")}>Need Help?</Link>
+          <Link to="/terms&conditions" className={navLinkClass("/terms&conditions")}>Terms and Conditions</Link>
+          <Link to="/privacy-policy" className={navLinkClass("/privacy-policy")}>Privacy Policy</Link>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={toggleMenu}
-          className="block lg:hidden focus:outline-none"
-        >
+        {/* Mobile Menu Toggle */}
+        <button onClick={toggleMenu} className="block lg:hidden focus:outline-none">
           {isMenuOpen ? (
             <FiX className="w-6 h-6 text-secondary" />
           ) : (
@@ -148,45 +135,38 @@ const Topbar = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-gray-100 w-full px-6 py-3">
           <nav className="flex flex-col space-y-2">
-            <Link
-              to="/"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about-us"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/why-choose-us"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              Why Choose Us
-            </Link>
-            <Link
-              to="/portfolio"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              Portfolio
-            </Link>
-            <Link
-              to="/projects"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              Projects
-            </Link>
+            {[
+              { name: "Home", path: "/" },
+              { name: "About Us", path: "/about-us" },
+              { name: "Why Choose Us", path: "/why-choose-us" },
+              { name: "Portfolio", path: "/portfolio" },
+              { name: "Projects", path: "/projects" },
+              { name: "Need Help?", path: "/need-help" },
+              { name: "Terms and Conditions", path: "/terms&conditions" },
+              { name: "Privacy Policy", path: "/privacy-policy" },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                to={item.path}
+                onClick={toggleMenu}
+                className={`block px-4 py-2 text-sm transition duration-300 ease-in-out ${
+                  location.pathname === item.path
+                    ? "font-bold border-b-2 border-secondary text-secondary"
+                    : "font-medium hover:text-secondary"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
 
-            {/* Mobile Services Dropdown */}
             <details className="w-full">
-              <summary className="text-primary font-medium text-sm transition block px-4 py-2 cursor-pointer hover:bg-primary hover:text-secondary">
+              <summary
+                className={`block px-4 py-2 text-sm transition duration-300 ease-in-out cursor-pointer ${
+                  serviceIsActive
+                    ? "font-bold border-b-2 border-secondary text-secondary"
+                    : "font-medium hover:text-secondary"
+                }`}
+              >
                 Services ▾
               </summary>
               <div className="ml-4 mt-2">
@@ -195,36 +175,17 @@ const Topbar = () => {
                     key={index}
                     to={service.path}
                     onClick={toggleMenu}
-                    className="block px-4 py-2 text-Heading hover:bg-primary hover:text-secondary"
+                    className={`block px-4 py-2 text-sm transition duration-300 ease-in-out ${
+                      location.pathname === service.path
+                        ? "font-bold border-b-2 border-secondary text-secondary"
+                        : "hover:text-secondary"
+                    }`}
                   >
                     {service.name}
                   </Link>
                 ))}
               </div>
             </details>
-
-            <Link
-              to="/need-help"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              Need Help?
-            </Link>
-
-            <Link
-              to="/terms&conditions"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              Terms and Conditions
-            </Link>
-            <Link
-              to="/privacy-policy"
-              onClick={toggleMenu}
-              className="text-primary font-medium text-sm transition block px-4 py-2 hover:bg-primary hover:text-secondary"
-            >
-              Privacy Policy
-            </Link>
           </nav>
         </div>
       )}
