@@ -8,7 +8,7 @@ const CustomCard = ({ icon, title, description }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="bg-gradient-to-b from-button to-primary rounded-3xl shadow-xl p-5 text-center transform transition-all duration-300 h-full flex flex-col justify-between hover:from-primary hover:to-gradiant hover:text-secondary"
+      className="bg-gradient-to-b from-button to-primary rounded-3xl shadow-xl p-5 text-center transform transition-all duration-300 h-full flex flex-col justify-between hover:from-primary hover:to-gradiant"
 
     >
       <div className="relative z-10 p-6 flex-grow">
@@ -32,7 +32,7 @@ const CustomCard = ({ icon, title, description }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-text text-sm mt-2 py-3"
+          className="text-white text-sm mt-2 py-3"
         >
           {description}
         </motion.p>

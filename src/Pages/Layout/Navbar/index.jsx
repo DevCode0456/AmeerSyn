@@ -1,5 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link, useLocation } from "react-router-dom";
 import Images from "../../../Helper/ImagesConstant";
 import { memo, useEffect, useRef, useState } from "react";
 
@@ -25,10 +25,7 @@ const Topbar = () => {
     };
   }, [isDropdownOpen]);
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
-  };
-
+  const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
     setIsDropdownOpen(false);
@@ -56,37 +53,50 @@ const Topbar = () => {
     { name: "Web Development", path: "/services/web-development" },
     { name: "Final Year Project", path: "/services/final-year-project" },
     { name: "Project Management", path: "/services/project-management" },
-    { name: "Data Structure & Algorithm", path: "/services/data-structure-algorithm" },
+    {
+      name: "Data Structure & Algorithm",
+      path: "/services/data-structure-algorithm",
+    },
   ];
 
   const navLinkClass = (path) =>
-    `text-sm transition duration-300 ease-in-out pb-1 ${
+    `text-sm lg:text-base xl:text-lg whitespace-nowrap transition duration-300 ease-in-out pb-1 ${
       location.pathname === path
-        ? "font-bold border-b-2 border-secondary text-secondary"
-        : "font-medium hover:text-secondary"
+        ? "font-bold border-b-2 border-white text-white text-xl xl:text-2xl"
+        : "font-medium hover:text-secondary hover:border-b-2 hover:border-secondary"
     }`;
 
   const serviceIsActive = location.pathname.startsWith("/services");
 
   return (
-    <header className="bg-primary text-secondary shadow w-full">
+    <header className="bg-primary text-white shadow w-full">
       <div className="mx-auto flex items-center justify-between px-4 py-3 xl:px-10">
         <div>
-          <img src={Images.LOGO_IMG} alt="logo" width="150" height="150" />
+          <img src={Images.LOGO_IMG} alt="logo" width="250" height="250" className="mb-2" />
         </div>
 
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center space-x-6">
-          <Link to="/" className={navLinkClass("/")}>Home</Link>
-          <Link to="/about-us" className={navLinkClass("/about-us")}>About Us</Link>
-          <Link to="/why-choose-us" className={navLinkClass("/why-choose-us")}>Why Choose Us</Link>
-          <Link to="/portfolio" className={navLinkClass("/portfolio")}>Portfolio</Link>
-          <Link to="/projects" className={navLinkClass("/projects")}>Projects</Link>
+          <Link to="/" className={navLinkClass("/")}>
+            Home
+          </Link>
+          <Link to="/about-us" className={navLinkClass("/about-us")}>
+            About Us
+          </Link>
+          <Link to="/why-choose-us" className={navLinkClass("/why-choose-us")}>
+            Why Choose Us
+          </Link>
+          <Link to="/portfolio" className={navLinkClass("/portfolio")}>
+            Portfolio
+          </Link>
+          <Link to="/projects" className={navLinkClass("/projects")}>
+            Projects
+          </Link>
 
           <div className="relative group" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
-              className={`text-sm transition duration-300 ease-in-out flex items-center focus:outline-none pb-1 ${
+              className={`text-sm lg:text-base xl:text-lg whitespace-nowrap transition duration-300 ease-in-out flex items-center focus:outline-none pb-1 ${
                 serviceIsActive
                   ? "font-bold border-b-2 border-secondary text-secondary"
                   : "font-medium hover:text-secondary"
@@ -101,10 +111,10 @@ const Topbar = () => {
                     <li key={index}>
                       <Link
                         to={service.path}
-                        className={`block px-4 py-2 text-Heading transition duration-300 ease-in-out ${
+                        className={`block px-4 py-2 text-sm lg:text-base whitespace-nowrap text-Heading transition duration-300 ease-in-out ${
                           location.pathname === service.path
-                            ? "font-bold border-b-2 border-secondary text-secondary"
-                            : "hover:text-secondary"
+                            ? "font-bold border-b-2 border-secondary text-primary"
+                            : "hover:text-primary hover:font-bold  "
                         }`}
                       >
                         {service.name}
@@ -116,25 +126,40 @@ const Topbar = () => {
             )}
           </div>
 
-          <Link to="/need-help" className={navLinkClass("/need-help")}>Need Help?</Link>
-          <Link to="/terms&conditions" className={navLinkClass("/terms&conditions")}>Terms and Conditions</Link>
-          <Link to="/privacy-policy" className={navLinkClass("/privacy-policy")}>Privacy Policy</Link>
+          <Link to="/need-help" className={navLinkClass("/need-help")}>
+            Need Help?
+          </Link>
+          <Link
+            to="/terms&conditions"
+            className={navLinkClass("/terms&conditions")}
+          >
+            Terms and Conditions
+          </Link>
+          <Link
+            to="/privacy-policy"
+            className={navLinkClass("/privacy-policy")}
+          >
+            Privacy Policy
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button onClick={toggleMenu} className="block lg:hidden focus:outline-none">
+        <button
+          onClick={toggleMenu}
+          className="block lg:hidden focus:outline-none"
+        >
           {isMenuOpen ? (
-            <FiX className="w-6 h-6 text-secondary" />
+            <FiX className="w-6 h-6 text-red-500" />
           ) : (
-            <FiMenu className="w-6 h-6 text-secondary" />
+            <FiMenu className="w-6 h-6 text-white" />
           )}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-gray-100 w-full px-6 py-3">
-          <nav className="flex flex-col space-y-2">
+        <div className="lg:hidden bg-gray-200 w-full px-6 py-3">
+          <nav className="flex flex-col space-y-2 text-primary">
             {[
               { name: "Home", path: "/" },
               { name: "About Us", path: "/about-us" },
@@ -151,8 +176,8 @@ const Topbar = () => {
                 onClick={toggleMenu}
                 className={`block px-4 py-2 text-sm transition duration-300 ease-in-out ${
                   location.pathname === item.path
-                    ? "font-bold border-b-2 border-secondary text-secondary"
-                    : "font-medium hover:text-secondary"
+                    ? "font-bold border-b-2 border-secondary text-primary"
+                    : "font-medium hover:text-primary"
                 }`}
               >
                 {item.name}
@@ -163,8 +188,8 @@ const Topbar = () => {
               <summary
                 className={`block px-4 py-2 text-sm transition duration-300 ease-in-out cursor-pointer ${
                   serviceIsActive
-                    ? "font-bold border-b-2 border-secondary text-secondary"
-                    : "font-medium hover:text-secondary"
+                    ? "font-bold border-b-2 border-secondary text-primary"
+                    : "font-medium hover:text-primary"
                 }`}
               >
                 Services ▾
@@ -177,8 +202,8 @@ const Topbar = () => {
                     onClick={toggleMenu}
                     className={`block px-4 py-2 text-sm transition duration-300 ease-in-out ${
                       location.pathname === service.path
-                        ? "font-bold border-b-2 border-secondary text-secondary"
-                        : "hover:text-secondary"
+                        ? "font-bold  text-primary"
+                        : "hover:text-primary"
                     }`}
                   >
                     {service.name}

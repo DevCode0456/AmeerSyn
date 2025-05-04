@@ -22,15 +22,12 @@ const ServicesSection = ({ services }) => {
     filter grayscale brightness-95
     transition-all duration-700 ease-in-out 
     
-    // Responsive floating animation
     animate-floatY lg:animate-floatX
 
-    // Hover effects
     hover:scale-110 hover:grayscale-0 hover:brightness-110 hover:contrast-125 hover:sepia-0
     hover:shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:ring-4 hover:ring-primary hover:ring-offset-2
     hover:animate-pulse-glow
 
-    // Active click effect
     active:scale-95 active:shadow-[0_0_25px_4px_var(--color-primary)]
   "
 />

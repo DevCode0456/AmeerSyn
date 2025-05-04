@@ -30,11 +30,11 @@ const WhyChooseUsSection = ({ reasons }) => {
               </span>
             </div>
 
-            <h3 className="mt-10 text-xl font-bold text-Heading group-hover:text-secondary">
+            <h3 className="mt-10 text-xl font-bold text-primary group-hover:text-white">
               {reason.title}
             </h3>
             <div className="w-10 h-1 bg-primary mx-auto my-2 rounded-full group-hover:bg-white"></div>
-            <p className="text-gray-600 group-hover:text-orange-100">
+            <p className="text-black text-base group-hover:text-white">
               {reason.description}
             </p>
 
