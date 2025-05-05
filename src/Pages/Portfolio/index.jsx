@@ -27,8 +27,6 @@ import {
   FaChartLine,
   FaLightbulb,
   FaMobileAlt,
-  FaLaptopCode,
-  FaProjectDiagram,
 } from "react-icons/fa";
 import "swiper/css";
 import React from "react";
@@ -45,10 +43,7 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
-const fadeInLeft = {
-  hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-};
+
 
 const features = [
   {
@@ -131,21 +126,10 @@ const testimonialsData = [
   },
 ];
 
-const mission = {
-  title: "Our Mission",
-  description:
-    "Empowering businesses with high-quality, innovative, and scalable digital solutions to drive success in a rapidly evolving world.",
-  image: "https://via.placeholder.com/600",
-};
 
 
-const skills = [
-  { name: "Web Development", icon: <FaCode />, category: "Development" },
-  { name: "Cloud Computing", icon: <FaCloud />, category: "Cloud" },
-  { name: "Cybersecurity", icon: <FaLock />, category: "Security" },
-  { name: "Linux Administration", icon: <FaServer />, category: "Networking" },
-  { name: "AI & Automation", icon: <FaLaptopCode />, category: "AI" },
-];
+
+
 
 const certifications = [
   {
@@ -401,7 +385,7 @@ const Portfolio = () => {
 
       <div className=" ">
         <section className="py-20 bg-gray-950 px-6 sm:px-12 lg:px-24">
-          <h1 className="text-5xl font-semibold text-Heading mx-auto text-center py-3 my-3">Tech Stack</h1>
+          <h1 className="text-5xl font-semibold text-primary mx-auto text-center py-3 my-3">Tech Stack</h1>
           <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
             initial="hidden"
@@ -412,7 +396,7 @@ const Portfolio = () => {
             {techStack.map((tech, index) => (
               <motion.div
                 key={index}
-               className="p-8 bg-white/5 hover:bg-secondary rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl backdrop-blur-lg border border-white/20 text-secondary hover:text-primary"
+               className="p-8 bg-white/5 hover:bg-secondary rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl backdrop-blur-lg border border-white/20 text-white hover:text-primary"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -435,7 +419,7 @@ const Portfolio = () => {
         
 
         <section className="py-20 bg-gray-950 px-6 sm:px-12 lg:px-24">
-          <h1  className="text-4xl font-semibold text-Heading mx-auto text-center py-3 my-3 ">Certifications</h1>
+          <h1  className="text-4xl font-semibold text-primary mx-auto text-center py-3 my-3 ">Certifications</h1>
           <motion.div
             className="grid md:grid-cols-3 gap-12"
             initial="hidden"
@@ -446,7 +430,7 @@ const Portfolio = () => {
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
-                className=" p-6 lg:p-12  hover:bg-secondary bg-white/5 rounded-full shadow-lg text-center transform hover:scale-105 transition-all backdrop-blur-lg border border-white/20"
+                className=" p-6 lg:p-12  hover:bg-secondary bg-white/5 rounded-full shadow-lg text-center transform hover:scale-105 transition-all backdrop-blur-lg border border-white/20 text-white hover:text-primary"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -460,7 +444,7 @@ const Portfolio = () => {
                 <h3 className="text-xl font-semibold text-primary mt-4">
                   {cert.title}
                 </h3>
-                <p className="text-gray-400 mt-2">{cert.issuer}</p>
+                <p className=" mt-2">{cert.issuer}</p>
               </motion.div>
             ))}
           </motion.div>

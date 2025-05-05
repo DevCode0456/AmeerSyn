@@ -33,7 +33,6 @@ body {
   --color-Heading: #006064;
 }
 
-/* Cyber Blue */
 .theme-cyber-blue {
   --color-Bg: #0f172a;
   --color-text: #e2e8f0;
@@ -46,7 +45,6 @@ body {
   --color-Heading: #93c5fd;
 }
 
-/* Minimal White */
 .theme-minimal-white {
   --color-Bg: #f9fafb;
   --color-text: #111827;
@@ -59,7 +57,6 @@ body {
   --color-Heading: #1f2937;
 }
 
-/* Classic Green */
 .theme-classic-green {
   --color-Bg: #f0fdf4;
   --color-text: #1b4332;
@@ -137,7 +134,6 @@ body {
   --color-Heading: #bf360c;
 }
 
-/* 🌿 New Professional Teal */
 .theme-professional-teal {
   --color-Bg: #f0fdfa;
   --color-text: #134e4a;
@@ -147,10 +143,9 @@ body {
   --color-secondary: #ccfbf1;
   --color-container: #e6fffa;
   --color-varientColor: #115e59;
-  --color-Heading: yellowgreen;
+  --color-Heading: #0d9488;
 }
 
-/* Dark Mode */
 .theme-dark {
   --color-Bg: #0d1117;
   --color-text: #c9d1d9;

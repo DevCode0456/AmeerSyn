@@ -62,7 +62,7 @@ const TestimonialsSection = ({ testimonials }) => {
                   boxShadow: "0px 8px 20px rgba(0,0,0,0.2)",
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="bg-container text-text p-6 py-12 rounded-3xl shadow-lg h-full flex flex-col justify-between border border-transparent transition-all will-change-transform relative overflow-hidden"
+                className="bg-container text-text p-6 py-12 rounded-3xl h-full flex flex-col justify-between border border-transparent transition-all will-change-transform relative overflow-hidden  shadow-primary-300/30"
               >
                 <div className="flex items-start">
                   <FaQuoteLeft className="text-Heading text-3xl mr-3 opacity-80 animate-pulse" />
