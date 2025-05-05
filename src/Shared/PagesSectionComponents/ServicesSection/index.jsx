@@ -11,15 +11,15 @@ const ServicesSection = ({ services }) => {
     initial={{ opacity: 0, y: 50 }}
     className=" container  mx-auto px-5 "
     >
-<div className="flex justify-center items-center ">
+<div className="flex justify-center items-center py-5 ">
 <img
   src={Images.SERVICES_IMG}
   alt="services"
   className="
-    max-h-64 max-w-64 mx-auto 
+    max-h-64 max-w-68 mx-auto
+    bg-primary 
     rounded-full p-4 
     cursor-pointer
-    filter grayscale brightness-95
     transition-all duration-700 ease-in-out 
     
     animate-floatY lg:animate-floatX

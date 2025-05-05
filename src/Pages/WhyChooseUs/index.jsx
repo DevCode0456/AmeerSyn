@@ -10,6 +10,7 @@ import { FaAward } from "react-icons/fa";
 import ContactUsSection from "../../Shared/ContactUsSection";
 import WhyChooseUsSection from "../../Shared/PagesSectionComponents/WhyChooseUsSection";
 import TestimonialsSection from "../../Shared/PagesSectionComponents/TestimonialsSection";
+import Images from "../../Helper/ImagesConstant";
 
 const reasons = [
   {
@@ -109,6 +110,15 @@ const testimonialsData = [
 const WhyChooseUs = () => {
   return (
     <div className="bg-Bg">
+    <section className="bg-Bg  w-full">
+  <img 
+    src={Images.SOLGAN_IMG_SERVICES} 
+    alt="Service visual" 
+    className="w-full h-auto object-cover" 
+  />
+</section>
+
+
       <WhyChooseUsSection reasons={reasons} />
       <ContactUsSection />
       <TestimonialsSection testimonials={testimonialsData} />

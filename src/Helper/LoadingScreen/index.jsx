@@ -13,7 +13,6 @@ const LoadingScreen = () => (
         src={Images.LOADER}
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-0"
       />
-      {/* {props?.text && <p className="textYellow">{props?.text}</p>} */}
     </div>
   </div>
 );

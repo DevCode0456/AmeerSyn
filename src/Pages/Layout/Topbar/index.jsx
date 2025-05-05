@@ -21,7 +21,7 @@ export default function Topbar() {
               size={18}
               className="transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="hidden sm:inline text-sm font-medium group-hover:text-indigo-600">
+            <span className="hidden sm:inline text-sm font-semibold group-hover:text-black">
               (+44) 7440 095528
             </span>
           </a>
@@ -34,7 +34,7 @@ export default function Topbar() {
               size={18}
               className="transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="hidden sm:inline text-sm font-medium group-hover:text-green-600">
+            <span className="hidden sm:inline text-sm font-semibold group-hover:text-black">
               (+92) 304-7914358
             </span>
           </a>
@@ -47,7 +47,7 @@ export default function Topbar() {
               size={18}
               className="transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="hidden sm:inline text-sm font-medium group-hover:text-emerald-600">
+            <span className="hidden sm:inline text-sm font-semibold group-hover:text-black">
               Morden, London UK
             </span>
           </a>
@@ -61,14 +61,13 @@ export default function Topbar() {
               size={18}
               className="transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="hidden sm:inline text-sm font-medium group-hover:text-rose-600">
+            <span className="hidden sm:inline text-sm font-semibold group-hover:text-black">
               ameersync.com@gmail.com
             </span>
           </a>
         </div>
 
-        {/* Social Media Icons */}
-        <div className="flex gap-3 text-primary justify-center">
+        <div className=" md:hidden lg:flex flex gap-3 text-primary justify-center items-center ">
           <a
             href="https://www.facebook.com"
             target="_blank"

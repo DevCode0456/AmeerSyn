@@ -1,12 +1,11 @@
-import React  from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../Shared/Accordin";
 import Images from "../../Helper/ImagesConstant";
 import ContactUsSection from "../../Shared/ContactUsSection";
-import { MdAndroid, MdEmail, MdPhoneAndroid } from "react-icons/md";
+import {  MdChat, MdEmail, MdPhoneAndroid } from "react-icons/md";
 
 const NeedHelp = () => {
-
   const faqs = [
     {
       question: "What type of help can I get from your team?",
@@ -73,60 +72,68 @@ const NeedHelp = () => {
   return (
     <div className="bg-Bg ">
       <div className="   rounded-lg container mx-auto md:px-4">
-      <div className="flex justify-center items-center p-6   rounded-3xl">
-<img src={Images.NEED_HELP_IMG} alt="terms&conditions" className={" max-h-80 rounded-full mx-auto"} />
-
-      </div>
-      <h1 className="text-4xl font-bold text-center text-Heading py-5">
-Need Help?      </h1>        <p className="text-text mb-4 max-w-2xl mx-auto text-center">
+        <div className="flex justify-center items-center p-6   rounded-3xl">
+          <img
+            src={Images.NEED_HELP_IMG}
+            alt="terms&conditions"
+            className={" max-h-80 rounded-full mx-auto"}
+          />
+        </div>
+        <h1 className="text-4xl font-bold text-center text-primary py-5">
+          Need Help?{" "}
+        </h1>{" "}
+        <p className="text-text mb-4 max-w-2xl mx-auto text-center">
           We're here to assist you. Whether it's a question about our services,
           feedback on your experience, or help with a specific problem, feel
           free to reach out to us!
         </p>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          <div className="bg-container  rounded-3xl hover:bg-white hover:shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-Heading mb-2">
-            <MdEmail className="inline-block items-center mr-2" size={44} /> Email Support
+          <div className="bg-container  rounded-3xl hover:bg-container hover:shadow-xl hover:border hover:border-primary p-6  ">
+            <h3 className="text-lg font-semibold  mb-2 text-primary">
+              <MdEmail className="inline-block items-center mr-2" size={44} />{" "}
+              Email Support
             </h3>
             <p className="text-text">
               Reach out to us at{" "}
-            
               <a
-  href="mailto:ameersync.com@gmail.com"
-  className="flex items-center gap-2 md:border-r-2 border-gray-300 text-primary md:pr-4 group"
->
-  
-  <span className="font-semibold  md:inline">
-    ameersync.com@gmail.com
-  </span>
-</a>
-
+                href="mailto:ameersync.com@gmail.com"
+                className="flex items-center gap-2 md:border-r-2 border-gray-300 text-primary md:pr-4 group"
+              >
+                {" "}
+                <span className="font-semibold  md:inline">
+                  ameersync.com@gmail.com
+                </span>
+              </a>
             </p>
           </div>
-          <div className="bg-container  rounded-3xl hover:bg-white hover:shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-Heading mb-2">
-              <MdPhoneAndroid className="inline-block items-center mr-2" size={44} /> Phone Support
+          <div className="bg-container  rounded-3xl hover:bg-container hover:shadow-xl hover:border hover:border-primary p-6 ">
+            <h3 className="text-lg font-semibold text-primary mb-2">
+              <MdPhoneAndroid
+                className="inline-block items-center mr-2"
+                size={44}
+              />{" "}
+              Phone Support
             </h3>
             <p className="text-text">
-              Call us at <span className="font-semibold text-Heading">+1 (123) 456-7890</span>{" "}
+              Call us at{" "}
+              <span className="font-semibold text-primary">
+                +1 (123) 456-7890
+              </span>{" "}
               (9 AM to 6 PM UTC).
             </p>
           </div>
-          <div className="bg-container  rounded-3xl hover:bg-white hover:shadow-xl p-6">
-            <h3 className="text-lg font-semibold text-yellow-700 mb-2">
-              💬 Live Chat
+          <div className="bg-container  rounded-3xl hover:bg-container hover:shadow-xl hover:border hover:border-primary p-6 ">
+            <h3 className="text-lg font-semibold text-primary mb-2">
+              <MdChat className="inline-block items-center mr-2" size={44} />{" "}
+              Live Chat
             </h3>
             <p className="text-text">
-              Chat with our support team in real-time. Available during business
-              hours.
+              Update it soon Chat with our support team in real-time. Available
+              during business hours.
             </p>
           </div>
         </div>
-
         {/* Contact Form */}
-      
-
         <motion.div
           className="my-10 "
           initial={{ opacity: 0, x: -50 }}
@@ -134,12 +141,11 @@ Need Help?      </h1>        <p className="text-text mb-4 max-w-2xl mx-auto text
           transition={{ duration: 0.8 }}
         >
           <Accordin faqs={faqs} />
-        </motion.div >
-
+        </motion.div>
         <h2 className="text-4xl text-center font-semibold text-Heading py-4 md:py-8 ">
           Helpful Links
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-gradient-to-b from-container to-primary rounded-3xl p-3 my-5 md:p-10 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-gradient-to-t from-container to-primary rounded-3xl p-3 my-5 md:p-10 ">
           <a
             href="/about-us"
             className="block bg-secondary text-text p-4 rounded-lg hover:bg-primary transition-all hover:text-white"

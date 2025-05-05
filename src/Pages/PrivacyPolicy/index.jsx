@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
   );
 
   const PolicyItem = ({ icon, title, description }) => (
-    <div className="p-6 bg-container rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-secondary">
+    <div className="p-6 bg-container rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-secondary hover:border hover:border-primary">
       <div className="flex items-center text-primary mb-4">
         <div className="p-2 rounded-full bg-primary text-white mr-4">
           {icon}
@@ -105,7 +105,11 @@ const PrivacyPolicy = () => {
       <SectionDescription text="We may update this Privacy Policy periodically. Please review it regularly for any changes." />
 
       <SectionHeading text="Contact Us" />
-      <SectionDescription text="If you have any questions about our Privacy Policy, please contact us at [Your Email]." />
+      <SectionDescription text="If you have any questions about our Privacy Policy, please contact us at " />
+<span className="text-lg text-primary mb-6">
+  <a href="mailto:ameersync.com@gmail.com">ameersync.com@gmail.com</a>.
+</span>
+
     </div>
   );
 };
