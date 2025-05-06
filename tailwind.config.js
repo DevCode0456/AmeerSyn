@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      transform: {
+        'preserve-3d': 'preserve-3d',
+      },
       colors: {
         text: "var(--color-text)",
         primary: "var(--color-primary)",
@@ -64,5 +67,11 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [ function ({ addUtilities }) {
+    addUtilities({
+      '.perspective': { perspective: '1000px' },
+      '.rotate-y-0': { transform: 'rotateY(0deg)' },
+      '.rotate-y-[-120deg]': { transform: 'rotateY(-120deg)' },
+    })
+  },],
 };
