@@ -7,7 +7,7 @@ import { ReactTyped } from "react-typed";
 const TechnologiesSection = ({ technologies }) => {
   return (
     <motion.div
-      className="my-10 container mx-auto p-5  "
+      className="my-10 container mx-auto p-5 bg-black rounded-3xl  "
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
@@ -16,7 +16,7 @@ const TechnologiesSection = ({ technologies }) => {
 <img src={Images.TECH_IMG} alt="terms&conditions" className={" max-h-80 max-w-80 mx-auto rounded-full px-20 animate-pulse md:animate-bounce lg:animate-scroll   transition duration-1000 ease-in"} />
 
       </div>
-      <h1 className="text-4xl font-bold text-center text-text py-3">
+      <h1 className="text-4xl font-bold text-center text-white py-3">
   Technologies We Use{" "}
   <ReactTyped
   className="text-Heading"
