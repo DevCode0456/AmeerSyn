@@ -17,7 +17,6 @@ let Images = {
   ASSAMBLY_LANGUAGE_IMG: require("../Assets/Images/Common/AssemblyLanguage.webp"),
   PROJECT_MANAGEMENT_IMG: require("../Assets/Images/Services/project-mangement.jpg"),
   FEEDBACK_IMG: require("../Assets/Images/Common/feedback.png"),
-  CONTACT_US_IMG: require("../Assets/Images/Common/contact-us.jpg"),
   PROJECT_IMG: require("../Assets/Images/Services/project.png"),
 
   Why_CHOOSE_US_IMG: require("../Assets/Images/Services/WhyChooseUs.png"),
@@ -25,28 +24,19 @@ let Images = {
   LOADER_IMG: require("../Assets/loader/loader.gif"),
 
   LOGO_IMG: require("../Assets/Images/Common/logo.png"),
-  NODE_IMG: require("../Assets/Images/Services/Node.jpg"),
   LINUX_IMG: require("../Assets/Images/Common/Linux.png"),
   AI_IMG: require("../Assets/Images/Services/Ai.jpg"),
   STATIC_IMG: require("../Assets/Images/Services/static.jpg"),
   SHOPIFY_IMG: require("../Assets/Images/Services/shopifiy.jpg"),
   DATABASE_IMG: require("../Assets/Images/Services/databases.avif"),
-  THESIS_WRITING_IMG: require("../Assets/Images/Services/Thesis.avif"),
   WEB_DEVELOPMENT_IMG: require("../Assets/Images/Services/web-dev.jpg"),
   WORDPRESS_DEVELOPMENT_IMG: require("../Assets/Images/Services/wordpress.avif"),
 
-  PENTRATION_TESTING: require("../Assets/Images/Services/penetating.avif"),
-  ANDRIOD_APP_IMG: require("../Assets/Images/Services/andriod app developement.jpg"), 
-
-
-   NODE_IMG: require("../Assets/Images/Services/Node.jpg"),
-  LINUX_IMG: require("../Assets/Images/Common/Linux.png"),
+  NODE_IMG: require("../Assets/Images/Services/Node.jpg"),
   TECH_IMG: require("../Assets/Images/Services/tech.avif"),
   FAQS_IMG: require("../Assets/Images/Services/faqs.avif"),
   REACT_IMG: require("../Assets/Images/Services/react.avif"),
-  SHOPIFY_IMG: require("../Assets/Images/Services/shopifiy.jpg"),
   SERVICES_IMG: require("../Assets/Images/Services/services.png"),
-  DATABASE_IMG: require("../Assets/Images/Services/databases.avif"),
   NEED_HELP_IMG: require("../Assets/Images/Services/need Help.jpg"),
   ACCORDIN_BACK_IMG: require("../Assets/Images/Common/graphic.png"),
   OUR_MISSION_IMG: require("../Assets/Images/Services/misiion.png"),
@@ -66,10 +56,6 @@ let Images = {
   BG_GRADIENT: require("../Assets/Images/Services/bg-gradient.avif"),
   SOLGAN_IMG: require("../Assets/Images/Services/ameersync.jpeg"),
   SOLGAN_IMG_SERVICES: require("../Assets/Images/Services/ourServices.png"),
-
-
-
-
 };
 
 export default Images;

@@ -332,10 +332,10 @@ const Portfolio = () => {
           autoPlay
           loop
           muted
-          className="absolute w-full h-full object-cover opacity-50"
+          className="absolute w-full h-full object-fill lg:object-cover opacity-50"
         >
           <source
-            src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4"
+            src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1746523764/video2_vdv3rh.mp4"
             type="video/mp4"
           />
         </video>
