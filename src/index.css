@@ -30,7 +30,7 @@ body {
   --color-secondary: #e0f7fa;
   --color-container: #ffffff;
   --color-varientColor: #26c6da;
-  --color-Heading: #006064;
+  --color-Heading: #14898d;
 }
 
 .theme-cyber-blue {
@@ -42,7 +42,7 @@ body {
   --color-secondary: #1e293b;
   --color-container: #1e293b;
   --color-varientColor: #60a5fa;
-  --color-Heading: #93c5fd;
+  --color-Heading: #518fd7;
 }
 
 .theme-minimal-white {
@@ -54,7 +54,7 @@ body {
   --color-secondary: #ffffff;
   --color-container: #f3f4f6;
   --color-varientColor: #9ca3af;
-  --color-Heading: #1f2937;
+  --color-Heading: white;
 }
 
 .theme-classic-green {
@@ -66,7 +66,7 @@ body {
   --color-secondary: #e6f4ea;
   --color-container: #ffffff;
   --color-varientColor: #065f46;
-  --color-Heading: #064e3b;
+  --color-Heading: #148063;
 }
 
 /* Elegant Purple */
@@ -79,7 +79,7 @@ body {
   --color-secondary: #ede9fe;
   --color-container: #ffffff;
   --color-varientColor: #a78bfa;
-  --color-Heading: #4c1d95;
+  --color-Heading: #6a35bb;
 }
 
 /* Black & Gold */
@@ -92,7 +92,7 @@ body {
   --color-secondary: #1f2937;
   --color-container: #18181b;
   --color-varientColor: #fde68a;
-  --color-Heading: #fcd34d;
+  --color-Heading: #dcbe5d;
 }
 
 /* Dynamic Red */
@@ -105,7 +105,7 @@ body {
   --color-secondary: #fee2e2;
   --color-container: #ffffff;
   --color-varientColor: #991b1b;
-  --color-Heading: #7f1d1d;
+  --color-Heading: #b33535;
 }
 
 /* Oceanic Blue */
@@ -118,7 +118,7 @@ body {
   --color-secondary: #e0f2f1;
   --color-container: #ffffff;
   --color-varientColor: #006064;
-  --color-Heading: #00363a;
+  --color-Heading: #1d8f97;
 }
 
 /* Sunset Orange */
@@ -131,7 +131,7 @@ body {
   --color-secondary: #ffe0b2;
   --color-container: #ffffff;
   --color-varientColor: #e65100;
-  --color-Heading: #bf360c;
+  --color-Heading: #c84c26;
 }
 
 .theme-professional-teal {
@@ -143,7 +143,7 @@ body {
   --color-secondary: #ccfbf1;
   --color-container: #e6fffa;
   --color-varientColor: #115e59;
-  --color-Heading: #0d9488;
+  --color-Heading: #20b6aa;
 }
 
 .theme-dark {

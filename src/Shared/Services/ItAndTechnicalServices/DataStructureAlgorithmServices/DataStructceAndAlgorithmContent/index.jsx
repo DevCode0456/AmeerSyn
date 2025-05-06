@@ -27,37 +27,37 @@ const DataStructceAndAlgorithmContent = () => {
 
   const services = [
     {
-      icon: <FaCode size={100} className="mt-6" />,
+      icon: <FaCode size={50} className="mt-6" />,
       title: "Algorithm Design & Analysis",
       description:
         "We design and analyze algorithms to solve complex problems efficiently.",
     },
     {
-      icon: <FaLightbulb size={100} className="mt-6" />,
+      icon: <FaLightbulb size={50} className="mt-6" />,
       title: "Data Structure Optimization",
       description:
         "Optimize existing data structures for enhanced performance.",
     },
     {
-      icon: <FaSearch size={100} className="mt-6" />,
+      icon: <FaSearch size={50} className="mt-6" />,
       title: "Problem Solving",
       description:
         "Solving data structure and algorithm-based problems with the most efficient approach.",
     },
     {
-      icon: <FaChartBar size={100} className="mt-6" />,
+      icon: <FaChartBar size={50} className="mt-6" />,
       title: "Performance Analysis",
       description:
         "Conducting performance analysis for algorithms and data structures.",
     },
     {
-      icon: <FaBrain size={100} className="mt-6" />,
+      icon: <FaBrain size={50} className="mt-6" />,
       title: "Algorithm Optimization",
       description:
         "Optimizing algorithms to run efficiently on large-scale data sets.",
     },
     {
-      icon: <FaFileAlt size={100} className="mt-6" />,
+      icon: <FaFileAlt size={50} className="mt-6" />,
       title: "Algorithm Tutorials",
       description:
         "Providing tutorials and resources to learn algorithms step by step.",
@@ -143,25 +143,25 @@ const DataStructceAndAlgorithmContent = () => {
 
   const technologies = [
     {
-      icon: <FaLaptopCode size={100} />,
+      icon: <FaLaptopCode size={50} />,
       title: "Algorithm Analysis",
       description:
         "Using advanced techniques to analyze and optimize algorithms.",
     },
     {
-      icon: <FaCode size={100} />,
+      icon: <FaCode size={50} />,
       title: "Complex Data Structures",
       description:
         "Working with complex data structures like trees, graphs, and hash tables.",
     },
     {
-      icon: <FaSearch size={100} />,
+      icon: <FaSearch size={50} />,
       title: "Efficiency Focused",
       description:
         "Optimizing algorithms and data structures for time and space complexity.",
     },
     {
-      icon: <FaBrain size={100} />,
+      icon: <FaBrain size={50} />,
       title: "Advanced Algorithms",
       description:
         "Teaching and implementing advanced algorithms like dynamic programming and greedy algorithms.",

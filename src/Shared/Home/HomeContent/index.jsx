@@ -237,12 +237,12 @@ const HomeContent = () => {
 
     return (
 <section
-  style={{ backgroundImage: `url(${Images.BG_GRADIENT})` }} 
+ 
   className="my-5 p-6 md:p-12  rounded-3xl"
 >        <div className=" w-full text-center ">
           <h2 className="text-3xl font-semibold text-primary hover:animate-bounce">About Us</h2>
         <div className="flex justify-center w-full">
-        <p className="text-lg text-gary-900 max-w-3xl text-center py-3 fadeInText hover:animate-pulse">
+        <p className="text-lg text-text max-w-3xl text-center py-3 fadeInText hover:animate-pulse">
             We are a team of dedicated professionals passionate about delivering
             high-quality digital solutions. Our mission is to empower businesses
             with innovative and sustainable technology solutions that drive
@@ -276,7 +276,7 @@ const HomeContent = () => {
                 </div>
                 <div>
                   <h2 className="text-lg  xl:text-2xl text-primary font-bold">{feature.title}</h2>
-                  <p className="text-black hover:animate-pulse text-lg font-medium">{feature.text}</p>
+                  <p className="text-text hover:animate-pulse text-lg font-medium">{feature.text}</p>
                 </div>
               </div>
             ))}
@@ -405,108 +405,132 @@ const HomeContent = () => {
 
   return (
     <div className="w-full bg-Bg ">
-      <div className="relative w-full  h-screen overflow-hidden flex items-center justify-center">
-        <video
+   <div className="relative w-full h-[30vh] md:h-screen overflow-hidden flex items-center justify-center ">
+  {/* Video Background */}
+  <video
+    loop
+    muted
+    autoPlay
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+  >
+    <source
+      src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+
+  {/* Overlay for readability on larger screens */}
+  <div className="hidden md:block absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/80 via-black/50 to-black/80 z-10"></div>
+
+  {/* Content Section */}
+  <div className="relative z-20 w-full h-auto px-4 py-10 md:absolute md:bottom-0 md:left-0 md:flex md:max-w-3xl md:h-full text-text">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="w-full hidden md:block"
+    >
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center md:text-left text-text md:text-white leading-snug">
+        Elevate Your Experience with{" "}
+        <ReactTyped
+          className="text-Heading font-semibold"
+          strings={VideoKeyWords}
+          typeSpeed={100}
+          backSpeed={50}
           loop
-          muted
-          autoPlay
-          className="absolute top-44 md:top-0 left-0 w-full h-full sm:object-contain md:object-cover z-0"
+        />
+      </h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="mt-4 text-base sm:text-lg text-center md:text-left text-text md:text-white"
+      >
+        Explore our innovative solutions crafted to enhance your journey.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+        className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4"
+      >
+        <Link to="/contact-us">
+          <button className="px-4 py-2 bg-button hover:bg-HoverBtn hover:shadow-md hover:shadow-primary text-white text-base sm:text-lg font-semibold rounded-3xl flex items-center gap-2 transition duration-300">
+            Get Started <FaRocket />
+          </button>
+        </Link>
+
+        <Link to="/need-help">
+          <button className="px-4 py-2 border border-white text-white text-base sm:text-lg font-semibold rounded-full flex items-center gap-2 hover:bg-white hover:text-black transition duration-300">
+            Learn More <FaArrowRight />
+          </button>
+        </Link>
+      </motion.div>
+    </motion.div>
+  </div>
+</div>
+
+
+<div className="py-12 bg-gray-100 w-full">
+  <div className="flex flex-col sm:flex-row gap-6 px-6 justify-start sm:justify-center items-center">
+    {[
+      {
+        icon: <FaRocket />,
+        title: "Innovative Solutions",
+        text: "We create cutting-edge solutions to enhance your business.",
+        bg: "from-purple-600 to-indigo-700",
+      },
+      {
+        icon: <FaUsers />,
+        title: "Expert Team",
+        text: "Our professional team is here to support your needs.",
+        bg: "from-pink-600 to-red-500",
+      },
+      {
+        icon: <FaEnvelope />,
+        title: "24/7 Support",
+        text: "We are available anytime to assist you with your queries.",
+        bg: "from-green-500 to-emerald-600",
+      },
+    ].map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: index * 0.2 }}
+        whileHover={{ scale: 1.05 }}
+        className="flex flex-col  gap-4 sm:gap-6 bg-gradient-to-br p-6 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 w-full sm:w-[350px] max-w-xs"
+      >
+        {/* Animated Icon */}
+        <motion.div
+          animate={{ rotate: [15, 15, 15, 0], scale: [1, 1.2, 1] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className={`text-white text-5xl p-6 rounded-full shadow-lg bg-gradient-to-br ${item.bg} transform transition duration-300`}
         >
-          <source
-            src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+          {item.icon}
+        </motion.div>
 
-        <div className="hidden md:block absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/80 via-black/50 to-black/80"></div>
-
-        <div
-          className="w-full  px-6 py-2 
-            md:absolute md:bottom-0 md:left-0 md:flex   md:max-w-3xl md:h-full text-text"
-        >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <h1 className=" text-text md:text-white  text-3xl sm:text-sm md:text-5xl md:max-w-1/2 font-bold">
-              Elevate Your Experience with{" "}
-              <ReactTyped
-        className="text-primary"
-        strings={VideoKeyWords}
-        typeSpeed={100}
-        backSpeed={50}
-        loop
-      />
-            </h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 1 }}
-              className="sm:text-lg text-text md:text-white"
-            >
-              Explore our innovative solutions crafted to enhance your journey.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1, duration: 0.5 }}
-              className="mt-6 flex flex-col sm:flex-row items-center sm:items-start gap-4"
-            >
-              <Link to="/contact-us">
-                <button className="px-4 py-2 bg-button hover:bg-HoverBtn hover:shadow-md hover:shadow-primary  text-white text-lg font-semibold rounded-3xl flex items-center gap-2 transition duration-300">
-                  Get Started <FaRocket />
-                </button>
-              </Link>
-
-              <Link to={"/need-help"}>
-                <button className="px-4 py-2 bg-transparent border border-white text-white text-lg font-semibold rounded-full flex items-center gap-2 hover:bg-white hover:text-black transition duration-300">
-                  Learn More <FaArrowRight />
-                </button>
-              </Link>
-            </motion.div>
-          </motion.div>
+        {/* Text */}
+        <div className=" mt-4 sm:mt-0">
+          <h3 className="text-lg font-semibold text-primary">{item.title}</h3>
+          <p className="text-sm text-gray-700 mt-2">{item.text}</p>
         </div>
-      </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
 
-      <div className="py-4 bottom-10 w-full flex justify-center">
-        <div className="flex flex-wrap justify-center gap-6">
-          {[
-            {
-              icon: <FaRocket />,
-              title: "Innovative Solutions",
-              text: "We create cutting-edge solutions to enhance your business.",
-            },
-            {
-              icon: <FaUsers />,
-              title: "Expert Team",
-              text: "Our professional team is here to support your needs.",
-            },
-            {
-              icon: <FaEnvelope />,
-              title: "24/7 Support",
-              text: "We are available anytime to assist you with your queries.",
-            },
-          ].map((item, index) => (
-            <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }} 
-            className="bg-white hover:bg-gradient-to-t hover:from-white hover:to-primary border border-primary p-6  hover:border-0 rounded-3xl hover:shadow-lg w-64 text-center duration-200"
-          >
-           <div className="text-5xl text-primary hover:text-secondary p-4 rounded-full mb-4">
-                {item.icon}
-              </div>
-            <h3 className="text-xl text-primary font-semibold">
-              {item.title}
-            </h3>
-            <p className="text-text mt-2">
-              {item.text}
-            </p>
-          </motion.div>
-          ))}
-        </div>
-      </div>
+
+
+
+
+
+
 
       <div className="w-full ">
         <div className="container mx-auto">
@@ -528,26 +552,26 @@ const HomeContent = () => {
             {mission?.map((service, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-gradient-to-r from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition hover:from-secondary hover:to-primary hover:border-0"
+                className="p-6 bg-gradient-to-br from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition hover:shadow-xl"
 
                 whileHover={{ scale: 1.1 }}
               >
-                <h3 className="text-2xl font-bold text-primary mb-3">
+                <h2 className="sm:text-2xl   font-semibold text-text mb-3">
                   {service.category}
-                </h3>
+                </h2>
                 <div className="space-y-4">
                   {service.items?.map(
                     (
                       item,
                       idx 
                     ) => (
-                      <div key={idx} className="flex items-center gap-4">
+                      <div key={idx} className="flex items-center jusitify-around gap-4">
                         <div className="text-primary text-3xl">{item.icon}</div>
                         <div>
-                          <h4 className="text-xl text-text font-semibold">
+                          <h3 className="text-xl text-text ">
                             {item.name}
-                          </h4>
-                          <p className="text-text">{item.desc}</p>
+                          </h3>
+                          <p className="text-text text-md">{item.desc}</p>
                         </div>
                       </div>
                     )

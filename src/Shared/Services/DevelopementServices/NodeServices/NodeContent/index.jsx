@@ -28,34 +28,34 @@ import TestimonialsSection from "../../../../PagesSectionComponents/Testimonials
 const NodeContent = () => {
   const services = [
     {
-      icon: <FaNodeJs size={100} className="mt-6" />,
+      icon: <FaNodeJs size={50} className="mt-6" />,
       title: "Custom Node.js Development",
       description:
         "Building high-performance Node.js solutions tailored to your needs.",
     },
     {
-      icon: <FaCodeBranch size={100} className="mt-6" />,
+      icon: <FaCodeBranch size={50} className="mt-6" />,
       title: "API Development",
       description: "Creating RESTful APIs for seamless communication.",
     },
     {
-      icon: <FaServer size={100} className="mt-6" />,
+      icon: <FaServer size={50} className="mt-6" />,
       title: "Backend Services",
       description: "Developing robust backend services with Node.js.",
     },
     {
-      icon: <FaNetworkWired size={100} className="mt-6" />,
+      icon: <FaNetworkWired size={50} className="mt-6" />,
       title: "Database Management",
       description: "Integrating and optimizing databases with Node.js.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Deployment",
       description:
         "Deploying Node.js applications to scalable cloud environments.",
     },
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />,
+      icon: <FaShieldAlt size={50} className="mt-6" />,
       title: "Security & Authentication",
       description: "Implementing robust security and authentication features.",
     },
@@ -148,35 +148,35 @@ const NodeContent = () => {
 
   const technologies = [
     {
-      icon: <FaNodeJs size={100} />,
+      icon: <FaNodeJs size={50} />,
       title: "Node.js",
       description: "A powerful runtime for building server-side applications.",
     },
     {
-      icon: <FaCodeBranch size={100} />,
+      icon: <FaCodeBranch size={50} />,
       title: "Express.js",
       description:
         "Web framework for building APIs and server-side applications.",
     },
     {
-      icon: <FaDatabase size={100} />,
+      icon: <FaDatabase size={50} />,
       title: "MongoDB",
       description: "NoSQL database for storing and managing data.",
     },
     {
-      icon: <FaLaptopCode size={100} />,
+      icon: <FaLaptopCode size={50} />,
       title: "NestJS",
       description:
         "A modern framework for building scalable server-side applications.",
     },
     {
-      icon: <FaFire size={100} />,
+      icon: <FaFire size={50} />,
       title: "Socket.io",
       description:
         "Enabling real-time, bidirectional communication between web clients and servers.",
     },
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "GraphQL",
       description: "A query language for APIs, optimizing data fetching.",
     },

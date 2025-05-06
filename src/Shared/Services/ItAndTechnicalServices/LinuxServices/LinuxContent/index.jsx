@@ -28,37 +28,37 @@ import TechnologiesSection from "../../../../PagesSectionComponents/Technologies
 const LinuxContent = () => {
   const services = [
     {
-      icon: <FaLinux size={100} className="mt-6" />,
+      icon: <FaLinux size={50} className="mt-6" />,
       title: "Linux Installation",
       description:
         "Comprehensive Linux installation services tailored to your needs.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "System Optimization",
       description:
         "Optimizing Linux systems for maximum performance and reliability.",
     },
     {
-      icon: <FaLock size={100} className="mt-6" />,
+      icon: <FaLock size={50} className="mt-6" />,
       title: "Security Solutions",
       description:
         "Implementing robust security protocols for Linux environments.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Integration",
       description:
         "Seamless integration of Linux systems with cloud platforms.",
     },
     {
-      icon: <FaCog size={100} className="mt-6" />,
+      icon: <FaCog size={50} className="mt-6" />,
       title: "System Automation",
       description:
         "Automating routine tasks using advanced Linux tools and scripting.",
     },
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Custom Solutions",
       description:
         "Crafting tailored Linux solutions to meet unique business requirements.",
@@ -150,33 +150,33 @@ const LinuxContent = () => {
 
   const technologies = [
     {
-      icon: <FaLinux size={100} />,
+      icon: <FaLinux size={50} />,
       title: "Ubuntu",
       description: "A user-friendly and versatile Linux distribution.",
     },
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "CentOS",
       description: "A robust Linux distribution for enterprise applications.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Red Hat",
       description: "A leading Linux platform for enterprise solutions.",
     },
     {
-      icon: <FaHdd size={100} />,
+      icon: <FaHdd size={50} />,
       title: "Debian",
       description: "A stable and secure Linux distribution.",
     },
     {
-      icon: <FaCog size={100} />,
+      icon: <FaCog size={50} />,
       title: "Fedora",
       description:
         "An innovative Linux distribution for developers and tech enthusiasts.",
     },
     {
-      icon: <FaLightbulb size={100} />,
+      icon: <FaLightbulb size={50} />,
       title: "Kali Linux",
       description: "A Linux distribution designed for security professionals.",
     },

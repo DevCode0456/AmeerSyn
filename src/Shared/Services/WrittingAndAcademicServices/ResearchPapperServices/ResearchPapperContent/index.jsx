@@ -27,22 +27,22 @@ const ResearchPapperContent = () => {
 
   const services = [
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Grammar and Syntax Correction",
       description: "We correct grammar and syntax errors to make your paper professional.",
     },
     {
-      icon: <FaFileAlt size={100} className="mt-6" />,
+      icon: <FaFileAlt size={50} className="mt-6" />,
       title: "Clarity and Structure Improvement",
       description: "We enhance the clarity and flow of your research paper.",
     },
     {
-      icon: <FaCheckCircle size={100} className="mt-6" />,
+      icon: <FaCheckCircle size={50} className="mt-6" />,
       title: "Citation and Reference Check",
       description: "We ensure your citations and references follow the required academic style.",
     },
     {
-      icon: <FaClipboardList size={100} className="mt-6" />,
+      icon: <FaClipboardList size={50} className="mt-6" />,
       title: "Consistency and Formatting",
       description: "We ensure consistency and proper formatting throughout your paper.",
     },
@@ -146,17 +146,17 @@ const ResearchPapperContent = () => {
 
   const technologies = [
     {
-      icon: <FaFileAlt size={100} />,
+      icon: <FaFileAlt size={50} />,
       title: "Microsoft Word",
       description: "We use Microsoft Word for its advanced editing and commenting features.",
     },
     {
-      icon: <FaPenFancy size={100} />,
+      icon: <FaPenFancy size={50} />,
       title: "Google Docs",
       description: "We also provide proofreading for papers shared through Google Docs.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Cloud Services",
       description: "We access your paper from secure cloud services for proofreading.",
     },

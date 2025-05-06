@@ -24,22 +24,22 @@ import TestimonialsSection from "../../../../PagesSectionComponents/Testimonials
 const ProofReadingContent = () => {
   const services = [
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Grammar and Punctuation Check",
       description: "Correcting grammatical errors and punctuation mistakes.",
     },
     {
-      icon: <FaFileAlt size={100} className="mt-6" />,
+      icon: <FaFileAlt size={50} className="mt-6" />,
       title: "Structure and Clarity Improvement",
       description: "Improving the flow and coherence of your document.",
     },
     {
-      icon: <FaCheckCircle size={100} className="mt-6" />,
+      icon: <FaCheckCircle size={50} className="mt-6" />,
       title: "Plagiarism Check",
       description: "Ensuring originality by checking for plagiarism.",
     },
     {
-      icon: <FaClipboardList size={100} className="mt-6" />,
+      icon: <FaClipboardList size={50} className="mt-6" />,
       title: "Formatting and Consistency",
       description: "Ensuring proper formatting and consistency in style.",
     },
@@ -157,18 +157,18 @@ const ProofReadingContent = () => {
 
   const technologies = [
     {
-      icon: <FaFileAlt size={100} />,
+      icon: <FaFileAlt size={50} />,
       title: "Microsoft Word",
       description: "We proofread documents using industry-standard software.",
     },
     {
-      icon: <FaPenFancy size={100} />,
+      icon: <FaPenFancy size={50} />,
       title: "Google Docs",
       description:
         "We also offer proofreading for documents shared via Google Docs.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Cloud Services",
       description: "We can access and proofread documents stored in the cloud.",
     },

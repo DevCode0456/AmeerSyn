@@ -36,37 +36,37 @@ const DatabasesContent = () => {
 
   const services = [
     {
-      icon: <FaDatabase size={100} className="mt-6" />,
+      icon: <FaDatabase size={50} className="mt-6" />,
       title: "Database Design",
       description:
         "Custom database architecture tailored to meet your business needs.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "Database Management",
       description:
         "Comprehensive management services ensuring database reliability and scalability.",
     },
     {
-      icon: <FaLock size={100} className="mt-6" />,
+      icon: <FaLock size={50} className="mt-6" />,
       title: "Data Security",
       description:
         "Implementing robust security measures to protect sensitive information.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Databases",
       description:
         "Leveraging cloud platforms for scalable and high-performance database solutions.",
     },
     {
-      icon: <FaCog size={100} className="mt-6" />,
+      icon: <FaCog size={50} className="mt-6" />,
       title: "Database Automation",
       description:
         "Automating routine tasks for improved efficiency and reduced operational costs.",
     },
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Custom Queries",
       description:
         "Crafting advanced queries for specific data retrieval and analysis needs.",
@@ -152,37 +152,37 @@ const DatabasesContent = () => {
 
   const technologies = [
     {
-      icon: <FaDatabase size={100} />,
+      icon: <FaDatabase size={50} />,
       title: "MySQL",
       description:
         "A widely-used open-source relational database management system.",
     },
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "PostgreSQL",
       description:
         "A powerful, open-source object-relational database system.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "MongoDB",
       description:
         "A NoSQL database for modern, high-volume applications.",
     },
     {
-      icon: <FaHdd size={100} />,
+      icon: <FaHdd size={50} />,
       title: "Oracle",
       description:
         "A comprehensive database solution for enterprise applications.",
     },
     {
-      icon: <FaCog size={100} />,
+      icon: <FaCog size={50} />,
       title: "SQL Server",
       description:
         "Microsoft's relational database for structured data storage and analysis.",
     },
     {
-      icon: <FaLightbulb size={100} />,
+      icon: <FaLightbulb size={50} />,
       title: "Firebase",
       description:
         "A cloud-hosted database solution for real-time applications.",

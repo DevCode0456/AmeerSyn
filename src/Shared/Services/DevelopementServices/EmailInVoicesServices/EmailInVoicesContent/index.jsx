@@ -28,32 +28,32 @@ const EmailInVoicesContent = () => {
 
   const services = [
     {
-      icon: <FaEnvelope size={100} className="mt-6" />,
+      icon: <FaEnvelope size={50} className="mt-6" />,
       title: "Email Invoice Design",
       description: "We create visually appealing email invoices that reflect your brand's identity.",
     },
     {
-      icon: <FaPencilAlt size={100} className="mt-6" />,
+      icon: <FaPencilAlt size={50} className="mt-6" />,
       title: "Custom Templates",
       description: "Designing personalized invoice templates that match your business style.",
     },
     {
-      icon: <FaDesktop size={100} className="mt-6" />,
+      icon: <FaDesktop size={50} className="mt-6" />,
       title: "Responsive Design",
       description: "Ensuring your email invoices are mobile-friendly and well-structured.",
     },
     {
-      icon: <FaFileInvoice size={100} className="mt-6" />,
+      icon: <FaFileInvoice size={50} className="mt-6" />,
       title: "Invoice Management",
       description: "Streamlining your invoice management with easy-to-use email templates.",
     },
     {
-      icon: <FaShippingFast size={100} className="mt-6" />,
+      icon: <FaShippingFast size={50} className="mt-6" />,
       title: "Automated Delivery",
       description: "Automating the delivery of invoices through email to your clients.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "Payment Integration",
       description: "Integrating secure payment options directly into your invoices.",
     },
@@ -134,22 +134,22 @@ const EmailInVoicesContent = () => {
 
   const technologies = [
     {
-      icon: <FaEnvelope size={100} />,
+      icon: <FaEnvelope size={50} />,
       title: "Email Development",
       description: "Expert knowledge in email development for effective invoice delivery.",
     },
     {
-      icon: <FaPencilAlt size={100} />,
+      icon: <FaPencilAlt size={50} />,
       title: "Custom Designs",
       description: "Crafting custom designs that match your brand’s look and feel.",
     },
     {
-      icon: <FaCog size={100} />,
+      icon: <FaCog size={50} />,
       title: "Email Automation",
       description: "Automating the email process to ensure timely and accurate invoice delivery.",
     },
     {
-      icon: <FaTools size={100} />,
+      icon: <FaTools size={50} />,
       title: "Payment Integration",
       description: "Integrating payment options directly into your invoices for convenience.",
     },

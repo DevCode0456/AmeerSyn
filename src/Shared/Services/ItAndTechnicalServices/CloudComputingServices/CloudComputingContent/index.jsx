@@ -28,37 +28,37 @@ import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSe
 const CloudComputingContent = () => {
   const services = [
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Strategy Development",
       description:
         "Crafting custom cloud strategies tailored to your business goals.",
     },
     {
-      icon: <FaServer size={100} className="mt-6" />,
+      icon: <FaServer size={50} className="mt-6" />,
       title: "Cloud Infrastructure Setup",
       description:
         "Building scalable, secure, and efficient cloud environments.",
     },
     {
-      icon: <FaDatabase size={100} className="mt-6" />,
+      icon: <FaDatabase size={50} className="mt-6" />,
       title: "Cloud Database Management",
       description:
         "Efficiently managing cloud-based databases with high availability.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "Cloud Maintenance",
       description:
         "Ongoing maintenance and optimization of your cloud systems.",
     },
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />,
+      icon: <FaShieldAlt size={50} className="mt-6" />,
       title: "Cloud Security Solutions",
       description:
         "Ensuring robust security measures to protect your cloud assets.",
     },
     {
-      icon: <FaCogs size={100} className="mt-6" />,
+      icon: <FaCogs size={50} className="mt-6" />,
       title: "DevOps Services",
       description:
         "Streamlining deployment pipelines and improving collaboration through DevOps.",
@@ -151,28 +151,28 @@ const CloudComputingContent = () => {
 
   const technologies = [
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "AWS",
       description: "Comprehensive cloud solutions by Amazon Web Services.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Microsoft Azure",
       description: "Scalable and secure cloud offerings by Microsoft.",
     },
     {
-      icon: <FaDatabase size={100} />,
+      icon: <FaDatabase size={50} />,
       title: "Google Cloud",
       description: "High-performance cloud computing by Google.",
     },
     {
-      icon: <FaShieldAlt size={100} />,
+      icon: <FaShieldAlt size={50} />,
       title: "Cloud Security Tools",
       description:
         "Cutting-edge tools for ensuring cloud infrastructure security.",
     },
     {
-      icon: <FaLaptopCode size={100} />,
+      icon: <FaLaptopCode size={50} />,
       title: "Kubernetes",
       description: "Efficient container orchestration for scalable cloud apps.",
     },

@@ -33,37 +33,37 @@ import TestimonialsSection from "../../../../PagesSectionComponents/Testimonials
 const AIContent = () => {
   const services = [
     {
-      icon: <FaBrain size={100} className="mt-6" />,
+      icon: <FaBrain size={50} className="mt-6" />,
       title: "Custom AI Development",
       description:
         "We build tailored AI solutions to meet specific business requirements, driving innovation and efficiency.",
     },
     {
-      icon: <FaRobot size={100} className="mt-6" />,
+      icon: <FaRobot size={50} className="mt-6" />,
       title: "Machine Learning Models",
       description:
         "Design and deploy machine learning models for data analysis, predictions, and automations.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "AI Integration",
       description:
         "Seamlessly integrate AI capabilities into existing systems for improved performance and automation.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud AI Solutions",
       description:
         "Harness the power of cloud-based AI services for scalability and seamless deployment.",
     },
     {
-      icon: <FaLock size={100} className="mt-6" />,
+      icon: <FaLock size={50} className="mt-6" />,
       title: "AI Security",
       description:
         "Implement secure AI models and solutions to protect data integrity and prevent misuse.",
     },
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "AI-Driven Insights",
       description:
         "Leverage AI for extracting actionable insights from structured and unstructured data.",
@@ -157,54 +157,54 @@ const AIContent = () => {
 
   const technologies = [
     {
-      icon: <FaCog size={100} />,
+      icon: <FaCog size={50} />,
       title: "TensorFlow",
       description:
         "An open-source platform for building and deploying machine learning models.",
     },
     {
-      icon: <FaLaptopCode size={100} />,
+      icon: <FaLaptopCode size={50} />,
       title: "PyTorch",
       description:
         "A deep learning framework for flexible model development and training.",
     },
     {
-      icon: <FaDatabase size={100} />,
+      icon: <FaDatabase size={50} />,
       title: "BigQuery",
       description:
         "A cloud data warehouse for storing and analyzing large datasets using AI.",
     },
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "OpenAI",
       description:
         "Advanced AI models for NLP, vision, and other applications.",
     },
     {
-      icon: <FaHdd size={100} />,
+      icon: <FaHdd size={50} />,
       title: "AWS SageMaker",
       description:
         "A comprehensive service for building, training, and deploying machine learning models.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Azure AI",
       description:
         "A suite of AI services and tools for building intelligent applications.",
     },
     {
-      icon: <FaShieldAlt size={100} />,
+      icon: <FaShieldAlt size={50} />,
       title: "AI Security Protocols",
       description: "Ensuring ethical and secure implementation of AI models.",
     },
     {
-      icon: <FaCodeBranch size={100} />,
+      icon: <FaCodeBranch size={50} />,
       title: "Git for ML",
       description:
         "Version control and collaboration tools tailored for machine learning workflows.",
     },
     {
-      icon: <FaLightbulb size={100} />,
+      icon: <FaLightbulb size={50} />,
       title: "AutoML",
       description:
         "Automated machine learning for quicker and more efficient model development.",

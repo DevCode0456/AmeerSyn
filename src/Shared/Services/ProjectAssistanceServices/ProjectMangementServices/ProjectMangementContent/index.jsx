@@ -24,25 +24,25 @@ import TestimonialsSection from "../../../../PagesSectionComponents/Testimonials
 // Services array for services section
 const services = [
   {
-    icon: <FaTasks size={100} className="mt-6" />,
+    icon: <FaTasks size={50} className="mt-6" />,
     title: "Project Planning & Scheduling",
     description:
       "We help you create detailed project plans, timelines, and schedules to ensure successful project execution.",
   },
   {
-    icon: <FaUsers size={100} className="mt-6" />,
+    icon: <FaUsers size={50} className="mt-6" />,
     title: "Team Collaboration & Management",
     description:
       "Our services focus on enhancing team collaboration and efficient management of human resources during project phases.",
   },
   {
-    icon: <FaRegChartBar size={100} className="mt-6" />,
+    icon: <FaRegChartBar size={50} className="mt-6" />,
     title: "Project Monitoring & Reporting",
     description:
       "We assist in tracking project progress, ensuring everything stays on schedule, and providing detailed reports.",
   },
   {
-    icon: <FaThumbsUp size={100} className="mt-6" />,
+    icon: <FaThumbsUp size={50} className="mt-6" />,
     title: "Risk Management & Problem Solving",
     description:
       "We identify and mitigate risks early on, ensuring smooth project execution without unexpected setbacks.",
@@ -137,27 +137,27 @@ const testimonialsData = [
 // Technologies array for technologies section
 const technologies = [
   {
-    icon: <FaRobot size={100} className="text-blue-500" />,
+    icon: <FaRobot size={50} className="text-blue-500" />,
     title: "Artificial Intelligence",
     description: "Leverage AI for innovative and intelligent solutions.",
   },
   {
-    icon: <FaLock size={100} className="text-green-500" />,
+    icon: <FaLock size={50} className="text-green-500" />,
     title: "Blockchain",
     description: "Implement secure and decentralized systems.",
   },
   {
-    icon: <FaWifi size={100} className="text-red-500" />,
+    icon: <FaWifi size={50} className="text-red-500" />,
     title: "Internet of Things (IoT)",
     description: "Connect devices for smart and automated environments.",
   },
   {
-    icon: <FaMobileAlt size={100} className="text-purple-500" />,
+    icon: <FaMobileAlt size={50} className="text-purple-500" />,
     title: "Mobile Development",
     description: "Create user-friendly and efficient mobile applications.",
   },
   {
-    icon: <FaGlobe size={100} className="text-yellow-500" />,
+    icon: <FaGlobe size={50} className="text-yellow-500" />,
     title: "Web Development",
     description: "Build responsive and modern web applications.",
   },

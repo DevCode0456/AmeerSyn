@@ -21,37 +21,37 @@ import TestimonialsSection from "../../../../PagesSectionComponents/Testimonials
 const CustomContent = () => {
   const services = [
     {
-      icon: <FaCode size={100} className="mt-6" />,
+      icon: <FaCode size={50} className="mt-6" />,
       title: "Custom Software Development",
       description:
         "Tailored solutions for businesses to optimize workflows and improve productivity.",
     },
     {
-      icon: <FaCogs size={100} className="mt-6" />,
+      icon: <FaCogs size={50} className="mt-6" />,
       title: "System Integration",
       description:
         "Integrating complex systems and technologies to create seamless workflows.",
     },
     {
-      icon: <FaUsers size={100} className="mt-6" />,
+      icon: <FaUsers size={50} className="mt-6" />,
       title: "Team Collaboration Tools",
       description:
         "Building tools that improve team collaboration, project management, and communication.",
     },
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />,
+      icon: <FaShieldAlt size={50} className="mt-6" />,
       title: "Security Solutions",
       description:
         "Ensuring your applications are safe with the latest security protocols and practices.",
     },
     {
-      icon: <FaLightbulb size={100} className="mt-6" />,
+      icon: <FaLightbulb size={50} className="mt-6" />,
       title: "Innovative Software Solutions",
       description:
         "Providing innovative software development techniques to give you an edge over competitors.",
     },
     {
-      icon: <FaListAlt size={100} className="mt-6" />,
+      icon: <FaListAlt size={50} className="mt-6" />,
       title: "Web & Mobile Development",
       description:
         "Building fully responsive web and mobile applications to meet your business needs.",
@@ -87,25 +87,25 @@ const CustomContent = () => {
 
   const technologies = [
     {
-      icon: <FaCode size={100} />,
+      icon: <FaCode size={50} />,
       title: "Full Stack Development",
       description:
         "Building applications using both front-end and back-end technologies.",
     },
     {
-      icon: <FaUsers size={100} />,
+      icon: <FaUsers size={50} />,
       title: "Cloud Technologies",
       description:
         "Leveraging cloud platforms like AWS, Azure, and Google Cloud for scalable solutions.",
     },
     {
-      icon: <FaCogs size={100} />,
+      icon: <FaCogs size={50} />,
       title: "API Development",
       description:
         "Creating custom APIs for seamless interaction between software components.",
     },
     {
-      icon: <FaShieldAlt size={100} />,
+      icon: <FaShieldAlt size={50} />,
       title: "DevOps",
       description:
         "Automating development and deployment processes for faster time-to-market.",

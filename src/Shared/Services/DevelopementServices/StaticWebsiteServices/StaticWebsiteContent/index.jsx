@@ -32,32 +32,32 @@ const StaticWebsiteContent = () => {
 
   const services = [
     {
-      icon: <FaGlobe size={100} className="mt-6" />,
+      icon: <FaGlobe size={50} className="mt-6" />,
       title: "Custom Static Websites",
       description: "Creating static websites that are fast, secure, and SEO-optimized.",
     },
     {
-      icon: <FaHtml5 size={100} className="mt-6" />,
+      icon: <FaHtml5 size={50} className="mt-6" />,
       title: "HTML5 & CSS3",
       description: "Crafting clean, modern, and responsive designs with HTML5 and CSS3.",
     },
     {
-      icon: <FaGithub size={100} className="mt-6" />,
+      icon: <FaGithub size={50} className="mt-6" />,
       title: "Version Control",
       description: "Using GitHub for version control and collaboration.",
     },
     {
-      icon: <FaCode size={100} className="mt-6" />,
+      icon: <FaCode size={50} className="mt-6" />,
       title: "SEO Optimization",
       description: "Optimizing static websites for search engines to enhance visibility.",
     },
     {
-      icon: <FaDesktop size={100} className="mt-6" />,
+      icon: <FaDesktop size={50} className="mt-6" />,
       title: "Cross-Browser Compatibility",
       description: "Ensuring the website works seamlessly across all major browsers.",
     },
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />,
+      icon: <FaShieldAlt size={50} className="mt-6" />,
       title: "Security & Performance",
       description: "Securing websites and optimizing them for fast load times.",
     },
@@ -137,27 +137,27 @@ const StaticWebsiteContent = () => {
 
   const technologies = [
     {
-      icon: <FaHtml5 size={100} />,
+      icon: <FaHtml5 size={50} />,
       title: "HTML5",
       description: "Modern and semantic markup for building fast websites.",
     },
     {
-      icon: <FaCss3Alt size={100} />,
+      icon: <FaCss3Alt size={50} />,
       title: "CSS3",
       description: "Styling websites with the latest CSS3 features for responsive design.",
     },
     {
-      icon: <FaGithub size={100} />,
+      icon: <FaGithub size={50} />,
       title: "GitHub",
       description: "Version control and collaboration with GitHub.",
     },
     {
-      icon: <FaCogs size={100} />,
+      icon: <FaCogs size={50} />,
       title: "Gulp/Grunt",
       description: "Task runners for automating the build process.",
     },
     {
-      icon: <FaMagic size={100} />,
+      icon: <FaMagic size={50} />,
       title: "Web Performance Optimization",
       description: "Ensuring websites are fast, reliable, and performant.",
     },
