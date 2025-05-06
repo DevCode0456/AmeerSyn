@@ -27,22 +27,22 @@ const ThesisContent = () => {
 
   const services = [
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Grammar and Syntax Correction",
       description: "We correct grammar and syntax errors to make your thesis professional.",
     },
     {
-      icon: <FaFileAlt size={100} className="mt-6" />,
+      icon: <FaFileAlt size={50} className="mt-6" />,
       title: "Clarity and Structure Enhancement",
       description: "We improve clarity and enhance the structure of your thesis.",
     },
     {
-      icon: <FaCheckCircle size={100} className="mt-6" />,
+      icon: <FaCheckCircle size={50} className="mt-6" />,
       title: "Citation and Reference Checking",
       description: "We ensure proper citation and reference format according to your required style.",
     },
     {
-      icon: <FaClipboardList size={100} className="mt-6" />,
+      icon: <FaClipboardList size={50} className="mt-6" />,
       title: "Consistency and Formatting",
       description: "We ensure consistency in language and proper formatting across your thesis.",
     },
@@ -146,17 +146,17 @@ const ThesisContent = () => {
 
   const technologies = [
     {
-      icon: <FaFileAlt size={100} />,
+      icon: <FaFileAlt size={50} />,
       title: "Microsoft Word",
       description: "We use Microsoft Word’s advanced editing features for proofreading your thesis.",
     },
     {
-      icon: <FaPenFancy size={100} />,
+      icon: <FaPenFancy size={50} />,
       title: "Google Docs",
       description: "We also proofread theses shared via Google Docs for collaborative editing.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Cloud Services",
       description: "We access your thesis through secure cloud services for remote proofreading.",
     },

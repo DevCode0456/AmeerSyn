@@ -29,35 +29,35 @@ const ReactContent = () => {
 
   const services = [
     {
-      icon: <FaReact size={100} className="mt-6" />,
+      icon: <FaReact size={50} className="mt-6" />,
       title: "Custom React Development",
       description:
         "Building tailored React solutions to meet your unique needs.",
     },
     {
-      icon: <FaCodeBranch size={100} className="mt-6" />,
+      icon: <FaCodeBranch size={50} className="mt-6" />,
       title: "State Management",
       description:
         "Implementing Redux, Context API, and other state management tools.",
     },
     {
-      icon: <FaLaptopCode size={100} className="mt-6" />,
+      icon: <FaLaptopCode size={50} className="mt-6" />,
       title: "React Native Apps",
       description:
         "Developing mobile apps with React Native for iOS and Android.",
     },
     {
-      icon: <FaNetworkWired size={100} className="mt-6" />,
+      icon: <FaNetworkWired size={50} className="mt-6" />,
       title: "API Integration",
       description: "Seamlessly integrating APIs for enhanced functionality.",
     },
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />,
+      icon: <FaShieldAlt size={50} className="mt-6" />,
       title: "Performance Optimization",
       description: "Ensuring fast and efficient React applications.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Deployment",
       description: "Deploying React apps to cloud platforms for scalability.",
     },
@@ -143,32 +143,32 @@ const ReactContent = () => {
 
   const technologies = [
     {
-      icon: <FaReact size={100} />,
+      icon: <FaReact size={50} />,
       title: "React",
       description: "A powerful library for building dynamic user interfaces.",
     },
     {
-      icon: <FaCodeBranch size={100} />,
+      icon: <FaCodeBranch size={50} />,
       title: "Redux",
       description: "Efficient state management for complex applications.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "GraphQL",
       description: "A query language for API communication in React apps.",
     },
     {
-      icon: <FaLaptopCode size={100} />,
+      icon: <FaLaptopCode size={50} />,
       title: "React Native",
       description: "Cross-platform mobile app development framework.",
     },
     {
-      icon: <FaDatabase size={100} />,
+      icon: <FaDatabase size={50} />,
       title: "Firebase",
       description: "Backend services and hosting for React applications.",
     },
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "Webpack",
       description: "Module bundler for optimizing React projects.",
     },

@@ -31,37 +31,37 @@ const ShopifyContent = () => {
 
   const services = [
     {
-      icon: <FaShopify size={100} className="mt-6" />,
+      icon: <FaShopify size={50} className="mt-6" />,
       title: "Shopify Store Setup",
       description:
         "Complete Shopify store setup services to get your business online quickly.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "Theme Development",
       description:
         "Creating custom themes to align with your brand identity.",
     },
     {
-      icon: <FaCog size={100} className="mt-6" />,
+      icon: <FaCog size={50} className="mt-6" />,
       title: "Store Optimization",
       description:
         "Optimizing Shopify stores for better performance and speed.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Integration",
       description:
         "Integrating cloud services to enhance Shopify store scalability.",
     },
     {
-      icon: <FaLock size={100} className="mt-6" />,
+      icon: <FaLock size={50} className="mt-6" />,
       title: "Security Enhancements",
       description:
         "Implementing robust security measures for Shopify stores.",
     },
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Custom Features",
       description:
         "Developing unique features tailored to your business needs.",
@@ -143,32 +143,32 @@ const ShopifyContent = () => {
 
   const technologies = [
     {
-      icon: <FaShopify size={100} />,
+      icon: <FaShopify size={50} />,
       title: "Shopify Plus",
       description: "An advanced platform for high-volume merchants.",
     },
     {
-      icon: <FaCog size={100} />,
+      icon: <FaCog size={50} />,
       title: "Shopify CLI",
       description: "A command-line tool to streamline Shopify development.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Shopify APIs",
       description: "Powerful APIs for integrating third-party services.",
     },
     {
-      icon: <FaHdd size={100} />,
+      icon: <FaHdd size={50} />,
       title: "Liquid",
       description: "The templating language used for Shopify themes.",
     },
     {
-      icon: <FaLightbulb size={100} />,
+      icon: <FaLightbulb size={50} />,
       title: "Shopify Apps",
       description: "Extend store functionality with powerful apps.",
     },
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "GraphQL",
       description: "Efficient querying with Shopify's GraphQL API.",
     },

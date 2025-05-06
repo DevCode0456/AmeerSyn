@@ -27,32 +27,32 @@ import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSe
 const WebDevelopementContent = () => {
   const services = [
     {
-      icon: <FaHtml5 size={100} className="mt-6" />,
+      icon: <FaHtml5 size={50} className="mt-6" />,
       title: "Front-end Development",
       description: "Crafting visually appealing and user-friendly interfaces.",
     },
     {
-      icon: <FaCodeBranch size={100} className="mt-6" />,
+      icon: <FaCodeBranch size={50} className="mt-6" />,
       title: "Back-end Development",
       description: "Building robust and scalable server-side solutions.",
     },
     {
-      icon: <FaLaptopCode size={100} className="mt-6" />,
+      icon: <FaLaptopCode size={50} className="mt-6" />,
       title: "Full-stack Development",
       description: "Providing end-to-end web development services.",
     },
     {
-      icon: <FaNetworkWired size={100} className="mt-6" />,
+      icon: <FaNetworkWired size={50} className="mt-6" />,
       title: "Website Optimization",
       description: "Enhancing performance and load times of websites.",
     },
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />,
+      icon: <FaShieldAlt size={50} className="mt-6" />,
       title: "Web Security",
       description: "Implementing measures to safeguard websites from threats.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Integration",
       description: "Integrating cloud services for improved functionality.",
     },
@@ -145,33 +145,33 @@ const WebDevelopementContent = () => {
 
   const technologies = [
     {
-      icon: <FaHtml5 size={100} />,
+      icon: <FaHtml5 size={50} />,
       title: "HTML5",
       description: "The standard markup language for creating web pages.",
     },
     {
-      icon: <FaLaptopCode size={100} />,
+      icon: <FaLaptopCode size={50} />,
       title: "CSS3",
       description:
         "Styling language for creating visually engaging web designs.",
     },
     {
-      icon: <FaCodeBranch size={100} />,
+      icon: <FaCodeBranch size={50} />,
       title: "JavaScript",
       description: "Programming language for dynamic and interactive content.",
     },
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "React",
       description: "A popular library for building user interfaces.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Node.js",
       description: "Server-side JavaScript for scalable applications.",
     },
     {
-      icon: <FaDatabase size={100} />,
+      icon: <FaDatabase size={50} />,
       title: "Databases",
       description: "Efficient data management with SQL and NoSQL solutions.",
     },

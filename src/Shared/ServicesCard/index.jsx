@@ -1,53 +1,50 @@
-import React, { memo } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { MdContactPhone } from "react-icons/md";
 
-const CustomCard = ({ icon, title, description }) => {
+const CustomCard = ({icon,title,description}) => {
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="bg-gradient-to-b from-button to-primary rounded-3xl shadow-xl p-5 text-center transform transition-all duration-300 h-full flex flex-col justify-between hover:from-primary hover:to-gradiant"
+    <div className="relative w-full max-w-xs mx-auto mb-6">
+      {/* Layered Backgrounds */}
+      <div className="absolute top-4 left-4 w-full h-full bg-blue-200 rounded-3xl z-0 transform rotate-6 shadow-lg" />
+      <div className="absolute top-2 left-2 w-full h-full bg-orange-200 rounded-3xl z-0 transform rotate-3 shadow-md" />
 
-    >
-      <div className="relative z-10 p-6 flex-grow">
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="bg-secondary p-4 rounded-full shadow-sm flex items-center justify-center mx-auto"
-        >
-          <div className="text-primary">{icon}</div>
-        </motion.div>
-        <motion.h5
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-white font-bold text-2xl mt-4"
-        >
-          {title}
-        </motion.h5>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-white text-sm mt-2 py-3"
-        >
-          {description}
-        </motion.p>
-      </div>
-      <Link to="/contact-us" className="flex justify-end">
-        <motion.div
-          whileHover={{ scale: 1.2, rotate: 360 }}
-          transition={{ duration: 0.4 }}
-          className="w-14 h-14 bg-gradient-to-b from-secondary to-container text-primary shadow-md rounded-full p-3  flex justify-center items-center cursor-pointer"
-        >
-          <MdContactPhone className="w-6 h-6" />
-        </motion.div>
-      </Link>
-    </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10 bg-white rounded-3xl p-6 shadow-2xl overflow-hidden"
+      >
+        {/* Icon Section */}
+        <div className=" bg-gradient-to-br from-primary to-Heading rounded-full mx-auto flex items-center justify-center shadow-md text-white ">
+{icon}        </div>
+
+        {/* Title and Description */}
+        <h3 className="text-center text-2xl font-bold text-primary mt-4">
+        {title}        </h3>
+        <p className="text-center text-gray-500 text-sm mt-2">
+        {description}        </p>
+
+        {/* Primary Button */}
+        {/* <div className="mt-5">
+          <button className="w-full py-2 rounded-full bg-gradient-to-r from-gray-700 to-black text-white font-semibold shadow-md hover:scale-105 transition-transform">
+             Details ...
+          </button>
+        </div> */}
+
+        {/* Bottom Button Bar */}
+        <Link to="/contact-us" className="flex items-center justify-between mt-4 bg-gradient-to-r from-orange-400 to-pink-500 p-2 rounded-full shadow-inner">
+          <span className="bg-white w-6 h-6 rounded-full text-sm flex items-center justify-center font-bold shadow-md">
+            1
+          </span>
+          <button className="text-white text-sm font-medium">Contact Us</button>
+          <span className="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm">
+            👁️
+          </span>
+        </Link>
+      </motion.div>
+    </div>
   );
 };
 
-export default memo(CustomCard);
+export default CustomCard;

@@ -27,36 +27,36 @@ import ServicesSection from "../../../../PagesSectionComponents/ServicesSection"
 const CyberSecurityContent = () => {
   const services = [
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />,
+      icon: <FaShieldAlt size={50} className="mt-6" />,
       title: "Cyber Threat Analysis",
       description:
         "Identifying potential cyber threats and implementing mitigation strategies.",
     },
     {
-      icon: <FaUserShield size={100} className="mt-6" />,
+      icon: <FaUserShield size={50} className="mt-6" />,
       title: "Identity Protection",
       description:
         "Securing digital identities with advanced authentication techniques.",
     },
     {
-      icon: <FaLock size={100} className="mt-6" />,
+      icon: <FaLock size={50} className="mt-6" />,
       title: "Data Security",
       description:
         "Protecting sensitive data from unauthorized access and breaches.",
     },
     {
-      icon: <FaBug size={100} className="mt-6" />,
+      icon: <FaBug size={50} className="mt-6" />,
       title: "Bug Bounty Programs",
       description:
         "Managing and conducting bug bounty programs to identify vulnerabilities.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Security",
       description: "Ensuring secure access and storage in cloud environments.",
     },
     {
-      icon: <FaLaptopCode size={100} className="mt-6" />,
+      icon: <FaLaptopCode size={50} className="mt-6" />,
       title: "Penetration Testing",
       description:
         "Simulating cyberattacks to identify and resolve system weaknesses.",
@@ -150,35 +150,35 @@ const CyberSecurityContent = () => {
 
   const technologies = [
     {
-      icon: <FaCodeBranch size={100} />,
+      icon: <FaCodeBranch size={50} />,
       title: "Firewall Solutions",
       description: "Advanced firewalls to safeguard your network.",
     },
     {
-      icon: <FaKey size={100} />,
+      icon: <FaKey size={50} />,
       title: "Encryption Tools",
       description:
         "Cutting-edge tools for data encryption and secure communication.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Cloud Security",
       description: "Ensuring safety in cloud-based systems and services.",
     },
     {
-      icon: <FaLaptopCode size={100} />,
+      icon: <FaLaptopCode size={50} />,
       title: "Security Scanners",
       description:
         "Tools to identify vulnerabilities across systems and applications.",
     },
     {
-      icon: <FaLightbulb size={100} />,
+      icon: <FaLightbulb size={50} />,
       title: "Threat Intelligence",
       description:
         "Proactively identifying and addressing emerging cyber threats.",
     },
     {
-      icon: <FaTools size={100} />,
+      icon: <FaTools size={50} />,
       title: "Security Automation",
       description: "Automated tools to streamline security operations.",
     },

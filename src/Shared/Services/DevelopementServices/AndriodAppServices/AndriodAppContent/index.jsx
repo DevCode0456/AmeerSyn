@@ -27,37 +27,37 @@ import TechnologiesSection from "../../../../PagesSectionComponents/Technologies
 const AndroidAppContent = () => {
   const services = [
     {
-      icon: <FaAndroid size={100} className="mt-6" />,
+      icon: <FaAndroid size={50} className="mt-6" />,
       title: "Custom Android App Development",
       description:
         "We build tailored Android apps to meet specific business requirements, driving engagement and efficiency.",
     },
     {
-      icon: <FaMobileAlt size={100} className="mt-6" />,
+      icon: <FaMobileAlt size={50} className="mt-6" />,
       title: "UI/UX Design",
       description:
         "Design intuitive and visually appealing interfaces for enhanced user experience.",
     },
     {
-      icon: <FaGooglePlay size={100} className="mt-6" />,
+      icon: <FaGooglePlay size={50} className="mt-6" />,
       title: "Play Store Deployment",
       description:
         "Seamless publishing of your apps to the Google Play Store with full compliance.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "App Maintenance",
       description:
         "Continuous support and updates to ensure app performance and security.",
     },
     {
-      icon: <FaShieldAlt size={100} className="mt-6" />,
+      icon: <FaShieldAlt size={50} className="mt-6" />,
       title: "App Security",
       description:
         "Implement secure code practices to safeguard user data and prevent breaches.",
     },
     {
-      icon: <FaLaptopCode size={100} className="mt-6" />,
+      icon: <FaLaptopCode size={50} className="mt-6" />,
       title: "API Integration",
       description:
         "Integrate third-party APIs for payment gateways, social login, and more.",
@@ -148,28 +148,28 @@ const AndroidAppContent = () => {
 
   const technologies = [
     {
-      icon: <FaAndroid size={100} />,
+      icon: <FaAndroid size={50} />,
       title: "Kotlin",
       description: "A modern programming language for Android app development.",
     },
     {
-      icon: <FaCodeBranch size={100} />,
+      icon: <FaCodeBranch size={50} />,
       title: "Java",
       description: "A robust and reliable language for building Android apps.",
     },
     {
-      icon: <FaLaptopCode size={100} />,
+      icon: <FaLaptopCode size={50} />,
       title: "Android Studio",
       description: "The official IDE for Android development.",
     },
     {
-      icon: <FaShieldAlt size={100} />,
+      icon: <FaShieldAlt size={50} />,
       title: "Firebase",
       description:
         "A platform for real-time databases, authentication, and analytics.",
     },
     {
-      icon: <FaGooglePlay size={100} />,
+      icon: <FaGooglePlay size={50} />,
       title: "Play Store APIs",
       description: "APIs for app monetization, subscriptions, and more.",
     },

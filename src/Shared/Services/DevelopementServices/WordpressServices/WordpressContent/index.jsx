@@ -29,34 +29,34 @@ import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSe
 const WordpressContent = () => {
   const services = [
     {
-      icon: <FaWordpress size={100} className="mt-6" />,
+      icon: <FaWordpress size={50} className="mt-6" />,
       title: "WordPress Installation",
       description:
         "Setting up WordPress for your website efficiently and quickly.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "Theme Customization",
       description: "Tailoring themes to align with your brand identity.",
     },
     {
-      icon: <FaCog size={100} className="mt-6" />,
+      icon: <FaCog size={50} className="mt-6" />,
       title: "Website Maintenance",
       description: "Ongoing support and maintenance to keep your site updated.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Hosting Setup",
       description: "Setting up reliable and secure hosting solutions.",
     },
     {
-      icon: <FaLock size={100} className="mt-6" />,
+      icon: <FaLock size={50} className="mt-6" />,
       title: "Security Enhancements",
       description:
         "Implementing advanced security measures to protect your website.",
     },
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Content Creation",
       description: "Creating engaging content tailored for your audience.",
     },
@@ -148,32 +148,32 @@ const WordpressContent = () => {
 
   const technologies = [
     {
-      icon: <FaWordpress size={100} />,
+      icon: <FaWordpress size={50} />,
       title: "WordPress Core",
       description: "The backbone of WordPress development.",
     },
     {
-      icon: <FaCog size={100} />,
+      icon: <FaCog size={50} />,
       title: "Gutenberg Editor",
       description: "A modern block editor for building dynamic content.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "Elementor",
       description: "A powerful page builder for WordPress.",
     },
     {
-      icon: <FaHdd size={100} />,
+      icon: <FaHdd size={50} />,
       title: "WooCommerce",
       description: "The go-to plugin for e-commerce solutions.",
     },
     {
-      icon: <FaLightbulb size={100} />,
+      icon: <FaLightbulb size={50} />,
       title: "Yoast SEO",
       description: "Optimizing WordPress sites for search engines.",
     },
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "Jetpack",
       description:
         "A suite of security, performance, and site management tools.",

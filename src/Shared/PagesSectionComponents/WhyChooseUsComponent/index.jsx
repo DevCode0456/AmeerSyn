@@ -45,7 +45,7 @@ const WhyChooseUsComponent = () => {
           Why Choose Us{" "}
         </h1>
       </div>
-      <h3 className="text-lg  font-semibold  text-center text-text">
+      <h3 className="text-lg px-3 font-semibold  text-center text-text">
         Discover the reasons why clients trust us for their projects and rely on
         our expertise.
       </h3>

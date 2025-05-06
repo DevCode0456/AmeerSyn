@@ -23,26 +23,26 @@ import Images from "../../../../../Helper/ImagesConstant";
 
 const services = [
   {
-    icon: <FaFileAlt size={100} className="mt-6" />,
+    icon: <FaFileAlt size={50} className="mt-6" />,
     title: "Custom Assignment Writing",
     description:
       "We write customized assignments as per the requirements, ensuring top-notch quality and originality.",
   },
 
   {
-    icon: <FaUserEdit size={100} className="mt-6" />,
+    icon: <FaUserEdit size={50} className="mt-6" />,
     title: "Plagiarism-Free Work",
     description:
       "We ensure that every assignment is 100% plagiarism-free with proper citations and references.",
   },
   {
-    icon: <FaRegMoneyBillAlt size={100} className="mt-6" />,
+    icon: <FaRegMoneyBillAlt size={50} className="mt-6" />,
     title: "Affordable Pricing",
     description:
       "Our pricing is competitive and designed to offer you high-quality assignments without breaking your budget.",
   },
   {
-    icon: <FaComments size={100} className="mt-6" />,
+    icon: <FaComments size={50} className="mt-6" />,
     title: "24/7 Customer Support",
     description:
       "Our customer support team is available 24/7 to help you with any issues related to your assignments.",
@@ -51,25 +51,25 @@ const services = [
 
 const technologies = [
   {
-    icon: <FaLaptopCode size={100} className="text-blue-500" />,
+    icon: <FaLaptopCode size={50} className="text-blue-500" />,
     title: "Web Development",
     description:
       "We leverage modern web technologies to ensure fast, responsive, and secure assignment ordering platforms.",
   },
   {
-    icon: <FaDatabase size={100} className="text-green-500" />,
+    icon: <FaDatabase size={50} className="text-green-500" />,
     title: "Database Management",
     description:
       "Our platform uses advanced database solutions for secure handling and storage of student information.",
   },
   {
-    icon: <FaRobot size={100} className="text-yellow-500" />,
+    icon: <FaRobot size={50} className="text-yellow-500" />,
     title: "AI-Powered Solutions",
     description:
       "AI tools help us ensure plagiarism-free work, automated grading, and personalized feedback for every assignment.",
   },
   {
-    icon: <FaCloud size={100} className="text-gray-500" />,
+    icon: <FaCloud size={50} className="text-gray-500" />,
     title: "Cloud Infrastructure",
     description:
       "We host our services on cloud platforms, ensuring scalability, data security, and high uptime.",

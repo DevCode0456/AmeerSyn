@@ -29,32 +29,32 @@ const NetworkingContent = () => {
 
   const services = [
     {
-      icon: <FaNetworkWired size={100} className="mt-6" />,
+      icon: <FaNetworkWired size={50} className="mt-6" />,
       title: "Network Setup",
       description: "Setting up robust and reliable networks tailored to your needs.",
     },
     {
-      icon: <FaTools size={100} className="mt-6" />,
+      icon: <FaTools size={50} className="mt-6" />,
       title: "Network Optimization",
       description: "Optimizing networks for peak performance and reliability.",
     },
     {
-      icon: <FaLock size={100} className="mt-6" />,
+      icon: <FaLock size={50} className="mt-6" />,
       title: "Security Solutions",
       description: "Implementing robust security protocols for networks.",
     },
     {
-      icon: <FaCloud size={100} className="mt-6" />,
+      icon: <FaCloud size={50} className="mt-6" />,
       title: "Cloud Integration",
       description: "Seamless integration of networks with cloud platforms.",
     },
     {
-      icon: <FaCog size={100} className="mt-6" />,
+      icon: <FaCog size={50} className="mt-6" />,
       title: "Network Automation",
       description: "Automating network management using advanced tools.",
     },
     {
-      icon: <FaPenFancy size={100} className="mt-6" />,
+      icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Custom Solutions",
       description: "Crafting tailored networking solutions for unique business needs.",
     },
@@ -134,32 +134,32 @@ const NetworkingContent = () => {
 
   const technologies = [
     {
-      icon: <FaNetworkWired size={100} />,
+      icon: <FaNetworkWired size={50} />,
       title: "Cisco",
       description: "Leading solutions for enterprise networking.",
     },
     {
-      icon: <FaCloud size={100} />,
+      icon: <FaCloud size={50} />,
       title: "AWS Networking",
       description: "Advanced cloud networking solutions.",
     },
     {
-      icon: <FaLock size={100} />,
+      icon: <FaLock size={50} />,
       title: "Fortinet",
       description: "Robust security for networks and systems.",
     },
     {
-      icon: <FaCog size={100} />,
+      icon: <FaCog size={50} />,
       title: "Juniper",
       description: "High-performance network solutions.",
     },
     {
-      icon: <FaHdd size={100} />,
+      icon: <FaHdd size={50} />,
       title: "Aruba",
       description: "Innovative wireless networking technologies.",
     },
     {
-      icon: <FaLightbulb size={100} />,
+      icon: <FaLightbulb size={50} />,
       title: "Palo Alto Networks",
       description: "Cutting-edge network security and automation.",
     },

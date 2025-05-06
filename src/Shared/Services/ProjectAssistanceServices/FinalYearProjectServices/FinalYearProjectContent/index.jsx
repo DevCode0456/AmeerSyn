@@ -80,25 +80,25 @@ const FinalYearProjectContent = () => {
 
   const services = [
     {
-      icon: <FaGraduationCap size={100} className="mt-6" />,
+      icon: <FaGraduationCap size={50} className="mt-6" />,
       title: "Custom Final Year Project Ideas",
       description:
         "Innovative and customized project ideas across various domains to suit your academic needs.",
     },
     {
-      icon: <FaLaptopCode size={100} className="mt-6" />,
+      icon: <FaLaptopCode size={50} className="mt-6" />,
       title: "Project Development & Guidance",
       description:
         "Comprehensive services including coding, debugging, and deployment to bring your ideas to life.",
     },
     {
-      icon: <FaProjectDiagram size={100} className="mt-6" />,
+      icon: <FaProjectDiagram size={50} className="mt-6" />,
       title: "Research & Documentation Support",
       description:
         "Professional assistance in preparing research papers, project reports, and thesis documentation.",
     },
     {
-      icon: <FaThumbsUp size={100} className="mt-6" />,
+      icon: <FaThumbsUp size={50} className="mt-6" />,
       title: "Presentation Preparation",
       description:
         "Prepare impactful presentations with visual aids and speech coaching for confident delivery.",
@@ -107,27 +107,27 @@ const FinalYearProjectContent = () => {
 
   const technologies = [
     {
-      icon: <FaRobot size={100} className="text-blue-500" />,
+      icon: <FaRobot size={50} className="text-blue-500" />,
       title: "Artificial Intelligence",
       description: "Leverage AI for innovative and intelligent solutions.",
     },
     {
-      icon: <FaLock size={100} className="text-green-500" />,
+      icon: <FaLock size={50} className="text-green-500" />,
       title: "Blockchain",
       description: "Implement secure and decentralized systems.",
     },
     {
-      icon: <FaWifi size={100} className="text-red-500" />,
+      icon: <FaWifi size={50} className="text-red-500" />,
       title: "Internet of Things (IoT)",
       description: "Connect devices for smart and automated environments.",
     },
     {
-      icon: <FaMobileAlt size={100} className="text-purple-500" />,
+      icon: <FaMobileAlt size={50} className="text-purple-500" />,
       title: "Mobile Development",
       description: "Create user-friendly and efficient mobile applications.",
     },
     {
-      icon: <FaGlobe size={100} className="text-yellow-500" />,
+      icon: <FaGlobe size={50} className="text-yellow-500" />,
       title: "Web Development",
       description: "Build responsive and modern web applications.",
     },
