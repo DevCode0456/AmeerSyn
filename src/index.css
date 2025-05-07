@@ -21,16 +21,16 @@ body {
 }
 
 /* Modern Tech */
-.theme-modern-tech {
-  --color-Bg: #fdfdfd;
-  --color-text: #212121;
-  --color-button: #00bcd4;
-  --color-primary: #00acc1;
-  --color-HoverBtn: #0097a7;
-  --color-secondary: #e0f7fa;
-  --color-container: #ffffff;
-  --color-varientColor: #26c6da;
-  --color-Heading: #14898d;
+.theme-modern-oceanic {
+  --color-Bg: #e0f7fa; 
+  --color-text: #004d40; 
+  --color-button: #00796b; 
+  --color-primary: #004d40;
+  --color-secondary: white; 
+  --color-Heading: #004d40; 
+  --color-HoverBtn: #00695c; 
+  --color-container: #ffffff; 
+  --color-varientColor: #00796b; 
 }
 
 .theme-cyber-blue {
@@ -38,35 +38,35 @@ body {
   --color-text: #e2e8f0;
   --color-button: #1e40af;
   --color-primary: #3b82f6;
+  --color-Heading: #518fd7;
   --color-HoverBtn: #2563eb;
   --color-secondary: #1e293b;
   --color-container: #1e293b;
-  --color-varientColor: #60a5fa;
-  --color-Heading: #518fd7;
+  --color-varientColor: #e0e0e0;
 }
 
 .theme-minimal-white {
   --color-Bg: #f9fafb;
   --color-text: #111827;
+  --color-Heading: white;
   --color-button: #6b7280;
   --color-primary: #4b5563;
   --color-HoverBtn: #374151;
   --color-secondary: #ffffff;
   --color-container: #f3f4f6;
-  --color-varientColor: #9ca3af;
-  --color-Heading: white;
+  --color-varientColor: black;
 }
 
 .theme-classic-green {
   --color-Bg: #f0fdf4;
   --color-text: #1b4332;
   --color-button: #34d399;
+  --color-Heading: #148063;
   --color-primary: #10b981;
   --color-HoverBtn: #059669;
   --color-secondary: #e6f4ea;
   --color-container: #ffffff;
-  --color-varientColor: #065f46;
-  --color-Heading: #148063;
+  --color-varientColor: #fffacd;
 }
 
 /* Elegant Purple */
@@ -74,12 +74,12 @@ body {
   --color-Bg: #f5f3ff;
   --color-text: #4b5563;
   --color-button: #8b5cf6;
+  --color-Heading: #6a35bb;
   --color-primary: #7c3aed;
   --color-HoverBtn: #6d28d9;
   --color-secondary: #ede9fe;
   --color-container: #ffffff;
-  --color-varientColor: #a78bfa;
-  --color-Heading: #6a35bb;
+  --color-varientColor: #98ff98;
 }
 
 /* Black & Gold */
@@ -88,11 +88,11 @@ body {
   --color-text: #fef9c3;
   --color-button: #facc15;
   --color-primary: #eab308;
+  --color-Heading: #dcbe5d;
   --color-HoverBtn: #ca8a04;
   --color-secondary: #1f2937;
   --color-container: #18181b;
-  --color-varientColor: #fde68a;
-  --color-Heading: #dcbe5d;
+  --color-varientColor: lightgreen;
 }
 
 /* Dynamic Red */
@@ -104,7 +104,7 @@ body {
   --color-HoverBtn: #b91c1c;
   --color-secondary: #fee2e2;
   --color-container: #ffffff;
-  --color-varientColor: #991b1b;
+  --color-varientColor: #ffa500;
   --color-Heading: #b33535;
 }
 
@@ -117,7 +117,7 @@ body {
   --color-HoverBtn: #00838f;
   --color-secondary: #e0f2f1;
   --color-container: #ffffff;
-  --color-varientColor: #006064;
+  --color-varientColor: #7e57c2;
   --color-Heading: #1d8f97;
 }
 
@@ -134,28 +134,28 @@ body {
   --color-Heading: #c84c26;
 }
 
-.theme-professional-teal {
-  --color-Bg: #f0fdfa;
-  --color-text: #134e4a;
-  --color-button: #14b8a6;
-  --color-primary: #0d9488;
-  --color-HoverBtn: #0f766e;
-  --color-secondary: #ccfbf1;
-  --color-container: #e6fffa;
-  --color-varientColor: #115e59;
-  --color-Heading: #20b6aa;
+.theme-black-white-cream {
+  --color-Bg: #000000;
+  --color-text: #ffffff;
+  --color-button: rgb(206, 101, 119);
+  --color-primary: #863083;
+  --color-HoverBtn: #e0e0e0;
+  --color-secondary: black;
+  --color-container: black;
+  --color-varientColor: #e5e5e5;
+  --color-Heading: rgb(139, 0, 97);
 }
 
 .theme-dark {
   --color-Bg: #0d1117;
   --color-text: #c9d1d9;
   --color-button: #238636;
+  --color-Heading: #f0f6fc;
   --color-primary: #2ea043;
   --color-HoverBtn: #2c974b;
   --color-secondary: #161b22;
   --color-container: #161b22;
-  --color-varientColor: #30363d;
-  --color-Heading: #f0f6fc;
+  --color-varientColor: #f5f5dc;
 }
 
 * {
@@ -173,8 +173,8 @@ body {
 }
 
 .hide-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
   border-radius: 8px;
+  background: var(--color-primary);
 }
 
 .loader {
@@ -182,9 +182,9 @@ body {
   height: 48px;
   border-radius: 50%;
   position: relative;
-  background: var(--color-secondary);
   display: inline-block;
   box-sizing: border-box;
+  background: var(--color-secondary);
   animation: rotation 1s linear infinite;
 }
 

@@ -30,7 +30,7 @@ const Topbar = () => {
     setIsMenuOpen((prev) => !prev);
     setIsDropdownOpen(false);
   };
-
+  
   const services = [
     { name: "AI", path: "/services/ai" },
     { name: "Linux", path: "/services/linux" },
@@ -70,13 +70,13 @@ const Topbar = () => {
 
   return (
     <header className="bg-primary text-white shadow w-full">
-      <div className="mx-auto flex items-center justify-between px-4 py-3 xl:px-10">
+      <div className="mx-auto flex items-center justify-between px-4  xl:px-10">
         <div>
           <img src={Images.LOGO_IMG} alt="logo" width="250" height="250" className="mb-2" />
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center space-x-6">
+        <nav className="hidden lg:flex items-center space-x-2 xl:space-x-6 ">
           <Link to="/" className={navLinkClass("/")}>
             Home
           </Link>
@@ -158,7 +158,7 @@ const Topbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-gray-200 w-full px-6 py-3">
+        <div className="lg:hidden bg-white w-full px-4">
           <nav className="flex flex-col space-y-2 text-primary">
             {[
               { name: "Home", path: "/" },

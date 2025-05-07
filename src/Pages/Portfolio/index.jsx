@@ -377,7 +377,7 @@ const Portfolio = () => {
               <h3 className="text-xl font-bold text-primary">
                 {feature.title}
               </h3>
-              <p className="text-text mt-2">{feature.description}</p>
+              <p className="text-black mt-2">{feature.description}</p>
             </motion.div>
           ))}
         </div>
