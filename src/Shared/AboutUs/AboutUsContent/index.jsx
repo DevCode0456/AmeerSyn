@@ -15,7 +15,7 @@ import {
   FiTrendingUp,
 } from "react-icons/fi";
 import "swiper/css";
-import React from "react";
+import React, { useRef, useState } from "react";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
@@ -25,6 +25,7 @@ import { FaServer, FaCode, FaCloud, FaLock, FaUserTie } from "react-icons/fa";
 import WhyChooseUsSection from "../../PagesSectionComponents/WhyChooseUsSection";
 import TestimonialsSection from "../../PagesSectionComponents/TestimonialsSection";
 import Images from "../../../Helper/ImagesConstant";
+import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 
 const reasons = [
   {
@@ -272,8 +273,19 @@ const testimonialsData = [
 ];
 
 const AboutUs = () => {
+  const [isMuted, setIsMuted] = useState(true); // Initially muted
+  const videoRef = useRef(null); // Reference to the video element
+
+  // Toggle mute/unmute functionality
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
   return (
-    <div className=" bg-Bg">
+    <div className="bg-Bg">
+      {/* Video Section */}
       <motion.section
         className="relative h-screen flex flex-col items-center justify-center text-center bg-black"
         initial={{ opacity: 0 }}
@@ -281,9 +293,10 @@ const AboutUs = () => {
         transition={{ duration: 1.5 }}
       >
         <video
+          ref={videoRef} // Set the video reference
           autoPlay
           loop
-          muted
+          muted={isMuted} // Control the mute state based on the state variable
           className="absolute w-full h-full object-fill lg:object-cover opacity-50"
         >
           <source
@@ -292,66 +305,68 @@ const AboutUs = () => {
           />
         </video>
         <div className="absolute bottom-0 z-10 p-10">
-        <motion.h1 className="text-lg md:text-6xl font-semibold text-white">
-  Elevate Your{" "}
-  <ReactTyped
-    className="text-primary"
-    strings={["Business", "Brand", "Success", "Growth", "Innovation", "Impact", "Strategy", "Reputation"]}
-    typeSpeed={100}
-    backSpeed={200}
-    loop
-  />
-</motion.h1>
+          <motion.h1 className="text-lg md:text-6xl font-semibold text-white">
+            Elevate Your{" "}
+            <ReactTyped
+              className="text-primary"
+              strings={["Business", "Brand", "Success", "Growth", "Innovation", "Impact", "Strategy", "Reputation"]}
+              typeSpeed={100}
+              backSpeed={200}
+              loop
+            />
+          </motion.h1>
           <motion.p className="text-white mt-4">
             We bring innovation and technology together to create impact.
           </motion.p>
         </div>
+
+        {/* Mute/Unmute Button */}
+        <button
+          onClick={toggleMute}
+          className="absolute top-5 left-5 z-20 p-3 rounded-full bg-primary text-white hover:bg-black/70 transition"
+        >
+          {isMuted ? <FaVolumeMute size={24} /> : <FaVolumeUp size={24} />}
+        </button>
       </motion.section>
 
+      {/* Mission Section */}
       <section className="py-16  px-6 sm:px-12 lg:px-24">
-          <div className="flex justify-center items-center   rounded-3xl">
+        <div className="flex justify-center items-center rounded-3xl">
           <img
-  src={Images.OUR_MISSION_IMG}
-  alt="terms&conditions"
-  className="rounded mx-auto max-h-64 transition duration-300 ease-in-out hover:scale-105 hover:rotate-1 hover:brightness-110 hover:saturate-150 animate__animated animate__pulse"
-/>
+            src={Images.OUR_MISSION_IMG}
+            alt="terms&conditions"
+            className="rounded mx-auto max-h-64 transition duration-300 ease-in-out hover:scale-105 hover:rotate-1 hover:brightness-110 hover:saturate-150 animate__animated animate__pulse"
+          />
+        </div>
+        <h2 className="text-4xl font-bold text-center text-Heading">Our Mission</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+          {mission?.map((service, index) => (
+            <motion.div
+              key={index}
+              className="p-6 bg-gradient-to-br from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition hover:shadow-xl"
+              whileHover={{ scale: 1.1 }}
+            >
+              <h2 className="sm:text-2xl font-semibold text-text mb-3">{service.category}</h2>
+              <div className="space-y-4">
+                {service.items?.map((item, idx) => (
+                  <div key={idx} className="flex items-center jusitify-around gap-4">
+                    <div className="text-primary text-3xl">{item.icon}</div>
+                    <div>
+                      <h3 className="text-xl text-text ">{item.name}</h3>
+                      <p className="text-text text-md">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-          </div>
-          <h2 className="text-4xl font-bold text-center text-Heading">
-            Our Mission
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-                     {mission?.map((service, index) => (
-                       <motion.div
-                         key={index}
-                         className="p-6 bg-gradient-to-br from-secondary to-container border border-primary rounded-3xl shadow-lg text-center transform hover:scale-105 transition hover:shadow-xl"
-                         whileHover={{ scale: 1.1 }}
-                       >
-                         <h2 className="sm:text-2xl   font-semibold text-text mb-3">
-                           {service.category}
-                         </h2>
-                         <div className="space-y-4">
-                           {service.items?.map((item, idx) => (
-                             <div
-                               key={idx}
-                               className="flex items-center jusitify-around gap-4"
-                             >
-                               <div className="text-primary text-3xl">{item.icon}</div>
-                               <div>
-                                 <h3 className="text-xl text-text ">{item.name}</h3>
-                                 <p className="text-text text-md">{item.desc}</p>
-                               </div>
-                             </div>
-                           ))}
-                         </div>
-                       </motion.div>
-                     ))}
-                   </div>
-        </section>
-
+      {/* Other Sections */}
       <ServicesSection services={services} />
       <WhyChooseUsSection reasons={reasons} />
-      <div className="">
+      <div>
         <ContactUsSection />
         <TestimonialsSection testimonials={testimonialsData} />
       </div>
