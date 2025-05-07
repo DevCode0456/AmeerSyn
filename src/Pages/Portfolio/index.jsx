@@ -29,9 +29,11 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 import "swiper/css";
-import React from "react";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
+import { useState, useRef } from "react";
+import { FaVolumeUp, FaVolumeMute } from "react-icons/fa"; // Volume icons for toggle
+
 import { ReactTyped } from "react-typed";
 import ContactUsSection from "../../Shared/ContactUsSection";
 import WhyChooseUsSection from "../../Shared/PagesSectionComponents/WhyChooseUsSection";
@@ -320,8 +322,19 @@ const services = [
 
 
 const Portfolio = () => {
+  const [isMuted, setIsMuted] = useState(true); // Initially muted
+  const videoRef = useRef(null); // Reference to the video element
+
+  // Toggle mute/unmute functionality
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
   return (
     <div className="bg-Bg">
+      {/* Video Section */}
       <motion.section
         className="relative h-screen flex flex-col items-center justify-center text-center bg-black"
         initial="hidden"
@@ -329,9 +342,10 @@ const Portfolio = () => {
         variants={fadeInUp}
       >
         <video
+          ref={videoRef} // Set the video reference
           autoPlay
           loop
-          muted
+          muted={isMuted} // Control mute state based on state
           className="absolute w-full h-full object-fill lg:object-cover opacity-50"
         >
           <source
@@ -354,13 +368,19 @@ const Portfolio = () => {
             Showcasing innovation, creativity, and technology-driven solutions.
           </motion.p>
         </div>
+
+        {/* Mute/Unmute Button */}
+        <button
+          onClick={toggleMute}
+          className="absolute top-5 left-5 z-20 p-3 rounded-full bg-primary text-white hover:bg-black/70 transition"
+        >
+          {isMuted ? <FaVolumeMute size={24} /> : <FaVolumeUp size={24} />}
+        </button>
       </motion.section>
 
+      {/* Features Section */}
       <section className="py-16 bg-gradient-to-b from-secondary to-container px-6 sm:px-12 lg:px-24">
-        <h2 className="text-4xl font-bold text-center text-primary mb-10">
-          Our Features
-        </h2>
-
+        <h2 className="text-4xl font-bold text-center text-primary mb-10">Our Features</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div
@@ -369,88 +389,82 @@ const Portfolio = () => {
                 scale: 1.08,
                 boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
               }}
-              className="p-6 bg-white rounded-3xl  flex flex-col items-center text-center border border-transparent hover:border-primary hover:shadow-lg transition-all duration-300"
+              className="p-6 bg-white rounded-3xl flex flex-col items-center text-center border border-transparent hover:border-primary hover:shadow-lg transition-all duration-300"
             >
               <div className="text-5xl bg-gradient-to-r from-pink-500 to-primary text-white p-4 rounded-full mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-primary">
-                {feature.title}
-              </h3>
+              <h3 className="text-xl font-bold text-primary">{feature.title}</h3>
               <p className="text-black mt-2">{feature.description}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      <div className=" ">
-        <section className="py-20 bg-gray-950 px-6 sm:px-12 lg:px-24">
-          <h1 className="text-5xl font-semibold text-primary mx-auto text-center py-3 my-3">Tech Stack</h1>
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
-            initial="hidden"
-            whileInView="visible"
-            transition={{ staggerChildren: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {techStack.map((tech, index) => (
-              <motion.div
-                key={index}
-               className="p-8 bg-white/5 hover:bg-secondary rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl backdrop-blur-lg border border-white/20 text-white hover:text-primary"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                  ease: "easeOut",
-                }}
-                viewport={{ once: true }}
-              >
-                <div className="text-5xl  mb-4">{tech.icon}</div>
-                <h3 className="text-2xl  font-semibold">{tech.name}</h3>
-                <p className=" mt-2">{tech.skills.join(", ")}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </section>
+      {/* Tech Stack Section */}
+      <section className="py-20 bg-gray-950 px-6 sm:px-12 lg:px-24">
+        <h1 className="text-5xl font-semibold text-primary mx-auto text-center py-3 my-3">Tech Stack</h1>
+        <motion.div
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ staggerChildren: 0.2 }}
+          viewport={{ once: true }}
+        >
+          {techStack.map((tech, index) => (
+            <motion.div
+              key={index}
+              className="p-8 bg-white/5 hover:bg-secondary rounded-xl shadow-lg text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl backdrop-blur-lg border border-white/20 text-white hover:text-primary"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+            >
+              <div className="text-5xl mb-4">{tech.icon}</div>
+              <h3 className="text-2xl font-semibold">{tech.name}</h3>
+              <p className="mt-2">{tech.skills.join(", ")}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
 
-    
-<ServicesSection services={services} />
-        
+      {/* Certifications Section */}
+      <section className="py-20 bg-gray-950 px-6 sm:px-12 lg:px-24">
+        <h1 className="text-4xl font-semibold text-primary mx-auto text-center py-3 my-3">Certifications</h1>
+        <motion.div
+          className="grid md:grid-cols-3 gap-12"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ staggerChildren: 0.2 }}
+          viewport={{ once: true }}
+        >
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={index}
+              className="p-6 lg:p-12 hover:bg-secondary bg-white/5 rounded-full shadow-lg text-center transform hover:scale-105 transition-all backdrop-blur-lg border border-white/20 text-white hover:text-primary"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl lg:text-6xl text-primary text-center">{cert.icon}</div>
+              <h3 className="text-xl font-semibold text-primary mt-4">{cert.title}</h3>
+              <p className="mt-2">{cert.issuer}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
 
-        <section className="py-20 bg-gray-950 px-6 sm:px-12 lg:px-24">
-          <h1  className="text-4xl font-semibold text-primary mx-auto text-center py-3 my-3 ">Certifications</h1>
-          <motion.div
-            className="grid md:grid-cols-3 gap-12"
-            initial="hidden"
-            whileInView="visible"
-            transition={{ staggerChildren: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={index}
-                className=" p-6 lg:p-12  hover:bg-secondary bg-white/5 rounded-full shadow-lg text-center transform hover:scale-105 transition-all backdrop-blur-lg border border-white/20 text-white hover:text-primary"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                  ease: "easeOut",
-                }}
-                viewport={{ once: true }}
-              >
-                <div className="text-4xl lg:text-6xl text-primary text-center  ">{cert.icon}</div>
-                <h3 className="text-xl font-semibold text-primary mt-4">
-                  {cert.title}
-                </h3>
-                <p className=" mt-2">{cert.issuer}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </section>
-      </div>
-
+      {/* Other Sections */}
+      <ServicesSection services={services} />
       <WhyChooseUsSection reasons={reasons} />
       <ContactUsSection />
       <TestimonialsSection testimonials={testimonialsData} />

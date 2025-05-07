@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaMapMarked,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 
@@ -117,6 +118,14 @@ const Topbar = () => {
             className="hover:text-pink-500 hover:scale-110 transition-transform"
           >
             <FaInstagram size={16} />
+          </a>
+          <a
+            href="https://whatsapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-green-500 hover:scale-110 transition-transform"
+          >
+            <FaWhatsapp size={16} />
           </a>
 
           <div className="relative">

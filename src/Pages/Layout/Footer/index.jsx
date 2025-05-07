@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedinIn, FaFacebook } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebook, FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Images from "../../../Helper/ImagesConstant";
 
@@ -251,21 +251,39 @@ const Footer = () => {
           © 2024 AmeerSync. All rights reserved.
         </p>
 
-        <div className="flex space-x-4 mt-4 md:mt-0">
-          {[
-            { icon: <FaFacebook />, url: "https://facebook.com" },
-            { icon: <FaLinkedinIn />, url: "https://linkedin.com" },
-          ].map((item, index) => (
-            <a
-              key={index}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full border text-Heading  border-Heading transition duration-300 hover:bg-primary hover:text-white"
-            >
-              {item.icon}
-            </a>
-          ))}
+        <div className="flex space-x-4 mt-4 items-center  md:mt-0">
+        <a
+                   href="https://facebook.com"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="hover:text-blue-500 hover:scale-110 transition-transform"
+                 >
+                   <FaFacebookF size={24} />
+                 </a>
+                 <a
+                   href="https://linkedin.com"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="hover:text-blue-400 hover:scale-110 transition-transform"
+                 >
+                   <FaLinkedinIn size={24}  />
+                 </a>
+                 <a
+                   href="https://instagram.com"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="hover:text-pink-500 hover:scale-110 transition-transform"
+                 >
+                   <FaInstagram size={24}  />
+                 </a>
+                 <a
+                   href="https://whatsapp.com"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="hover:text-green-500 hover:scale-110 transition-transform"
+                 >
+                   <FaWhatsapp size={24}  />
+                 </a>
         </div>
       </div>
     </footer>

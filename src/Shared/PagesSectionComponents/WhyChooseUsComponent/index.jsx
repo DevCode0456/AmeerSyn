@@ -1,10 +1,14 @@
 import React, { memo, useState } from "react";
-
 import Images from "../../../Helper/ImagesConstant";
 import { Link } from "react-router-dom";
+import { FaVolumeMute } from "react-icons/fa";
+import { FaVolumeUp } from "react-icons/fa";
+
+
 
 const WhyChooseUsComponent = () => {
   const [activeTab, setActiveTab] = useState("mission");
+  const [isMuted, setIsMuted] = useState(true); // State to control mute
 
   const tabsContent = {
     mission: {
@@ -29,6 +33,12 @@ const WhyChooseUsComponent = () => {
         "https://res.cloudinary.com/dvgpgzibx/video/upload/v1737486563/WhatsApp_Video_2025-01-22_at_12.02.42_AM_wgvlx5.mp4",
     },
   };
+
+  // Toggle mute/unmute
+  const toggleMute = () => {
+    setIsMuted((prevMuted) => !prevMuted);
+  };
+
   return (
     <div className=" bg-gradient-to-b from-secondary to-container">
       <div className="text-center mb-6">
@@ -37,7 +47,7 @@ const WhyChooseUsComponent = () => {
             src={Images.Why_CHOOSE_US_IMG}
             alt="terms&conditions"
             className={
-              " rounded mx-auto max-h-64 animate-pulse md:animate-bounce lg:animate-scroll   "
+              " rounded mx-auto max-h-64 animate-pulse md:animate-bounce lg:animate-scroll"
             }
           />
         </div>
@@ -97,13 +107,28 @@ const WhyChooseUsComponent = () => {
                 src={tabsContent[activeTab].video}
                 autoPlay
                 loop
-                muted
+                muted={isMuted} // Bind mute state here
                 controls
                 className="w-full h-full object-fill"
                 title="Company Video"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
+
+            {/* Mute/Unmute Button */}
+            <button
+              onClick={toggleMute}
+              className="absolute bottom-5 right-5 bg-primary text-white p-2 rounded-full shadow-md"
+            >
+              {isMuted ? (
+                <span  >
+<FaVolumeMute size={24} className="text-white" aria-label="Unmute"/>                </span>
+              ) : (
+                <span  aria-label="Mute">
+                  <FaVolumeUp size={24} className="text-white" aria-label="Mute"/>  
+                </span>
+              )}
+            </button>
           </div>
         </div>
       </div>
