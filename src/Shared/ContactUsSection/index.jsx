@@ -27,7 +27,7 @@ const ContactUsSection = () => {
           <h1 className="text-3xl md:text-4xl font-semibold text-white">
             Let's Work Together!
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-white">
             Have a project in mind? Contact us and let's bring your ideas to
             life with cutting-edge technology.
           </p>
@@ -35,20 +35,20 @@ const ContactUsSection = () => {
           <div className="space-y-4">
           <div className="flex items-center justify-center md:justify-start gap-4">
               <MdPhone className="text-white text-3xl" />
-              <p className="text-white">            (+44) 7440 095528
+              <p className="text-white font-semibold ">            (+44) 7440 095528
               </p>
             </div>
            
             <div className="flex items-center justify-center md:justify-start gap-4">
               <MdLocationOn className="text-white text-3xl" />
-              <p className="text-white"> Morden, London UK</p>
+              <p className="text-white font-semibold "> Morden, London UK</p>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-4">
               <MdEmail className="text-white text-3xl" />
               <p className="text-white">
                 <a
   href="mailto:ameersync.com@gmail.com"
-  className="flex items-center gap-2 md:border-r-2 border-gray-300 text-primary md:pr-4 group"
+  className="flex items-center gap-2 text-primary md:pr-4 group"
 >
  
   <span className="font-semibold  inline text-white">

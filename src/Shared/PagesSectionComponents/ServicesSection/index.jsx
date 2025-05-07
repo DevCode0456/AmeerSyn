@@ -10,24 +10,21 @@ const ServicesSection = ({ services }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="container mx-auto px-4 md:px-6 lg:px-8 py-16"
+      className="container mx-auto p-4 md:px-6 lg:px-8 py-16 overflow-hidden"
     >
       {/* Animated Header Image */}
       <div className="flex justify-center items-center mb-10">
         <motion.img
           src={Images.SERVICES_IMG}
           alt="services"
-          className="max-h-64 w-auto bg-primary rounded-full p-4 cursor-pointer transition-all duration-700 ease-in-out
-            animate-floatY lg:animate-floatX
-            hover:scale-110 hover:brightness-110 hover:contrast-125 hover:shadow-xl hover:ring-4 hover:ring-primary hover:ring-offset-2
-            active:scale-95"
+          className="max-h-68 max-w-68 mx-auto rounded-full  p-4 animate-pulse lg:animate-scroll"
           whileHover={{ rotate: [0, 5, -5, 0] }}
           transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
 
       {/* Section Title */}
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-heading mb-4">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-primary mb-4 p-4">
         Our Services
       </h2>
 

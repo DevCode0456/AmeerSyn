@@ -16,7 +16,7 @@ const Accordin = ({ faqs }) => {
 <img src={Images.FAQS_IMG} alt="terms&conditions" className={" max-h-64 rounded-full mx-auto animate-pulse md:animate-bounce lg:animate-scroll "} />
 
       </div>
-      <h1 className="text-4xl font-bold text-center text-Heading py-3">
+      <h1 className="text-4xl font-bold text-center text-Heading py-6">
 Frequently Asked Questions      </h1>
 
       <div className="space-y-4 bg-white">
