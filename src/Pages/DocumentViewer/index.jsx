@@ -7,7 +7,10 @@ const DocumentViewer = ({ docUrl }) => {
   useEffect(() => {
     const handleContextMenu = (e) => e.preventDefault();
     const handleKeydown = (e) => {
-      if ((e.ctrlKey && ["s", "u", "p"].includes(e.key.toLowerCase())) || e.key === "F12") {
+      if (
+        (e.ctrlKey && ["s", "u", "p"].includes(e.key.toLowerCase())) ||
+        e.key === "F12"
+      ) {
         e.preventDefault();
         e.stopPropagation();
       }
