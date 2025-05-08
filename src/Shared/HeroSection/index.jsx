@@ -40,7 +40,7 @@ const HeroSection = ({
 </motion.button>
               </Link>
       </div>
-      <div className="hero-image bg-container  overflow-hidden md:w-1/2">
+      <div className="hero-image bg-container rounded-3xl  overflow-hidden md:w-1/2">
         <img
           src={imageSrc}
           alt={imageAlt}
