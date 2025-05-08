@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedinIn, FaFacebook, FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn,  FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Images from "../../../Helper/ImagesConstant";
 
@@ -253,34 +253,34 @@ const Footer = () => {
 
         <div className="flex space-x-4 mt-4 items-center  md:mt-0">
         <a
-                   href="https://facebook.com"
+                   href="https://www.facebook.com/profile.php?id=61575707057172"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="hover:text-blue-500 hover:scale-110 transition-transform"
+                   className="hover:text-blue-500 hover:scale-110 transition-transform text-white"
                  >
                    <FaFacebookF size={24} />
                  </a>
-                 <a
+                 {/* <a
                    href="https://linkedin.com"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="hover:text-blue-400 hover:scale-110 transition-transform"
+                   className="hover:text-blue-400 hover:scale-110 transition-transform text-white"
                  >
                    <FaLinkedinIn size={24}  />
-                 </a>
+                 </a> */}
                  <a
-                   href="https://instagram.com"
+                   href="https://www.instagram.com/ameersync"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="hover:text-pink-500 hover:scale-110 transition-transform"
+                   className="hover:text-pink-500 hover:scale-110 transition-transform text-white"
                  >
                    <FaInstagram size={24}  />
                  </a>
                  <a
-                   href="https://whatsapp.com"
+                   href="https://wa.me/447440095528"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="hover:text-green-500 hover:scale-110 transition-transform"
+                   className="hover:text-green-500 hover:scale-110 transition-transform text-white"
                  >
                    <FaWhatsapp size={24}  />
                  </a>
