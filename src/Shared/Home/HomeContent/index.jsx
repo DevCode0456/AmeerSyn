@@ -462,7 +462,7 @@ const HomeContent = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8 container mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8 container mx-auto overflow-hidden">
           {services.map((service, index) => (
             <div key={index} className="mb-4">
               <Link to={service.path}>
