@@ -220,30 +220,29 @@ const NodeContent = () => {
 
   return (
     <div className="node-development-content w-100 bg-Bg">
-     
       <motion.div
         className=""
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-         <HeroSection
-        icon={FaNodeJs}
-        imageWidth="100%"
-        imageHeight="500px"
-        imageAlt="Node.js Development Services"
-        buttonText="Get Started"
-        title="Node.js Development Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.NODE_IMG}
-        description="Build scalable and high-performance applications with our expert Node.js development services."
-        details={
-          "Our Node.js development services provide solutions tailored to your business needs. Whether you need real-time apps, backend services, or scalable cloud solutions, we have the expertise to bring your ideas to life."
-        }
-      />
-      <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <WhyChooseUsSection reasons={reasons} />
+        <HeroSection
+          icon={FaNodeJs}
+          imageWidth="100%"
+          imageHeight="500px"
+          imageAlt="Node.js Development Services"
+          buttonText="Get Started"
+          title="Node.js Development Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.NODE_IMG}
+          description="Build scalable and high-performance applications with our expert Node.js development services."
+          details={
+            "Our Node.js development services provide solutions tailored to your business needs. Whether you need real-time apps, backend services, or scalable cloud solutions, we have the expertise to bring your ideas to life."
+          }
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
         <ContactUsSection />
         <TestimonialsSection testimonials={testimonialsData} />

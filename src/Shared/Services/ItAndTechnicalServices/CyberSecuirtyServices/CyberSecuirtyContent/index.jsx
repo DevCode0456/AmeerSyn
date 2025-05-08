@@ -1,28 +1,26 @@
 import {
-  FaShieldAlt,
-  FaUserShield,
-  FaLock,
   FaBug,
-  FaCodeBranch,
-  FaCloud,
-  FaLaptopCode,
   FaKey,
-  FaLightbulb,
+  FaLock,
+  FaCloud,
   FaTools,
+  FaShieldAlt,
+  FaLightbulb,
+  FaLaptopCode,
+  FaUserShield,
+  FaCodeBranch,
   FaCheckCircle,
 } from "react-icons/fa";
 import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
-
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
+import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
-import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 
 const CyberSecurityContent = () => {
   const services = [

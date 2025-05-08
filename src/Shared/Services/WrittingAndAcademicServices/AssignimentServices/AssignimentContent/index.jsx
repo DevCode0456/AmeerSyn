@@ -1,16 +1,15 @@
-import React, { useState, useEffect, memo } from "react";
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import {
+  FaCloud,
+  FaRobot,
   FaFileAlt,
   FaUserEdit,
-  FaRegMoneyBillAlt,
   FaComments,
-  FaLaptopCode,
   FaDatabase,
-  FaRobot,
-  FaCloud,
+  FaLaptopCode,
+  FaRegMoneyBillAlt,
 } from "react-icons/fa";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import HeroSection from "../../../../HeroSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
@@ -188,30 +187,29 @@ const AssignmentContent = () => {
   };
 
   return (
-    <div className="assignment-writing-platform w-full bg-Bg">     
-
+    <div className="assignment-writing-platform w-full bg-Bg">
       <motion.div
         className=""
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-         <HeroSection
-        icon={FaFileAlt}
-        imageAlt="Assignment Writing"
-        buttonText="Get Started"
-        title="Expert Assignment Writing Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.ASSIGNMENT_WRITING_IMG}
-        description="Need help with your assignments? We offer expert writing services for students across various fields."
-        details="Get high-quality, plagiarism-free assignments written by professionals in your field. Affordable prices and timely delivery."
-      />
-      <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <WhyChooseUsSection reasons={reasons} />
+        <HeroSection
+          icon={FaFileAlt}
+          imageAlt="Assignment Writing"
+          buttonText="Get Started"
+          title="Expert Assignment Writing Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.ASSIGNMENT_WRITING_IMG}
+          description="Need help with your assignments? We offer expert writing services for students across various fields."
+          details="Get high-quality, plagiarism-free assignments written by professionals in your field. Affordable prices and timely delivery."
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
-      <ContactUsSection />
-      <TestimonialsSection testimonials={testimonialsData} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

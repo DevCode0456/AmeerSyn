@@ -18,7 +18,6 @@ import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
 
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";

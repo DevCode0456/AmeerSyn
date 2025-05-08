@@ -12,7 +12,6 @@ import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
 import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
@@ -112,56 +111,62 @@ const CustomContent = () => {
     },
   ];
 
-  
-
   const testimonialsData = [
     {
-      quote: "Muhammad helped me develop a custom software solution tailored to my business needs, improving efficiency and automation.",
+      quote:
+        "Muhammad helped me develop a custom software solution tailored to my business needs, improving efficiency and automation.",
       author: "John Davis",
-      company: "E-commerce Business"
+      company: "E-commerce Business",
     },
     {
-      quote: "He built a unique application for my company that integrated seamlessly with our existing systems and workflows.",
+      quote:
+        "He built a unique application for my company that integrated seamlessly with our existing systems and workflows.",
       author: "Sarah Taylor",
-      company: "Tech Start-up"
+      company: "Tech Start-up",
     },
     {
-      quote: "Muhammad’s expertise in custom programming enabled me to solve specific challenges within my business, providing a competitive edge.",
+      quote:
+        "Muhammad’s expertise in custom programming enabled me to solve specific challenges within my business, providing a competitive edge.",
       author: "David Williams",
-      company: "Consulting Firm"
+      company: "Consulting Firm",
     },
     {
-      quote: "He delivered a high-quality custom software solution that perfectly met my business requirements and exceeded expectations.",
+      quote:
+        "He delivered a high-quality custom software solution that perfectly met my business requirements and exceeded expectations.",
       author: "Rachel Green",
-      company: "Retail Business"
+      company: "Retail Business",
     },
     {
-      quote: "Muhammad worked closely with me to understand my needs, delivering a customized solution that was intuitive and user-friendly.",
+      quote:
+        "Muhammad worked closely with me to understand my needs, delivering a customized solution that was intuitive and user-friendly.",
       author: "Michael Carter",
-      company: "Financial Services"
+      company: "Financial Services",
     },
     {
-      quote: "Thanks to Muhammad’s custom programming expertise, I now have a scalable solution that supports my growing business.",
+      quote:
+        "Thanks to Muhammad’s custom programming expertise, I now have a scalable solution that supports my growing business.",
       author: "Sophia Kim",
-      company: "Marketing Agency"
+      company: "Marketing Agency",
     },
     {
-      quote: "Muhammad built a custom CRM system for my company that simplified client management and streamlined operations.",
+      quote:
+        "Muhammad built a custom CRM system for my company that simplified client management and streamlined operations.",
       author: "Olivia Brown",
-      company: "Customer Relations"
+      company: "Customer Relations",
     },
     {
-      quote: "He created a robust custom application that handled complex processes and reduced the time needed to complete tasks.",
+      quote:
+        "He created a robust custom application that handled complex processes and reduced the time needed to complete tasks.",
       author: "Nathan Scott",
-      company: "Logistics Firm"
+      company: "Logistics Firm",
     },
     {
-      quote: "Muhammad's custom programming service helped me develop a personalized solution that gave my business a unique advantage.",
+      quote:
+        "Muhammad's custom programming service helped me develop a personalized solution that gave my business a unique advantage.",
       author: "James Carter",
-      company: "Business Solutions"
-    }
+      company: "Business Solutions",
+    },
   ];
-  
 
   const faqs = [
     {
@@ -197,7 +202,6 @@ const CustomContent = () => {
 
   return (
     <div className="custom-programming-services-content w-full bg-Bg">
-      
       <motion.div
         className=""
         initial={{ opacity: 0, x: -50 }}
@@ -205,20 +209,19 @@ const CustomContent = () => {
         transition={{ duration: 0.8 }}
       >
         <HeroSection
-        icon={FaCode}
-      
-        buttonText="Get Started"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.PROGRAMING_IMG}
-        title="Custom Programming Solutions"
-        imageAlt="Custom Programming Solutions"
-        description="We offer custom programming services designed to meet your unique business requirements. From software development to system integration, we deliver reliable solutions."
-        details="Our team of expert developers works closely with you to create personalized applications that meet your goals, whether it’s a mobile app, web app, or an enterprise solution."
-      />
+          icon={FaCode}
+          buttonText="Get Started"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.PROGRAMING_IMG}
+          title="Custom Programming Solutions"
+          imageAlt="Custom Programming Solutions"
+          description="We offer custom programming services designed to meet your unique business requirements. From software development to system integration, we deliver reliable solutions."
+          details="Our team of expert developers works closely with you to create personalized applications that meet your goals, whether it’s a mobile app, web app, or an enterprise solution."
+        />
         <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-   
-      <WhyChooseUsSection reasons={reasons	}/>
+        <TechnologiesSection technologies={technologies} />
+
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
         <ContactUsSection />
         <TestimonialsSection testimonials={testimonialsData} />

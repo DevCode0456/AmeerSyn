@@ -14,8 +14,14 @@ import { Link } from "react-router-dom";
 import Images from "../../../Helper/ImagesConstant";
 import ContactUsSection from "../../ContactUsSection";
 import ServicesCard from "../../../Shared/ServicesCard";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { FaArrowRight, FaRocket, FaUsers, FaEnvelope, FaVolumeUp, FaVolumeMute } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaRocket,
+  FaUsers,
+  FaEnvelope,
+  FaVolumeUp,
+  FaVolumeMute,
+} from "react-icons/fa";
 import { FaCloud, FaCode, FaLock, FaServer, FaUserTie } from "react-icons/fa";
 import WhyChooseUsSection from "../../PagesSectionComponents/WhyChooseUsSection";
 import TestimonialsSection from "../../PagesSectionComponents/TestimonialsSection";
@@ -42,8 +48,6 @@ import {
   FaChartLine,
   FaCubes,
 } from "react-icons/fa";
-
-
 
 const VideoKeyWords = [
   "Stunning Designs",
@@ -449,7 +453,9 @@ const HomeContent = () => {
               className="max-h-68 max-w-68 mx-auto rounded-full  p-4 animate-pulse lg:animate-scroll"
             />
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-primary mb-4 p-4">Our Services</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-primary mb-4 p-4">
+            Our Services
+          </h2>
           <p className="text-base text-text ">
             At AmeerSync, we deliver exceptional solutions tailored to your
             needs. Here’s an overview of the services we offer:
@@ -485,82 +491,82 @@ const HomeContent = () => {
   return (
     <div className="w-full bg-Bg ">
       <div className="relative w-full h-[30vh] md:h-screen overflow-hidden flex items-center justify-center">
-      {/* Video Background */}
-      <video
-        ref={videoRef} // Set the video reference
-        loop
-        muted={isMuted} // Control the mute state based on the state variable
-        autoPlay
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-      >
-        <source
-          src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Overlay for readability on larger screens */}
-      <div className="hidden md:block absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/80 via-black/50 to-black/80 z-10"></div>
-
-      {/* Mute/Unmute Button */}
-      <button
-        onClick={toggleMute}
-        className="absolute top-5 right-5 z-20 p-3 rounded-full bg-primary text-white hover:bg-black/70 transition"
-      >
-        {isMuted ? <FaVolumeMute size={24} /> : <FaVolumeUp size={24} />}
-      </button>
-
-      {/* Content Section */}
-      <div className="relative z-20 w-full h-auto px-4 py-10 md:absolute md:bottom-0 md:left-0 md:flex md:max-w-3xl md:h-full text-text">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="w-full hidden md:block"
+        {/* Video Background */}
+        <video
+          ref={videoRef} // Set the video reference
+          loop
+          muted={isMuted} // Control the mute state based on the state variable
+          autoPlay
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center md:text-left text-text md:text-white leading-snug">
-            Elevate Your Experience with{" "}
-            <ReactTyped
-              className="text-Heading font-semibold"
-              strings={VideoKeyWords}
-              typeSpeed={100}
-              backSpeed={50}
-              loop
-            />
-          </h1>
+          <source
+            src="https://res.cloudinary.com/dvgpgzibx/video/upload/v1738346543/VID-20250131-WA0006_jwqfop.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="mt-4 text-base sm:text-lg text-center md:text-left text-text md:text-white"
-          >
-            Explore our innovative solutions crafted to enhance your journey.
-          </motion.p>
+        {/* Overlay for readability on larger screens */}
+        <div className="hidden md:block absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/80 via-black/50 to-black/80 z-10"></div>
 
+        {/* Mute/Unmute Button */}
+        <button
+          onClick={toggleMute}
+          className="absolute top-5 right-5 z-20 p-3 rounded-full bg-primary text-white hover:bg-black/70 transition"
+        >
+          {isMuted ? <FaVolumeMute size={24} /> : <FaVolumeUp size={24} />}
+        </button>
+
+        {/* Content Section */}
+        <div className="relative z-20 w-full h-auto px-4 py-10 md:absolute md:bottom-0 md:left-0 md:flex md:max-w-3xl md:h-full text-text">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-            className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="w-full hidden md:block"
           >
-            <Link to="/contact-us">
-              <button className="px-4 py-2 bg-button hover:bg-HoverBtn hover:shadow-md hover:shadow-primary text-white text-base sm:text-lg font-semibold rounded-3xl flex items-center gap-2 transition duration-300">
-                Get Started <FaRocket />
-              </button>
-            </Link>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center md:text-left text-text md:text-white leading-snug">
+              Elevate Your Experience with{" "}
+              <ReactTyped
+                className="text-Heading font-semibold"
+                strings={VideoKeyWords}
+                typeSpeed={100}
+                backSpeed={50}
+                loop
+              />
+            </h1>
 
-            <Link to="/need-help">
-              <button className="px-4 py-2 border border-white text-white text-base sm:text-lg font-semibold rounded-full flex items-center gap-2 hover:bg-white hover:text-black transition duration-300">
-                Learn More <FaArrowRight />
-              </button>
-            </Link>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="mt-4 text-base sm:text-lg text-center md:text-left text-text md:text-white"
+            >
+              Explore our innovative solutions crafted to enhance your journey.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4"
+            >
+              <Link to="/contact-us">
+                <button className="px-4 py-2 bg-button hover:bg-HoverBtn hover:shadow-md hover:shadow-primary text-white text-base sm:text-lg font-semibold rounded-3xl flex items-center gap-2 transition duration-300">
+                  Get Started <FaRocket />
+                </button>
+              </Link>
+
+              <Link to="/need-help">
+                <button className="px-4 py-2 border border-white text-white text-base sm:text-lg font-semibold rounded-full flex items-center gap-2 hover:bg-white hover:text-black transition duration-300">
+                  Learn More <FaArrowRight />
+                </button>
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
-    </div>
 
       <div className="py-12 bg-gray-100 w-full">
         <div className="flex flex-col sm:flex-row gap-6 px-6 justify-start sm:justify-center items-center">
