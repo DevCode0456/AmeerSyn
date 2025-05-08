@@ -202,31 +202,31 @@ const ContactFormContent = () => {
             </div>
             <div className="flex items-center justify-center gap-3 text-white">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61575707057172"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-500 hover:scale-110 transition-transform"
               >
                 <FaFacebookF size={24} />
               </a>
-              <a
+              {/* <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-400 hover:scale-110 transition-transform"
               >
                 <FaLinkedinIn size={24} />
-              </a>
+              </a> */}
               <a
-                href="https://instagram.com"
-                target="_blank"
+                   href="https://www.instagram.com/ameersync"
+                   target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-500 hover:scale-110 transition-transform"
               >
                 <FaInstagram size={24} />
               </a>
               <a
-                href="https://whatsapp.com"
+                href="https://wa.me/447440095528"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-green-500 hover:scale-110 transition-transform"
