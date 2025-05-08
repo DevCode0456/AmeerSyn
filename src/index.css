@@ -11,7 +11,7 @@ body {
 :root {
   --color-Bg: #ffffff;
   --color-text: #1f2937;
-  --color-button: #3b82f6;
+  --color-button: #4d7ecf;
   --color-primary: #2563eb;
   --color-HoverBtn: #1d4ed8;
   --color-secondary: #f3f4f6;
@@ -24,10 +24,10 @@ body {
 .theme-modern-oceanic {
   --color-Bg: #e0f7fa; 
   --color-text: #004d40; 
-  --color-button: #00796b; 
+  --color-button: #29a395; 
   --color-primary: #004d40;
   --color-secondary: white; 
-  --color-Heading: #004d40; 
+  --color-Heading: #41c9b2; 
   --color-HoverBtn: #00695c; 
   --color-container: #ffffff; 
   --color-varientColor: #00796b; 
@@ -157,6 +157,32 @@ body {
   --color-container: #161b22;
   --color-varientColor: #f5f5dc;
 }
+.theme-soft-cream {
+  --color-Bg: rgb(245, 228, 214);
+  --color-text: black;
+  --color-button: #de9556;
+  --color-primary: #b86823;
+  --color-HoverBtn: black;
+  --color-secondary: #fef6e4;
+  --color-container: white;
+  --color-varientColor: #de8fdb;
+  --color-Heading: #d6863f;
+}
+.theme-blush-pink {
+  --color-Bg: #fde4e1;           /* Light blush pink */
+  --color-text: #4b1f1f;         /* Deep brownish-pink text */
+  --color-button: #f9c6d7;       /* Soft pink button */
+  --color-primary: #f8a9b6;      /* Soft rose pink */
+  --color-HoverBtn: #f4a6b1;     /* Light rosy pink */
+  --color-secondary: #fce1e6;    /* Lighter blush */
+  --color-container: #ffffff;    /* White container */
+  --color-varientColor: #ff94af; /* Soft coral-pink */
+  --color-Heading: #d26969;      /* Warm coral pink for headings */
+}
+
+
+
+
 
 * {
   transition: background-color 0.3s ease, color 0.3s ease;

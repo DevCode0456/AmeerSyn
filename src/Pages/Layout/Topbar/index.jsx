@@ -15,25 +15,28 @@ const Topbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const themes = [
-    { name: "theme-dark", color: "#238636" },
-    { name: "theme-cyber-blue", color: "#3B82F6" },
-    { name: "theme-black-gold", color: "#FACC15" },
-    { name: "theme-dynamic-red", color: "#EF4444" },
-    { name: "theme-oceanic-blue", color: "#00ACC1" },
-    { name: "theme-minimal-white", color: "#4B5563" },
-    { name: "theme-classic-green", color: "#10B981" },
-    { name: "theme-modern-oceanic", color: "#004d40" },
     { name: "theme-elegant-purple", color: "#8B5CF6" },
+    { name: "theme-dark", color: "#238636" },
+    { name: "theme-dynamic-red", color: "#EF4444" },
+    { name: "theme-cyber-blue", color: "#3B82F6" },
+    { name: "theme-classic-green", color: "#10B981" },
+    { name: "theme-black-gold", color: "#FACC15" },
+    { name: "theme-oceanic-blue", color: "#00ACC1" },
     { name: "theme-black-white-cream", color: "#863083" },
+    { name: "theme-minimal-white", color: "#4B5563" },
+    { name: "theme-soft-cream", color: "#bc6c25" },
+    { name: "theme-blush-pink ", color: "#f8a9b6" }, // ✅ fixed name (removed space)
+    { name: "theme-modern-oceanic", color: "#004d40" },
   ];
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("themeIndex");
     if (savedTheme) setCurrentTheme(parseInt(savedTheme, 10));
+
     themes.forEach((theme) =>
-      document.documentElement.classList.remove(theme.name)
+      document.documentElement.classList.remove(theme.name.trim())
     );
-    document.documentElement.classList.add(themes[currentTheme].name);
+    document.documentElement.classList.add(themes[currentTheme].name.trim());
   }, [currentTheme]);
 
   return (
@@ -41,7 +44,6 @@ const Topbar = () => {
       <div className="flex flex-wrap justify-between items-center gap-4">
         {/* Contact Info */}
         <div className="flex flex-wrap items-center gap-4">
-          {/* UK Number */}
           <a
             href="tel:+447440095528"
             className="flex items-center gap-2 hover:text-primary transition-all group"
@@ -53,7 +55,6 @@ const Topbar = () => {
             <span className="hidden lg:inline">(+44) 7440 095528</span>
           </a>
 
-          {/* Pakistan Number */}
           <a
             href="tel:+923047914358"
             className="flex items-center gap-2 hover:text-primary transition-all group"
@@ -65,7 +66,6 @@ const Topbar = () => {
             <span className="hidden lg:inline">(+92) 304-7914358</span>
           </a>
 
-          {/* Location */}
           <a
             href="https://maps.google.com"
             target="_blank"
@@ -79,7 +79,6 @@ const Topbar = () => {
             <span className="hidden lg:inline">Morden, London UK</span>
           </a>
 
-          {/* Email */}
           <a
             href="mailto:ameersync.com@gmail.com"
             className="flex items-center gap-2 hover:text-primary transition-all group"
@@ -102,14 +101,7 @@ const Topbar = () => {
           >
             <FaFacebookF size={16} />
           </a>
-          {/* <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-400 hover:scale-110 transition-transform"
-          >
-            <FaLinkedinIn size={16} />
-          </a> */}
+
           <a
             href="https://www.instagram.com/ameersync"
             target="_blank"
@@ -118,6 +110,7 @@ const Topbar = () => {
           >
             <FaInstagram size={16} />
           </a>
+
           <a
             href="https://wa.me/447440095528"
             target="_blank"
