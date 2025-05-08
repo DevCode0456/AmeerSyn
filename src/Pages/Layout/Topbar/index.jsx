@@ -5,7 +5,6 @@ import {
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
   FaMapMarked,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -112,8 +111,8 @@ const Topbar = () => {
             <FaLinkedinIn size={16} />
           </a> */}
           <a
-                   href="https://www.instagram.com/ameersync"
-                   target="_blank"
+            href="https://www.instagram.com/ameersync"
+            target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-500 hover:scale-110 transition-transform"
           >

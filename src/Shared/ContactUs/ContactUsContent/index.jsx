@@ -9,12 +9,11 @@ import {
   FaUser,
   FaEnvelope,
   FaInstagram,
-  FaLinkedinIn,
   FaFacebookF,
   FaWhatsapp,
 } from "react-icons/fa";
-import Images from "../../../Helper/ImagesConstant";
 import Toaster from "../../Toaster";
+import Images from "../../../Helper/ImagesConstant";
 
 const ContactFormContent = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -91,44 +90,43 @@ const ContactFormContent = () => {
           <div className="mt-8 space-y-2">
             <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
             <div className="mt-8 space-y-2">
-  <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
+              <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
 
-  <Link
-    to="/about-us"
-    className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
-  >
-    About Us
-  </Link>
+              <Link
+                to="/about-us"
+                className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
+              >
+                About Us
+              </Link>
 
-  <Link
-    to="/portfolio"
-    className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
-  >
-    Portfolio
-  </Link>
+              <Link
+                to="/portfolio"
+                className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
+              >
+                Portfolio
+              </Link>
 
-  <Link
-    to="/need-help"
-    className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
-  >
-    Need Help ?
-  </Link>
+              <Link
+                to="/need-help"
+                className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
+              >
+                Need Help ?
+              </Link>
 
-  <Link
-    to="/privacy-policy"
-    className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
-  >
-    Privacy Policy
-  </Link>
+              <Link
+                to="/privacy-policy"
+                className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
+              >
+                Privacy Policy
+              </Link>
 
-  <Link
-    to="/terms&conditions"
-    className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
-  >
-    Terms & Conditions
-  </Link>
-</div>
-
+              <Link
+                to="/terms&conditions"
+                className="block w-full text-left px-4 py-2 bg-white text-primary rounded-3xl font-semibold hover:bg-orange-100 transition"
+              >
+                Terms & Conditions
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -218,8 +216,8 @@ const ContactFormContent = () => {
                 <FaLinkedinIn size={24} />
               </a> */}
               <a
-                   href="https://www.instagram.com/ameersync"
-                   target="_blank"
+                href="https://www.instagram.com/ameersync"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-500 hover:scale-110 transition-transform"
               >

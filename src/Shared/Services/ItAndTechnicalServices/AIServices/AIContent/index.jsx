@@ -24,7 +24,6 @@ import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
 import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
@@ -258,7 +257,6 @@ const AIContent = () => {
       >
         <HeroSection
           icon={FaBrain}
-        
           imageAlt="AI Solutions"
           buttonText="Get Started"
           title="AI Development Services"

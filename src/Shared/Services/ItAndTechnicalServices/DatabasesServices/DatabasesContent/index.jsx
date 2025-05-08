@@ -17,9 +17,7 @@ import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
-
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
@@ -27,8 +25,6 @@ import TestimonialsSection from "../../../../PagesSectionComponents/Testimonials
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const DatabasesContent = () => {
-
-
   const services = [
     {
       icon: <FaDatabase size={50} className="mt-6" />,
@@ -70,52 +66,60 @@ const DatabasesContent = () => {
 
   const testimonialsData = [
     {
-      quote: "Managing databases was a nightmare until AmeerSync optimized our queries and indexing. Our application runs much faster now!",
+      quote:
+        "Managing databases was a nightmare until AmeerSync optimized our queries and indexing. Our application runs much faster now!",
       author: "Michael Carter",
-      company: "DataSphere"
+      company: "DataSphere",
     },
     {
-      quote: "They helped us migrate our database from MySQL to PostgreSQL with zero downtime.",
+      quote:
+        "They helped us migrate our database from MySQL to PostgreSQL with zero downtime.",
       author: "Ethan Lewis",
-      company: "CloudData"
+      company: "CloudData",
     },
     {
-      quote: "AmeerSync set up a high-availability database cluster, improving reliability and performance.",
+      quote:
+        "AmeerSync set up a high-availability database cluster, improving reliability and performance.",
       author: "Rachel Green",
-      company: "ScaleDB"
+      company: "ScaleDB",
     },
     {
-      quote: "Their expertise in database normalization helped us reduce redundant data and improve query speed.",
+      quote:
+        "Their expertise in database normalization helped us reduce redundant data and improve query speed.",
       author: "David Williams",
-      company: "DataOptimizer"
+      company: "DataOptimizer",
     },
     {
-      quote: "They implemented advanced indexing strategies that made our reports load 3x faster.",
+      quote:
+        "They implemented advanced indexing strategies that made our reports load 3x faster.",
       author: "Sophia Kim",
-      company: "BIAnalytics"
+      company: "BIAnalytics",
     },
     {
-      quote: "AmeerSync optimized our database backup and recovery process, enhancing data security.",
+      quote:
+        "AmeerSync optimized our database backup and recovery process, enhancing data security.",
       author: "Olivia Adams",
-      company: "SecureData"
+      company: "SecureData",
     },
     {
-      quote: "Their NoSQL database implementation helped us scale our big data applications.",
+      quote:
+        "Their NoSQL database implementation helped us scale our big data applications.",
       author: "Nathan Scott",
-      company: "BigDataTech"
+      company: "BigDataTech",
     },
     {
-      quote: "AmeerSync helped us secure our database against SQL injection attacks and other vulnerabilities.",
+      quote:
+        "AmeerSync helped us secure our database against SQL injection attacks and other vulnerabilities.",
       author: "Linda Thomas",
-      company: "SafeNet"
+      company: "SafeNet",
     },
     {
-      quote: "They integrated real-time data synchronization between our databases, ensuring seamless updates.",
+      quote:
+        "They integrated real-time data synchronization between our databases, ensuring seamless updates.",
       author: "James Carter",
-      company: "LiveSync"
-    }
+      company: "LiveSync",
+    },
   ];
-  
 
   const faqs = [
     {
@@ -155,14 +159,12 @@ const DatabasesContent = () => {
     {
       icon: <FaNetworkWired size={50} />,
       title: "PostgreSQL",
-      description:
-        "A powerful, open-source object-relational database system.",
+      description: "A powerful, open-source object-relational database system.",
     },
     {
       icon: <FaCloud size={50} />,
       title: "MongoDB",
-      description:
-        "A NoSQL database for modern, high-volume applications.",
+      description: "A NoSQL database for modern, high-volume applications.",
     },
     {
       icon: <FaHdd size={50} />,
@@ -223,32 +225,30 @@ const DatabasesContent = () => {
 
   return (
     <div className="database-content w-100 bg-Bg">
-     
       <motion.div
         className=""
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-         <HeroSection
-        icon={FaDatabase}
-     
-        imageAlt="Database Solutions"
-        buttonText="Get Started"
-        title="Database Development Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.DATABASE_IMG}
-        description="Unlock the power of efficient data management and analytics with our database solutions. From database design and optimization to secure cloud integration, we deliver tailored services that drive business success."
-        details={
-          "Our database services ensure your data is accessible, secure, and optimized for performance. Whether you're looking to implement a new database system, migrate to a cloud platform, or enhance existing setups, our team has the expertise to deliver. Explore the benefits of modern database technologies for improved decision-making and operational efficiency."
-        }
-      />
-      <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <WhyChooseUsSection reasons={reasons	}/>
+        <HeroSection
+          icon={FaDatabase}
+          imageAlt="Database Solutions"
+          buttonText="Get Started"
+          title="Database Development Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.DATABASE_IMG}
+          description="Unlock the power of efficient data management and analytics with our database solutions. From database design and optimization to secure cloud integration, we deliver tailored services that drive business success."
+          details={
+            "Our database services ensure your data is accessible, secure, and optimized for performance. Whether you're looking to implement a new database system, migrate to a cloud platform, or enhance existing setups, our team has the expertise to deliver. Explore the benefits of modern database technologies for improved decision-making and operational efficiency."
+          }
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
-      <ContactUsSection />
-      <TestimonialsSection testimonials={testimonialsData} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

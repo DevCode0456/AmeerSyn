@@ -18,20 +18,18 @@ import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
 import Images from "../../../../../Helper/ImagesConstant";
 import ContactUsSection from "../../../../ContactUsSection";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ServicesSection from "../../../../PagesSectionComponents/ServicesSection";
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
 
 const NetworkingContent = () => {
- 
-
   const services = [
     {
       icon: <FaNetworkWired size={50} className="mt-6" />,
       title: "Network Setup",
-      description: "Setting up robust and reliable networks tailored to your needs.",
+      description:
+        "Setting up robust and reliable networks tailored to your needs.",
     },
     {
       icon: <FaTools size={50} className="mt-6" />,
@@ -56,58 +54,67 @@ const NetworkingContent = () => {
     {
       icon: <FaPenFancy size={50} className="mt-6" />,
       title: "Custom Solutions",
-      description: "Crafting tailored networking solutions for unique business needs.",
+      description:
+        "Crafting tailored networking solutions for unique business needs.",
     },
   ];
 
   const testimonialsData = [
     {
-      quote: "Their networking solutions are fantastic! We struggled with connectivity and security issues, but AmeerSync streamlined our entire infrastructure.",
+      quote:
+        "Their networking solutions are fantastic! We struggled with connectivity and security issues, but AmeerSync streamlined our entire infrastructure.",
       author: "William Harris",
-      company: "Enterprise Networks"
+      company: "Enterprise Networks",
     },
     {
-      quote: "They optimized our office network, eliminating lag and increasing speed significantly.",
+      quote:
+        "They optimized our office network, eliminating lag and increasing speed significantly.",
       author: "Sophia Mitchell",
-      company: "SpeedNet"
+      company: "SpeedNet",
     },
     {
-      quote: "AmeerSync implemented a secure VPN for our remote teams, improving productivity and security.",
+      quote:
+        "AmeerSync implemented a secure VPN for our remote teams, improving productivity and security.",
       author: "David Williams",
-      company: "RemoteWorks"
+      company: "RemoteWorks",
     },
     {
-      quote: "Their firewall and cybersecurity setup protected us from constant cyber threats.",
+      quote:
+        "Their firewall and cybersecurity setup protected us from constant cyber threats.",
       author: "Rachel Green",
-      company: "CyberSafe"
+      company: "CyberSafe",
     },
     {
-      quote: "They designed a scalable cloud networking solution for our distributed applications.",
+      quote:
+        "They designed a scalable cloud networking solution for our distributed applications.",
       author: "Ethan Lewis",
-      company: "CloudConnect"
+      company: "CloudConnect",
     },
     {
-      quote: "AmeerSync resolved our network congestion issues with advanced traffic management strategies.",
+      quote:
+        "AmeerSync resolved our network congestion issues with advanced traffic management strategies.",
       author: "Linda Thomas",
-      company: "NetFlow"
+      company: "NetFlow",
     },
     {
-      quote: "Their wireless networking solutions improved our office Wi-Fi coverage and performance.",
+      quote:
+        "Their wireless networking solutions improved our office Wi-Fi coverage and performance.",
       author: "Nathan Scott",
-      company: "SmartOffice"
+      company: "SmartOffice",
     },
     {
-      quote: "They configured our data center networking, ensuring seamless communication between servers.",
+      quote:
+        "They configured our data center networking, ensuring seamless communication between servers.",
       author: "Lucas Bennett",
-      company: "DataHub"
+      company: "DataHub",
     },
     {
-      quote: "AmeerSync provided an effective network monitoring solution that helps us detect issues before they become critical.",
+      quote:
+        "AmeerSync provided an effective network monitoring solution that helps us detect issues before they become critical.",
       author: "Emily White",
-      company: "ITGuard"
-    }
+      company: "ITGuard",
+    },
   ];
-  
 
   const faqs = [
     {
@@ -204,7 +211,6 @@ const NetworkingContent = () => {
 
   return (
     <div className="networking-content w-100 bg-Bg">
-      
       <motion.div
         className=""
         initial={{ opacity: 0, x: -50 }}
@@ -212,24 +218,23 @@ const NetworkingContent = () => {
         transition={{ duration: 0.8 }}
       >
         <HeroSection
-        icon={FaNetworkWired}
-       
-        imageAlt="Networking Solutions"
-        buttonText="Get Started"
-        title="Networking Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.NETWORKING_IMG}
-        description="Empower your business with our cutting-edge networking solutions. From setup and optimization to security and automation, we deliver services tailored to your needs."
-        details={
-          "Our networking services ensure reliable, secure, and efficient operations. Whether it's designing a new network, integrating cloud solutions, or enhancing security, we have the expertise to support you. Explore the advantages of modern networking technologies for scalable and robust solutions."
-        }
-      />
+          icon={FaNetworkWired}
+          imageAlt="Networking Solutions"
+          buttonText="Get Started"
+          title="Networking Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.NETWORKING_IMG}
+          description="Empower your business with our cutting-edge networking solutions. From setup and optimization to security and automation, we deliver services tailored to your needs."
+          details={
+            "Our networking services ensure reliable, secure, and efficient operations. Whether it's designing a new network, integrating cloud solutions, or enhancing security, we have the expertise to support you. Explore the advantages of modern networking technologies for scalable and robust solutions."
+          }
+        />
         <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <WhyChooseUsSection reasons={reasons	}/>
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
-      <ContactUsSection />
-      <TestimonialsSection testimonials={testimonialsData} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

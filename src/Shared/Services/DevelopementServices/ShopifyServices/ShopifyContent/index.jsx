@@ -19,7 +19,6 @@ import Accordin from "../../../../Accordin";
 import HeroSection from "../../../../HeroSection";
 
 import Images from "../../../../../Helper/ImagesConstant";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ContactUsSection from "../../../../ContactUsSection";
 import TechnologiesSection from "../../../../PagesSectionComponents/TechnologiesSection";
 import TestimonialsSection from "../../../../PagesSectionComponents/TestimonialsSection";
@@ -27,8 +26,6 @@ import ServicesSection from "../../../../PagesSectionComponents/ServicesSection"
 import WhyChooseUsSection from "../../../../PagesSectionComponents/WhyChooseUsSection";
 
 const ShopifyContent = () => {
-
-
   const services = [
     {
       icon: <FaShopify size={50} className="mt-6" />,
@@ -39,8 +36,7 @@ const ShopifyContent = () => {
     {
       icon: <FaTools size={50} className="mt-6" />,
       title: "Theme Development",
-      description:
-        "Creating custom themes to align with your brand identity.",
+      description: "Creating custom themes to align with your brand identity.",
     },
     {
       icon: <FaCog size={50} className="mt-6" />,
@@ -57,8 +53,7 @@ const ShopifyContent = () => {
     {
       icon: <FaLock size={50} className="mt-6" />,
       title: "Security Enhancements",
-      description:
-        "Implementing robust security measures for Shopify stores.",
+      description: "Implementing robust security measures for Shopify stores.",
     },
     {
       icon: <FaPenFancy size={50} className="mt-6" />,
@@ -70,53 +65,60 @@ const ShopifyContent = () => {
 
   const testimonialsData = [
     {
-      quote: "We needed a fully customized Shopify store, and AmeerSync delivered beyond expectations! The store is fast, user-friendly, and optimized for conversions.",
+      quote:
+        "We needed a fully customized Shopify store, and AmeerSync delivered beyond expectations! The store is fast, user-friendly, and optimized for conversions.",
       author: "Rachel Green",
-      company: "EcomBoost"
+      company: "EcomBoost",
     },
     {
-      quote: "Their Shopify theme customization gave our store a unique and professional look.",
+      quote:
+        "Their Shopify theme customization gave our store a unique and professional look.",
       author: "David Williams",
-      company: "TrendWear"
+      company: "TrendWear",
     },
     {
-      quote: "AmeerSync integrated advanced payment gateways and streamlined our checkout process.",
+      quote:
+        "AmeerSync integrated advanced payment gateways and streamlined our checkout process.",
       author: "Sophia Mitchell",
-      company: "ShopNow"
+      company: "ShopNow",
     },
     {
-      quote: "Their expertise in Shopify SEO helped our store rank higher, bringing in more organic traffic.",
+      quote:
+        "Their expertise in Shopify SEO helped our store rank higher, bringing in more organic traffic.",
       author: "Ethan Lewis",
-      company: "OrganicFashion"
+      company: "OrganicFashion",
     },
     {
-      quote: "They set up automated inventory management, saving us hours of manual updates.",
+      quote:
+        "They set up automated inventory management, saving us hours of manual updates.",
       author: "Linda Thomas",
-      company: "SmartGadgets"
+      company: "SmartGadgets",
     },
     {
-      quote: "AmeerSync migrated our existing store to Shopify without any downtime.",
+      quote:
+        "AmeerSync migrated our existing store to Shopify without any downtime.",
       author: "James Carter",
-      company: "HomeDecor"
+      company: "HomeDecor",
     },
     {
-      quote: "Their custom Shopify app allowed us to add exclusive functionalities to our store.",
+      quote:
+        "Their custom Shopify app allowed us to add exclusive functionalities to our store.",
       author: "Emily Wilson",
-      company: "PetCare"
+      company: "PetCare",
     },
     {
-      quote: "They provided excellent post-launch support and maintenance for our Shopify store.",
+      quote:
+        "They provided excellent post-launch support and maintenance for our Shopify store.",
       author: "Nathan Scott",
-      company: "FitnessPro"
+      company: "FitnessPro",
     },
     {
-      quote: "AmeerSync optimized our store’s loading speed, reducing bounce rates significantly.",
+      quote:
+        "AmeerSync optimized our store’s loading speed, reducing bounce rates significantly.",
       author: "Lucas Harris",
-      company: "FastTrends"
-    }
+      company: "FastTrends",
+    },
   ];
-  
-  
 
   const faqs = [
     {
@@ -125,15 +127,18 @@ const ShopifyContent = () => {
     },
     {
       question: "Do you provide Shopify app development?",
-      answer: "Yes, we develop and integrate Shopify apps tailored to your needs.",
+      answer:
+        "Yes, we develop and integrate Shopify apps tailored to your needs.",
     },
     {
       question: "What payment gateways do you support?",
-      answer: "We support a wide range of payment gateways, including Stripe and PayPal.",
+      answer:
+        "We support a wide range of payment gateways, including Stripe and PayPal.",
     },
     {
       question: "Can you optimize an existing Shopify store?",
-      answer: "Yes, we offer store optimization services for better performance.",
+      answer:
+        "Yes, we offer store optimization services for better performance.",
     },
     {
       question: "Do you offer Shopify training?",
@@ -213,32 +218,30 @@ const ShopifyContent = () => {
 
   return (
     <div className="shopify-content w-100 bg-Bg">
-    
       <motion.div
         className=""
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-          <HeroSection
-        icon={FaShopify}
-      
-        imageAlt="Shopify Solutions"
-        buttonText="Get Started"
-        title="Shopify Development Services"
-        onButtonClick={handleButtonClick}
-        imageSrc={Images.SHOPIFY_IMG}
-        description="Boost your online presence with our expert Shopify services. From store setup and theme customization to app integration and optimization, we provide solutions tailored to your business needs."
-        details={
-          "Our Shopify services empower businesses to succeed in the e-commerce landscape. Whether you're launching a new store or enhancing an existing one, our expertise ensures seamless and scalable solutions."
-        }
-      />
-      <ServicesSection services={services} />
-      <TechnologiesSection technologies={technologies} />
-      <WhyChooseUsSection reasons={reasons	}/>
+        <HeroSection
+          icon={FaShopify}
+          imageAlt="Shopify Solutions"
+          buttonText="Get Started"
+          title="Shopify Development Services"
+          onButtonClick={handleButtonClick}
+          imageSrc={Images.SHOPIFY_IMG}
+          description="Boost your online presence with our expert Shopify services. From store setup and theme customization to app integration and optimization, we provide solutions tailored to your business needs."
+          details={
+            "Our Shopify services empower businesses to succeed in the e-commerce landscape. Whether you're launching a new store or enhancing an existing one, our expertise ensures seamless and scalable solutions."
+          }
+        />
+        <ServicesSection services={services} />
+        <TechnologiesSection technologies={technologies} />
+        <WhyChooseUsSection reasons={reasons} />
         <Accordin faqs={faqs} />
-      <ContactUsSection />
-      <TestimonialsSection testimonials={testimonialsData} />
+        <ContactUsSection />
+        <TestimonialsSection testimonials={testimonialsData} />
       </motion.div>
     </div>
   );

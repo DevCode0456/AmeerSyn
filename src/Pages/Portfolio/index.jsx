@@ -45,8 +45,6 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
-
-
 const features = [
   {
     title: "Cutting-Edge Technology",
@@ -127,11 +125,6 @@ const testimonialsData = [
     company: "Tech Ventures",
   },
 ];
-
-
-
-
-
 
 const certifications = [
   {
@@ -320,7 +313,6 @@ const services = [
   },
 ];
 
-
 const Portfolio = () => {
   const [isMuted, setIsMuted] = useState(true); // Initially muted
   const videoRef = useRef(null); // Reference to the video element
@@ -380,7 +372,9 @@ const Portfolio = () => {
 
       {/* Features Section */}
       <section className="py-16 bg-gradient-to-b from-secondary to-container px-6 sm:px-12 lg:px-24">
-        <h2 className="text-4xl font-bold text-center text-primary mb-10">Our Features</h2>
+        <h2 className="text-4xl font-bold text-center text-primary mb-10">
+          Our Features
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div
@@ -394,7 +388,9 @@ const Portfolio = () => {
               <div className="text-5xl bg-gradient-to-r from-pink-500 to-primary text-white p-4 rounded-full mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-primary">{feature.title}</h3>
+              <h3 className="text-xl font-bold text-primary">
+                {feature.title}
+              </h3>
               <p className="text-black mt-2">{feature.description}</p>
             </motion.div>
           ))}
@@ -403,7 +399,9 @@ const Portfolio = () => {
 
       {/* Tech Stack Section */}
       <section className="py-20 bg-gray-950 px-6 sm:px-12 lg:px-24">
-        <h1 className="text-5xl font-semibold text-primary mx-auto text-center py-3 my-3">Tech Stack</h1>
+        <h1 className="text-5xl font-semibold text-primary mx-auto text-center py-3 my-3">
+          Tech Stack
+        </h1>
         <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
           initial="hidden"
@@ -434,7 +432,9 @@ const Portfolio = () => {
 
       {/* Certifications Section */}
       <section className="py-20 bg-gray-950 px-6 sm:px-12 lg:px-24">
-        <h1 className="text-4xl font-semibold text-primary mx-auto text-center py-3 my-3">Certifications</h1>
+        <h1 className="text-4xl font-semibold text-primary mx-auto text-center py-3 my-3">
+          Certifications
+        </h1>
         <motion.div
           className="grid md:grid-cols-3 gap-12"
           initial="hidden"
@@ -455,8 +455,12 @@ const Portfolio = () => {
               }}
               viewport={{ once: true }}
             >
-              <div className="text-4xl lg:text-6xl text-primary text-center">{cert.icon}</div>
-              <h3 className="text-xl font-semibold text-primary mt-4">{cert.title}</h3>
+              <div className="text-4xl lg:text-6xl text-primary text-center">
+                {cert.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-primary mt-4">
+                {cert.title}
+              </h3>
               <p className="mt-2">{cert.issuer}</p>
             </motion.div>
           ))}
